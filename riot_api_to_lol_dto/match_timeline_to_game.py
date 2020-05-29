@@ -41,7 +41,9 @@ building_dict = {
 }
 
 
-def timeline_dto_to_game(riot_timeline_dto: dict, game_id, platform_id) -> lol_dto.LolGame:
+def match_timeline_to_game(riot_timeline_dto: dict, game_id, platform_id) -> lol_dto.LolGame:
+    """Returns a LolGame from a MatchTimelineDto
+    """
     riot_source = {"riot": {"gameId": game_id, "platformId": platform_id}}
 
     # Creating the game_dto skeleton
@@ -92,29 +94,28 @@ def timeline_dto_to_game(riot_timeline_dto: dict, game_id, platform_id) -> lol_d
                 # If neither participantId nor killerId is in the field, it is usually a kill made by minions
                 player_id = None
 
-            position = (
-                lol_dto.Position(x=event["position"]["x"], y=event["position"]["y"]) if "position" in event else None
+            event_dto = lol_dto.LolGameEvent(
+                timestamp=event["timestamp"] / 1000, type=event["type"], playerId=player_id,
             )
 
-            event_dto = lol_dto.LolGameEvent(
-                timestamp=event["timestamp"] / 1000, type=event["type"], playerId=player_id, position=position,
-            )
+            if "position" in event:
+                event_dto['position'] = lol_dto.Position(x=event["position"]["x"], y=event["position"]["y"])
 
             # Then, we handle type-specific fields
             # Epic monster kills
             # TODO Should we change event type name? ELITE was never used in the history of the game
             if event["type"] == "ELITE_MONSTER_KILL":
-                event_dto["monster"] = lol_dto.Monster(monsterType=event["monsterType"])
+                event_dto["monster"] = lol_dto.Monster(type=event["monsterType"])
 
-                if event["monsterType"] == "DRAGON":
+                if event["type"] == "DRAGON":
                     try:
-                        event_dto["monster"]["monsterSubType"] = monster_subtype_dict[event["monsterSubType"]]
+                        event_dto["monster"]["subType"] = monster_subtype_dict[event["monsterSubType"]]
                     # If we don’t know how to translate the monster subtype, we simply leave it as-is
                     except KeyError:
-                        event_dto["monster"]["monsterSubType"] = event["monsterSubType"]
+                        event_dto["monster"]["subType"] = event["monsterSubType"]
             # Building kills
             elif event["type"] == "BUILDING_KILL":
-                # TODO Dropping teamId because it is redundant with the tower’s team side
+                # TODO Dropping teamId because it is redundant with the tower’s team side, ask
                 event_dto["building"] = building_dict[event["position"]["x"], event["position"]["y"]]
             # Champion kills
             elif event["type"] == "CHAMPION_KILL":
@@ -140,7 +141,7 @@ def timeline_dto_to_game(riot_timeline_dto: dict, game_id, platform_id) -> lol_d
             game["events"].append(event_dto)
 
     # Making extra sure events are in chronological order
-    # TODO Might be overkill, but you’re never too sure
+    # TODO Might be overkill, but you’re never too sure. Maybe should sort players snapshots too
     game['events'] = sorted(game['events'], key=lambda x: x['timestamp'])
 
     return game

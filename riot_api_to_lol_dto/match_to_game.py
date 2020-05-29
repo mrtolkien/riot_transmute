@@ -2,18 +2,14 @@ import lol_dto
 from datetime import datetime
 
 
-def match_dto_to_game(match_dto: dict) -> lol_dto.LolGame:
-    """Takes a Riot MatchDto and transforms into into a LolGame
+def match_to_game(match_dto: dict) -> lol_dto.LolGame:
+    """Returns a LolGame from a MatchDto
     """
 
     riot_source = {"riot": {"gameId": match_dto["gameId"], "platformId": match_dto["platformId"]}}
     iso_date = datetime.fromtimestamp(match_dto["gameCreation"] / 1000).isoformat()
     patch = ".".join(match_dto["gameVersion"].split(".")[:2])
-    winner = (
-        "blue"
-        if (match_dto["teams"][0]["teamId"] == 100) == (match_dto["teams"][0]["win"] == "Win")
-        else "red"
-    )
+    winner = "blue" if (match_dto["teams"][0]["teamId"] == 100) == (match_dto["teams"][0]["win"] == "Win") else "red"
 
     game_dto = lol_dto.LolGame(
         sources=riot_source,
@@ -41,9 +37,7 @@ def match_dto_to_game(match_dto: dict) -> lol_dto.LolGame:
             firstBaron=team["firstBaron"],
         )
 
-        team_dto["bans"] = [
-            lol_dto.LolGameTeamBan(championId=ban["championId"]) for ban in team["bans"]
-        ]
+        team_dto["bans"] = team["bans"]
 
         team_dto["players"] = []
 
@@ -80,14 +74,10 @@ def match_dto_to_game(match_dto: dict) -> lol_dto.LolGame:
                 runes_list=runes_list,
             )
 
-            items = [
-                lol_dto.LolGamePlayerItem(id=participant["stats"][f"item{i}"], slot=i)
-                for i in range(0, 7)
-            ]
+            items = [lol_dto.LolGamePlayerItem(id=participant["stats"][f"item{i}"], slot=i) for i in range(0, 7)]
 
             summoner_spells = [
-                lol_dto.LolGamePlayerSummonerSpell(id=participant[f"spell{i}Id"], slot=i - 1)
-                for i in range(1, 3)
+                lol_dto.LolGamePlayerSummonerSpell(id=participant[f"spell{i}Id"], slot=i - 1) for i in range(1, 3)
             ]
 
             player = lol_dto.LolGamePlayer(
@@ -100,9 +90,7 @@ def match_dto_to_game(match_dto: dict) -> lol_dto.LolGame:
                 items=items,
                 summonerSpells=summoner_spells,
                 firstBlood=participant["stats"]["firstBloodKill"],
-                firstBloodAssist=participant["stats"][
-                    "firstBloodAssist"
-                ],  # This field is wrong by default
+                firstBloodAssist=participant["stats"]["firstBloodAssist"],  # This field is wrong by default
                 firstTower=participant["stats"]["firstTowerKill"],
                 firstTowerAssist=participant["stats"]["firstTowerAssist"],
                 firstInhibitor=participant["stats"]["firstInhibitorKill"],
@@ -111,8 +99,7 @@ def match_dto_to_game(match_dto: dict) -> lol_dto.LolGame:
                 deaths=participant["stats"]["deaths"],
                 assists=participant["stats"]["assists"],
                 gold=participant["stats"]["goldEarned"],
-                cs=participant["stats"]["totalMinionsKilled"]
-                + participant["stats"]["neutralMinionsKilled"],
+                cs=participant["stats"]["totalMinionsKilled"] + participant["stats"]["neutralMinionsKilled"],
                 level=participant["stats"]["champLevel"],
                 wardsPlaced=participant["stats"]["wardsPlaced"],
                 wardsKilled=participant["stats"]["wardsKilled"],
@@ -131,9 +118,7 @@ def match_dto_to_game(match_dto: dict) -> lol_dto.LolGame:
                 physicalDamageDealt=participant["stats"]["physicalDamageDealt"],
                 magicDamageDealt=participant["stats"]["magicDamageDealt"],
                 totalDamageDealtToChampions=participant["stats"]["totalDamageDealtToChampions"],
-                physicalDamageDealtToChampions=participant["stats"][
-                    "physicalDamageDealtToChampions"
-                ],
+                physicalDamageDealtToChampions=participant["stats"]["physicalDamageDealtToChampions"],
                 magicDamageDealtToChampions=participant["stats"]["magicDamageDealtToChampions"],
                 damageDealtToObjectives=participant["stats"]["damageDealtToObjectives"],
                 damageDealtToTurrets=participant["stats"]["damageDealtToTurrets"],
