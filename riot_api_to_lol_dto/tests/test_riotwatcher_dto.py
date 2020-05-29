@@ -2,15 +2,15 @@ import lol_dto
 import pytest
 import os
 
-from riotwatcher_dto.match_dto_to_game import match_dto_to_game
-from riotwatcher_dto.riotwatcher_dto import LolWatcherDto
+from riotwatcher import LolWatcher
+from riot_api_to_lol_dto.match_dto_to_game import match_dto_to_game
 
 
 @pytest.fixture
 def watcher_dto():
     with open(os.path.join(os.path.expanduser("~"), ".config", "riot", "api_key.txt")) as file:
         api_key = file.read()
-    return LolWatcherDto(api_key)
+    return LolWatcher(api_key)
 
 
 @pytest.fixture
@@ -19,8 +19,8 @@ def match_dto(watcher_dto) -> lol_dto.LolGame:
 
 
 @pytest.fixture
-def timeline(watcher_dto) -> lol_dto.LolGame:
-    return watcher_dto.match.timeline_by_match("KR", 4409190456)
+def timeline(watcher) -> lol_dto.LolGame:
+    return watcher.match.timeline_by_match("KR", 4409190456)
 
 
 def test_game(match_dto):

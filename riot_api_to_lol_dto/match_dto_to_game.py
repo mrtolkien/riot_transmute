@@ -5,6 +5,7 @@ from datetime import datetime
 def match_dto_to_game(match_dto: dict) -> lol_dto.LolGame:
     """Takes a Riot MatchDto and transforms into into a LolGame
     """
+
     riot_source = {"riot": {"gameId": match_dto["gameId"], "platformId": match_dto["platformId"]}}
     iso_date = datetime.fromtimestamp(match_dto["gameCreation"] / 1000).isoformat()
     patch = ".".join(match_dto["gameVersion"].split(".")[:2])
