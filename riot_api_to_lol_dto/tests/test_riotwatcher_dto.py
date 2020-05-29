@@ -4,23 +4,24 @@ import os
 
 from riotwatcher import LolWatcher
 from riot_api_to_lol_dto.match_dto_to_game import match_dto_to_game
+from riot_api_to_lol_dto.timeline_dto_to_game import timeline_dto_to_game
 
 
 @pytest.fixture
-def watcher_dto():
+def watcher():
     with open(os.path.join(os.path.expanduser("~"), ".config", "riot", "api_key.txt")) as file:
         api_key = file.read()
     return LolWatcher(api_key)
 
 
 @pytest.fixture
-def match_dto(watcher_dto) -> lol_dto.LolGame:
-    return watcher_dto.match.by_id("KR", 4409190456)
+def match_dto(watcher) -> lol_dto.LolGame:
+    return watcher.match.by_id("KR", 4409190456)
 
 
 @pytest.fixture
-def timeline(watcher) -> lol_dto.LolGame:
-    return watcher.match.timeline_by_match("KR", 4409190456)
+def timeline_game_id_platform_id(watcher) -> lol_dto.LolGame:
+    return watcher.match.timeline_by_match("KR", 4409190456), 4409190456, "KR"
 
 
 def test_game(match_dto):
@@ -43,9 +44,13 @@ def test_game(match_dto):
     assert onfleek["items"][0]["id"] == 3047
 
 
-def test_timeline(timeline):
-    pass
+def test_timeline(timeline_game_id_platform_id):
+    timeline, game_id, platform_id = timeline_game_id_platform_id
+
+    game = timeline_dto_to_game(timeline, game_id, platform_id)
+
+    assert game['sources']['riot']['gameId'] == game_id
 
 
-def test_both(match_dto, timeline):
+def test_both(match_dto, timeline_game_id_platform_id):
     pass
