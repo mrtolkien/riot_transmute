@@ -1,4 +1,4 @@
-import lol_dto
+import lol_dto.classes as dto_classes
 
 monster_subtype_dict = {
     "FIRE_DRAGON": "INFERNAL",
@@ -10,48 +10,51 @@ monster_subtype_dict = {
 
 
 building_dict = {
-    (981, 10441): lol_dto.Building(buildingType="TOWER", lane="TOP", towerLocation="OUTER", side="blue"),
-    (1512, 6699): lol_dto.Building(buildingType="TOWER", lane="TOP", towerLocation="INNER", side="blue"),
-    (1169, 4287): lol_dto.Building(buildingType="TOWER", lane="TOP", towerLocation="INHIBITOR", side="blue"),
-    (5846, 6396): lol_dto.Building(buildingType="TOWER", lane="MID", towerLocation="OUTER", side="blue"),
-    (5048, 4812): lol_dto.Building(buildingType="TOWER", lane="MID", towerLocation="INNER", side="blue"),
-    (3651, 3696): lol_dto.Building(buildingType="TOWER", lane="MID", towerLocation="INHIBITOR", side="blue"),
-    (10504, 1029): lol_dto.Building(buildingType="TOWER", lane="BOT", towerLocation="OUTER", side="blue"),
-    (6919, 1483): lol_dto.Building(buildingType="TOWER", lane="BOT", towerLocation="INNER", side="blue"),
-    (4281, 1253): lol_dto.Building(buildingType="TOWER", lane="BOT", towerLocation="INHIBITOR", side="blue"),
-    (1748, 2270): lol_dto.Building(buildingType="TOWER", lane="TOP", towerLocation="NEXUS", side="blue"),
-    (2177, 1807): lol_dto.Building(buildingType="TOWER", lane="BOT", towerLocation="NEXUS", side="blue"),
-    (1171, 3571): lol_dto.Building(buildingType="INHIBITOR", lane="TOP", towerLocation=None, side="blue"),
-    (3203, 3208): lol_dto.Building(buildingType="INHIBITOR", lane="MID", towerLocation=None, side="blue"),
-    (3452, 1236): lol_dto.Building(buildingType="INHIBITOR", lane="BOT", towerLocation=None, side="blue"),
-    (4318, 13875): lol_dto.Building(buildingType="TOWER", lane="TOP", towerLocation="OUTER", side="red"),
-    (7943, 13411): lol_dto.Building(buildingType="TOWER", lane="TOP", towerLocation="INNER", side="red"),
-    (10481, 13650): lol_dto.Building(buildingType="TOWER", lane="TOP", towerLocation="INHIBITOR", side="red"),
-    (8955, 8510): lol_dto.Building(buildingType="TOWER", lane="MID", towerLocation="OUTER", side="red"),
-    (9767, 10113): lol_dto.Building(buildingType="TOWER", lane="MID", towerLocation="INNER", side="red"),
-    (11134, 11207): lol_dto.Building(buildingType="TOWER", lane="MID", towerLocation="INHIBITOR", side="red"),
-    (13866, 4505): lol_dto.Building(buildingType="TOWER", lane="BOT", towerLocation="OUTER", side="red"),
-    (13327, 8226): lol_dto.Building(buildingType="TOWER", lane="BOT", towerLocation="INNER", side="red"),
-    (13624, 10572): lol_dto.Building(buildingType="TOWER", lane="BOT", towerLocation="INHIBITOR", side="red"),
-    (12611, 13084): lol_dto.Building(buildingType="TOWER", lane="TOP", towerLocation="NEXUS", side="red"),
-    (13052, 12612): lol_dto.Building(buildingType="TOWER", lane="BOT", towerLocation="NEXUS", side="red"),
-    (11261, 13676): lol_dto.Building(buildingType="INHIBITOR", lane="TOP", towerLocation=None, side="red"),
-    (11598, 11667): lol_dto.Building(buildingType="INHIBITOR", lane="MID", towerLocation=None, side="red"),
-    (13604, 11316): lol_dto.Building(buildingType="INHIBITOR", lane="BOT", towerLocation=None, side="red"),
+    (981, 10441): dto_classes.Building(buildingType="TOWER", lane="TOP", towerLocation="OUTER", side="blue"),
+    (1512, 6699): dto_classes.Building(buildingType="TOWER", lane="TOP", towerLocation="INNER", side="blue"),
+    (1169, 4287): dto_classes.Building(buildingType="TOWER", lane="TOP", towerLocation="INHIBITOR", side="blue"),
+    (5846, 6396): dto_classes.Building(buildingType="TOWER", lane="MID", towerLocation="OUTER", side="blue"),
+    (5048, 4812): dto_classes.Building(buildingType="TOWER", lane="MID", towerLocation="INNER", side="blue"),
+    (3651, 3696): dto_classes.Building(buildingType="TOWER", lane="MID", towerLocation="INHIBITOR", side="blue"),
+    (10504, 1029): dto_classes.Building(buildingType="TOWER", lane="BOT", towerLocation="OUTER", side="blue"),
+    (6919, 1483): dto_classes.Building(buildingType="TOWER", lane="BOT", towerLocation="INNER", side="blue"),
+    (4281, 1253): dto_classes.Building(buildingType="TOWER", lane="BOT", towerLocation="INHIBITOR", side="blue"),
+    (1748, 2270): dto_classes.Building(buildingType="TOWER", lane="TOP", towerLocation="NEXUS", side="blue"),
+    (2177, 1807): dto_classes.Building(buildingType="TOWER", lane="BOT", towerLocation="NEXUS", side="blue"),
+    (1171, 3571): dto_classes.Building(buildingType="INHIBITOR", lane="TOP", towerLocation=None, side="blue"),
+    (3203, 3208): dto_classes.Building(buildingType="INHIBITOR", lane="MID", towerLocation=None, side="blue"),
+    (3452, 1236): dto_classes.Building(buildingType="INHIBITOR", lane="BOT", towerLocation=None, side="blue"),
+    (4318, 13875): dto_classes.Building(buildingType="TOWER", lane="TOP", towerLocation="OUTER", side="red"),
+    (7943, 13411): dto_classes.Building(buildingType="TOWER", lane="TOP", towerLocation="INNER", side="red"),
+    (10481, 13650): dto_classes.Building(buildingType="TOWER", lane="TOP", towerLocation="INHIBITOR", side="red"),
+    (8955, 8510): dto_classes.Building(buildingType="TOWER", lane="MID", towerLocation="OUTER", side="red"),
+    (9767, 10113): dto_classes.Building(buildingType="TOWER", lane="MID", towerLocation="INNER", side="red"),
+    (11134, 11207): dto_classes.Building(buildingType="TOWER", lane="MID", towerLocation="INHIBITOR", side="red"),
+    (13866, 4505): dto_classes.Building(buildingType="TOWER", lane="BOT", towerLocation="OUTER", side="red"),
+    (13327, 8226): dto_classes.Building(buildingType="TOWER", lane="BOT", towerLocation="INNER", side="red"),
+    (13624, 10572): dto_classes.Building(buildingType="TOWER", lane="BOT", towerLocation="INHIBITOR", side="red"),
+    (12611, 13084): dto_classes.Building(buildingType="TOWER", lane="TOP", towerLocation="NEXUS", side="red"),
+    (13052, 12612): dto_classes.Building(buildingType="TOWER", lane="BOT", towerLocation="NEXUS", side="red"),
+    (11261, 13676): dto_classes.Building(buildingType="INHIBITOR", lane="TOP", towerLocation=None, side="red"),
+    (11598, 11667): dto_classes.Building(buildingType="INHIBITOR", lane="MID", towerLocation=None, side="red"),
+    (13604, 11316): dto_classes.Building(buildingType="INHIBITOR", lane="BOT", towerLocation=None, side="red"),
 }
 
 
-def match_timeline_to_game(riot_timeline_dto: dict, game_id, platform_id) -> lol_dto.LolGame:
+def match_timeline_to_game(riot_timeline_dto: dict, game_id, platform_id, add_names: bool = False) -> dto_classes.LolGame:
     """Returns a LolGame from a MatchTimelineDto
     """
+
+    # TODO Use add_names and lol_id_tools to add names fields
+
     riot_source = {"riot": {"gameId": game_id, "platformId": platform_id}}
 
     # Creating the game_dto skeleton
-    game = lol_dto.LolGame(
+    game = dto_classes.LolGame(
         sources=riot_source,
         teams={
-            "blue": lol_dto.LolGameTeam(players=[lol_dto.LolGamePlayer(id=i, snapshots=[]) for i in range(1, 6)]),
-            "red": lol_dto.LolGameTeam(players=[lol_dto.LolGamePlayer(id=i, snapshots=[]) for i in range(6, 11)]),
+            "blue": dto_classes.LolGameTeam(players=[dto_classes.LolGamePlayer(id=i, snapshots=[]) for i in range(1, 6)]),
+            "red": dto_classes.LolGameTeam(players=[dto_classes.LolGamePlayer(id=i, snapshots=[]) for i in range(6, 11)]),
         },
         events=[],
     )
@@ -67,11 +70,11 @@ def match_timeline_to_game(riot_timeline_dto: dict, game_id, platform_id) -> lol
             )
 
             try:
-                position = lol_dto.Position(x=participant_frame["position"]["x"], y=participant_frame["position"]["y"])
+                position = dto_classes.Position(x=participant_frame["position"]["x"], y=participant_frame["position"]["y"])
             except KeyError:
                 position = None
 
-            snapshot = lol_dto.LolGamePlayerSnapshot(
+            snapshot = dto_classes.LolGamePlayerSnapshot(
                 timestamp=frame["timestamp"] / 1000,
                 currentGold=participant_frame["currentGold"],
                 totalGold=participant_frame["totalGold"],
@@ -94,18 +97,18 @@ def match_timeline_to_game(riot_timeline_dto: dict, game_id, platform_id) -> lol
                 # If neither participantId nor killerId is in the field, it is usually a kill made by minions
                 player_id = None
 
-            event_dto = lol_dto.LolGameEvent(
+            event_dto = dto_classes.LolGameEvent(
                 timestamp=event["timestamp"] / 1000, type=event["type"], playerId=player_id,
             )
 
             if "position" in event:
-                event_dto['position'] = lol_dto.Position(x=event["position"]["x"], y=event["position"]["y"])
+                event_dto["position"] = dto_classes.Position(x=event["position"]["x"], y=event["position"]["y"])
 
             # Then, we handle type-specific fields
             # Epic monster kills
             # TODO Should we change event type name? ELITE was never used in the history of the game
             if event["type"] == "ELITE_MONSTER_KILL":
-                event_dto["monster"] = lol_dto.Monster(type=event["monsterType"])
+                event_dto["monster"] = dto_classes.Monster(type=event["monsterType"])
 
                 if event["type"] == "DRAGON":
                     try:
@@ -130,8 +133,8 @@ def match_timeline_to_game(riot_timeline_dto: dict, game_id, platform_id) -> lol
                 event_dto["itemId"] = event["itemId"]
             # Undoing items
             elif event["type"] == "ITEM_UNDO":
-                event_dto['itemIdBeforeUndo'] = event['beforeId']
-                event_dto['itemIdAfterUndo'] = event['afterId']
+                event_dto["itemIdBeforeUndo"] = event["beforeId"]
+                event_dto["itemIdAfterUndo"] = event["afterId"]
             elif event["type"] in ["WARD_PLACED", "WARD_KILL"]:
                 event_dto["wardType"] = event["wardType"]
             else:
@@ -141,7 +144,7 @@ def match_timeline_to_game(riot_timeline_dto: dict, game_id, platform_id) -> lol
             game["events"].append(event_dto)
 
     # Making extra sure events are in chronological order
-    # TODO Might be overkill, but you’re never too sure. Maybe should sort players snapshots too
-    game['events'] = sorted(game['events'], key=lambda x: x['timestamp'])
+    # TODO Might be overkill, but you’re never too sure. Maybe should sort players snapshots too just in case.
+    game["events"] = sorted(game["events"], key=lambda x: x["timestamp"])
 
     return game

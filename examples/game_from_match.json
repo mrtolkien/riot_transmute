@@ -23,26 +23,11 @@
             "firstDragon": false,
             "firstBaron": true,
             "bans": [
-                {
-                    "championId": -1,
-                    "pickTurn": 1
-                },
-                {
-                    "championId": 80,
-                    "pickTurn": 2
-                },
-                {
-                    "championId": 429,
-                    "pickTurn": 3
-                },
-                {
-                    "championId": 24,
-                    "pickTurn": 4
-                },
-                {
-                    "championId": 110,
-                    "pickTurn": 5
-                }
+                -1,
+                80,
+                429,
+                24,
+                110
             ],
             "players": [
                 {
@@ -839,26 +824,11 @@
             "firstDragon": true,
             "firstBaron": false,
             "bans": [
-                {
-                    "championId": 110,
-                    "pickTurn": 6
-                },
-                {
-                    "championId": 875,
-                    "pickTurn": 7
-                },
-                {
-                    "championId": 142,
-                    "pickTurn": 8
-                },
-                {
-                    "championId": 104,
-                    "pickTurn": 9
-                },
-                {
-                    "championId": 76,
-                    "pickTurn": 10
-                }
+                110,
+                875,
+                142,
+                104,
+                76
             ],
             "players": [
                 {

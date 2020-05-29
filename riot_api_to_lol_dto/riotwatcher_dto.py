@@ -10,20 +10,22 @@ class MatchApiDtoV4(MatchApiV4):
 
     More of a proof of concept class than anything, not meant to be use as-is.
     """
-    def game_from_match(self, region: str, match_id: int) -> lol_dto.LolGame:
+    def game_from_match(self, region: str, match_id: int) -> lol_dto.classes.LolGame:
         """Returns a LolGame with only MatchDto information"""
         riot_match_dto = self.by_id(region, match_id)
         return match_to_game(riot_match_dto)
 
-    def game_from_timeline(self, region: str, match_id: int) -> lol_dto.LolGame:
+    def game_from_timeline(self, region: str, match_id: int) -> lol_dto.classes.LolGame:
         """Returns a LolGame with only MatchTimelineDto information"""
         riot_timeline_dto = self.timeline_by_match(region, match_id)
         return match_timeline_to_game(riot_timeline_dto, game_id=match_id, platform_id=region)
 
-    def full_game(self, region: str, match_id: int) -> lol_dto.LolGame:
+    def full_game(self, region: str, match_id: int) -> lol_dto.classes.LolGame:
         """Returns a LolGame with all data available in the Riot API"""
         game_from_match = self.game_from_match(region, match_id)
         game_from_timeline = self.game_from_timeline(region, match_id)
+
+        return lol_dto.utilities.merge_games(game_from_match, game_from_timeline)
 
 
 class LolWatcherDto(riotwatcher.LolWatcher):

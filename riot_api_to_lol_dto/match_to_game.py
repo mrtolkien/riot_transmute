@@ -1,17 +1,18 @@
-import lol_dto
+import lol_dto.classes as dto_classes
 from datetime import datetime
 
 
-def match_to_game(match_dto: dict) -> lol_dto.LolGame:
+def match_to_game(match_dto: dict, add_names: bool = False) -> dto_classes.LolGame:
     """Returns a LolGame from a MatchDto
     """
+    # TODO Use add_names and lol_id_tools to add names fields
 
     riot_source = {"riot": {"gameId": match_dto["gameId"], "platformId": match_dto["platformId"]}}
     iso_date = datetime.fromtimestamp(match_dto["gameCreation"] / 1000).isoformat()
     patch = ".".join(match_dto["gameVersion"].split(".")[:2])
     winner = "blue" if (match_dto["teams"][0]["teamId"] == 100) == (match_dto["teams"][0]["win"] == "Win") else "red"
 
-    game_dto = lol_dto.LolGame(
+    game_dto = dto_classes.LolGame(
         sources=riot_source,
         duration=match_dto["gameDuration"],
         startDate=iso_date,
@@ -24,7 +25,7 @@ def match_to_game(match_dto: dict) -> lol_dto.LolGame:
     for team in match_dto["teams"]:
         side = "blue" if team["teamId"] == 100 else "red"
 
-        team_dto = lol_dto.LolGameTeam(
+        team_dto = dto_classes.LolGameTeam(
             riftHeraldKills=team["riftHeraldKills"],
             dragonKills=team["dragonKills"],
             baronKills=team["baronKills"],
@@ -37,7 +38,7 @@ def match_to_game(match_dto: dict) -> lol_dto.LolGame:
             firstBaron=team["firstBaron"],
         )
 
-        team_dto["bans"] = team["bans"]
+        team_dto["bans"] = [b["championId"] for b in team["bans"]]
 
         team_dto["players"] = []
 
@@ -60,7 +61,7 @@ def match_to_game(match_dto: dict) -> lol_dto.LolGame:
             }
 
             runes_list = [
-                lol_dto.LolGamePlayerRune(
+                dto_classes.LolGamePlayerRune(
                     id=participant["stats"][f"perk{i}"],
                     slot=i,
                     stats=[participant["stats"][f"perk{i}Var{j}"] for j in range(1, 4)],
@@ -68,19 +69,19 @@ def match_to_game(match_dto: dict) -> lol_dto.LolGame:
                 for i in range(0, 6)
             ]
 
-            runes = lol_dto.LolGamePlayerRunes(
+            runes = dto_classes.LolGamePlayerRunes(
                 primaryTreeId=participant["stats"]["perkPrimaryStyle"],
                 secondaryTreeId=participant["stats"]["perkSubStyle"],
                 runes_list=runes_list,
             )
 
-            items = [lol_dto.LolGamePlayerItem(id=participant["stats"][f"item{i}"], slot=i) for i in range(0, 7)]
+            items = [dto_classes.LolGamePlayerItem(id=participant["stats"][f"item{i}"], slot=i) for i in range(0, 7)]
 
             summoner_spells = [
-                lol_dto.LolGamePlayerSummonerSpell(id=participant[f"spell{i}Id"], slot=i - 1) for i in range(1, 3)
+                dto_classes.LolGamePlayerSummonerSpell(id=participant[f"spell{i}Id"], slot=i - 1) for i in range(1, 3)
             ]
 
-            player = lol_dto.LolGamePlayer(
+            player = dto_classes.LolGamePlayer(
                 id=participant["participantId"],
                 inGameName=participant_identity["summonerName"],
                 championId=participant["championId"],
