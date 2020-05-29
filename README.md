@@ -1,2 +1,2 @@
-# riotwatcher_dto
-A simple riotwatcher wrapper that adds LolGame DTO support.
+# Riot API to LoL DTO
+A simple wrapper to cast Riot API acquired data to the community-defined LoL DTO format.
