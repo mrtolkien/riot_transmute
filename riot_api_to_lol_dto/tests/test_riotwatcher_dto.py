@@ -38,20 +38,20 @@ def test_game(match_dto):
     with open(os.path.join("examples", "game_from_match.json"), "w+") as file:
         json.dump(game, file, indent=4)
 
-    assert game["winner"] == "blue"
+    assert game["winner"] == "BLUE"
     assert game["patch"] == "10.10"
-    assert game["startDate"] == "2020-05-27T02:23:02.536000"
-    assert "riot" in game["sources"]
-    assert game["teams"]["blue"]["firstTower"]
-    assert not game["teams"]["blue"]["firstDragon"]
-    assert game["teams"]["blue"]["bans"].__len__() == 5
-    assert game["teams"]["blue"]["players"].__len__() == 5
+    assert game["start"] == "2020-05-27T02:23:02+00:00"
+    assert "riotLolApi" in game["sources"]
+    assert game["teams"]["BLUE"]["firstTower"]
+    assert not game["teams"]["BLUE"]["firstDragon"]
+    assert game["teams"]["BLUE"]["bans"].__len__() == 5
+    assert game["teams"]["BLUE"]["players"].__len__() == 5
 
-    onfleek = next(p for p in game["teams"]["blue"]["players"] if p["inGameName"] == "SANDBOX OnFleek")
+    onfleek = next(p for p in game["teams"]["BLUE"]["players"] if p["inGameName"] == "SANDBOX OnFleek")
 
-    assert "riot" in onfleek["foreignKeys"]
-    assert onfleek["runes"]["primaryTreeId"] == 8000
-    assert onfleek["items"][0]["id"] == 3047
+    assert "riotLolApi" in onfleek["foreignKeys"]
+    assert onfleek["primaryRuneTreeId"] == 8000
+    assert onfleek["endOfGameStats"]["items"][0]["id"] == 3047
 
 
 def test_timeline(timeline_game_id_platform_id):
@@ -62,22 +62,10 @@ def test_timeline(timeline_game_id_platform_id):
     with open(os.path.join("examples", "game_from_match_timeline.json"), "w+") as file:
         json.dump(game, file, indent=4)
 
-    assert game["sources"]["riot"]["gameId"] == game_id
-    assert game["teams"]["blue"]["players"][0]["snapshots"].__len__() > 0
+    assert game["sources"]["riotLolApi"]["gameId"] == game_id
+    assert game["teams"]["BLUE"]["players"][0]["snapshots"].__len__() > 0
 
-    for event in game["events"]:
-        assert event["type"] in [
-            "CHAMPION_KILL",
-            "WARD_PLACED",
-            "WARD_KILL",
-            "BUILDING_KILL",
-            "ELITE_MONSTER_KILL",
-            "ITEM_PURCHASED",
-            "ITEM_SOLD",
-            "ITEM_DESTROYED",
-            "ITEM_UNDO",
-            "SKILL_LEVEL_UP",
-        ]
+    # TODO Test events
 
 
 def test_full(match_dto, timeline_game_id_platform_id):
@@ -91,9 +79,8 @@ def test_full(match_dto, timeline_game_id_platform_id):
     with open(os.path.join("examples", "game_merged.json"), "w+") as file:
         json.dump(game_full, file, indent=4)
 
-    assert game_full["sources"]["riot"]["gameId"] == game_id
-    assert game_full["teams"]["blue"]["players"][0]["snapshots"].__len__() > 0
-    assert game_full["events"].__len__() > 0
+    assert game_full["sources"]["riotLolApi"]["gameId"] == game_id
+    assert game_full["teams"]["BLUE"]["players"][0]["snapshots"].__len__() > 0
     assert game_full["duration"]
     assert game_full["patch"]
 

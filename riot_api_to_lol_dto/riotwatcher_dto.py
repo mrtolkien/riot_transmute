@@ -1,5 +1,6 @@
 import riotwatcher
-import lol_dto
+import lol_dto.utilities
+import lol_dto.classes
 from riotwatcher._apis.league_of_legends import MatchApiV4
 from riot_api_to_lol_dto.match_to_game import match_to_game
 from riot_api_to_lol_dto.match_timeline_to_game import match_timeline_to_game
