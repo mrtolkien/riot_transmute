@@ -172,13 +172,15 @@ def match_timeline_to_game(riot_timeline_dto: dict, game_id, platform_id, add_na
                 event_type = event["type"].lstrip("ITEM_")
 
                 if event_type == "UNDO":
-                    item_id = event["beforeId"]
+                    player["itemsEvents"].append(
+                        dto.LolGamePlayerItemEvent(
+                            timestamp=timestamp, type=event_type, id=event["afterId"], undoId=event["beforeId"]
+                        )
+                    )
                 else:
-                    item_id = event["itemId"]
-
-                player["itemsEvents"].append(
-                    dto.LolGamePlayerItemEvent(timestamp=timestamp, type=event_type, id=item_id)
-                )
+                    player["itemsEvents"].append(
+                        dto.LolGamePlayerItemEvent(timestamp=timestamp, type=event_type, id=event["itemId"])
+                    )
 
             # Wards placing and killing
             elif "WARD" in event["type"]:

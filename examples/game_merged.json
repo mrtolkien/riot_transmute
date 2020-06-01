@@ -2702,7 +2702,8 @@
                         {
                             "timestamp": 535.811,
                             "type": "UNDO",
-                            "id": 2055
+                            "id": 0,
+                            "undoId": 2055
                         },
                         {
                             "timestamp": 542.42,
@@ -2752,7 +2753,8 @@
                         {
                             "timestamp": 762.778,
                             "type": "UNDO",
-                            "id": 2031
+                            "id": 0,
+                            "undoId": 2031
                         },
                         {
                             "timestamp": 763.241,
@@ -3857,7 +3859,8 @@
                         {
                             "timestamp": 500.985,
                             "type": "UNDO",
-                            "id": 1004
+                            "id": 0,
+                            "undoId": 1004
                         },
                         {
                             "timestamp": 501.447,
@@ -4897,7 +4900,8 @@
                         {
                             "timestamp": 516.779,
                             "type": "UNDO",
-                            "id": 1036
+                            "id": 0,
+                            "undoId": 1036
                         },
                         {
                             "timestamp": 517.802,
@@ -4977,7 +4981,8 @@
                         {
                             "timestamp": 995.672,
                             "type": "UNDO",
-                            "id": 3044
+                            "id": 0,
+                            "undoId": 3044
                         },
                         {
                             "timestamp": 998.217,
@@ -6118,7 +6123,8 @@
                         {
                             "timestamp": 1279.421,
                             "type": "UNDO",
-                            "id": 1033
+                            "id": 0,
+                            "undoId": 1033
                         },
                         {
                             "timestamp": 1280.478,
@@ -6913,7 +6919,8 @@
                         {
                             "timestamp": 6.257,
                             "type": "UNDO",
-                            "id": 1055
+                            "id": 0,
+                            "undoId": 1055
                         },
                         {
                             "timestamp": 6.686,
@@ -6983,7 +6990,8 @@
                         {
                             "timestamp": 784.625,
                             "type": "UNDO",
-                            "id": 3044
+                            "id": 0,
+                            "undoId": 3044
                         },
                         {
                             "timestamp": 785.087,
@@ -7063,7 +7071,8 @@
                         {
                             "timestamp": 1490.065,
                             "type": "UNDO",
-                            "id": 3086
+                            "id": 0,
+                            "undoId": 3086
                         },
                         {
                             "timestamp": 1490.857,
@@ -9423,7 +9432,8 @@
                         {
                             "timestamp": 1847.957,
                             "type": "UNDO",
-                            "id": 1036
+                            "id": 0,
+                            "undoId": 1036
                         }
                     ],
                     "wardsEvents": [
