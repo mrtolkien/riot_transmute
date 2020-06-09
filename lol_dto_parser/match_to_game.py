@@ -159,9 +159,9 @@ def match_to_game(match_dto: dict, add_names: bool = False) -> game_dto.LolGame:
         team_dto["players"] = sorted(team_dto["players"], key=lambda x: x["id"])
 
         if add_names:
-            team_dto['bansNames'] = []
-            for ban in team_dto['bans']:
-                team_dto['bansNames'].append(lit.get_name(ban, object_type='champion'))
+            team_dto["bansNames"] = []
+            for ban in team_dto["bans"]:
+                team_dto["bansNames"].append(lit.get_name(ban, object_type="champion"))
 
         game["teams"][side] = team_dto
 
