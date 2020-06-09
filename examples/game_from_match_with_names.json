@@ -51,7 +51,8 @@
                                 135,
                                 0,
                                 0
-                            ]
+                            ],
+                            "name": "Conqueror"
                         },
                         {
                             "id": 8009,
@@ -60,7 +61,8 @@
                                 3963,
                                 500,
                                 0
-                            ]
+                            ],
+                            "name": "Presence of Mind"
                         },
                         {
                             "id": 9105,
@@ -69,7 +71,8 @@
                                 14,
                                 20,
                                 0
-                            ]
+                            ],
+                            "name": "Legend: Tenacity"
                         },
                         {
                             "id": 8299,
@@ -78,7 +81,8 @@
                                 432,
                                 0,
                                 0
-                            ]
+                            ],
+                            "name": "Last Stand"
                         },
                         {
                             "id": 8143,
@@ -87,7 +91,8 @@
                                 401,
                                 0,
                                 0
-                            ]
+                            ],
+                            "name": "Sudden Impact"
                         },
                         {
                             "id": 8135,
@@ -96,48 +101,58 @@
                                 6019,
                                 5,
                                 0
-                            ]
+                            ],
+                            "name": "Ravenous Hunter"
                         }
                     ],
                     "summonerSpells": [
                         {
                             "id": 11,
-                            "slot": 0
+                            "slot": 0,
+                            "name": "Smite"
                         },
                         {
                             "id": 4,
-                            "slot": 1
+                            "slot": 1,
+                            "name": "Flash"
                         }
                     ],
                     "endOfGameStats": {
                         "items": [
                             {
                                 "id": 3047,
-                                "slot": 0
+                                "slot": 0,
+                                "name": "Ninja Tabi"
                             },
                             {
                                 "id": 3157,
-                                "slot": 1
+                                "slot": 1,
+                                "name": "Zhonya's Hourglass"
                             },
                             {
                                 "id": 0,
-                                "slot": 2
+                                "slot": 2,
+                                "name": ""
                             },
                             {
                                 "id": 1414,
-                                "slot": 3
+                                "slot": 3,
+                                "name": "Enchantment: Runic Echoes"
                             },
                             {
                                 "id": 3065,
-                                "slot": 4
+                                "slot": 4,
+                                "name": "Spirit Visage"
                             },
                             {
                                 "id": 1052,
-                                "slot": 5
+                                "slot": 5,
+                                "name": "Amplifying Tome"
                             },
                             {
                                 "id": 3364,
-                                "slot": 6
+                                "slot": 6,
+                                "name": "Oracle Lens"
                             }
                         ],
                         "firstBlood": false,
@@ -184,7 +199,10 @@
                         "damageSelfMitigated": 27003,
                         "totalTimeCCDealt": 502,
                         "timeCCingOthers": 13
-                    }
+                    },
+                    "championName": "Sylas",
+                    "primaryRuneTreeName": "Precision",
+                    "secondaryRuneTreeName": "Domination"
                 },
                 {
                     "id": 2,
@@ -207,7 +225,8 @@
                                 2690,
                                 0,
                                 0
-                            ]
+                            ],
+                            "name": "Arcane Comet"
                         },
                         {
                             "id": 8226,
@@ -216,7 +235,8 @@
                                 250,
                                 1125,
                                 0
-                            ]
+                            ],
+                            "name": "Manaflow Band"
                         },
                         {
                             "id": 8233,
@@ -225,7 +245,8 @@
                                 22,
                                 50,
                                 0
-                            ]
+                            ],
+                            "name": "Absolute Focus"
                         },
                         {
                             "id": 8237,
@@ -234,7 +255,8 @@
                                 663,
                                 0,
                                 0
-                            ]
+                            ],
+                            "name": "Scorch"
                         },
                         {
                             "id": 8126,
@@ -243,7 +265,8 @@
                                 714,
                                 0,
                                 0
-                            ]
+                            ],
+                            "name": "Cheap Shot"
                         },
                         {
                             "id": 8135,
@@ -252,48 +275,58 @@
                                 2178,
                                 4,
                                 0
-                            ]
+                            ],
+                            "name": "Ravenous Hunter"
                         }
                     ],
                     "summonerSpells": [
                         {
                             "id": 7,
-                            "slot": 0
+                            "slot": 0,
+                            "name": "Heal"
                         },
                         {
                             "id": 4,
-                            "slot": 1
+                            "slot": 1,
+                            "name": "Flash"
                         }
                     ],
                     "endOfGameStats": {
                         "items": [
                             {
                                 "id": 3157,
-                                "slot": 0
+                                "slot": 0,
+                                "name": "Zhonya's Hourglass"
                             },
                             {
                                 "id": 2055,
-                                "slot": 1
+                                "slot": 1,
+                                "name": "Control Ward"
                             },
                             {
                                 "id": 1058,
-                                "slot": 2
+                                "slot": 2,
+                                "name": "Needlessly Large Rod"
                             },
                             {
                                 "id": 3285,
-                                "slot": 3
+                                "slot": 3,
+                                "name": "Luden's Echo"
                             },
                             {
                                 "id": 3089,
-                                "slot": 4
+                                "slot": 4,
+                                "name": "Rabadon's Deathcap"
                             },
                             {
                                 "id": 1001,
-                                "slot": 5
+                                "slot": 5,
+                                "name": "Boots of Speed"
                             },
                             {
                                 "id": 3363,
-                                "slot": 6
+                                "slot": 6,
+                                "name": "Farsight Alteration"
                             }
                         ],
                         "firstBlood": false,
@@ -340,7 +373,10 @@
                         "damageSelfMitigated": 6780,
                         "totalTimeCCDealt": 170,
                         "timeCCingOthers": 23
-                    }
+                    },
+                    "championName": "Xerath",
+                    "primaryRuneTreeName": "Sorcery",
+                    "secondaryRuneTreeName": "Domination"
                 },
                 {
                     "id": 3,
@@ -363,7 +399,8 @@
                                 77,
                                 0,
                                 0
-                            ]
+                            ],
+                            "name": "Glacial Augment"
                         },
                         {
                             "id": 8304,
@@ -372,7 +409,8 @@
                                 9,
                                 0,
                                 0
-                            ]
+                            ],
+                            "name": "Magical Footwear"
                         },
                         {
                             "id": 8345,
@@ -381,7 +419,8 @@
                                 3,
                                 0,
                                 0
-                            ]
+                            ],
+                            "name": "Biscuit Delivery"
                         },
                         {
                             "id": 8410,
@@ -390,7 +429,8 @@
                                 160,
                                 0,
                                 0
-                            ]
+                            ],
+                            "name": "Approach Velocity"
                         },
                         {
                             "id": 8009,
@@ -399,7 +439,8 @@
                                 5920,
                                 500,
                                 0
-                            ]
+                            ],
+                            "name": "Presence of Mind"
                         },
                         {
                             "id": 9104,
@@ -408,48 +449,58 @@
                                 15,
                                 10,
                                 0
-                            ]
+                            ],
+                            "name": "Legend: Alacrity"
                         }
                     ],
                     "summonerSpells": [
                         {
                             "id": 4,
-                            "slot": 0
+                            "slot": 0,
+                            "name": "Flash"
                         },
                         {
                             "id": 1,
-                            "slot": 1
+                            "slot": 1,
+                            "name": "Cleanse"
                         }
                     ],
                     "endOfGameStats": {
                         "items": [
                             {
                                 "id": 3864,
-                                "slot": 0
+                                "slot": 0,
+                                "name": "Black Mist Scythe"
                             },
                             {
                                 "id": 3814,
-                                "slot": 1
+                                "slot": 1,
+                                "name": "Edge of Night"
                             },
                             {
                                 "id": 3044,
-                                "slot": 2
+                                "slot": 2,
+                                "name": "Phage"
                             },
                             {
                                 "id": 3094,
-                                "slot": 3
+                                "slot": 3,
+                                "name": "Rapid Firecannon"
                             },
                             {
                                 "id": 3009,
-                                "slot": 4
+                                "slot": 4,
+                                "name": "Boots of Swiftness"
                             },
                             {
                                 "id": 3179,
-                                "slot": 5
+                                "slot": 5,
+                                "name": "Umbral Glaive"
                             },
                             {
                                 "id": 3364,
-                                "slot": 6
+                                "slot": 6,
+                                "name": "Oracle Lens"
                             }
                         ],
                         "firstBlood": true,
@@ -496,7 +547,10 @@
                         "damageSelfMitigated": 11155,
                         "totalTimeCCDealt": 223,
                         "timeCCingOthers": 57
-                    }
+                    },
+                    "championName": "Senna",
+                    "primaryRuneTreeName": "Inspiration",
+                    "secondaryRuneTreeName": "Precision"
                 },
                 {
                     "id": 4,
@@ -519,7 +573,8 @@
                                 8,
                                 0,
                                 0
-                            ]
+                            ],
+                            "name": "Phase Rush"
                         },
                         {
                             "id": 8226,
@@ -528,7 +583,8 @@
                                 250,
                                 819,
                                 0
-                            ]
+                            ],
+                            "name": "Manaflow Band"
                         },
                         {
                             "id": 8210,
@@ -537,7 +593,8 @@
                                 0,
                                 0,
                                 0
-                            ]
+                            ],
+                            "name": "Transcendence"
                         },
                         {
                             "id": 8237,
@@ -546,7 +603,8 @@
                                 590,
                                 0,
                                 0
-                            ]
+                            ],
+                            "name": "Scorch"
                         },
                         {
                             "id": 8304,
@@ -555,7 +613,8 @@
                                 10,
                                 3,
                                 0
-                            ]
+                            ],
+                            "name": "Magical Footwear"
                         },
                         {
                             "id": 8345,
@@ -564,48 +623,58 @@
                                 3,
                                 0,
                                 0
-                            ]
+                            ],
+                            "name": "Biscuit Delivery"
                         }
                     ],
                     "summonerSpells": [
                         {
                             "id": 3,
-                            "slot": 0
+                            "slot": 0,
+                            "name": "Exhaust"
                         },
                         {
                             "id": 4,
-                            "slot": 1
+                            "slot": 1,
+                            "name": "Flash"
                         }
                     ],
                     "endOfGameStats": {
                         "items": [
                             {
                                 "id": 3142,
-                                "slot": 0
+                                "slot": 0,
+                                "name": "Youmuu's Ghostblade"
                             },
                             {
                                 "id": 3134,
-                                "slot": 1
+                                "slot": 1,
+                                "name": "Serrated Dirk"
                             },
                             {
                                 "id": 3036,
-                                "slot": 2
+                                "slot": 2,
+                                "name": "Lord Dominik's Regards"
                             },
                             {
                                 "id": 3179,
-                                "slot": 3
+                                "slot": 3,
+                                "name": "Umbral Glaive"
                             },
                             {
                                 "id": 3814,
-                                "slot": 4
+                                "slot": 4,
+                                "name": "Edge of Night"
                             },
                             {
                                 "id": 3047,
-                                "slot": 5
+                                "slot": 5,
+                                "name": "Ninja Tabi"
                             },
                             {
                                 "id": 3340,
-                                "slot": 6
+                                "slot": 6,
+                                "name": "Warding Totem (Trinket)"
                             }
                         ],
                         "firstBlood": false,
@@ -652,7 +721,10 @@
                         "damageSelfMitigated": 9341,
                         "totalTimeCCDealt": 155,
                         "timeCCingOthers": 6
-                    }
+                    },
+                    "championName": "Jayce",
+                    "primaryRuneTreeName": "Sorcery",
+                    "secondaryRuneTreeName": "Inspiration"
                 },
                 {
                     "id": 5,
@@ -675,7 +747,8 @@
                                 1771,
                                 0,
                                 0
-                            ]
+                            ],
+                            "name": "Conqueror"
                         },
                         {
                             "id": 9111,
@@ -684,7 +757,8 @@
                                 1652,
                                 280,
                                 0
-                            ]
+                            ],
+                            "name": "Triumph"
                         },
                         {
                             "id": 9104,
@@ -693,7 +767,8 @@
                                 14,
                                 10,
                                 0
-                            ]
+                            ],
+                            "name": "Legend: Alacrity"
                         },
                         {
                             "id": 8299,
@@ -702,7 +777,8 @@
                                 999,
                                 0,
                                 0
-                            ]
+                            ],
+                            "name": "Last Stand"
                         },
                         {
                             "id": 8304,
@@ -711,7 +787,8 @@
                                 10,
                                 3,
                                 0
-                            ]
+                            ],
+                            "name": "Magical Footwear"
                         },
                         {
                             "id": 8345,
@@ -720,48 +797,58 @@
                                 3,
                                 0,
                                 0
-                            ]
+                            ],
+                            "name": "Biscuit Delivery"
                         }
                     ],
                     "summonerSpells": [
                         {
                             "id": 4,
-                            "slot": 0
+                            "slot": 0,
+                            "name": "Flash"
                         },
                         {
                             "id": 12,
-                            "slot": 1
+                            "slot": 1,
+                            "name": "Teleport"
                         }
                     ],
                     "endOfGameStats": {
                         "items": [
                             {
                                 "id": 3077,
-                                "slot": 0
+                                "slot": 0,
+                                "name": "Tiamat"
                             },
                             {
                                 "id": 3047,
-                                "slot": 1
+                                "slot": 1,
+                                "name": "Ninja Tabi"
                             },
                             {
                                 "id": 3812,
-                                "slot": 2
+                                "slot": 2,
+                                "name": "Death's Dance"
                             },
                             {
                                 "id": 3078,
-                                "slot": 3
+                                "slot": 3,
+                                "name": "Trinity Force"
                             },
                             {
                                 "id": 3071,
-                                "slot": 4
+                                "slot": 4,
+                                "name": "Black Cleaver"
                             },
                             {
                                 "id": 1036,
-                                "slot": 5
+                                "slot": 5,
+                                "name": "Long Sword"
                             },
                             {
                                 "id": 3364,
-                                "slot": 6
+                                "slot": 6,
+                                "name": "Oracle Lens"
                             }
                         ],
                         "firstBlood": false,
@@ -808,7 +895,10 @@
                         "damageSelfMitigated": 22442,
                         "totalTimeCCDealt": 56,
                         "timeCCingOthers": 15
-                    }
+                    },
+                    "championName": "Wukong",
+                    "primaryRuneTreeName": "Precision",
+                    "secondaryRuneTreeName": "Inspiration"
                 }
             ]
         },
@@ -852,7 +942,8 @@
                                 1675,
                                 0,
                                 0
-                            ]
+                            ],
+                            "name": "Electrocute"
                         },
                         {
                             "id": 8126,
@@ -861,7 +952,8 @@
                                 909,
                                 0,
                                 0
-                            ]
+                            ],
+                            "name": "Cheap Shot"
                         },
                         {
                             "id": 8138,
@@ -870,7 +962,8 @@
                                 30,
                                 0,
                                 0
-                            ]
+                            ],
+                            "name": "Eyeball Collection"
                         },
                         {
                             "id": 8135,
@@ -879,7 +972,8 @@
                                 9085,
                                 5,
                                 0
-                            ]
+                            ],
+                            "name": "Ravenous Hunter"
                         },
                         {
                             "id": 8275,
@@ -888,7 +982,8 @@
                                 22,
                                 0,
                                 0
-                            ]
+                            ],
+                            "name": "Nimbus Cloak"
                         },
                         {
                             "id": 8232,
@@ -897,48 +992,58 @@
                                 3,
                                 0,
                                 0
-                            ]
+                            ],
+                            "name": "Waterwalking"
                         }
                     ],
                     "summonerSpells": [
                         {
                             "id": 11,
-                            "slot": 0
+                            "slot": 0,
+                            "name": "Smite"
                         },
                         {
                             "id": 4,
-                            "slot": 1
+                            "slot": 1,
+                            "name": "Flash"
                         }
                     ],
                     "endOfGameStats": {
                         "items": [
                             {
                                 "id": 1402,
-                                "slot": 0
+                                "slot": 0,
+                                "name": "Enchantment: Runic Echoes"
                             },
                             {
                                 "id": 3157,
-                                "slot": 1
+                                "slot": 1,
+                                "name": "Zhonya's Hourglass"
                             },
                             {
                                 "id": 3165,
-                                "slot": 2
+                                "slot": 2,
+                                "name": "Morellonomicon"
                             },
                             {
                                 "id": 3102,
-                                "slot": 3
+                                "slot": 3,
+                                "name": "Banshee's Veil"
                             },
                             {
                                 "id": 1058,
-                                "slot": 4
+                                "slot": 4,
+                                "name": "Needlessly Large Rod"
                             },
                             {
                                 "id": 3020,
-                                "slot": 5
+                                "slot": 5,
+                                "name": "Sorcerer's Shoes"
                             },
                             {
                                 "id": 3364,
-                                "slot": 6
+                                "slot": 6,
+                                "name": "Oracle Lens"
                             }
                         ],
                         "firstBlood": false,
@@ -985,7 +1090,10 @@
                         "damageSelfMitigated": 13110,
                         "totalTimeCCDealt": 606,
                         "timeCCingOthers": 17
-                    }
+                    },
+                    "championName": "Taliyah",
+                    "primaryRuneTreeName": "Domination",
+                    "secondaryRuneTreeName": "Sorcery"
                 },
                 {
                     "id": 7,
@@ -1008,7 +1116,8 @@
                                 114,
                                 0,
                                 0
-                            ]
+                            ],
+                            "name": "Conqueror"
                         },
                         {
                             "id": 9101,
@@ -1017,7 +1126,8 @@
                                 4150,
                                 5181,
                                 0
-                            ]
+                            ],
+                            "name": "Overheal"
                         },
                         {
                             "id": 9103,
@@ -1026,7 +1136,8 @@
                                 24,
                                 0,
                                 0
-                            ]
+                            ],
+                            "name": "Legend: Bloodline"
                         },
                         {
                             "id": 8017,
@@ -1035,7 +1146,8 @@
                                 1184,
                                 0,
                                 0
-                            ]
+                            ],
+                            "name": "Cut Down"
                         },
                         {
                             "id": 8275,
@@ -1044,7 +1156,8 @@
                                 11,
                                 0,
                                 0
-                            ]
+                            ],
+                            "name": "Nimbus Cloak"
                         },
                         {
                             "id": 8236,
@@ -1053,48 +1166,58 @@
                                 28,
                                 0,
                                 0
-                            ]
+                            ],
+                            "name": "Gathering Storm"
                         }
                     ],
                     "summonerSpells": [
                         {
                             "id": 7,
-                            "slot": 0
+                            "slot": 0,
+                            "name": "Heal"
                         },
                         {
                             "id": 4,
-                            "slot": 1
+                            "slot": 1,
+                            "name": "Flash"
                         }
                     ],
                     "endOfGameStats": {
                         "items": [
                             {
                                 "id": 3046,
-                                "slot": 0
+                                "slot": 0,
+                                "name": "Phantom Dancer"
                             },
                             {
                                 "id": 3085,
-                                "slot": 1
+                                "slot": 1,
+                                "name": "Runaan's Hurricane"
                             },
                             {
                                 "id": 1018,
-                                "slot": 2
+                                "slot": 2,
+                                "name": "Cloak of Agility"
                             },
                             {
                                 "id": 3031,
-                                "slot": 3
+                                "slot": 3,
+                                "name": "Infinity Edge"
                             },
                             {
                                 "id": 3035,
-                                "slot": 4
+                                "slot": 4,
+                                "name": "Last Whisper"
                             },
                             {
                                 "id": 3006,
-                                "slot": 5
+                                "slot": 5,
+                                "name": "Berserker's Greaves"
                             },
                             {
                                 "id": 3363,
-                                "slot": 6
+                                "slot": 6,
+                                "name": "Farsight Alteration"
                             }
                         ],
                         "firstBlood": false,
@@ -1141,7 +1264,10 @@
                         "damageSelfMitigated": 16864,
                         "totalTimeCCDealt": 240,
                         "timeCCingOthers": 21
-                    }
+                    },
+                    "championName": "Aphelios",
+                    "primaryRuneTreeName": "Precision",
+                    "secondaryRuneTreeName": "Sorcery"
                 },
                 {
                     "id": 8,
@@ -1164,7 +1290,8 @@
                                 237,
                                 0,
                                 0
-                            ]
+                            ],
+                            "name": "Aftershock"
                         },
                         {
                             "id": 8446,
@@ -1173,7 +1300,8 @@
                                 0,
                                 0,
                                 0
-                            ]
+                            ],
+                            "name": "Demolish"
                         },
                         {
                             "id": 8473,
@@ -1182,7 +1310,8 @@
                                 640,
                                 0,
                                 0
-                            ]
+                            ],
+                            "name": "Bone Plating"
                         },
                         {
                             "id": 8451,
@@ -1191,7 +1320,8 @@
                                 167,
                                 0,
                                 0
-                            ]
+                            ],
+                            "name": "Overgrowth"
                         },
                         {
                             "id": 8313,
@@ -1200,7 +1330,8 @@
                                 0,
                                 0,
                                 0
-                            ]
+                            ],
+                            "name": "Perfect Timing"
                         },
                         {
                             "id": 8316,
@@ -1209,48 +1340,58 @@
                                 259,
                                 0,
                                 0
-                            ]
+                            ],
+                            "name": "Minion Dematerializer"
                         }
                     ],
                     "summonerSpells": [
                         {
                             "id": 4,
-                            "slot": 0
+                            "slot": 0,
+                            "name": "Flash"
                         },
                         {
                             "id": 14,
-                            "slot": 1
+                            "slot": 1,
+                            "name": "Ignite"
                         }
                     ],
                     "endOfGameStats": {
                         "items": [
                             {
                                 "id": 3857,
-                                "slot": 0
+                                "slot": 0,
+                                "name": "Pauldrons of Whiterock"
                             },
                             {
                                 "id": 3050,
-                                "slot": 1
+                                "slot": 1,
+                                "name": "Zeke's Convergence"
                             },
                             {
                                 "id": 3109,
-                                "slot": 2
+                                "slot": 2,
+                                "name": "Knight's Vow"
                             },
                             {
                                 "id": 2055,
-                                "slot": 3
+                                "slot": 3,
+                                "name": "Control Ward"
                             },
                             {
                                 "id": 3117,
-                                "slot": 4
+                                "slot": 4,
+                                "name": "Boots of Mobility"
                             },
                             {
                                 "id": 0,
-                                "slot": 5
+                                "slot": 5,
+                                "name": ""
                             },
                             {
                                 "id": 3364,
-                                "slot": 6
+                                "slot": 6,
+                                "name": "Oracle Lens"
                             }
                         ],
                         "firstBlood": false,
@@ -1297,7 +1438,10 @@
                         "damageSelfMitigated": 24767,
                         "totalTimeCCDealt": 94,
                         "timeCCingOthers": 29
-                    }
+                    },
+                    "championName": "Thresh",
+                    "primaryRuneTreeName": "Resolve",
+                    "secondaryRuneTreeName": "Inspiration"
                 },
                 {
                     "id": 9,
@@ -1320,7 +1464,8 @@
                                 909,
                                 0,
                                 0
-                            ]
+                            ],
+                            "name": "Electrocute"
                         },
                         {
                             "id": 8143,
@@ -1329,7 +1474,8 @@
                                 404,
                                 0,
                                 0
-                            ]
+                            ],
+                            "name": "Sudden Impact"
                         },
                         {
                             "id": 8138,
@@ -1338,7 +1484,8 @@
                                 18,
                                 0,
                                 0
-                            ]
+                            ],
+                            "name": "Eyeball Collection"
                         },
                         {
                             "id": 8135,
@@ -1347,7 +1494,8 @@
                                 2039,
                                 4,
                                 0
-                            ]
+                            ],
+                            "name": "Ravenous Hunter"
                         },
                         {
                             "id": 8233,
@@ -1356,7 +1504,8 @@
                                 18,
                                 50,
                                 0
-                            ]
+                            ],
+                            "name": "Absolute Focus"
                         },
                         {
                             "id": 8237,
@@ -1365,48 +1514,58 @@
                                 378,
                                 0,
                                 0
-                            ]
+                            ],
+                            "name": "Scorch"
                         }
                     ],
                     "summonerSpells": [
                         {
                             "id": 4,
-                            "slot": 0
+                            "slot": 0,
+                            "name": "Flash"
                         },
                         {
                             "id": 14,
-                            "slot": 1
+                            "slot": 1,
+                            "name": "Ignite"
                         }
                     ],
                     "endOfGameStats": {
                         "items": [
                             {
                                 "id": 3077,
-                                "slot": 0
+                                "slot": 0,
+                                "name": "Tiamat"
                             },
                             {
                                 "id": 3147,
-                                "slot": 1
+                                "slot": 1,
+                                "name": "Duskblade of Draktharr"
                             },
                             {
                                 "id": 3142,
-                                "slot": 2
+                                "slot": 2,
+                                "name": "Youmuu's Ghostblade"
                             },
                             {
                                 "id": 3117,
-                                "slot": 3
+                                "slot": 3,
+                                "name": "Boots of Mobility"
                             },
                             {
                                 "id": 3134,
-                                "slot": 4
+                                "slot": 4,
+                                "name": "Serrated Dirk"
                             },
                             {
                                 "id": 0,
-                                "slot": 5
+                                "slot": 5,
+                                "name": ""
                             },
                             {
                                 "id": 3364,
-                                "slot": 6
+                                "slot": 6,
+                                "name": "Oracle Lens"
                             }
                         ],
                         "firstBlood": false,
@@ -1453,7 +1612,10 @@
                         "damageSelfMitigated": 13077,
                         "totalTimeCCDealt": 134,
                         "timeCCingOthers": 2
-                    }
+                    },
+                    "championName": "Talon",
+                    "primaryRuneTreeName": "Domination",
+                    "secondaryRuneTreeName": "Sorcery"
                 },
                 {
                     "id": 10,
@@ -1476,7 +1638,8 @@
                                 1277,
                                 891,
                                 0
-                            ]
+                            ],
+                            "name": "Grasp of the Undying"
                         },
                         {
                             "id": 8401,
@@ -1485,7 +1648,8 @@
                                 691,
                                 0,
                                 0
-                            ]
+                            ],
+                            "name": "Shield Bash"
                         },
                         {
                             "id": 8444,
@@ -1494,7 +1658,8 @@
                                 1435,
                                 0,
                                 0
-                            ]
+                            ],
+                            "name": "Second Wind"
                         },
                         {
                             "id": 8451,
@@ -1503,7 +1668,8 @@
                                 194,
                                 0,
                                 0
-                            ]
+                            ],
+                            "name": "Overgrowth"
                         },
                         {
                             "id": 8304,
@@ -1512,7 +1678,8 @@
                                 12,
                                 0,
                                 0
-                            ]
+                            ],
+                            "name": "Magical Footwear"
                         },
                         {
                             "id": 8345,
@@ -1521,48 +1688,58 @@
                                 3,
                                 0,
                                 0
-                            ]
+                            ],
+                            "name": "Biscuit Delivery"
                         }
                     ],
                     "summonerSpells": [
                         {
                             "id": 12,
-                            "slot": 0
+                            "slot": 0,
+                            "name": "Teleport"
                         },
                         {
                             "id": 4,
-                            "slot": 1
+                            "slot": 1,
+                            "name": "Flash"
                         }
                     ],
                     "endOfGameStats": {
                         "items": [
                             {
                                 "id": 3074,
-                                "slot": 0
+                                "slot": 0,
+                                "name": "Ravenous Hydra"
                             },
                             {
                                 "id": 2031,
-                                "slot": 1
+                                "slot": 1,
+                                "name": "Refillable Potion"
                             },
                             {
                                 "id": 3123,
-                                "slot": 2
+                                "slot": 2,
+                                "name": "Executioner's Calling"
                             },
                             {
                                 "id": 1055,
-                                "slot": 3
+                                "slot": 3,
+                                "name": "Doran's Blade"
                             },
                             {
                                 "id": 3078,
-                                "slot": 4
+                                "slot": 4,
+                                "name": "Trinity Force"
                             },
                             {
                                 "id": 3047,
-                                "slot": 5
+                                "slot": 5,
+                                "name": "Ninja Tabi"
                             },
                             {
                                 "id": 3340,
-                                "slot": 6
+                                "slot": 6,
+                                "name": "Warding Totem (Trinket)"
                             }
                         ],
                         "firstBlood": false,
@@ -1609,7 +1786,10 @@
                         "damageSelfMitigated": 25784,
                         "totalTimeCCDealt": 178,
                         "timeCCingOthers": 21
-                    }
+                    },
+                    "championName": "Camille",
+                    "primaryRuneTreeName": "Resolve",
+                    "secondaryRuneTreeName": "Inspiration"
                 }
             ]
         }

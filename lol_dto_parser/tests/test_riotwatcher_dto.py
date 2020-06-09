@@ -5,8 +5,8 @@ import pytest
 import os
 
 from riotwatcher import LolWatcher
-from riot_api_to_lol_dto.match_to_game import match_to_game
-from riot_api_to_lol_dto.match_timeline_to_game import match_timeline_to_game
+from lol_dto_parser.match_to_game import match_to_game
+from lol_dto_parser.match_timeline_to_game import match_timeline_to_game
 
 
 @pytest.fixture
@@ -19,17 +19,17 @@ def watcher():
 @pytest.fixture
 def match_dto(watcher):
     match_dto = watcher.match.by_id("KR", 4409190456)
-    with open(os.path.join("examples", "match.json"), "w+") as file:
+    with open(os.path.join("examples", "source_match.json"), "w+") as file:
         json.dump(match_dto, file, indent=4)
     return match_dto
 
 
 @pytest.fixture
 def timeline_game_id_platform_id(watcher):
-    timeline = watcher.match.timeline_by_match("KR", 4409190456), 4409190456, "KR"
-    with open(os.path.join("examples", "match_timeline.json"), "w+") as file:
-        json.dump(timeline, file, indent=4)
-    return timeline
+    timeline_game_platform = watcher.match.timeline_by_match("KR", 4409190456), 4409190456, "KR"
+    with open(os.path.join("examples", "source_timeline.json"), "w+") as file:
+        json.dump(timeline_game_platform[0], file, indent=4)
+    return timeline_game_platform
 
 
 def test_game(match_dto):
@@ -49,9 +49,19 @@ def test_game(match_dto):
 
     onfleek = next(p for p in game["teams"]["BLUE"]["players"] if p["inGameName"] == "SANDBOX OnFleek")
 
-    assert "riotLolApi" in onfleek["foreignKeys"]
+    assert "riotLolApi" in onfleek["uniqueIdentifiers"]
     assert onfleek["primaryRuneTreeId"] == 8000
     assert onfleek["endOfGameStats"]["items"][0]["id"] == 3047
+
+
+def test_game_with_names(match_dto):
+    game = match_to_game(match_dto, add_names=True)
+
+    with open(os.path.join("examples", "game_from_match_with_names.json"), "w+") as file:
+        json.dump(game, file, indent=4)
+
+    for p in game["teams"]["BLUE"]["players"]:
+        assert p["championName"]
 
 
 def test_timeline(timeline_game_id_platform_id):
@@ -59,13 +69,26 @@ def test_timeline(timeline_game_id_platform_id):
 
     game = match_timeline_to_game(timeline, game_id, platform_id)
 
-    with open(os.path.join("examples", "game_from_match_timeline.json"), "w+") as file:
+    with open(os.path.join("examples", "game_from_timeline.json"), "w+") as file:
         json.dump(game, file, indent=4)
 
     assert game["sources"]["riotLolApi"]["gameId"] == game_id
     assert game["teams"]["BLUE"]["players"][0]["snapshots"].__len__() > 0
 
     # TODO Test events
+
+
+def test_timeline_with_names(timeline_game_id_platform_id):
+    timeline, game_id, platform_id = timeline_game_id_platform_id
+
+    game = match_timeline_to_game(timeline, game_id, platform_id, add_names=True)
+
+    with open(os.path.join("examples", "game_from_timeline_with_names.json"), "w+") as file:
+        json.dump(game, file, indent=4)
+
+    for p in game["teams"]["BLUE"]["players"]:
+        for event in p["itemsEvents"]:
+            assert event["name"] is not None
 
 
 def test_full(match_dto, timeline_game_id_platform_id):
@@ -85,3 +108,21 @@ def test_full(match_dto, timeline_game_id_platform_id):
     assert game_full["patch"]
 
     return game_full
+
+
+def test_full_with_names(match_dto, timeline_game_id_platform_id):
+    timeline, game_id, platform_id = timeline_game_id_platform_id
+
+    game_match = match_to_game(match_dto, add_names=True)
+    game_timeline = match_timeline_to_game(timeline, game_id, platform_id, add_names=True)
+
+    game = lol_dto.utilities.merge_games(game_match, game_timeline)
+
+    with open(os.path.join("examples", "game_merged_with_names.json"), "w+") as file:
+        json.dump(game, file, indent=4)
+
+    for p in game["teams"]["BLUE"]["players"]:
+        assert p["championName"]
+
+        for event in p["itemsEvents"]:
+            assert event["name"] is not None

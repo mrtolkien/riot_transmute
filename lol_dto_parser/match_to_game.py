@@ -1,11 +1,11 @@
-import lol_dto.classes as dto_classes
+import lol_dto.classes.game as game_dto
+import lol_id_tools as lit
 from datetime import datetime, timezone
 
 
-def match_to_game(match_dto: dict, add_names: bool = False) -> dto_classes.LolGame:
+def match_to_game(match_dto: dict, add_names: bool = False) -> game_dto.LolGame:
     """Returns a LolGame from a MatchDto
     """
-    # TODO Use add_names and lol_id_tools to add names fields
 
     riot_source = {"riotLolApi": {"gameId": match_dto["gameId"], "platformId": match_dto["platformId"]}}
 
@@ -16,7 +16,7 @@ def match_to_game(match_dto: dict, add_names: bool = False) -> dto_classes.LolGa
     patch = ".".join(match_dto["gameVersion"].split(".")[:2])
     winner = "BLUE" if (match_dto["teams"][0]["teamId"] == 100) == (match_dto["teams"][0]["win"] == "Win") else "RED"
 
-    game_dto = dto_classes.LolGame(
+    game = game_dto.LolGame(
         sources=riot_source,
         duration=match_dto["gameDuration"],
         start=iso_date,
@@ -29,7 +29,7 @@ def match_to_game(match_dto: dict, add_names: bool = False) -> dto_classes.LolGa
     for team in match_dto["teams"]:
         side = "BLUE" if team["teamId"] == 100 else "RED"
 
-        team_dto = dto_classes.LolGameTeam(
+        team_dto = game_dto.LolGameTeam(
             riftHeraldKills=team["riftHeraldKills"],
             dragonKills=team["dragonKills"],
             baronKills=team["baronKills"],
@@ -56,8 +56,8 @@ def match_to_game(match_dto: dict, add_names: bool = False) -> dto_classes.LolGa
                 if identity["participantId"] == participant["participantId"]
             )
 
-            # TODO See if we add all "identity" fields
-            foreign_keys = {
+            # TODO Should we add more info from the "identity" fields?
+            unique_identifier = {
                 "riotLolApi": {
                     "accountId": participant_identity["accountId"],
                     "platformId": participant_identity["platformId"],
@@ -65,7 +65,7 @@ def match_to_game(match_dto: dict, add_names: bool = False) -> dto_classes.LolGa
             }
 
             runes = [
-                dto_classes.LolGamePlayerRune(
+                game_dto.LolGamePlayerRune(
                     id=participant["stats"][f"perk{i}"],
                     slot=i,
                     stats=[participant["stats"][f"perk{i}Var{j}"] for j in range(1, 4)],
@@ -73,13 +73,13 @@ def match_to_game(match_dto: dict, add_names: bool = False) -> dto_classes.LolGa
                 for i in range(0, 6)
             ]
 
-            items = [dto_classes.LolGamePlayerItem(id=participant["stats"][f"item{i}"], slot=i) for i in range(0, 7)]
+            items = [game_dto.LolGamePlayerItem(id=participant["stats"][f"item{i}"], slot=i) for i in range(0, 7)]
 
             summoner_spells = [
-                dto_classes.LolGamePlayerSummonerSpell(id=participant[f"spell{i}Id"], slot=i - 1) for i in range(1, 3)
+                game_dto.LolGamePlayerSummonerSpell(id=participant[f"spell{i}Id"], slot=i - 1) for i in range(1, 3)
             ]
 
-            end_of_game_stats = dto_classes.LolGamePlayerStats(
+            end_of_game_stats = game_dto.LolGamePlayerStats(
                 items=items,
                 firstBlood=participant["stats"]["firstBloodKill"],
                 firstBloodAssist=participant["stats"]["firstBloodAssist"],  # This field is wrong by default
@@ -127,12 +127,12 @@ def match_to_game(match_dto: dict, add_names: bool = False) -> dto_classes.LolGa
                 timeCCingOthers=participant["stats"]["timeCCingOthers"],
             )
 
-            player = dto_classes.LolGamePlayer(
+            player = game_dto.LolGamePlayer(
                 id=participant["participantId"],
                 inGameName=participant_identity["summonerName"],
                 profileIconId=participant_identity["profileIcon"],
                 championId=participant["championId"],
-                foreignKeys=foreign_keys,
+                uniqueIdentifiers=unique_identifier,
                 primaryRuneTreeId=participant["stats"]["perkPrimaryStyle"],
                 secondaryRuneTreeId=participant["stats"]["perkSubStyle"],
                 runes=runes,
@@ -140,11 +140,24 @@ def match_to_game(match_dto: dict, add_names: bool = False) -> dto_classes.LolGa
                 endOfGameStats=end_of_game_stats,
             )
 
+            # Then, we add convenience name fields for human readability if asked
+            if add_names:
+                player["championName"] = lit.get_name(player["championId"], object_type="champion")
+                player["primaryRuneTreeName"] = lit.get_name(player["primaryRuneTreeId"])
+                player["secondaryRuneTreeName"] = lit.get_name(player["secondaryRuneTreeId"])
+
+                for item in player["endOfGameStats"]["items"]:
+                    item["name"] = lit.get_name(item["id"], object_type="item")
+                for rune in player["runes"]:
+                    rune["name"] = lit.get_name(rune["id"], object_type="rune")
+                for summoner_spell in player["summonerSpells"]:
+                    summoner_spell["name"] = lit.get_name(summoner_spell["id"], object_type="summoner_spell")
+
             team_dto["players"].append(player)
 
         # We want to make extra sure players are always ordered by id
         team_dto["players"] = sorted(team_dto["players"], key=lambda x: x["id"])
 
-        game_dto["teams"][side] = team_dto
+        game["teams"][side] = team_dto
 
-    return game_dto
+    return game

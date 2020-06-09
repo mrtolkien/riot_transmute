@@ -51,7 +51,8 @@
                                 135,
                                 0,
                                 0
-                            ]
+                            ],
+                            "name": "Conqueror"
                         },
                         {
                             "id": 8009,
@@ -60,7 +61,8 @@
                                 3963,
                                 500,
                                 0
-                            ]
+                            ],
+                            "name": "Presence of Mind"
                         },
                         {
                             "id": 9105,
@@ -69,7 +71,8 @@
                                 14,
                                 20,
                                 0
-                            ]
+                            ],
+                            "name": "Legend: Tenacity"
                         },
                         {
                             "id": 8299,
@@ -78,7 +81,8 @@
                                 432,
                                 0,
                                 0
-                            ]
+                            ],
+                            "name": "Last Stand"
                         },
                         {
                             "id": 8143,
@@ -87,7 +91,8 @@
                                 401,
                                 0,
                                 0
-                            ]
+                            ],
+                            "name": "Sudden Impact"
                         },
                         {
                             "id": 8135,
@@ -96,48 +101,58 @@
                                 6019,
                                 5,
                                 0
-                            ]
+                            ],
+                            "name": "Ravenous Hunter"
                         }
                     ],
                     "summonerSpells": [
                         {
                             "id": 11,
-                            "slot": 0
+                            "slot": 0,
+                            "name": "Smite"
                         },
                         {
                             "id": 4,
-                            "slot": 1
+                            "slot": 1,
+                            "name": "Flash"
                         }
                     ],
                     "endOfGameStats": {
                         "items": [
                             {
                                 "id": 3047,
-                                "slot": 0
+                                "slot": 0,
+                                "name": "Ninja Tabi"
                             },
                             {
                                 "id": 3157,
-                                "slot": 1
+                                "slot": 1,
+                                "name": "Zhonya's Hourglass"
                             },
                             {
                                 "id": 0,
-                                "slot": 2
+                                "slot": 2,
+                                "name": ""
                             },
                             {
                                 "id": 1414,
-                                "slot": 3
+                                "slot": 3,
+                                "name": "Enchantment: Runic Echoes"
                             },
                             {
                                 "id": 3065,
-                                "slot": 4
+                                "slot": 4,
+                                "name": "Spirit Visage"
                             },
                             {
                                 "id": 1052,
-                                "slot": 5
+                                "slot": 5,
+                                "name": "Amplifying Tome"
                             },
                             {
                                 "id": 3364,
-                                "slot": 6
+                                "slot": 6,
+                                "name": "Oracle Lens"
                             }
                         ],
                         "firstBlood": false,
@@ -185,6 +200,9 @@
                         "totalTimeCCDealt": 502,
                         "timeCCingOthers": 13
                     },
+                    "championName": "Sylas",
+                    "primaryRuneTreeName": "Precision",
+                    "secondaryRuneTreeName": "Domination",
                     "snapshots": [
                         {
                             "timestamp": 0.0,
@@ -617,217 +635,260 @@
                         {
                             "timestamp": 16.233,
                             "type": "PURCHASED",
-                            "id": 1039
+                            "id": 1039,
+                            "name": "Hunter's Talisman"
                         },
                         {
                             "timestamp": 16.431,
                             "type": "PURCHASED",
-                            "id": 2031
+                            "id": 2031,
+                            "name": "Refillable Potion"
                         },
                         {
                             "timestamp": 17.224,
                             "type": "PURCHASED",
-                            "id": 3364
+                            "id": 3364,
+                            "name": "Oracle Lens"
                         },
                         {
                             "timestamp": 303.741,
                             "type": "PURCHASED",
-                            "id": 3715
+                            "id": 3715,
+                            "name": "Skirmisher's Sabre"
                         },
                         {
                             "timestamp": 303.741,
                             "type": "DESTROYED",
-                            "id": 1039
+                            "id": 1039,
+                            "name": "Hunter's Talisman"
                         },
                         {
                             "timestamp": 304.47,
                             "type": "PURCHASED",
-                            "id": 1001
+                            "id": 1001,
+                            "name": "Boots of Speed"
                         },
                         {
                             "timestamp": 304.734,
                             "type": "PURCHASED",
-                            "id": 1052
+                            "id": 1052,
+                            "name": "Amplifying Tome"
                         },
                         {
                             "timestamp": 305.031,
                             "type": "PURCHASED",
-                            "id": 2055
+                            "id": 2055,
+                            "name": "Control Ward"
                         },
                         {
                             "timestamp": 343.655,
                             "type": "DESTROYED",
-                            "id": 2055
+                            "id": 2055,
+                            "name": "Control Ward"
                         },
                         {
                             "timestamp": 427.091,
                             "type": "PURCHASED",
-                            "id": 3108
+                            "id": 3108,
+                            "name": "Fiendish Codex"
                         },
                         {
                             "timestamp": 427.091,
                             "type": "DESTROYED",
-                            "id": 1052
+                            "id": 1052,
+                            "name": "Amplifying Tome"
                         },
                         {
                             "timestamp": 568.199,
                             "type": "PURCHASED",
-                            "id": 1414
+                            "id": 1414,
+                            "name": "Enchantment: Runic Echoes"
                         },
                         {
                             "timestamp": 568.199,
                             "type": "DESTROYED",
-                            "id": 3108
+                            "id": 3108,
+                            "name": "Fiendish Codex"
                         },
                         {
                             "timestamp": 568.199,
                             "type": "DESTROYED",
-                            "id": 3715
+                            "id": 3715,
+                            "name": "Skirmisher's Sabre"
                         },
                         {
                             "timestamp": 583.791,
                             "type": "PURCHASED",
-                            "id": 2055
+                            "id": 2055,
+                            "name": "Control Ward"
                         },
                         {
                             "timestamp": 618.723,
                             "type": "DESTROYED",
-                            "id": 2055
+                            "id": 2055,
+                            "name": "Control Ward"
                         },
                         {
                             "timestamp": 650.839,
                             "type": "DESTROYED",
-                            "id": 3364
+                            "id": 3364,
+                            "name": "Oracle Lens"
                         },
                         {
                             "timestamp": 658.206,
                             "type": "DESTROYED",
-                            "id": 3513
+                            "id": 3513,
+                            "name": "Eye of the Herald"
                         },
                         {
                             "timestamp": 757.129,
                             "type": "PURCHASED",
-                            "id": 3047
+                            "id": 3047,
+                            "name": "Ninja Tabi"
                         },
                         {
                             "timestamp": 757.129,
                             "type": "DESTROYED",
-                            "id": 1001
+                            "id": 1001,
+                            "name": "Boots of Speed"
                         },
                         {
                             "timestamp": 765.355,
                             "type": "PURCHASED",
-                            "id": 3108
+                            "id": 3108,
+                            "name": "Fiendish Codex"
                         },
                         {
                             "timestamp": 775.729,
                             "type": "PURCHASED",
-                            "id": 2055
+                            "id": 2055,
+                            "name": "Control Ward"
                         },
                         {
                             "timestamp": 834.546,
                             "type": "DESTROYED",
-                            "id": 2055
+                            "id": 2055,
+                            "name": "Control Ward"
                         },
                         {
                             "timestamp": 977.801,
                             "type": "PURCHASED",
-                            "id": 2420
+                            "id": 2420,
+                            "name": "Stopwatch"
                         },
                         {
                             "timestamp": 979.518,
                             "type": "PURCHASED",
-                            "id": 3067
+                            "id": 3067,
+                            "name": "Kindlegem"
                         },
                         {
                             "timestamp": 980.278,
                             "type": "SOLD",
-                            "id": 2031
+                            "id": 2031,
+                            "name": "Refillable Potion"
                         },
                         {
                             "timestamp": 981.5,
                             "type": "PURCHASED",
-                            "id": 2055
+                            "id": 2055,
+                            "name": "Control Ward"
                         },
                         {
                             "timestamp": 1004.064,
                             "type": "DESTROYED",
-                            "id": 2055
+                            "id": 2055,
+                            "name": "Control Ward"
                         },
                         {
                             "timestamp": 1026.902,
                             "type": "DESTROYED",
-                            "id": 2420
+                            "id": 2420,
+                            "name": "Stopwatch"
                         },
                         {
                             "timestamp": 1040.812,
                             "type": "PURCHASED",
-                            "id": 2055
+                            "id": 2055,
+                            "name": "Control Ward"
                         },
                         {
                             "timestamp": 1157.778,
                             "type": "DESTROYED",
-                            "id": 2055
+                            "id": 2055,
+                            "name": "Control Ward"
                         },
                         {
                             "timestamp": 1388.506,
                             "type": "PURCHASED",
-                            "id": 3157
+                            "id": 3157,
+                            "name": "Zhonya's Hourglass"
                         },
                         {
                             "timestamp": 1388.506,
                             "type": "DESTROYED",
-                            "id": 3108
+                            "id": 3108,
+                            "name": "Fiendish Codex"
                         },
                         {
                             "timestamp": 1388.506,
                             "type": "DESTROYED",
-                            "id": 2421
+                            "id": 2421,
+                            "name": "Broken Stopwatch"
                         },
                         {
                             "timestamp": 1389.992,
                             "type": "PURCHASED",
-                            "id": 1052
+                            "id": 1052,
+                            "name": "Amplifying Tome"
                         },
                         {
                             "timestamp": 1390.521,
                             "type": "PURCHASED",
-                            "id": 2055
+                            "id": 2055,
+                            "name": "Control Ward"
                         },
                         {
                             "timestamp": 1436.893,
                             "type": "DESTROYED",
-                            "id": 2055
+                            "id": 2055,
+                            "name": "Control Ward"
                         },
                         {
                             "timestamp": 1557.712,
                             "type": "PURCHASED",
-                            "id": 3211
+                            "id": 3211,
+                            "name": "Spectre's Cowl"
                         },
                         {
                             "timestamp": 1678.068,
                             "type": "PURCHASED",
-                            "id": 3065
+                            "id": 3065,
+                            "name": "Spirit Visage"
                         },
                         {
                             "timestamp": 1678.068,
                             "type": "DESTROYED",
-                            "id": 3211
+                            "id": 3211,
+                            "name": "Spectre's Cowl"
                         },
                         {
                             "timestamp": 1678.068,
                             "type": "DESTROYED",
-                            "id": 3067
+                            "id": 3067,
+                            "name": "Kindlegem"
                         },
                         {
                             "timestamp": 1714.198,
                             "type": "PURCHASED",
-                            "id": 2055
+                            "id": 2055,
+                            "name": "Control Ward"
                         },
                         {
                             "timestamp": 1748.198,
                             "type": "DESTROYED",
-                            "id": 2055
+                            "id": 2055,
+                            "name": "Control Ward"
                         }
                     ],
                     "wardsEvents": [
@@ -1001,7 +1062,8 @@
                                 2690,
                                 0,
                                 0
-                            ]
+                            ],
+                            "name": "Arcane Comet"
                         },
                         {
                             "id": 8226,
@@ -1010,7 +1072,8 @@
                                 250,
                                 1125,
                                 0
-                            ]
+                            ],
+                            "name": "Manaflow Band"
                         },
                         {
                             "id": 8233,
@@ -1019,7 +1082,8 @@
                                 22,
                                 50,
                                 0
-                            ]
+                            ],
+                            "name": "Absolute Focus"
                         },
                         {
                             "id": 8237,
@@ -1028,7 +1092,8 @@
                                 663,
                                 0,
                                 0
-                            ]
+                            ],
+                            "name": "Scorch"
                         },
                         {
                             "id": 8126,
@@ -1037,7 +1102,8 @@
                                 714,
                                 0,
                                 0
-                            ]
+                            ],
+                            "name": "Cheap Shot"
                         },
                         {
                             "id": 8135,
@@ -1046,48 +1112,58 @@
                                 2178,
                                 4,
                                 0
-                            ]
+                            ],
+                            "name": "Ravenous Hunter"
                         }
                     ],
                     "summonerSpells": [
                         {
                             "id": 7,
-                            "slot": 0
+                            "slot": 0,
+                            "name": "Heal"
                         },
                         {
                             "id": 4,
-                            "slot": 1
+                            "slot": 1,
+                            "name": "Flash"
                         }
                     ],
                     "endOfGameStats": {
                         "items": [
                             {
                                 "id": 3157,
-                                "slot": 0
+                                "slot": 0,
+                                "name": "Zhonya's Hourglass"
                             },
                             {
                                 "id": 2055,
-                                "slot": 1
+                                "slot": 1,
+                                "name": "Control Ward"
                             },
                             {
                                 "id": 1058,
-                                "slot": 2
+                                "slot": 2,
+                                "name": "Needlessly Large Rod"
                             },
                             {
                                 "id": 3285,
-                                "slot": 3
+                                "slot": 3,
+                                "name": "Luden's Echo"
                             },
                             {
                                 "id": 3089,
-                                "slot": 4
+                                "slot": 4,
+                                "name": "Rabadon's Deathcap"
                             },
                             {
                                 "id": 1001,
-                                "slot": 5
+                                "slot": 5,
+                                "name": "Boots of Speed"
                             },
                             {
                                 "id": 3363,
-                                "slot": 6
+                                "slot": 6,
+                                "name": "Farsight Alteration"
                             }
                         ],
                         "firstBlood": false,
@@ -1135,6 +1211,9 @@
                         "totalTimeCCDealt": 170,
                         "timeCCingOthers": 23
                     },
+                    "championName": "Xerath",
+                    "primaryRuneTreeName": "Sorcery",
+                    "secondaryRuneTreeName": "Domination",
                     "snapshots": [
                         {
                             "timestamp": 0.0,
@@ -1567,227 +1646,272 @@
                         {
                             "timestamp": 4.738,
                             "type": "PURCHASED",
-                            "id": 2003
+                            "id": 2003,
+                            "name": "Health Potion"
                         },
                         {
                             "timestamp": 5.002,
                             "type": "PURCHASED",
-                            "id": 2003
+                            "id": 2003,
+                            "name": "Health Potion"
                         },
                         {
                             "timestamp": 5.432,
                             "type": "PURCHASED",
-                            "id": 1056
+                            "id": 1056,
+                            "name": "Doran's Ring"
                         },
                         {
                             "timestamp": 68.272,
                             "type": "PURCHASED",
-                            "id": 2003
+                            "id": 2003,
+                            "name": "Health Potion"
                         },
                         {
                             "timestamp": 186.575,
                             "type": "DESTROYED",
-                            "id": 2003
+                            "id": 2003,
+                            "name": "Health Potion"
                         },
                         {
                             "timestamp": 196.319,
                             "type": "DESTROYED",
-                            "id": 2003
+                            "id": 2003,
+                            "name": "Health Potion"
                         },
                         {
                             "timestamp": 207.152,
                             "type": "PURCHASED",
-                            "id": 1052
+                            "id": 1052,
+                            "name": "Amplifying Tome"
                         },
                         {
                             "timestamp": 208.837,
                             "type": "PURCHASED",
-                            "id": 2055
+                            "id": 2055,
+                            "name": "Control Ward"
                         },
                         {
                             "timestamp": 300.206,
                             "type": "DESTROYED",
-                            "id": 2055
+                            "id": 2055,
+                            "name": "Control Ward"
                         },
                         {
                             "timestamp": 324.559,
                             "type": "DESTROYED",
-                            "id": 2003
+                            "id": 2003,
+                            "name": "Health Potion"
                         },
                         {
                             "timestamp": 347.023,
                             "type": "PURCHASED",
-                            "id": 3802
+                            "id": 3802,
+                            "name": "Lost Chapter"
                         },
                         {
                             "timestamp": 347.023,
                             "type": "DESTROYED",
-                            "id": 1052
+                            "id": 1052,
+                            "name": "Amplifying Tome"
                         },
                         {
                             "timestamp": 347.981,
                             "type": "PURCHASED",
-                            "id": 2031
+                            "id": 2031,
+                            "name": "Refillable Potion"
                         },
                         {
                             "timestamp": 555.973,
                             "type": "PURCHASED",
-                            "id": 1026
+                            "id": 1026,
+                            "name": "Blasting Wand"
                         },
                         {
                             "timestamp": 557.361,
                             "type": "PURCHASED",
-                            "id": 1001
+                            "id": 1001,
+                            "name": "Boots of Speed"
                         },
                         {
                             "timestamp": 557.988,
                             "type": "PURCHASED",
-                            "id": 2055
+                            "id": 2055,
+                            "name": "Control Ward"
                         },
                         {
                             "timestamp": 558.087,
                             "type": "PURCHASED",
-                            "id": 2055
+                            "id": 2055,
+                            "name": "Control Ward"
                         },
                         {
                             "timestamp": 603.652,
                             "type": "DESTROYED",
-                            "id": 2055
+                            "id": 2055,
+                            "name": "Control Ward"
                         },
                         {
                             "timestamp": 650.146,
                             "type": "DESTROYED",
-                            "id": 2055
+                            "id": 2055,
+                            "name": "Control Ward"
                         },
                         {
                             "timestamp": 787.962,
                             "type": "PURCHASED",
-                            "id": 3285
+                            "id": 3285,
+                            "name": "Luden's Echo"
                         },
                         {
                             "timestamp": 787.962,
                             "type": "DESTROYED",
-                            "id": 3802
+                            "id": 3802,
+                            "name": "Lost Chapter"
                         },
                         {
                             "timestamp": 787.962,
                             "type": "DESTROYED",
-                            "id": 1026
+                            "id": 1026,
+                            "name": "Blasting Wand"
                         },
                         {
                             "timestamp": 792.519,
                             "type": "PURCHASED",
-                            "id": 2420
+                            "id": 2420,
+                            "name": "Stopwatch"
                         },
                         {
                             "timestamp": 806.855,
                             "type": "PURCHASED",
-                            "id": 2055
+                            "id": 2055,
+                            "name": "Control Ward"
                         },
                         {
                             "timestamp": 941.66,
                             "type": "SOLD",
-                            "id": 2055
+                            "id": 2055,
+                            "name": "Control Ward"
                         },
                         {
                             "timestamp": 942.519,
                             "type": "PURCHASED",
-                            "id": 1058
+                            "id": 1058,
+                            "name": "Needlessly Large Rod"
                         },
                         {
                             "timestamp": 944.8,
                             "type": "PURCHASED",
-                            "id": 3363
+                            "id": 3363,
+                            "name": "Farsight Alteration"
                         },
                         {
                             "timestamp": 944.8,
                             "type": "DESTROYED",
-                            "id": 3340
+                            "id": 3340,
+                            "name": "Warding Totem (Trinket)"
                         },
                         {
                             "timestamp": 1149.056,
                             "type": "SOLD",
-                            "id": 2031
+                            "id": 2031,
+                            "name": "Refillable Potion"
                         },
                         {
                             "timestamp": 1150.908,
                             "type": "PURCHASED",
-                            "id": 1058
+                            "id": 1058,
+                            "name": "Needlessly Large Rod"
                         },
                         {
                             "timestamp": 1276.251,
                             "type": "DESTROYED",
-                            "id": 2420
+                            "id": 2420,
+                            "name": "Stopwatch"
                         },
                         {
                             "timestamp": 1283.55,
                             "type": "PURCHASED",
-                            "id": 3089
+                            "id": 3089,
+                            "name": "Rabadon's Deathcap"
                         },
                         {
                             "timestamp": 1283.55,
                             "type": "DESTROYED",
-                            "id": 1058
+                            "id": 1058,
+                            "name": "Needlessly Large Rod"
                         },
                         {
                             "timestamp": 1283.55,
                             "type": "DESTROYED",
-                            "id": 1058
+                            "id": 1058,
+                            "name": "Needlessly Large Rod"
                         },
                         {
                             "timestamp": 1286.324,
                             "type": "PURCHASED",
-                            "id": 2055
+                            "id": 2055,
+                            "name": "Control Ward"
                         },
                         {
                             "timestamp": 1320.81,
                             "type": "PURCHASED",
-                            "id": 2055
+                            "id": 2055,
+                            "name": "Control Ward"
                         },
                         {
                             "timestamp": 1353.549,
                             "type": "DESTROYED",
-                            "id": 2055
+                            "id": 2055,
+                            "name": "Control Ward"
                         },
                         {
                             "timestamp": 1403.434,
                             "type": "DESTROYED",
-                            "id": 2055
+                            "id": 2055,
+                            "name": "Control Ward"
                         },
                         {
                             "timestamp": 1587.67,
                             "type": "PURCHASED",
-                            "id": 3157
+                            "id": 3157,
+                            "name": "Zhonya's Hourglass"
                         },
                         {
                             "timestamp": 1587.67,
                             "type": "DESTROYED",
-                            "id": 2421
+                            "id": 2421,
+                            "name": "Broken Stopwatch"
                         },
                         {
                             "timestamp": 1588.232,
                             "type": "PURCHASED",
-                            "id": 2055
+                            "id": 2055,
+                            "name": "Control Ward"
                         },
                         {
                             "timestamp": 1706.139,
                             "type": "SOLD",
-                            "id": 1056
+                            "id": 1056,
+                            "name": "Doran's Ring"
                         },
                         {
                             "timestamp": 1706.767,
                             "type": "PURCHASED",
-                            "id": 1058
+                            "id": 1058,
+                            "name": "Needlessly Large Rod"
                         },
                         {
                             "timestamp": 1707.692,
                             "type": "PURCHASED",
-                            "id": 2055
+                            "id": 2055,
+                            "name": "Control Ward"
                         },
                         {
                             "timestamp": 1756.391,
                             "type": "DESTROYED",
-                            "id": 2055
+                            "id": 2055,
+                            "name": "Control Ward"
                         }
                     ],
                     "wardsEvents": [
@@ -2006,7 +2130,8 @@
                                 77,
                                 0,
                                 0
-                            ]
+                            ],
+                            "name": "Glacial Augment"
                         },
                         {
                             "id": 8304,
@@ -2015,7 +2140,8 @@
                                 9,
                                 0,
                                 0
-                            ]
+                            ],
+                            "name": "Magical Footwear"
                         },
                         {
                             "id": 8345,
@@ -2024,7 +2150,8 @@
                                 3,
                                 0,
                                 0
-                            ]
+                            ],
+                            "name": "Biscuit Delivery"
                         },
                         {
                             "id": 8410,
@@ -2033,7 +2160,8 @@
                                 160,
                                 0,
                                 0
-                            ]
+                            ],
+                            "name": "Approach Velocity"
                         },
                         {
                             "id": 8009,
@@ -2042,7 +2170,8 @@
                                 5920,
                                 500,
                                 0
-                            ]
+                            ],
+                            "name": "Presence of Mind"
                         },
                         {
                             "id": 9104,
@@ -2051,48 +2180,58 @@
                                 15,
                                 10,
                                 0
-                            ]
+                            ],
+                            "name": "Legend: Alacrity"
                         }
                     ],
                     "summonerSpells": [
                         {
                             "id": 4,
-                            "slot": 0
+                            "slot": 0,
+                            "name": "Flash"
                         },
                         {
                             "id": 1,
-                            "slot": 1
+                            "slot": 1,
+                            "name": "Cleanse"
                         }
                     ],
                     "endOfGameStats": {
                         "items": [
                             {
                                 "id": 3864,
-                                "slot": 0
+                                "slot": 0,
+                                "name": "Black Mist Scythe"
                             },
                             {
                                 "id": 3814,
-                                "slot": 1
+                                "slot": 1,
+                                "name": "Edge of Night"
                             },
                             {
                                 "id": 3044,
-                                "slot": 2
+                                "slot": 2,
+                                "name": "Phage"
                             },
                             {
                                 "id": 3094,
-                                "slot": 3
+                                "slot": 3,
+                                "name": "Rapid Firecannon"
                             },
                             {
                                 "id": 3009,
-                                "slot": 4
+                                "slot": 4,
+                                "name": "Boots of Swiftness"
                             },
                             {
                                 "id": 3179,
-                                "slot": 5
+                                "slot": 5,
+                                "name": "Umbral Glaive"
                             },
                             {
                                 "id": 3364,
-                                "slot": 6
+                                "slot": 6,
+                                "name": "Oracle Lens"
                             }
                         ],
                         "firstBlood": true,
@@ -2140,6 +2279,9 @@
                         "totalTimeCCDealt": 223,
                         "timeCCingOthers": 57
                     },
+                    "championName": "Senna",
+                    "primaryRuneTreeName": "Inspiration",
+                    "secondaryRuneTreeName": "Precision",
                     "snapshots": [
                         {
                             "timestamp": 0.0,
@@ -2572,319 +2714,382 @@
                         {
                             "timestamp": 4.077,
                             "type": "PURCHASED",
-                            "id": 3862
+                            "id": 3862,
+                            "name": "Spectral Sickle"
                         },
                         {
                             "timestamp": 4.308,
                             "type": "PURCHASED",
-                            "id": 2003
+                            "id": 2003,
+                            "name": "Health Potion"
                         },
                         {
                             "timestamp": 4.44,
                             "type": "PURCHASED",
-                            "id": 2003
+                            "id": 2003,
+                            "name": "Health Potion"
                         },
                         {
                             "timestamp": 4.771,
                             "type": "PURCHASED",
-                            "id": 3340
+                            "id": 3340,
+                            "name": "Warding Totem (Trinket)"
                         },
                         {
                             "timestamp": 58.726,
                             "type": "PURCHASED",
-                            "id": 1036
+                            "id": 1036,
+                            "name": "Long Sword"
                         },
                         {
                             "timestamp": 59.222,
                             "type": "PURCHASED",
-                            "id": 2055
+                            "id": 2055,
+                            "name": "Control Ward"
                         },
                         {
                             "timestamp": 134.191,
                             "type": "DESTROYED",
-                            "id": 2003
+                            "id": 2003,
+                            "name": "Health Potion"
                         },
                         {
                             "timestamp": 194.173,
                             "type": "DESTROYED",
-                            "id": 2003
+                            "id": 2003,
+                            "name": "Health Potion"
                         },
                         {
                             "timestamp": 197.97,
                             "type": "DESTROYED",
-                            "id": 2010
+                            "id": 2010,
+                            "name": "Total Biscuit of Everlasting Will"
                         },
                         {
                             "timestamp": 206.558,
                             "type": "PURCHASED",
-                            "id": 1036
+                            "id": 1036,
+                            "name": "Long Sword"
                         },
                         {
                             "timestamp": 207.582,
                             "type": "PURCHASED",
-                            "id": 2003
+                            "id": 2003,
+                            "name": "Health Potion"
                         },
                         {
                             "timestamp": 249.309,
                             "type": "DESTROYED",
-                            "id": 2055
+                            "id": 2055,
+                            "name": "Control Ward"
                         },
                         {
                             "timestamp": 361.061,
                             "type": "PURCHASED",
-                            "id": 3134
+                            "id": 3134,
+                            "name": "Serrated Dirk"
                         },
                         {
                             "timestamp": 361.061,
                             "type": "DESTROYED",
-                            "id": 1036
+                            "id": 1036,
+                            "name": "Long Sword"
                         },
                         {
                             "timestamp": 361.061,
                             "type": "DESTROYED",
-                            "id": 1036
+                            "id": 1036,
+                            "name": "Long Sword"
                         },
                         {
                             "timestamp": 362.317,
                             "type": "PURCHASED",
-                            "id": 1036
+                            "id": 1036,
+                            "name": "Long Sword"
                         },
                         {
                             "timestamp": 364.993,
                             "type": "SOLD",
-                            "id": 2003
+                            "id": 2003,
+                            "name": "Health Potion"
                         },
                         {
                             "timestamp": 365.753,
                             "type": "PURCHASED",
-                            "id": 1036
+                            "id": 1036,
+                            "name": "Long Sword"
                         },
                         {
                             "timestamp": 478.845,
                             "type": "DESTROYED",
-                            "id": 2010
+                            "id": 2010,
+                            "name": "Total Biscuit of Everlasting Will"
                         },
                         {
                             "timestamp": 501.48,
                             "type": "DESTROYED",
-                            "id": 3862
+                            "id": 3862,
+                            "name": "Spectral Sickle"
                         },
                         {
                             "timestamp": 522.195,
                             "type": "PURCHASED",
-                            "id": 3179
+                            "id": 3179,
+                            "name": "Umbral Glaive"
                         },
                         {
                             "timestamp": 522.195,
                             "type": "DESTROYED",
-                            "id": 3134
+                            "id": 3134,
+                            "name": "Serrated Dirk"
                         },
                         {
                             "timestamp": 522.195,
                             "type": "DESTROYED",
-                            "id": 1036
+                            "id": 1036,
+                            "name": "Long Sword"
                         },
                         {
                             "timestamp": 522.195,
                             "type": "DESTROYED",
-                            "id": 1036
+                            "id": 1036,
+                            "name": "Long Sword"
                         },
                         {
                             "timestamp": 524.408,
                             "type": "PURCHASED",
-                            "id": 1036
+                            "id": 1036,
+                            "name": "Long Sword"
                         },
                         {
                             "timestamp": 525.961,
                             "type": "PURCHASED",
-                            "id": 2055
+                            "id": 2055,
+                            "name": "Control Ward"
                         },
                         {
                             "timestamp": 535.811,
                             "type": "UNDO",
                             "id": 0,
-                            "undoId": 2055
+                            "undoId": 2055,
+                            "name": ""
                         },
                         {
                             "timestamp": 542.42,
                             "type": "PURCHASED",
-                            "id": 2055
+                            "id": 2055,
+                            "name": "Control Ward"
                         },
                         {
                             "timestamp": 545.525,
                             "type": "PURCHASED",
-                            "id": 3364
+                            "id": 3364,
+                            "name": "Oracle Lens"
                         },
                         {
                             "timestamp": 545.525,
                             "type": "DESTROYED",
-                            "id": 3340
+                            "id": 3340,
+                            "name": "Warding Totem (Trinket)"
                         },
                         {
                             "timestamp": 603.883,
                             "type": "DESTROYED",
-                            "id": 2055
+                            "id": 2055,
+                            "name": "Control Ward"
                         },
                         {
                             "timestamp": 745.727,
                             "type": "DESTROYED",
-                            "id": 2010
+                            "id": 2010,
+                            "name": "Total Biscuit of Everlasting Will"
                         },
                         {
                             "timestamp": 760.5,
                             "type": "PURCHASED",
-                            "id": 3009
+                            "id": 3009,
+                            "name": "Boots of Swiftness"
                         },
                         {
                             "timestamp": 760.5,
                             "type": "DESTROYED",
-                            "id": 2422
+                            "id": 2422,
+                            "name": "Slightly Magical Boots"
                         },
                         {
                             "timestamp": 761.259,
                             "type": "PURCHASED",
-                            "id": 1036
+                            "id": 1036,
+                            "name": "Long Sword"
                         },
                         {
                             "timestamp": 761.688,
                             "type": "PURCHASED",
-                            "id": 2031
+                            "id": 2031,
+                            "name": "Refillable Potion"
                         },
                         {
                             "timestamp": 762.778,
                             "type": "UNDO",
                             "id": 0,
-                            "undoId": 2031
+                            "undoId": 2031,
+                            "name": ""
                         },
                         {
                             "timestamp": 763.241,
                             "type": "PURCHASED",
-                            "id": 2055
+                            "id": 2055,
+                            "name": "Control Ward"
                         },
                         {
                             "timestamp": 903.006,
                             "type": "DESTROYED",
-                            "id": 3863
+                            "id": 3863,
+                            "name": "Harrowing Crescent"
                         },
                         {
                             "timestamp": 940.835,
                             "type": "PURCHASED",
-                            "id": 3134
+                            "id": 3134,
+                            "name": "Serrated Dirk"
                         },
                         {
                             "timestamp": 940.835,
                             "type": "DESTROYED",
-                            "id": 1036
+                            "id": 1036,
+                            "name": "Long Sword"
                         },
                         {
                             "timestamp": 940.835,
                             "type": "DESTROYED",
-                            "id": 1036
+                            "id": 1036,
+                            "name": "Long Sword"
                         },
                         {
                             "timestamp": 941.363,
                             "type": "PURCHASED",
-                            "id": 1037
+                            "id": 1037,
+                            "name": "Pickaxe"
                         },
                         {
                             "timestamp": 996.333,
                             "type": "DESTROYED",
-                            "id": 2055
+                            "id": 2055,
+                            "name": "Control Ward"
                         },
                         {
                             "timestamp": 1011.762,
                             "type": "PURCHASED",
-                            "id": 3814
+                            "id": 3814,
+                            "name": "Edge of Night"
                         },
                         {
                             "timestamp": 1011.762,
                             "type": "DESTROYED",
-                            "id": 1037
+                            "id": 1037,
+                            "name": "Pickaxe"
                         },
                         {
                             "timestamp": 1011.762,
                             "type": "DESTROYED",
-                            "id": 3134
+                            "id": 3134,
+                            "name": "Serrated Dirk"
                         },
                         {
                             "timestamp": 1014.371,
                             "type": "PURCHASED",
-                            "id": 2055
+                            "id": 2055,
+                            "name": "Control Ward"
                         },
                         {
                             "timestamp": 1014.503,
                             "type": "PURCHASED",
-                            "id": 2055
+                            "id": 2055,
+                            "name": "Control Ward"
                         },
                         {
                             "timestamp": 1014.801,
                             "type": "PURCHASED",
-                            "id": 1042
+                            "id": 1042,
+                            "name": "Dagger"
                         },
                         {
                             "timestamp": 1072.596,
                             "type": "DESTROYED",
-                            "id": 2055
+                            "id": 2055,
+                            "name": "Control Ward"
                         },
                         {
                             "timestamp": 1133.591,
                             "type": "DESTROYED",
-                            "id": 2055
+                            "id": 2055,
+                            "name": "Control Ward"
                         },
                         {
                             "timestamp": 1192.073,
                             "type": "PURCHASED",
-                            "id": 3086
+                            "id": 3086,
+                            "name": "Zeal"
                         },
                         {
                             "timestamp": 1192.073,
                             "type": "DESTROYED",
-                            "id": 1042
+                            "id": 1042,
+                            "name": "Dagger"
                         },
                         {
                             "timestamp": 1192.834,
                             "type": "PURCHASED",
-                            "id": 2055
+                            "id": 2055,
+                            "name": "Control Ward"
                         },
                         {
                             "timestamp": 1192.999,
                             "type": "PURCHASED",
-                            "id": 2055
+                            "id": 2055,
+                            "name": "Control Ward"
                         },
                         {
                             "timestamp": 1356.193,
                             "type": "DESTROYED",
-                            "id": 2055
+                            "id": 2055,
+                            "name": "Control Ward"
                         },
                         {
                             "timestamp": 1389.53,
                             "type": "PURCHASED",
-                            "id": 3094
+                            "id": 3094,
+                            "name": "Rapid Firecannon"
                         },
                         {
                             "timestamp": 1389.53,
                             "type": "DESTROYED",
-                            "id": 3086
+                            "id": 3086,
+                            "name": "Zeal"
                         },
                         {
                             "timestamp": 1459.582,
                             "type": "DESTROYED",
-                            "id": 2055
+                            "id": 2055,
+                            "name": "Control Ward"
                         },
                         {
                             "timestamp": 1597.842,
                             "type": "PURCHASED",
-                            "id": 3044
+                            "id": 3044,
+                            "name": "Phage"
                         },
                         {
                             "timestamp": 1699.667,
                             "type": "PURCHASED",
-                            "id": 2140
+                            "id": 2140,
+                            "name": "Elixir of Wrath"
                         },
                         {
                             "timestamp": 1699.667,
                             "type": "DESTROYED",
-                            "id": 2140
+                            "id": 2140,
+                            "name": "Elixir of Wrath"
                         }
                     ],
                     "wardsEvents": [
@@ -3233,7 +3438,8 @@
                                 8,
                                 0,
                                 0
-                            ]
+                            ],
+                            "name": "Phase Rush"
                         },
                         {
                             "id": 8226,
@@ -3242,7 +3448,8 @@
                                 250,
                                 819,
                                 0
-                            ]
+                            ],
+                            "name": "Manaflow Band"
                         },
                         {
                             "id": 8210,
@@ -3251,7 +3458,8 @@
                                 0,
                                 0,
                                 0
-                            ]
+                            ],
+                            "name": "Transcendence"
                         },
                         {
                             "id": 8237,
@@ -3260,7 +3468,8 @@
                                 590,
                                 0,
                                 0
-                            ]
+                            ],
+                            "name": "Scorch"
                         },
                         {
                             "id": 8304,
@@ -3269,7 +3478,8 @@
                                 10,
                                 3,
                                 0
-                            ]
+                            ],
+                            "name": "Magical Footwear"
                         },
                         {
                             "id": 8345,
@@ -3278,48 +3488,58 @@
                                 3,
                                 0,
                                 0
-                            ]
+                            ],
+                            "name": "Biscuit Delivery"
                         }
                     ],
                     "summonerSpells": [
                         {
                             "id": 3,
-                            "slot": 0
+                            "slot": 0,
+                            "name": "Exhaust"
                         },
                         {
                             "id": 4,
-                            "slot": 1
+                            "slot": 1,
+                            "name": "Flash"
                         }
                     ],
                     "endOfGameStats": {
                         "items": [
                             {
                                 "id": 3142,
-                                "slot": 0
+                                "slot": 0,
+                                "name": "Youmuu's Ghostblade"
                             },
                             {
                                 "id": 3134,
-                                "slot": 1
+                                "slot": 1,
+                                "name": "Serrated Dirk"
                             },
                             {
                                 "id": 3036,
-                                "slot": 2
+                                "slot": 2,
+                                "name": "Lord Dominik's Regards"
                             },
                             {
                                 "id": 3179,
-                                "slot": 3
+                                "slot": 3,
+                                "name": "Umbral Glaive"
                             },
                             {
                                 "id": 3814,
-                                "slot": 4
+                                "slot": 4,
+                                "name": "Edge of Night"
                             },
                             {
                                 "id": 3047,
-                                "slot": 5
+                                "slot": 5,
+                                "name": "Ninja Tabi"
                             },
                             {
                                 "id": 3340,
-                                "slot": 6
+                                "slot": 6,
+                                "name": "Warding Totem (Trinket)"
                             }
                         ],
                         "firstBlood": false,
@@ -3367,6 +3587,9 @@
                         "totalTimeCCDealt": 155,
                         "timeCCingOthers": 6
                     },
+                    "championName": "Jayce",
+                    "primaryRuneTreeName": "Sorcery",
+                    "secondaryRuneTreeName": "Inspiration",
                     "snapshots": [
                         {
                             "timestamp": 0.0,
@@ -3799,223 +4022,267 @@
                         {
                             "timestamp": 27.567,
                             "type": "PURCHASED",
-                            "id": 2033
+                            "id": 2033,
+                            "name": "Corrupting Potion"
                         },
                         {
                             "timestamp": 202.232,
                             "type": "SOLD",
-                            "id": 2010
+                            "id": 2010,
+                            "name": "Total Biscuit of Everlasting Will"
                         },
                         {
                             "timestamp": 203.982,
                             "type": "PURCHASED",
-                            "id": 1036
+                            "id": 1036,
+                            "name": "Long Sword"
                         },
                         {
                             "timestamp": 204.312,
                             "type": "PURCHASED",
-                            "id": 1029
+                            "id": 1029,
+                            "name": "Cloth Armor"
                         },
                         {
                             "timestamp": 360.07,
                             "type": "PURCHASED",
-                            "id": 3134
+                            "id": 3134,
+                            "name": "Serrated Dirk"
                         },
                         {
                             "timestamp": 360.07,
                             "type": "DESTROYED",
-                            "id": 1036
+                            "id": 1036,
+                            "name": "Long Sword"
                         },
                         {
                             "timestamp": 360.664,
                             "type": "PURCHASED",
-                            "id": 1004
+                            "id": 1004,
+                            "name": "Faerie Charm"
                         },
                         {
                             "timestamp": 360.896,
                             "type": "PURCHASED",
-                            "id": 2055
+                            "id": 2055,
+                            "name": "Control Ward"
                         },
                         {
                             "timestamp": 412.801,
                             "type": "DESTROYED",
-                            "id": 2055
+                            "id": 2055,
+                            "name": "Control Ward"
                         },
                         {
                             "timestamp": 498.705,
                             "type": "PURCHASED",
-                            "id": 3133
+                            "id": 3133,
+                            "name": "Caulfield's Warhammer"
                         },
                         {
                             "timestamp": 500.093,
                             "type": "SOLD",
-                            "id": 1004
+                            "id": 1004,
+                            "name": "Faerie Charm"
                         },
                         {
                             "timestamp": 500.324,
                             "type": "PURCHASED",
-                            "id": 1004
+                            "id": 1004,
+                            "name": "Faerie Charm"
                         },
                         {
                             "timestamp": 500.985,
                             "type": "UNDO",
                             "id": 0,
-                            "undoId": 1004
+                            "undoId": 1004,
+                            "name": ""
                         },
                         {
                             "timestamp": 501.447,
                             "type": "PURCHASED",
-                            "id": 2055
+                            "id": 2055,
+                            "name": "Control Ward"
                         },
                         {
                             "timestamp": 537.529,
                             "type": "DESTROYED",
-                            "id": 2055
+                            "id": 2055,
+                            "name": "Control Ward"
                         },
                         {
                             "timestamp": 663.099,
                             "type": "DESTROYED",
-                            "id": 2010
+                            "id": 2010,
+                            "name": "Total Biscuit of Everlasting Will"
                         },
                         {
                             "timestamp": 713.981,
                             "type": "PURCHASED",
-                            "id": 3142
+                            "id": 3142,
+                            "name": "Youmuu's Ghostblade"
                         },
                         {
                             "timestamp": 713.981,
                             "type": "DESTROYED",
-                            "id": 3133
+                            "id": 3133,
+                            "name": "Caulfield's Warhammer"
                         },
                         {
                             "timestamp": 713.981,
                             "type": "DESTROYED",
-                            "id": 3134
+                            "id": 3134,
+                            "name": "Serrated Dirk"
                         },
                         {
                             "timestamp": 716.161,
                             "type": "PURCHASED",
-                            "id": 3134
+                            "id": 3134,
+                            "name": "Serrated Dirk"
                         },
                         {
                             "timestamp": 717.25,
                             "type": "PURCHASED",
-                            "id": 3047
+                            "id": 3047,
+                            "name": "Ninja Tabi"
                         },
                         {
                             "timestamp": 717.25,
                             "type": "DESTROYED",
-                            "id": 1029
+                            "id": 1029,
+                            "name": "Cloth Armor"
                         },
                         {
                             "timestamp": 717.25,
                             "type": "DESTROYED",
-                            "id": 2422
+                            "id": 2422,
+                            "name": "Slightly Magical Boots"
                         },
                         {
                             "timestamp": 778.375,
                             "type": "SOLD",
-                            "id": 2010
+                            "id": 2010,
+                            "name": "Total Biscuit of Everlasting Will"
                         },
                         {
                             "timestamp": 778.639,
                             "type": "PURCHASED",
-                            "id": 1036
+                            "id": 1036,
+                            "name": "Long Sword"
                         },
                         {
                             "timestamp": 1011.663,
                             "type": "PURCHASED",
-                            "id": 3179
+                            "id": 3179,
+                            "name": "Umbral Glaive"
                         },
                         {
                             "timestamp": 1011.663,
                             "type": "DESTROYED",
-                            "id": 3134
+                            "id": 3134,
+                            "name": "Serrated Dirk"
                         },
                         {
                             "timestamp": 1011.663,
                             "type": "DESTROYED",
-                            "id": 1036
+                            "id": 1036,
+                            "name": "Long Sword"
                         },
                         {
                             "timestamp": 1013.017,
                             "type": "PURCHASED",
-                            "id": 3134
+                            "id": 3134,
+                            "name": "Serrated Dirk"
                         },
                         {
                             "timestamp": 1013.777,
                             "type": "PURCHASED",
-                            "id": 1037
+                            "id": 1037,
+                            "name": "Pickaxe"
                         },
                         {
                             "timestamp": 1090.934,
                             "type": "DESTROYED",
-                            "id": 3340
+                            "id": 3340,
+                            "name": "Warding Totem (Trinket)"
                         },
                         {
                             "timestamp": 1130.32,
                             "type": "PURCHASED",
-                            "id": 3814
+                            "id": 3814,
+                            "name": "Edge of Night"
                         },
                         {
                             "timestamp": 1130.32,
                             "type": "DESTROYED",
-                            "id": 1037
+                            "id": 1037,
+                            "name": "Pickaxe"
                         },
                         {
                             "timestamp": 1130.32,
                             "type": "DESTROYED",
-                            "id": 3134
+                            "id": 3134,
+                            "name": "Serrated Dirk"
                         },
                         {
                             "timestamp": 1130.948,
                             "type": "PURCHASED",
-                            "id": 2055
+                            "id": 2055,
+                            "name": "Control Ward"
                         },
                         {
                             "timestamp": 1315.82,
                             "type": "DESTROYED",
-                            "id": 2055
+                            "id": 2055,
+                            "name": "Control Ward"
                         },
                         {
                             "timestamp": 1327.817,
                             "type": "DESTROYED",
-                            "id": 3513
+                            "id": 3513,
+                            "name": "Eye of the Herald"
                         },
                         {
                             "timestamp": 1387.813,
                             "type": "PURCHASED",
-                            "id": 3035
+                            "id": 3035,
+                            "name": "Last Whisper"
                         },
                         {
                             "timestamp": 1576.604,
                             "type": "PURCHASED",
-                            "id": 3036
+                            "id": 3036,
+                            "name": "Lord Dominik's Regards"
                         },
                         {
                             "timestamp": 1576.604,
                             "type": "DESTROYED",
-                            "id": 3035
+                            "id": 3035,
+                            "name": "Last Whisper"
                         },
                         {
                             "timestamp": 1577.033,
                             "type": "PURCHASED",
-                            "id": 2140
+                            "id": 2140,
+                            "name": "Elixir of Wrath"
                         },
                         {
                             "timestamp": 1577.033,
                             "type": "DESTROYED",
-                            "id": 2140
+                            "id": 2140,
+                            "name": "Elixir of Wrath"
                         },
                         {
                             "timestamp": 1726.385,
                             "type": "SOLD",
-                            "id": 2033
+                            "id": 2033,
+                            "name": "Corrupting Potion"
                         },
                         {
                             "timestamp": 1726.65,
                             "type": "PURCHASED",
-                            "id": 3134
+                            "id": 3134,
+                            "name": "Serrated Dirk"
                         }
                     ],
                     "wardsEvents": [
@@ -4264,7 +4531,8 @@
                                 1771,
                                 0,
                                 0
-                            ]
+                            ],
+                            "name": "Conqueror"
                         },
                         {
                             "id": 9111,
@@ -4273,7 +4541,8 @@
                                 1652,
                                 280,
                                 0
-                            ]
+                            ],
+                            "name": "Triumph"
                         },
                         {
                             "id": 9104,
@@ -4282,7 +4551,8 @@
                                 14,
                                 10,
                                 0
-                            ]
+                            ],
+                            "name": "Legend: Alacrity"
                         },
                         {
                             "id": 8299,
@@ -4291,7 +4561,8 @@
                                 999,
                                 0,
                                 0
-                            ]
+                            ],
+                            "name": "Last Stand"
                         },
                         {
                             "id": 8304,
@@ -4300,7 +4571,8 @@
                                 10,
                                 3,
                                 0
-                            ]
+                            ],
+                            "name": "Magical Footwear"
                         },
                         {
                             "id": 8345,
@@ -4309,48 +4581,58 @@
                                 3,
                                 0,
                                 0
-                            ]
+                            ],
+                            "name": "Biscuit Delivery"
                         }
                     ],
                     "summonerSpells": [
                         {
                             "id": 4,
-                            "slot": 0
+                            "slot": 0,
+                            "name": "Flash"
                         },
                         {
                             "id": 12,
-                            "slot": 1
+                            "slot": 1,
+                            "name": "Teleport"
                         }
                     ],
                     "endOfGameStats": {
                         "items": [
                             {
                                 "id": 3077,
-                                "slot": 0
+                                "slot": 0,
+                                "name": "Tiamat"
                             },
                             {
                                 "id": 3047,
-                                "slot": 1
+                                "slot": 1,
+                                "name": "Ninja Tabi"
                             },
                             {
                                 "id": 3812,
-                                "slot": 2
+                                "slot": 2,
+                                "name": "Death's Dance"
                             },
                             {
                                 "id": 3078,
-                                "slot": 3
+                                "slot": 3,
+                                "name": "Trinity Force"
                             },
                             {
                                 "id": 3071,
-                                "slot": 4
+                                "slot": 4,
+                                "name": "Black Cleaver"
                             },
                             {
                                 "id": 1036,
-                                "slot": 5
+                                "slot": 5,
+                                "name": "Long Sword"
                             },
                             {
                                 "id": 3364,
-                                "slot": 6
+                                "slot": 6,
+                                "name": "Oracle Lens"
                             }
                         ],
                         "firstBlood": false,
@@ -4398,6 +4680,9 @@
                         "totalTimeCCDealt": 56,
                         "timeCCingOthers": 15
                     },
+                    "championName": "Wukong",
+                    "primaryRuneTreeName": "Precision",
+                    "secondaryRuneTreeName": "Inspiration",
                     "snapshots": [
                         {
                             "timestamp": 0.0,
@@ -4830,244 +5115,292 @@
                         {
                             "timestamp": 5.531,
                             "type": "PURCHASED",
-                            "id": 3340
+                            "id": 3340,
+                            "name": "Warding Totem (Trinket)"
                         },
                         {
                             "timestamp": 5.729,
                             "type": "PURCHASED",
-                            "id": 2003
+                            "id": 2003,
+                            "name": "Health Potion"
                         },
                         {
                             "timestamp": 5.927,
                             "type": "PURCHASED",
-                            "id": 1054
+                            "id": 1054,
+                            "name": "Doran's Shield"
                         },
                         {
                             "timestamp": 65.53,
                             "type": "PURCHASED",
-                            "id": 2003
+                            "id": 2003,
+                            "name": "Health Potion"
                         },
                         {
                             "timestamp": 168.728,
                             "type": "DESTROYED",
-                            "id": 2003
+                            "id": 2003,
+                            "name": "Health Potion"
                         },
                         {
                             "timestamp": 213.562,
                             "type": "DESTROYED",
-                            "id": 2003
+                            "id": 2003,
+                            "name": "Health Potion"
                         },
                         {
                             "timestamp": 213.596,
                             "type": "DESTROYED",
-                            "id": 2010
+                            "id": 2010,
+                            "name": "Total Biscuit of Everlasting Will"
                         },
                         {
                             "timestamp": 278.122,
                             "type": "DESTROYED",
-                            "id": 2010
+                            "id": 2010,
+                            "name": "Total Biscuit of Everlasting Will"
                         },
                         {
                             "timestamp": 307.376,
                             "type": "PURCHASED",
-                            "id": 3077
+                            "id": 3077,
+                            "name": "Tiamat"
                         },
                         {
                             "timestamp": 313.425,
                             "type": "PURCHASED",
-                            "id": 2003
+                            "id": 2003,
+                            "name": "Health Potion"
                         },
                         {
                             "timestamp": 511.824,
                             "type": "PURCHASED",
-                            "id": 1036
+                            "id": 1036,
+                            "name": "Long Sword"
                         },
                         {
                             "timestamp": 512.517,
                             "type": "SOLD",
-                            "id": 2010
+                            "id": 2010,
+                            "name": "Total Biscuit of Everlasting Will"
                         },
                         {
                             "timestamp": 512.715,
                             "type": "PURCHASED",
-                            "id": 1028
+                            "id": 1028,
+                            "name": "Ruby Crystal"
                         },
                         {
                             "timestamp": 514.269,
                             "type": "PURCHASED",
-                            "id": 1036
+                            "id": 1036,
+                            "name": "Long Sword"
                         },
                         {
                             "timestamp": 516.779,
                             "type": "UNDO",
                             "id": 0,
-                            "undoId": 1036
+                            "undoId": 1036,
+                            "name": ""
                         },
                         {
                             "timestamp": 517.802,
                             "type": "PURCHASED",
-                            "id": 1029
+                            "id": 1029,
+                            "name": "Cloth Armor"
                         },
                         {
                             "timestamp": 567.437,
                             "type": "DESTROYED",
-                            "id": 2003
+                            "id": 2003,
+                            "name": "Health Potion"
                         },
                         {
                             "timestamp": 748.534,
                             "type": "PURCHASED",
-                            "id": 3047
+                            "id": 3047,
+                            "name": "Ninja Tabi"
                         },
                         {
                             "timestamp": 748.534,
                             "type": "DESTROYED",
-                            "id": 1029
+                            "id": 1029,
+                            "name": "Cloth Armor"
                         },
                         {
                             "timestamp": 748.534,
                             "type": "DESTROYED",
-                            "id": 2422
+                            "id": 2422,
+                            "name": "Slightly Magical Boots"
                         },
                         {
                             "timestamp": 751.046,
                             "type": "PURCHASED",
-                            "id": 3044
+                            "id": 3044,
+                            "name": "Phage"
                         },
                         {
                             "timestamp": 751.046,
                             "type": "DESTROYED",
-                            "id": 1028
+                            "id": 1028,
+                            "name": "Ruby Crystal"
                         },
                         {
                             "timestamp": 751.046,
                             "type": "DESTROYED",
-                            "id": 1036
+                            "id": 1036,
+                            "name": "Long Sword"
                         },
                         {
                             "timestamp": 752.07,
                             "type": "PURCHASED",
-                            "id": 3067
+                            "id": 3067,
+                            "name": "Kindlegem"
                         },
                         {
                             "timestamp": 857.277,
                             "type": "PURCHASED",
-                            "id": 3071
+                            "id": 3071,
+                            "name": "Black Cleaver"
                         },
                         {
                             "timestamp": 857.277,
                             "type": "DESTROYED",
-                            "id": 3044
+                            "id": 3044,
+                            "name": "Phage"
                         },
                         {
                             "timestamp": 857.277,
                             "type": "DESTROYED",
-                            "id": 3067
+                            "id": 3067,
+                            "name": "Kindlegem"
                         },
                         {
                             "timestamp": 892.03,
                             "type": "PURCHASED",
-                            "id": 1036
+                            "id": 1036,
+                            "name": "Long Sword"
                         },
                         {
                             "timestamp": 994.748,
                             "type": "PURCHASED",
-                            "id": 3044
+                            "id": 3044,
+                            "name": "Phage"
                         },
                         {
                             "timestamp": 994.748,
                             "type": "DESTROYED",
-                            "id": 1036
+                            "id": 1036,
+                            "name": "Long Sword"
                         },
                         {
                             "timestamp": 995.672,
                             "type": "UNDO",
                             "id": 0,
-                            "undoId": 3044
+                            "undoId": 3044,
+                            "name": ""
                         },
                         {
                             "timestamp": 998.217,
                             "type": "PURCHASED",
-                            "id": 3364
+                            "id": 3364,
+                            "name": "Oracle Lens"
                         },
                         {
                             "timestamp": 998.217,
                             "type": "DESTROYED",
-                            "id": 3340
+                            "id": 3340,
+                            "name": "Warding Totem (Trinket)"
                         },
                         {
                             "timestamp": 1007.367,
                             "type": "PURCHASED",
-                            "id": 3057
+                            "id": 3057,
+                            "name": "Sheen"
                         },
                         {
                             "timestamp": 1171.395,
                             "type": "PURCHASED",
-                            "id": 3044
+                            "id": 3044,
+                            "name": "Phage"
                         },
                         {
                             "timestamp": 1171.395,
                             "type": "DESTROYED",
-                            "id": 1036
+                            "id": 1036,
+                            "name": "Long Sword"
                         },
                         {
                             "timestamp": 1436.002,
                             "type": "SOLD",
-                            "id": 1054
+                            "id": 1054,
+                            "name": "Doran's Shield"
                         },
                         {
                             "timestamp": 1436.398,
                             "type": "PURCHASED",
-                            "id": 3078
+                            "id": 3078,
+                            "name": "Trinity Force"
                         },
                         {
                             "timestamp": 1436.398,
                             "type": "DESTROYED",
-                            "id": 3057
+                            "id": 3057,
+                            "name": "Sheen"
                         },
                         {
                             "timestamp": 1436.398,
                             "type": "DESTROYED",
-                            "id": 3044
+                            "id": 3044,
+                            "name": "Phage"
                         },
                         {
                             "timestamp": 1472.594,
                             "type": "PURCHASED",
-                            "id": 2055
+                            "id": 2055,
+                            "name": "Control Ward"
                         },
                         {
                             "timestamp": 1529.607,
                             "type": "DESTROYED",
-                            "id": 2055
+                            "id": 2055,
+                            "name": "Control Ward"
                         },
                         {
                             "timestamp": 1587.703,
                             "type": "PURCHASED",
-                            "id": 1053
+                            "id": 1053,
+                            "name": "Vampiric Scepter"
                         },
                         {
                             "timestamp": 1703.497,
                             "type": "PURCHASED",
-                            "id": 3133
+                            "id": 3133,
+                            "name": "Caulfield's Warhammer"
                         },
                         {
                             "timestamp": 1844.059,
                             "type": "PURCHASED",
-                            "id": 3812
+                            "id": 3812,
+                            "name": "Death's Dance"
                         },
                         {
                             "timestamp": 1844.059,
                             "type": "DESTROYED",
-                            "id": 1053
+                            "id": 1053,
+                            "name": "Vampiric Scepter"
                         },
                         {
                             "timestamp": 1844.059,
                             "type": "DESTROYED",
-                            "id": 3133
+                            "id": 3133,
+                            "name": "Caulfield's Warhammer"
                         },
                         {
                             "timestamp": 1845.182,
                             "type": "PURCHASED",
-                            "id": 1036
+                            "id": 1036,
+                            "name": "Long Sword"
                         }
                     ],
                     "wardsEvents": [
@@ -5384,7 +5717,8 @@
                                 1675,
                                 0,
                                 0
-                            ]
+                            ],
+                            "name": "Electrocute"
                         },
                         {
                             "id": 8126,
@@ -5393,7 +5727,8 @@
                                 909,
                                 0,
                                 0
-                            ]
+                            ],
+                            "name": "Cheap Shot"
                         },
                         {
                             "id": 8138,
@@ -5402,7 +5737,8 @@
                                 30,
                                 0,
                                 0
-                            ]
+                            ],
+                            "name": "Eyeball Collection"
                         },
                         {
                             "id": 8135,
@@ -5411,7 +5747,8 @@
                                 9085,
                                 5,
                                 0
-                            ]
+                            ],
+                            "name": "Ravenous Hunter"
                         },
                         {
                             "id": 8275,
@@ -5420,7 +5757,8 @@
                                 22,
                                 0,
                                 0
-                            ]
+                            ],
+                            "name": "Nimbus Cloak"
                         },
                         {
                             "id": 8232,
@@ -5429,48 +5767,58 @@
                                 3,
                                 0,
                                 0
-                            ]
+                            ],
+                            "name": "Waterwalking"
                         }
                     ],
                     "summonerSpells": [
                         {
                             "id": 11,
-                            "slot": 0
+                            "slot": 0,
+                            "name": "Smite"
                         },
                         {
                             "id": 4,
-                            "slot": 1
+                            "slot": 1,
+                            "name": "Flash"
                         }
                     ],
                     "endOfGameStats": {
                         "items": [
                             {
                                 "id": 1402,
-                                "slot": 0
+                                "slot": 0,
+                                "name": "Enchantment: Runic Echoes"
                             },
                             {
                                 "id": 3157,
-                                "slot": 1
+                                "slot": 1,
+                                "name": "Zhonya's Hourglass"
                             },
                             {
                                 "id": 3165,
-                                "slot": 2
+                                "slot": 2,
+                                "name": "Morellonomicon"
                             },
                             {
                                 "id": 3102,
-                                "slot": 3
+                                "slot": 3,
+                                "name": "Banshee's Veil"
                             },
                             {
                                 "id": 1058,
-                                "slot": 4
+                                "slot": 4,
+                                "name": "Needlessly Large Rod"
                             },
                             {
                                 "id": 3020,
-                                "slot": 5
+                                "slot": 5,
+                                "name": "Sorcerer's Shoes"
                             },
                             {
                                 "id": 3364,
-                                "slot": 6
+                                "slot": 6,
+                                "name": "Oracle Lens"
                             }
                         ],
                         "firstBlood": false,
@@ -5518,6 +5866,9 @@
                         "totalTimeCCDealt": 606,
                         "timeCCingOthers": 17
                     },
+                    "championName": "Taliyah",
+                    "primaryRuneTreeName": "Domination",
+                    "secondaryRuneTreeName": "Sorcery",
                     "snapshots": [
                         {
                             "timestamp": 0.0,
@@ -5950,248 +6301,297 @@
                         {
                             "timestamp": 7.083,
                             "type": "PURCHASED",
-                            "id": 1039
+                            "id": 1039,
+                            "name": "Hunter's Talisman"
                         },
                         {
                             "timestamp": 7.149,
                             "type": "PURCHASED",
-                            "id": 2031
+                            "id": 2031,
+                            "name": "Refillable Potion"
                         },
                         {
                             "timestamp": 68.438,
                             "type": "PURCHASED",
-                            "id": 3364
+                            "id": 3364,
+                            "name": "Oracle Lens"
                         },
                         {
                             "timestamp": 68.438,
                             "type": "DESTROYED",
-                            "id": 3340
+                            "id": 3340,
+                            "name": "Warding Totem (Trinket)"
                         },
                         {
                             "timestamp": 260.807,
                             "type": "PURCHASED",
-                            "id": 3706
+                            "id": 3706,
+                            "name": "Stalker's Blade"
                         },
                         {
                             "timestamp": 260.807,
                             "type": "DESTROYED",
-                            "id": 1039
+                            "id": 1039,
+                            "name": "Hunter's Talisman"
                         },
                         {
                             "timestamp": 261.535,
                             "type": "PURCHASED",
-                            "id": 1052
+                            "id": 1052,
+                            "name": "Amplifying Tome"
                         },
                         {
                             "timestamp": 261.799,
                             "type": "PURCHASED",
-                            "id": 1001
+                            "id": 1001,
+                            "name": "Boots of Speed"
                         },
                         {
                             "timestamp": 262.592,
                             "type": "PURCHASED",
-                            "id": 2055
+                            "id": 2055,
+                            "name": "Control Ward"
                         },
                         {
                             "timestamp": 330.933,
                             "type": "DESTROYED",
-                            "id": 2055
+                            "id": 2055,
+                            "name": "Control Ward"
                         },
                         {
                             "timestamp": 457.227,
                             "type": "PURCHASED",
-                            "id": 3108
+                            "id": 3108,
+                            "name": "Fiendish Codex"
                         },
                         {
                             "timestamp": 457.227,
                             "type": "DESTROYED",
-                            "id": 1052
+                            "id": 1052,
+                            "name": "Amplifying Tome"
                         },
                         {
                             "timestamp": 458.219,
                             "type": "PURCHASED",
-                            "id": 1027
+                            "id": 1027,
+                            "name": "Sapphire Crystal"
                         },
                         {
                             "timestamp": 610.989,
                             "type": "PURCHASED",
-                            "id": 1402
+                            "id": 1402,
+                            "name": "Enchantment: Runic Echoes"
                         },
                         {
                             "timestamp": 610.989,
                             "type": "DESTROYED",
-                            "id": 3108
+                            "id": 3108,
+                            "name": "Fiendish Codex"
                         },
                         {
                             "timestamp": 610.989,
                             "type": "DESTROYED",
-                            "id": 1027
+                            "id": 1027,
+                            "name": "Sapphire Crystal"
                         },
                         {
                             "timestamp": 610.989,
                             "type": "DESTROYED",
-                            "id": 3706
+                            "id": 3706,
+                            "name": "Stalker's Blade"
                         },
                         {
                             "timestamp": 612.145,
                             "type": "PURCHASED",
-                            "id": 3020
+                            "id": 3020,
+                            "name": "Sorcerer's Shoes"
                         },
                         {
                             "timestamp": 612.145,
                             "type": "DESTROYED",
-                            "id": 1001
+                            "id": 1001,
+                            "name": "Boots of Speed"
                         },
                         {
                             "timestamp": 612.806,
                             "type": "PURCHASED",
-                            "id": 1052
+                            "id": 1052,
+                            "name": "Amplifying Tome"
                         },
                         {
                             "timestamp": 751.145,
                             "type": "PURCHASED",
-                            "id": 1026
+                            "id": 1026,
+                            "name": "Blasting Wand"
                         },
                         {
                             "timestamp": 865.273,
                             "type": "PURCHASED",
-                            "id": 1028
+                            "id": 1028,
+                            "name": "Ruby Crystal"
                         },
                         {
                             "timestamp": 1053.662,
                             "type": "PURCHASED",
-                            "id": 3165
+                            "id": 3165,
+                            "name": "Morellonomicon"
                         },
                         {
                             "timestamp": 1053.662,
                             "type": "DESTROYED",
-                            "id": 1028
+                            "id": 1028,
+                            "name": "Ruby Crystal"
                         },
                         {
                             "timestamp": 1053.662,
                             "type": "DESTROYED",
-                            "id": 1052
+                            "id": 1052,
+                            "name": "Amplifying Tome"
                         },
                         {
                             "timestamp": 1053.662,
                             "type": "DESTROYED",
-                            "id": 1026
+                            "id": 1026,
+                            "name": "Blasting Wand"
                         },
                         {
                             "timestamp": 1059.216,
                             "type": "PURCHASED",
-                            "id": 3108
+                            "id": 3108,
+                            "name": "Fiendish Codex"
                         },
                         {
                             "timestamp": 1061.726,
                             "type": "SOLD",
-                            "id": 2031
+                            "id": 2031,
+                            "name": "Refillable Potion"
                         },
                         {
                             "timestamp": 1063.973,
                             "type": "PURCHASED",
-                            "id": 2055
+                            "id": 2055,
+                            "name": "Control Ward"
                         },
                         {
                             "timestamp": 1088.225,
                             "type": "DESTROYED",
-                            "id": 2055
+                            "id": 2055,
+                            "name": "Control Ward"
                         },
                         {
                             "timestamp": 1180.811,
                             "type": "PURCHASED",
-                            "id": 1026
+                            "id": 1026,
+                            "name": "Blasting Wand"
                         },
                         {
                             "timestamp": 1182.825,
                             "type": "PURCHASED",
-                            "id": 2055
+                            "id": 2055,
+                            "name": "Control Ward"
                         },
                         {
                             "timestamp": 1200.399,
                             "type": "DESTROYED",
-                            "id": 2055
+                            "id": 2055,
+                            "name": "Control Ward"
                         },
                         {
                             "timestamp": 1277.209,
                             "type": "PURCHASED",
-                            "id": 1033
+                            "id": 1033,
+                            "name": "Null-Magic Mantle"
                         },
                         {
                             "timestamp": 1279.421,
                             "type": "UNDO",
                             "id": 0,
-                            "undoId": 1033
+                            "undoId": 1033,
+                            "name": ""
                         },
                         {
                             "timestamp": 1280.478,
                             "type": "PURCHASED",
-                            "id": 2420
+                            "id": 2420,
+                            "name": "Stopwatch"
                         },
                         {
                             "timestamp": 1402.113,
                             "type": "PURCHASED",
-                            "id": 3102
+                            "id": 3102,
+                            "name": "Banshee's Veil"
                         },
                         {
                             "timestamp": 1402.113,
                             "type": "DESTROYED",
-                            "id": 3108
+                            "id": 3108,
+                            "name": "Fiendish Codex"
                         },
                         {
                             "timestamp": 1402.113,
                             "type": "DESTROYED",
-                            "id": 1026
+                            "id": 1026,
+                            "name": "Blasting Wand"
                         },
                         {
                             "timestamp": 1493.169,
                             "type": "PURCHASED",
-                            "id": 1052
+                            "id": 1052,
+                            "name": "Amplifying Tome"
                         },
                         {
                             "timestamp": 1529.938,
                             "type": "DESTROYED",
-                            "id": 2420
+                            "id": 2420,
+                            "name": "Stopwatch"
                         },
                         {
                             "timestamp": 1583.706,
                             "type": "PURCHASED",
-                            "id": 3108
+                            "id": 3108,
+                            "name": "Fiendish Codex"
                         },
                         {
                             "timestamp": 1583.706,
                             "type": "DESTROYED",
-                            "id": 1052
+                            "id": 1052,
+                            "name": "Amplifying Tome"
                         },
                         {
                             "timestamp": 1618.583,
                             "type": "PURCHASED",
-                            "id": 3157
+                            "id": 3157,
+                            "name": "Zhonya's Hourglass"
                         },
                         {
                             "timestamp": 1618.583,
                             "type": "DESTROYED",
-                            "id": 3108
+                            "id": 3108,
+                            "name": "Fiendish Codex"
                         },
                         {
                             "timestamp": 1618.583,
                             "type": "DESTROYED",
-                            "id": 2421
+                            "id": 2421,
+                            "name": "Broken Stopwatch"
                         },
                         {
                             "timestamp": 1688.404,
                             "type": "PURCHASED",
-                            "id": 1052
+                            "id": 1052,
+                            "name": "Amplifying Tome"
                         },
                         {
                             "timestamp": 1864.647,
                             "type": "SOLD",
-                            "id": 1052
+                            "id": 1052,
+                            "name": "Amplifying Tome"
                         },
                         {
                             "timestamp": 1866.893,
                             "type": "PURCHASED",
-                            "id": 1058
+                            "id": 1058,
+                            "name": "Needlessly Large Rod"
                         }
                     ],
                     "wardsEvents": [
@@ -6345,7 +6745,8 @@
                                 114,
                                 0,
                                 0
-                            ]
+                            ],
+                            "name": "Conqueror"
                         },
                         {
                             "id": 9101,
@@ -6354,7 +6755,8 @@
                                 4150,
                                 5181,
                                 0
-                            ]
+                            ],
+                            "name": "Overheal"
                         },
                         {
                             "id": 9103,
@@ -6363,7 +6765,8 @@
                                 24,
                                 0,
                                 0
-                            ]
+                            ],
+                            "name": "Legend: Bloodline"
                         },
                         {
                             "id": 8017,
@@ -6372,7 +6775,8 @@
                                 1184,
                                 0,
                                 0
-                            ]
+                            ],
+                            "name": "Cut Down"
                         },
                         {
                             "id": 8275,
@@ -6381,7 +6785,8 @@
                                 11,
                                 0,
                                 0
-                            ]
+                            ],
+                            "name": "Nimbus Cloak"
                         },
                         {
                             "id": 8236,
@@ -6390,48 +6795,58 @@
                                 28,
                                 0,
                                 0
-                            ]
+                            ],
+                            "name": "Gathering Storm"
                         }
                     ],
                     "summonerSpells": [
                         {
                             "id": 7,
-                            "slot": 0
+                            "slot": 0,
+                            "name": "Heal"
                         },
                         {
                             "id": 4,
-                            "slot": 1
+                            "slot": 1,
+                            "name": "Flash"
                         }
                     ],
                     "endOfGameStats": {
                         "items": [
                             {
                                 "id": 3046,
-                                "slot": 0
+                                "slot": 0,
+                                "name": "Phantom Dancer"
                             },
                             {
                                 "id": 3085,
-                                "slot": 1
+                                "slot": 1,
+                                "name": "Runaan's Hurricane"
                             },
                             {
                                 "id": 1018,
-                                "slot": 2
+                                "slot": 2,
+                                "name": "Cloak of Agility"
                             },
                             {
                                 "id": 3031,
-                                "slot": 3
+                                "slot": 3,
+                                "name": "Infinity Edge"
                             },
                             {
                                 "id": 3035,
-                                "slot": 4
+                                "slot": 4,
+                                "name": "Last Whisper"
                             },
                             {
                                 "id": 3006,
-                                "slot": 5
+                                "slot": 5,
+                                "name": "Berserker's Greaves"
                             },
                             {
                                 "id": 3363,
-                                "slot": 6
+                                "slot": 6,
+                                "name": "Farsight Alteration"
                             }
                         ],
                         "firstBlood": false,
@@ -6479,6 +6894,9 @@
                         "totalTimeCCDealt": 240,
                         "timeCCingOthers": 21
                     },
+                    "championName": "Aphelios",
+                    "primaryRuneTreeName": "Precision",
+                    "secondaryRuneTreeName": "Sorcery",
                     "snapshots": [
                         {
                             "timestamp": 0.0,
@@ -6911,200 +7329,239 @@
                         {
                             "timestamp": 5.465,
                             "type": "PURCHASED",
-                            "id": 1055
+                            "id": 1055,
+                            "name": "Doran's Blade"
                         },
                         {
                             "timestamp": 6.257,
                             "type": "UNDO",
                             "id": 0,
-                            "undoId": 1055
+                            "undoId": 1055,
+                            "name": ""
                         },
                         {
                             "timestamp": 6.686,
                             "type": "PURCHASED",
-                            "id": 1054
+                            "id": 1054,
+                            "name": "Doran's Shield"
                         },
                         {
                             "timestamp": 7.116,
                             "type": "PURCHASED",
-                            "id": 2003
+                            "id": 2003,
+                            "name": "Health Potion"
                         },
                         {
                             "timestamp": 7.38,
                             "type": "PURCHASED",
-                            "id": 3340
+                            "id": 3340,
+                            "name": "Warding Totem (Trinket)"
                         },
                         {
                             "timestamp": 188.788,
                             "type": "DESTROYED",
-                            "id": 2003
+                            "id": 2003,
+                            "name": "Health Potion"
                         },
                         {
                             "timestamp": 233.948,
                             "type": "PURCHASED",
-                            "id": 1055
+                            "id": 1055,
+                            "name": "Doran's Blade"
                         },
                         {
                             "timestamp": 236.161,
                             "type": "PURCHASED",
-                            "id": 2003
+                            "id": 2003,
+                            "name": "Health Potion"
                         },
                         {
                             "timestamp": 237.846,
                             "type": "PURCHASED",
-                            "id": 1001
+                            "id": 1001,
+                            "name": "Boots of Speed"
                         },
                         {
                             "timestamp": 322.279,
                             "type": "DESTROYED",
-                            "id": 2003
+                            "id": 2003,
+                            "name": "Health Potion"
                         },
                         {
                             "timestamp": 346.297,
                             "type": "PURCHASED",
-                            "id": 3006
+                            "id": 3006,
+                            "name": "Berserker's Greaves"
                         },
                         {
                             "timestamp": 346.297,
                             "type": "DESTROYED",
-                            "id": 1001
+                            "id": 1001,
+                            "name": "Boots of Speed"
                         },
                         {
                             "timestamp": 515.92,
                             "type": "PURCHASED",
-                            "id": 1083
+                            "id": 1083,
+                            "name": "Cull"
                         },
                         {
                             "timestamp": 516.283,
                             "type": "PURCHASED",
-                            "id": 1042
+                            "id": 1042,
+                            "name": "Dagger"
                         },
                         {
                             "timestamp": 783.898,
                             "type": "PURCHASED",
-                            "id": 3044
+                            "id": 3044,
+                            "name": "Phage"
                         },
                         {
                             "timestamp": 784.625,
                             "type": "UNDO",
                             "id": 0,
-                            "undoId": 3044
+                            "undoId": 3044,
+                            "name": ""
                         },
                         {
                             "timestamp": 785.087,
                             "type": "PURCHASED",
-                            "id": 1038
+                            "id": 1038,
+                            "name": "B. F. Sword"
                         },
                         {
                             "timestamp": 1019.228,
                             "type": "SOLD",
-                            "id": 1054
+                            "id": 1054,
+                            "name": "Doran's Shield"
                         },
                         {
                             "timestamp": 1020.121,
                             "type": "PURCHASED",
-                            "id": 1037
+                            "id": 1037,
+                            "name": "Pickaxe"
                         },
                         {
                             "timestamp": 1102.961,
                             "type": "PURCHASED",
-                            "id": 3031
+                            "id": 3031,
+                            "name": "Infinity Edge"
                         },
                         {
                             "timestamp": 1102.961,
                             "type": "DESTROYED",
-                            "id": 1038
+                            "id": 1038,
+                            "name": "B. F. Sword"
                         },
                         {
                             "timestamp": 1102.961,
                             "type": "DESTROYED",
-                            "id": 1037
+                            "id": 1037,
+                            "name": "Pickaxe"
                         },
                         {
                             "timestamp": 1194.452,
                             "type": "PURCHASED",
-                            "id": 1018
+                            "id": 1018,
+                            "name": "Cloak of Agility"
                         },
                         {
                             "timestamp": 1196.434,
                             "type": "PURCHASED",
-                            "id": 3363
+                            "id": 3363,
+                            "name": "Farsight Alteration"
                         },
                         {
                             "timestamp": 1196.434,
                             "type": "DESTROYED",
-                            "id": 3340
+                            "id": 3340,
+                            "name": "Warding Totem (Trinket)"
                         },
                         {
                             "timestamp": 1357.448,
                             "type": "PURCHASED",
-                            "id": 3086
+                            "id": 3086,
+                            "name": "Zeal"
                         },
                         {
                             "timestamp": 1357.448,
                             "type": "DESTROYED",
-                            "id": 1018
+                            "id": 1018,
+                            "name": "Cloak of Agility"
                         },
                         {
                             "timestamp": 1357.448,
                             "type": "DESTROYED",
-                            "id": 1042
+                            "id": 1042,
+                            "name": "Dagger"
                         },
                         {
                             "timestamp": 1378.295,
                             "type": "PURCHASED",
-                            "id": 3085
+                            "id": 3085,
+                            "name": "Runaan's Hurricane"
                         },
                         {
                             "timestamp": 1378.295,
                             "type": "DESTROYED",
-                            "id": 3086
+                            "id": 3086,
+                            "name": "Zeal"
                         },
                         {
                             "timestamp": 1488.05,
                             "type": "PURCHASED",
-                            "id": 3086
+                            "id": 3086,
+                            "name": "Zeal"
                         },
                         {
                             "timestamp": 1490.065,
                             "type": "UNDO",
                             "id": 0,
-                            "undoId": 3086
+                            "undoId": 3086,
+                            "name": ""
                         },
                         {
                             "timestamp": 1490.857,
                             "type": "PURCHASED",
-                            "id": 1018
+                            "id": 1018,
+                            "name": "Cloak of Agility"
                         },
                         {
                             "timestamp": 1491.617,
                             "type": "SOLD",
-                            "id": 1083
+                            "id": 1083,
+                            "name": "Cull"
                         },
                         {
                             "timestamp": 1491.848,
                             "type": "PURCHASED",
-                            "id": 1018
+                            "id": 1018,
+                            "name": "Cloak of Agility"
                         },
                         {
                             "timestamp": 1701.351,
                             "type": "PURCHASED",
-                            "id": 3046
+                            "id": 3046,
+                            "name": "Phantom Dancer"
                         },
                         {
                             "timestamp": 1701.351,
                             "type": "DESTROYED",
-                            "id": 1018
+                            "id": 1018,
+                            "name": "Cloak of Agility"
                         },
                         {
                             "timestamp": 1848.65,
                             "type": "SOLD",
-                            "id": 1055
+                            "id": 1055,
+                            "name": "Doran's Blade"
                         },
                         {
                             "timestamp": 1854.53,
                             "type": "PURCHASED",
-                            "id": 3035
+                            "id": 3035,
+                            "name": "Last Whisper"
                         }
                     ],
                     "wardsEvents": [
@@ -7323,7 +7780,8 @@
                                 237,
                                 0,
                                 0
-                            ]
+                            ],
+                            "name": "Aftershock"
                         },
                         {
                             "id": 8446,
@@ -7332,7 +7790,8 @@
                                 0,
                                 0,
                                 0
-                            ]
+                            ],
+                            "name": "Demolish"
                         },
                         {
                             "id": 8473,
@@ -7341,7 +7800,8 @@
                                 640,
                                 0,
                                 0
-                            ]
+                            ],
+                            "name": "Bone Plating"
                         },
                         {
                             "id": 8451,
@@ -7350,7 +7810,8 @@
                                 167,
                                 0,
                                 0
-                            ]
+                            ],
+                            "name": "Overgrowth"
                         },
                         {
                             "id": 8313,
@@ -7359,7 +7820,8 @@
                                 0,
                                 0,
                                 0
-                            ]
+                            ],
+                            "name": "Perfect Timing"
                         },
                         {
                             "id": 8316,
@@ -7368,48 +7830,58 @@
                                 259,
                                 0,
                                 0
-                            ]
+                            ],
+                            "name": "Minion Dematerializer"
                         }
                     ],
                     "summonerSpells": [
                         {
                             "id": 4,
-                            "slot": 0
+                            "slot": 0,
+                            "name": "Flash"
                         },
                         {
                             "id": 14,
-                            "slot": 1
+                            "slot": 1,
+                            "name": "Ignite"
                         }
                     ],
                     "endOfGameStats": {
                         "items": [
                             {
                                 "id": 3857,
-                                "slot": 0
+                                "slot": 0,
+                                "name": "Pauldrons of Whiterock"
                             },
                             {
                                 "id": 3050,
-                                "slot": 1
+                                "slot": 1,
+                                "name": "Zeke's Convergence"
                             },
                             {
                                 "id": 3109,
-                                "slot": 2
+                                "slot": 2,
+                                "name": "Knight's Vow"
                             },
                             {
                                 "id": 2055,
-                                "slot": 3
+                                "slot": 3,
+                                "name": "Control Ward"
                             },
                             {
                                 "id": 3117,
-                                "slot": 4
+                                "slot": 4,
+                                "name": "Boots of Mobility"
                             },
                             {
                                 "id": 0,
-                                "slot": 5
+                                "slot": 5,
+                                "name": ""
                             },
                             {
                                 "id": 3364,
-                                "slot": 6
+                                "slot": 6,
+                                "name": "Oracle Lens"
                             }
                         ],
                         "firstBlood": false,
@@ -7457,6 +7929,9 @@
                         "totalTimeCCDealt": 94,
                         "timeCCingOthers": 29
                     },
+                    "championName": "Thresh",
+                    "primaryRuneTreeName": "Resolve",
+                    "secondaryRuneTreeName": "Inspiration",
                     "snapshots": [
                         {
                             "timestamp": 0.0,
@@ -7889,342 +8364,410 @@
                         {
                             "timestamp": 3.944,
                             "type": "PURCHASED",
-                            "id": 3854
+                            "id": 3854,
+                            "name": "Steel Shoulderguards"
                         },
                         {
                             "timestamp": 4.11,
                             "type": "PURCHASED",
-                            "id": 2003
+                            "id": 2003,
+                            "name": "Health Potion"
                         },
                         {
                             "timestamp": 4.275,
                             "type": "PURCHASED",
-                            "id": 2003
+                            "id": 2003,
+                            "name": "Health Potion"
                         },
                         {
                             "timestamp": 4.44,
                             "type": "PURCHASED",
-                            "id": 3340
+                            "id": 3340,
+                            "name": "Warding Totem (Trinket)"
                         },
                         {
                             "timestamp": 182.212,
                             "type": "DESTROYED",
-                            "id": 2403
+                            "id": 2403,
+                            "name": "Minion Dematerializer"
                         },
                         {
                             "timestamp": 184.096,
                             "type": "DESTROYED",
-                            "id": 2003
+                            "id": 2003,
+                            "name": "Health Potion"
                         },
                         {
                             "timestamp": 194.074,
                             "type": "DESTROYED",
-                            "id": 2003
+                            "id": 2003,
+                            "name": "Health Potion"
                         },
                         {
                             "timestamp": 233.321,
                             "type": "PURCHASED",
-                            "id": 1001
+                            "id": 1001,
+                            "name": "Boots of Speed"
                         },
                         {
                             "timestamp": 234.146,
                             "type": "PURCHASED",
-                            "id": 2055
+                            "id": 2055,
+                            "name": "Control Ward"
                         },
                         {
                             "timestamp": 234.246,
                             "type": "PURCHASED",
-                            "id": 2055
+                            "id": 2055,
+                            "name": "Control Ward"
                         },
                         {
                             "timestamp": 236.227,
                             "type": "PURCHASED",
-                            "id": 2003
+                            "id": 2003,
+                            "name": "Health Potion"
                         },
                         {
                             "timestamp": 236.359,
                             "type": "PURCHASED",
-                            "id": 2003
+                            "id": 2003,
+                            "name": "Health Potion"
                         },
                         {
                             "timestamp": 236.755,
                             "type": "PURCHASED",
-                            "id": 3364
+                            "id": 3364,
+                            "name": "Oracle Lens"
                         },
                         {
                             "timestamp": 236.755,
                             "type": "DESTROYED",
-                            "id": 3340
+                            "id": 3340,
+                            "name": "Warding Totem (Trinket)"
                         },
                         {
                             "timestamp": 319.966,
                             "type": "DESTROYED",
-                            "id": 2003
+                            "id": 2003,
+                            "name": "Health Potion"
                         },
                         {
                             "timestamp": 382.047,
                             "type": "DESTROYED",
-                            "id": 2055
+                            "id": 2055,
+                            "name": "Control Ward"
                         },
                         {
                             "timestamp": 426.827,
                             "type": "DESTROYED",
-                            "id": 2003
+                            "id": 2003,
+                            "name": "Health Potion"
                         },
                         {
                             "timestamp": 440.77,
                             "type": "DESTROYED",
-                            "id": 2403
+                            "id": 2403,
+                            "name": "Minion Dematerializer"
                         },
                         {
                             "timestamp": 480.331,
                             "type": "DESTROYED",
-                            "id": 2419
+                            "id": 2419,
+                            "name": "Commencing Stopwatch"
                         },
                         {
                             "timestamp": 503.166,
                             "type": "DESTROYED",
-                            "id": 2055
+                            "id": 2055,
+                            "name": "Control Ward"
                         },
                         {
                             "timestamp": 533.466,
                             "type": "PURCHASED",
-                            "id": 3117
+                            "id": 3117,
+                            "name": "Boots of Mobility"
                         },
                         {
                             "timestamp": 533.466,
                             "type": "DESTROYED",
-                            "id": 1001
+                            "id": 1001,
+                            "name": "Boots of Speed"
                         },
                         {
                             "timestamp": 533.994,
                             "type": "PURCHASED",
-                            "id": 2055
+                            "id": 2055,
+                            "name": "Control Ward"
                         },
                         {
                             "timestamp": 534.159,
                             "type": "PURCHASED",
-                            "id": 2055
+                            "id": 2055,
+                            "name": "Control Ward"
                         },
                         {
                             "timestamp": 536.372,
                             "type": "PURCHASED",
-                            "id": 2031
+                            "id": 2031,
+                            "name": "Refillable Potion"
                         },
                         {
                             "timestamp": 689.171,
                             "type": "DESTROYED",
-                            "id": 3854
+                            "id": 3854,
+                            "name": "Steel Shoulderguards"
                         },
                         {
                             "timestamp": 785.12,
                             "type": "SOLD",
-                            "id": 2031
+                            "id": 2031,
+                            "name": "Refillable Potion"
                         },
                         {
                             "timestamp": 786.111,
                             "type": "PURCHASED",
-                            "id": 3024
+                            "id": 3024,
+                            "name": "Glacial Shroud"
                         },
                         {
                             "timestamp": 912.521,
                             "type": "DESTROYED",
-                            "id": 2423
+                            "id": 2423,
+                            "name": "Perfectly Timed Stopwatch"
                         },
                         {
                             "timestamp": 963.96,
                             "type": "DESTROYED",
-                            "id": 2055
+                            "id": 2055,
+                            "name": "Control Ward"
                         },
                         {
                             "timestamp": 974.135,
                             "type": "DESTROYED",
-                            "id": 2055
+                            "id": 2055,
+                            "name": "Control Ward"
                         },
                         {
                             "timestamp": 1026.043,
                             "type": "PURCHASED",
-                            "id": 3050
+                            "id": 3050,
+                            "name": "Zeke's Convergence"
                         },
                         {
                             "timestamp": 1026.043,
                             "type": "DESTROYED",
-                            "id": 3024
+                            "id": 3024,
+                            "name": "Glacial Shroud"
                         },
                         {
                             "timestamp": 1026.836,
                             "type": "PURCHASED",
-                            "id": 2055
+                            "id": 2055,
+                            "name": "Control Ward"
                         },
                         {
                             "timestamp": 1027.002,
                             "type": "PURCHASED",
-                            "id": 2055
+                            "id": 2055,
+                            "name": "Control Ward"
                         },
                         {
                             "timestamp": 1118.065,
                             "type": "DESTROYED",
-                            "id": 2055
+                            "id": 2055,
+                            "name": "Control Ward"
                         },
                         {
                             "timestamp": 1161.84,
                             "type": "DESTROYED",
-                            "id": 2055
+                            "id": 2055,
+                            "name": "Control Ward"
                         },
                         {
                             "timestamp": 1178.828,
                             "type": "DESTROYED",
-                            "id": 2403
+                            "id": 2403,
+                            "name": "Minion Dematerializer"
                         },
                         {
                             "timestamp": 1190.587,
                             "type": "DESTROYED",
-                            "id": 3855
+                            "id": 3855,
+                            "name": "Runesteel Spaulders"
                         },
                         {
                             "timestamp": 1205.65,
                             "type": "PURCHASED",
-                            "id": 2055
+                            "id": 2055,
+                            "name": "Control Ward"
                         },
                         {
                             "timestamp": 1205.783,
                             "type": "PURCHASED",
-                            "id": 2055
+                            "id": 2055,
+                            "name": "Control Ward"
                         },
                         {
                             "timestamp": 1207.169,
                             "type": "PURCHASED",
-                            "id": 1028
+                            "id": 1028,
+                            "name": "Ruby Crystal"
                         },
                         {
                             "timestamp": 1267.628,
                             "type": "DESTROYED",
-                            "id": 2055
+                            "id": 2055,
+                            "name": "Control Ward"
                         },
                         {
                             "timestamp": 1326.562,
                             "type": "DESTROYED",
-                            "id": 2055
+                            "id": 2055,
+                            "name": "Control Ward"
                         },
                         {
                             "timestamp": 1355.07,
                             "type": "PURCHASED",
-                            "id": 3067
+                            "id": 3067,
+                            "name": "Kindlegem"
                         },
                         {
                             "timestamp": 1355.07,
                             "type": "DESTROYED",
-                            "id": 1028
+                            "id": 1028,
+                            "name": "Ruby Crystal"
                         },
                         {
                             "timestamp": 1355.599,
                             "type": "PURCHASED",
-                            "id": 2055
+                            "id": 2055,
+                            "name": "Control Ward"
                         },
                         {
                             "timestamp": 1355.731,
                             "type": "PURCHASED",
-                            "id": 2055
+                            "id": 2055,
+                            "name": "Control Ward"
                         },
                         {
                             "timestamp": 1394.815,
                             "type": "DESTROYED",
-                            "id": 2055
+                            "id": 2055,
+                            "name": "Control Ward"
                         },
                         {
                             "timestamp": 1440.79,
                             "type": "DESTROYED",
-                            "id": 2055
+                            "id": 2055,
+                            "name": "Control Ward"
                         },
                         {
                             "timestamp": 1485.177,
                             "type": "PURCHASED",
-                            "id": 2055
+                            "id": 2055,
+                            "name": "Control Ward"
                         },
                         {
                             "timestamp": 1485.342,
                             "type": "PURCHASED",
-                            "id": 2055
+                            "id": 2055,
+                            "name": "Control Ward"
                         },
                         {
                             "timestamp": 1511.245,
                             "type": "SOLD",
-                            "id": 2424
+                            "id": 2424,
+                            "name": "Broken Stopwatch"
                         },
                         {
                             "timestamp": 1511.806,
                             "type": "PURCHASED",
-                            "id": 1029
+                            "id": 1029,
+                            "name": "Cloth Armor"
                         },
                         {
                             "timestamp": 1535.552,
                             "type": "DESTROYED",
-                            "id": 2055
+                            "id": 2055,
+                            "name": "Control Ward"
                         },
                         {
                             "timestamp": 1560.619,
                             "type": "PURCHASED",
-                            "id": 1031
+                            "id": 1031,
+                            "name": "Chain Vest"
                         },
                         {
                             "timestamp": 1560.619,
                             "type": "DESTROYED",
-                            "id": 1029
+                            "id": 1029,
+                            "name": "Cloth Armor"
                         },
                         {
                             "timestamp": 1591.237,
                             "type": "DESTROYED",
-                            "id": 2055
+                            "id": 2055,
+                            "name": "Control Ward"
                         },
                         {
                             "timestamp": 1616.436,
                             "type": "PURCHASED",
-                            "id": 2055
+                            "id": 2055,
+                            "name": "Control Ward"
                         },
                         {
                             "timestamp": 1616.502,
                             "type": "PURCHASED",
-                            "id": 2055
+                            "id": 2055,
+                            "name": "Control Ward"
                         },
                         {
                             "timestamp": 1726.815,
                             "type": "DESTROYED",
-                            "id": 2055
+                            "id": 2055,
+                            "name": "Control Ward"
                         },
                         {
                             "timestamp": 1747.338,
                             "type": "DESTROYED",
-                            "id": 2055
+                            "id": 2055,
+                            "name": "Control Ward"
                         },
                         {
                             "timestamp": 1828.267,
                             "type": "PURCHASED",
-                            "id": 3109
+                            "id": 3109,
+                            "name": "Knight's Vow"
                         },
                         {
                             "timestamp": 1828.267,
                             "type": "DESTROYED",
-                            "id": 3067
+                            "id": 3067,
+                            "name": "Kindlegem"
                         },
                         {
                             "timestamp": 1828.267,
                             "type": "DESTROYED",
-                            "id": 1031
+                            "id": 1031,
+                            "name": "Chain Vest"
                         },
                         {
                             "timestamp": 1837.254,
                             "type": "PURCHASED",
-                            "id": 2055
+                            "id": 2055,
+                            "name": "Control Ward"
                         },
                         {
                             "timestamp": 1837.386,
                             "type": "PURCHASED",
-                            "id": 2055
+                            "id": 2055,
+                            "name": "Control Ward"
                         },
                         {
                             "timestamp": 1858.66,
                             "type": "DESTROYED",
-                            "id": 2055
+                            "id": 2055,
+                            "name": "Control Ward"
                         }
                     ],
                     "wardsEvents": [
@@ -8578,7 +9121,8 @@
                                 909,
                                 0,
                                 0
-                            ]
+                            ],
+                            "name": "Electrocute"
                         },
                         {
                             "id": 8143,
@@ -8587,7 +9131,8 @@
                                 404,
                                 0,
                                 0
-                            ]
+                            ],
+                            "name": "Sudden Impact"
                         },
                         {
                             "id": 8138,
@@ -8596,7 +9141,8 @@
                                 18,
                                 0,
                                 0
-                            ]
+                            ],
+                            "name": "Eyeball Collection"
                         },
                         {
                             "id": 8135,
@@ -8605,7 +9151,8 @@
                                 2039,
                                 4,
                                 0
-                            ]
+                            ],
+                            "name": "Ravenous Hunter"
                         },
                         {
                             "id": 8233,
@@ -8614,7 +9161,8 @@
                                 18,
                                 50,
                                 0
-                            ]
+                            ],
+                            "name": "Absolute Focus"
                         },
                         {
                             "id": 8237,
@@ -8623,48 +9171,58 @@
                                 378,
                                 0,
                                 0
-                            ]
+                            ],
+                            "name": "Scorch"
                         }
                     ],
                     "summonerSpells": [
                         {
                             "id": 4,
-                            "slot": 0
+                            "slot": 0,
+                            "name": "Flash"
                         },
                         {
                             "id": 14,
-                            "slot": 1
+                            "slot": 1,
+                            "name": "Ignite"
                         }
                     ],
                     "endOfGameStats": {
                         "items": [
                             {
                                 "id": 3077,
-                                "slot": 0
+                                "slot": 0,
+                                "name": "Tiamat"
                             },
                             {
                                 "id": 3147,
-                                "slot": 1
+                                "slot": 1,
+                                "name": "Duskblade of Draktharr"
                             },
                             {
                                 "id": 3142,
-                                "slot": 2
+                                "slot": 2,
+                                "name": "Youmuu's Ghostblade"
                             },
                             {
                                 "id": 3117,
-                                "slot": 3
+                                "slot": 3,
+                                "name": "Boots of Mobility"
                             },
                             {
                                 "id": 3134,
-                                "slot": 4
+                                "slot": 4,
+                                "name": "Serrated Dirk"
                             },
                             {
                                 "id": 0,
-                                "slot": 5
+                                "slot": 5,
+                                "name": ""
                             },
                             {
                                 "id": 3364,
-                                "slot": 6
+                                "slot": 6,
+                                "name": "Oracle Lens"
                             }
                         ],
                         "firstBlood": false,
@@ -8712,6 +9270,9 @@
                         "totalTimeCCDealt": 134,
                         "timeCCingOthers": 2
                     },
+                    "championName": "Talon",
+                    "primaryRuneTreeName": "Domination",
+                    "secondaryRuneTreeName": "Sorcery",
                     "snapshots": [
                         {
                             "timestamp": 0.0,
@@ -9144,293 +9705,351 @@
                         {
                             "timestamp": 14.284,
                             "type": "PURCHASED",
-                            "id": 1036
+                            "id": 1036,
+                            "name": "Long Sword"
                         },
                         {
                             "timestamp": 14.515,
                             "type": "PURCHASED",
-                            "id": 2031
+                            "id": 2031,
+                            "name": "Refillable Potion"
                         },
                         {
                             "timestamp": 14.647,
                             "type": "PURCHASED",
-                            "id": 3340
+                            "id": 3340,
+                            "name": "Warding Totem (Trinket)"
                         },
                         {
                             "timestamp": 233.024,
                             "type": "PURCHASED",
-                            "id": 1036
+                            "id": 1036,
+                            "name": "Long Sword"
                         },
                         {
                             "timestamp": 234.113,
                             "type": "PURCHASED",
-                            "id": 1006
+                            "id": 1006,
+                            "name": "Rejuvenation Bead"
                         },
                         {
                             "timestamp": 324.228,
                             "type": "PURCHASED",
-                            "id": 1001
+                            "id": 1001,
+                            "name": "Boots of Speed"
                         },
                         {
                             "timestamp": 449.727,
                             "type": "PURCHASED",
-                            "id": 3077
+                            "id": 3077,
+                            "name": "Tiamat"
                         },
                         {
                             "timestamp": 449.727,
                             "type": "DESTROYED",
-                            "id": 1036
+                            "id": 1036,
+                            "name": "Long Sword"
                         },
                         {
                             "timestamp": 449.727,
                             "type": "DESTROYED",
-                            "id": 1006
+                            "id": 1006,
+                            "name": "Rejuvenation Bead"
                         },
                         {
                             "timestamp": 449.727,
                             "type": "DESTROYED",
-                            "id": 1036
+                            "id": 1036,
+                            "name": "Long Sword"
                         },
                         {
                             "timestamp": 451.445,
                             "type": "PURCHASED",
-                            "id": 2055
+                            "id": 2055,
+                            "name": "Control Ward"
                         },
                         {
                             "timestamp": 489.98,
                             "type": "DESTROYED",
-                            "id": 2055
+                            "id": 2055,
+                            "name": "Control Ward"
                         },
                         {
                             "timestamp": 590.466,
                             "type": "PURCHASED",
-                            "id": 3117
+                            "id": 3117,
+                            "name": "Boots of Mobility"
                         },
                         {
                             "timestamp": 590.466,
                             "type": "DESTROYED",
-                            "id": 1001
+                            "id": 1001,
+                            "name": "Boots of Speed"
                         },
                         {
                             "timestamp": 591.129,
                             "type": "PURCHASED",
-                            "id": 2055
+                            "id": 2055,
+                            "name": "Control Ward"
                         },
                         {
                             "timestamp": 653.481,
                             "type": "PURCHASED",
-                            "id": 1036
+                            "id": 1036,
+                            "name": "Long Sword"
                         },
                         {
                             "timestamp": 700.866,
                             "type": "DESTROYED",
-                            "id": 2055
+                            "id": 2055,
+                            "name": "Control Ward"
                         },
                         {
                             "timestamp": 782.115,
                             "type": "PURCHASED",
-                            "id": 3134
+                            "id": 3134,
+                            "name": "Serrated Dirk"
                         },
                         {
                             "timestamp": 782.115,
                             "type": "DESTROYED",
-                            "id": 1036
+                            "id": 1036,
+                            "name": "Long Sword"
                         },
                         {
                             "timestamp": 782.412,
                             "type": "PURCHASED",
-                            "id": 1036
+                            "id": 1036,
+                            "name": "Long Sword"
                         },
                         {
                             "timestamp": 783.568,
                             "type": "PURCHASED",
-                            "id": 2055
+                            "id": 2055,
+                            "name": "Control Ward"
                         },
                         {
                             "timestamp": 829.622,
                             "type": "DESTROYED",
-                            "id": 2055
+                            "id": 2055,
+                            "name": "Control Ward"
                         },
                         {
                             "timestamp": 937.562,
                             "type": "SOLD",
-                            "id": 2031
+                            "id": 2031,
+                            "name": "Refillable Potion"
                         },
                         {
                             "timestamp": 938.058,
                             "type": "PURCHASED",
-                            "id": 3147
+                            "id": 3147,
+                            "name": "Duskblade of Draktharr"
                         },
                         {
                             "timestamp": 938.058,
                             "type": "DESTROYED",
-                            "id": 3134
+                            "id": 3134,
+                            "name": "Serrated Dirk"
                         },
                         {
                             "timestamp": 938.058,
                             "type": "DESTROYED",
-                            "id": 1036
+                            "id": 1036,
+                            "name": "Long Sword"
                         },
                         {
                             "timestamp": 1005.352,
                             "type": "PURCHASED",
-                            "id": 1036
+                            "id": 1036,
+                            "name": "Long Sword"
                         },
                         {
                             "timestamp": 1005.946,
                             "type": "PURCHASED",
-                            "id": 2055
+                            "id": 2055,
+                            "name": "Control Ward"
                         },
                         {
                             "timestamp": 1016.751,
                             "type": "PURCHASED",
-                            "id": 3364
+                            "id": 3364,
+                            "name": "Oracle Lens"
                         },
                         {
                             "timestamp": 1016.751,
                             "type": "DESTROYED",
-                            "id": 3340
+                            "id": 3340,
+                            "name": "Warding Totem (Trinket)"
                         },
                         {
                             "timestamp": 1078.906,
                             "type": "DESTROYED",
-                            "id": 2055
+                            "id": 2055,
+                            "name": "Control Ward"
                         },
                         {
                             "timestamp": 1102.4,
                             "type": "PURCHASED",
-                            "id": 1036
+                            "id": 1036,
+                            "name": "Long Sword"
                         },
                         {
                             "timestamp": 1245.884,
                             "type": "PURCHASED",
-                            "id": 3134
+                            "id": 3134,
+                            "name": "Serrated Dirk"
                         },
                         {
                             "timestamp": 1245.884,
                             "type": "DESTROYED",
-                            "id": 1036
+                            "id": 1036,
+                            "name": "Long Sword"
                         },
                         {
                             "timestamp": 1245.884,
                             "type": "DESTROYED",
-                            "id": 1036
+                            "id": 1036,
+                            "name": "Long Sword"
                         },
                         {
                             "timestamp": 1246.941,
                             "type": "PURCHASED",
-                            "id": 1036
+                            "id": 1036,
+                            "name": "Long Sword"
                         },
                         {
                             "timestamp": 1247.073,
                             "type": "PURCHASED",
-                            "id": 1036
+                            "id": 1036,
+                            "name": "Long Sword"
                         },
                         {
                             "timestamp": 1327.85,
                             "type": "PURCHASED",
-                            "id": 3133
+                            "id": 3133,
+                            "name": "Caulfield's Warhammer"
                         },
                         {
                             "timestamp": 1327.85,
                             "type": "DESTROYED",
-                            "id": 1036
+                            "id": 1036,
+                            "name": "Long Sword"
                         },
                         {
                             "timestamp": 1327.85,
                             "type": "DESTROYED",
-                            "id": 1036
+                            "id": 1036,
+                            "name": "Long Sword"
                         },
                         {
                             "timestamp": 1382.694,
                             "type": "PURCHASED",
-                            "id": 2055
+                            "id": 2055,
+                            "name": "Control Ward"
                         },
                         {
                             "timestamp": 1382.826,
                             "type": "PURCHASED",
-                            "id": 2055
+                            "id": 2055,
+                            "name": "Control Ward"
                         },
                         {
                             "timestamp": 1402.873,
                             "type": "DESTROYED",
-                            "id": 2055
+                            "id": 2055,
+                            "name": "Control Ward"
                         },
                         {
                             "timestamp": 1552.032,
                             "type": "PURCHASED",
-                            "id": 3142
+                            "id": 3142,
+                            "name": "Youmuu's Ghostblade"
                         },
                         {
                             "timestamp": 1552.032,
                             "type": "DESTROYED",
-                            "id": 3133
+                            "id": 3133,
+                            "name": "Caulfield's Warhammer"
                         },
                         {
                             "timestamp": 1552.032,
                             "type": "DESTROYED",
-                            "id": 3134
+                            "id": 3134,
+                            "name": "Serrated Dirk"
                         },
                         {
                             "timestamp": 1594.242,
                             "type": "DESTROYED",
-                            "id": 2055
+                            "id": 2055,
+                            "name": "Control Ward"
                         },
                         {
                             "timestamp": 1645.801,
                             "type": "PURCHASED",
-                            "id": 1036
+                            "id": 1036,
+                            "name": "Long Sword"
                         },
                         {
                             "timestamp": 1746.676,
                             "type": "PURCHASED",
-                            "id": 3134
+                            "id": 3134,
+                            "name": "Serrated Dirk"
                         },
                         {
                             "timestamp": 1746.676,
                             "type": "DESTROYED",
-                            "id": 1036
+                            "id": 1036,
+                            "name": "Long Sword"
                         },
                         {
                             "timestamp": 1747.173,
                             "type": "PURCHASED",
-                            "id": 2055
+                            "id": 2055,
+                            "name": "Control Ward"
                         },
                         {
                             "timestamp": 1759.366,
                             "type": "DESTROYED",
-                            "id": 2055
+                            "id": 2055,
+                            "name": "Control Ward"
                         },
                         {
                             "timestamp": 1784.768,
                             "type": "PURCHASED",
-                            "id": 2055
+                            "id": 2055,
+                            "name": "Control Ward"
                         },
                         {
                             "timestamp": 1784.933,
                             "type": "PURCHASED",
-                            "id": 2055
+                            "id": 2055,
+                            "name": "Control Ward"
                         },
                         {
                             "timestamp": 1811.72,
                             "type": "DESTROYED",
-                            "id": 2055
+                            "id": 2055,
+                            "name": "Control Ward"
                         },
                         {
                             "timestamp": 1819.085,
                             "type": "DESTROYED",
-                            "id": 2055
+                            "id": 2055,
+                            "name": "Control Ward"
                         },
                         {
                             "timestamp": 1846.04,
                             "type": "PURCHASED",
-                            "id": 1036
+                            "id": 1036,
+                            "name": "Long Sword"
                         },
                         {
                             "timestamp": 1847.957,
                             "type": "UNDO",
                             "id": 0,
-                            "undoId": 1036
+                            "undoId": 1036,
+                            "name": ""
                         }
                     ],
                     "wardsEvents": [
@@ -9629,7 +10248,8 @@
                                 1277,
                                 891,
                                 0
-                            ]
+                            ],
+                            "name": "Grasp of the Undying"
                         },
                         {
                             "id": 8401,
@@ -9638,7 +10258,8 @@
                                 691,
                                 0,
                                 0
-                            ]
+                            ],
+                            "name": "Shield Bash"
                         },
                         {
                             "id": 8444,
@@ -9647,7 +10268,8 @@
                                 1435,
                                 0,
                                 0
-                            ]
+                            ],
+                            "name": "Second Wind"
                         },
                         {
                             "id": 8451,
@@ -9656,7 +10278,8 @@
                                 194,
                                 0,
                                 0
-                            ]
+                            ],
+                            "name": "Overgrowth"
                         },
                         {
                             "id": 8304,
@@ -9665,7 +10288,8 @@
                                 12,
                                 0,
                                 0
-                            ]
+                            ],
+                            "name": "Magical Footwear"
                         },
                         {
                             "id": 8345,
@@ -9674,48 +10298,58 @@
                                 3,
                                 0,
                                 0
-                            ]
+                            ],
+                            "name": "Biscuit Delivery"
                         }
                     ],
                     "summonerSpells": [
                         {
                             "id": 12,
-                            "slot": 0
+                            "slot": 0,
+                            "name": "Teleport"
                         },
                         {
                             "id": 4,
-                            "slot": 1
+                            "slot": 1,
+                            "name": "Flash"
                         }
                     ],
                     "endOfGameStats": {
                         "items": [
                             {
                                 "id": 3074,
-                                "slot": 0
+                                "slot": 0,
+                                "name": "Ravenous Hydra"
                             },
                             {
                                 "id": 2031,
-                                "slot": 1
+                                "slot": 1,
+                                "name": "Refillable Potion"
                             },
                             {
                                 "id": 3123,
-                                "slot": 2
+                                "slot": 2,
+                                "name": "Executioner's Calling"
                             },
                             {
                                 "id": 1055,
-                                "slot": 3
+                                "slot": 3,
+                                "name": "Doran's Blade"
                             },
                             {
                                 "id": 3078,
-                                "slot": 4
+                                "slot": 4,
+                                "name": "Trinity Force"
                             },
                             {
                                 "id": 3047,
-                                "slot": 5
+                                "slot": 5,
+                                "name": "Ninja Tabi"
                             },
                             {
                                 "id": 3340,
-                                "slot": 6
+                                "slot": 6,
+                                "name": "Warding Totem (Trinket)"
                             }
                         ],
                         "firstBlood": false,
@@ -9763,6 +10397,9 @@
                         "totalTimeCCDealt": 178,
                         "timeCCingOthers": 21
                     },
+                    "championName": "Camille",
+                    "primaryRuneTreeName": "Resolve",
+                    "secondaryRuneTreeName": "Inspiration",
                     "snapshots": [
                         {
                             "timestamp": 0.0,
@@ -10195,137 +10832,164 @@
                         {
                             "timestamp": 13.723,
                             "type": "PURCHASED",
-                            "id": 3340
+                            "id": 3340,
+                            "name": "Warding Totem (Trinket)"
                         },
                         {
                             "timestamp": 14.053,
                             "type": "PURCHASED",
-                            "id": 1055
+                            "id": 1055,
+                            "name": "Doran's Blade"
                         },
                         {
                             "timestamp": 14.251,
                             "type": "PURCHASED",
-                            "id": 2003
+                            "id": 2003,
+                            "name": "Health Potion"
                         },
                         {
                             "timestamp": 52.217,
                             "type": "DESTROYED",
-                            "id": 2003
+                            "id": 2003,
+                            "name": "Health Potion"
                         },
                         {
                             "timestamp": 198.928,
                             "type": "DESTROYED",
-                            "id": 2010
+                            "id": 2010,
+                            "name": "Total Biscuit of Everlasting Will"
                         },
                         {
                             "timestamp": 279.246,
                             "type": "DESTROYED",
-                            "id": 2010
+                            "id": 2010,
+                            "name": "Total Biscuit of Everlasting Will"
                         },
                         {
                             "timestamp": 295.139,
                             "type": "PURCHASED",
-                            "id": 1055
+                            "id": 1055,
+                            "name": "Doran's Blade"
                         },
                         {
                             "timestamp": 297.682,
                             "type": "PURCHASED",
-                            "id": 1036
+                            "id": 1036,
+                            "name": "Long Sword"
                         },
                         {
                             "timestamp": 298.639,
                             "type": "PURCHASED",
-                            "id": 2003
+                            "id": 2003,
+                            "name": "Health Potion"
                         },
                         {
                             "timestamp": 492.69,
                             "type": "PURCHASED",
-                            "id": 3057
+                            "id": 3057,
+                            "name": "Sheen"
                         },
                         {
                             "timestamp": 494.013,
                             "type": "SOLD",
-                            "id": 2010
+                            "id": 2010,
+                            "name": "Total Biscuit of Everlasting Will"
                         },
                         {
                             "timestamp": 494.442,
                             "type": "SOLD",
-                            "id": 2003
+                            "id": 2003,
+                            "name": "Health Potion"
                         },
                         {
                             "timestamp": 495.136,
                             "type": "PURCHASED",
-                            "id": 2031
+                            "id": 2031,
+                            "name": "Refillable Potion"
                         },
                         {
                             "timestamp": 722.569,
                             "type": "PURCHASED",
-                            "id": 3044
+                            "id": 3044,
+                            "name": "Phage"
                         },
                         {
                             "timestamp": 722.569,
                             "type": "DESTROYED",
-                            "id": 1036
+                            "id": 1036,
+                            "name": "Long Sword"
                         },
                         {
                             "timestamp": 970.434,
                             "type": "PURCHASED",
-                            "id": 3078
+                            "id": 3078,
+                            "name": "Trinity Force"
                         },
                         {
                             "timestamp": 970.434,
                             "type": "DESTROYED",
-                            "id": 3057
+                            "id": 3057,
+                            "name": "Sheen"
                         },
                         {
                             "timestamp": 970.434,
                             "type": "DESTROYED",
-                            "id": 3044
+                            "id": 3044,
+                            "name": "Phage"
                         },
                         {
                             "timestamp": 1047.652,
                             "type": "PURCHASED",
-                            "id": 3047
+                            "id": 3047,
+                            "name": "Ninja Tabi"
                         },
                         {
                             "timestamp": 1047.652,
                             "type": "DESTROYED",
-                            "id": 2422
+                            "id": 2422,
+                            "name": "Slightly Magical Boots"
                         },
                         {
                             "timestamp": 1242.184,
                             "type": "PURCHASED",
-                            "id": 3077
+                            "id": 3077,
+                            "name": "Tiamat"
                         },
                         {
                             "timestamp": 1495.745,
                             "type": "SOLD",
-                            "id": 1055
+                            "id": 1055,
+                            "name": "Doran's Blade"
                         },
                         {
                             "timestamp": 1496.24,
                             "type": "PURCHASED",
-                            "id": 3074
+                            "id": 3074,
+                            "name": "Ravenous Hydra"
                         },
                         {
                             "timestamp": 1496.24,
                             "type": "DESTROYED",
-                            "id": 3077
+                            "id": 3077,
+                            "name": "Tiamat"
                         },
                         {
                             "timestamp": 1554.971,
                             "type": "PURCHASED",
-                            "id": 1036
+                            "id": 1036,
+                            "name": "Long Sword"
                         },
                         {
                             "timestamp": 1662.942,
                             "type": "PURCHASED",
-                            "id": 3123
+                            "id": 3123,
+                            "name": "Executioner's Calling"
                         },
                         {
                             "timestamp": 1662.942,
                             "type": "DESTROYED",
-                            "id": 1036
+                            "id": 1036,
+                            "name": "Long Sword"
                         }
                     ],
                     "wardsEvents": [
