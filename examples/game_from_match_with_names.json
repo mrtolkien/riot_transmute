@@ -900,6 +900,13 @@
                     "primaryRuneTreeName": "Precision",
                     "secondaryRuneTreeName": "Inspiration"
                 }
+            ],
+            "bansNames": [
+                "",
+                "Pantheon",
+                "Kalista",
+                "Jax",
+                "Varus"
             ]
         },
         "RED": {
@@ -1791,6 +1798,13 @@
                     "primaryRuneTreeName": "Resolve",
                     "secondaryRuneTreeName": "Inspiration"
                 }
+            ],
+            "bansNames": [
+                "Varus",
+                "Sett",
+                "Zoe",
+                "Graves",
+                "Nidalee"
             ]
         }
     }

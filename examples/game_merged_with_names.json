@@ -5559,6 +5559,13 @@
                     ]
                 }
             ],
+            "bansNames": [
+                "",
+                "Pantheon",
+                "Kalista",
+                "Jax",
+                "Varus"
+            ],
             "monstersKills": [
                 {
                     "timestamp": 649.188,
@@ -11132,6 +11139,13 @@
                         }
                     ]
                 }
+            ],
+            "bansNames": [
+                "Varus",
+                "Sett",
+                "Zoe",
+                "Graves",
+                "Nidalee"
             ],
             "monstersKills": [
                 {
