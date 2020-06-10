@@ -45,19 +45,32 @@ building_dict = {
 
 
 def get_player(game: game_dto.LolGame, participant_id: int) -> game_dto.LolGamePlayer:
-    """Gets a player object from its "participantId"
+    """Gets a player object from its participantId.
     """
     team_side = "BLUE" if participant_id < 6 else "RED"
     return next(p for p in game["teams"][team_side]["players"] if p["id"] == participant_id)
 
 
 def get_team(game: game_dto.LolGame, participant_id: int) -> game_dto.LolGameTeam:
+    """Gets a team object from a player’s participantId
+    """
     team_side = "BLUE" if participant_id < 6 else "RED"
     return game["teams"][team_side]
 
 
-def match_timeline_to_game(riot_timeline_dto: dict, game_id, platform_id, add_names: bool = False,) -> game_dto.LolGame:
-    """Returns a LolGame from a MatchTimelineDto
+def match_timeline_to_game(
+    match_timeline_dto: dict, game_id, platform_id, add_names: bool = False,
+) -> game_dto.LolGame:
+    """Returns a LolGame from a MatchTimelineDto.
+
+    Args:
+        match_timeline_dto: A MatchTimelineDto from Riot’s API.
+        game_id: The gameId of the game, required as it is not present in the MatchTimelineDto.
+        platform_id: The platformId of the game, required as it is not present in the MatchTimelineDto.
+        add_names: whether or not to add names for human readability in the DTO. False by default.
+
+    Returns:
+        The LolGame representation of the game.
     """
 
     riot_source = {"riotLolApi": {"gameId": game_id, "platformId": platform_id}}
@@ -86,7 +99,7 @@ def match_timeline_to_game(riot_timeline_dto: dict, game_id, platform_id, add_na
         kills=[],
     )
 
-    for frame in riot_timeline_dto["frames"]:
+    for frame in match_timeline_dto["frames"]:
         # We start by adding player information at the given snapshot timestamps
         for participant_frame in frame["participantFrames"].values():
             team_side = "BLUE" if participant_frame["participantId"] < 6 else "RED"

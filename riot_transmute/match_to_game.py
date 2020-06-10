@@ -4,7 +4,14 @@ from datetime import datetime, timezone
 
 
 def match_to_game(match_dto: dict, add_names: bool = False) -> game_dto.LolGame:
-    """Returns a LolGame from a MatchDto
+    """Returns a LolGame from a MatchDto.
+
+    Args:
+        match_dto: A MatchDto from Riot’s API
+        add_names: whether or not to add names for human readability in the DTO. False by default.
+
+    Returns:
+        The LolGame representation of the game.
     """
 
     riot_source = {"riotLolApi": {"gameId": match_dto["gameId"], "platformId": match_dto["platformId"]}}
