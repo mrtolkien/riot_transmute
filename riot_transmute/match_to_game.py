@@ -1,6 +1,7 @@
 import lol_dto.classes.game as game_dto
 import lol_id_tools as lit
 from datetime import datetime, timezone
+import logging
 
 
 def match_to_game(match_dto: dict, add_names: bool = False) -> game_dto.LolGame:
@@ -15,6 +16,9 @@ def match_to_game(match_dto: dict, add_names: bool = False) -> game_dto.LolGame:
     """
 
     riot_source = {"riotLolApi": {"gameId": match_dto["gameId"], "platformId": match_dto["platformId"]}}
+
+    log_prefix = f"gameId {match_dto['gameId']}|" f"platformId {match_dto['platformId']}:\t"
+    info_log = set()
 
     date_time = datetime.fromtimestamp(match_dto["gameCreation"] / 1000)
     date_time = date_time.replace(tzinfo=timezone.utc)
@@ -94,10 +98,6 @@ def match_to_game(match_dto: dict, add_names: bool = False) -> game_dto.LolGame:
                 items=items,
                 firstBlood=participant["stats"]["firstBloodKill"],
                 firstBloodAssist=participant["stats"]["firstBloodAssist"],  # This field is wrong by default
-                firstTower=participant["stats"]["firstTowerKill"],
-                firstTowerAssist=participant["stats"]["firstTowerAssist"],
-                firstInhibitor=participant["stats"]["firstInhibitorKill"],
-                firstInhibitorAssist=participant["stats"]["firstInhibitorAssist"],
                 kills=participant["stats"]["kills"],
                 deaths=participant["stats"]["deaths"],
                 assists=participant["stats"]["assists"],
@@ -137,6 +137,20 @@ def match_to_game(match_dto: dict, add_names: bool = False) -> game_dto.LolGame:
                 totalTimeCCDealt=participant["stats"]["totalTimeCrowdControlDealt"],
                 timeCCingOthers=participant["stats"]["timeCCingOthers"],
             )
+
+            # The following fields have proved to be missing or buggy in multiple games
+
+            if "firstTowerKill" in participant["stats"]:
+                end_of_game_stats["firstTower"] = participant["stats"]["firstTowerKill"]
+                end_of_game_stats["firstTowerAssist"] = participant["stats"]["firstTowerAssist"]
+            else:
+                info_log.add(f"{log_prefix}Missing ['player']['firstTower']")
+
+            if "firstInhibitorKill" in participant["stats"]:
+                end_of_game_stats["firstInhibitor"] = participant["stats"]["firstInhibitorKill"]
+                end_of_game_stats["firstInhibitorAssist"] = participant["stats"]["firstInhibitorAssist"]
+            else:
+                info_log.add(f"{log_prefix}Missing ['player']['firstInhibitor']")
 
             player = game_dto.LolGamePlayer(
                 id=participant["participantId"],
