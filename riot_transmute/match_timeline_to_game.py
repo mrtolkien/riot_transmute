@@ -59,7 +59,7 @@ def get_team(game: game_dto.LolGame, participant_id: int) -> game_dto.LolGameTea
 
 
 def match_timeline_to_game(
-    match_timeline_dto: dict, game_id, platform_id, add_names: bool = False,
+    match_timeline_dto: dict, game_id: int, platform_id: str, add_names: bool = False,
 ) -> game_dto.LolGame:
     """Returns a LolGame from a MatchTimelineDto.
 

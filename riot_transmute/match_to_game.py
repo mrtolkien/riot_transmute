@@ -36,6 +36,7 @@ def match_to_game(match_dto: dict, add_names: bool = False) -> game_dto.LolGame:
     for team in match_dto["teams"]:
         side = "BLUE" if team["teamId"] == 100 else "RED"
 
+        # TODO Handle old games with elemental drakes before they were part of the API
         team_dto = game_dto.LolGameTeam(
             riftHeraldKills=team["riftHeraldKills"],
             dragonKills=team["dragonKills"],
@@ -63,13 +64,16 @@ def match_to_game(match_dto: dict, add_names: bool = False) -> game_dto.LolGame:
                 if identity["participantId"] == participant["participantId"]
             )
 
-            # TODO Should we add more info from the "identity" fields?
-            unique_identifier = {
-                "riotLolApi": {
-                    "accountId": participant_identity["accountId"],
-                    "platformId": participant_identity["platformId"],
+            # Esports matches do not have an accountId field
+            if "accountId" in participant_identity:
+                unique_identifier = {
+                    "riotLolApi": {
+                        "accountId": participant_identity["accountId"],
+                        "platformId": participant_identity["platformId"],
+                    }
                 }
-            }
+            else:
+                unique_identifier = None
 
             runes = [
                 game_dto.LolGamePlayerRune(

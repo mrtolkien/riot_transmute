@@ -126,3 +126,21 @@ def test_full_with_names(match_dto, timeline_game_id_platform_id):
 
         for event in p["itemsEvents"]:
             assert event["name"] is not None
+
+
+def test_esports_match():
+    with open(os.path.join("json_examples", "source_match_esports.json")) as file:
+        match_dto = json.load(file)
+
+    game = match_to_game(match_dto)
+
+    assert game
+
+
+def test_esports_timeline():
+    with open(os.path.join("json_examples", "source_timeline_esports.json")) as file:
+        match_dto = json.load(file)
+
+    game = match_timeline_to_game(match_dto, None, None)
+
+    assert game
