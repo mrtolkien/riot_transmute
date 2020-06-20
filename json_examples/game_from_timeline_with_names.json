@@ -509,7 +509,7 @@
                             "timestamp": 568.199,
                             "type": "PURCHASED",
                             "id": 1414,
-                            "name": "Enchantment: Runic Echoes"
+                            "name": "Skirmisher's Sabre - Runic Echoes"
                         },
                         {
                             "timestamp": 568.199,
@@ -4705,7 +4705,7 @@
                 },
                 {
                     "timestamp": 1835.368,
-                    "type": "NASHOR",
+                    "type": "BARON",
                     "killerId": 1
                 }
             ],
@@ -5315,7 +5315,7 @@
                             "timestamp": 610.989,
                             "type": "PURCHASED",
                             "id": 1402,
-                            "name": "Enchantment: Runic Echoes"
+                            "name": "Stalker's Blade - Runic Echoes"
                         },
                         {
                             "timestamp": 610.989,

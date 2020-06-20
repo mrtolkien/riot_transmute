@@ -1,7 +1,13 @@
+from typing import TypedDict
+
 import lol_dto.classes.game as game_dto
 import lol_id_tools as lit
 from datetime import datetime, timezone
-import logging
+
+
+class RiotGameIdentifier(TypedDict):
+    gameId: int
+    platformId: str
 
 
 def match_to_game(match_dto: dict, add_names: bool = False) -> game_dto.LolGame:
@@ -15,7 +21,7 @@ def match_to_game(match_dto: dict, add_names: bool = False) -> game_dto.LolGame:
         The LolGame representation of the game.
     """
 
-    riot_source = {"riotLolApi": {"gameId": match_dto["gameId"], "platformId": match_dto["platformId"]}}
+    riot_source = {"riotLolApi": RiotGameIdentifier(gameId=match_dto["gameId"], platformId=match_dto["platformId"])}
 
     log_prefix = f"gameId {match_dto['gameId']}|" f"platformId {match_dto['platformId']}:\t"
     info_log = set()
@@ -42,16 +48,18 @@ def match_to_game(match_dto: dict, add_names: bool = False) -> game_dto.LolGame:
 
         # TODO Handle old games with elemental drakes before they were part of the API
         team_dto = game_dto.LolGameTeam(
-            riftHeraldKills=team["riftHeraldKills"],
-            dragonKills=team["dragonKills"],
-            baronKills=team["baronKills"],
-            towerKills=team["towerKills"],
-            inhibitorKills=team["inhibitorKills"],
-            firstTower=team["firstTower"],
-            firstInhibitor=team["firstInhibitor"],
-            firstRiftHerald=team["firstRiftHerald"],
-            firstDragon=team["firstDragon"],
-            firstBaron=team["firstBaron"],
+            endOfGameStats=game_dto.LolGameTeamEndOfGameStats(
+                riftHeraldKills=team["riftHeraldKills"],
+                dragonKills=team["dragonKills"],
+                baronKills=team["baronKills"],
+                towerKills=team["towerKills"],
+                inhibitorKills=team["inhibitorKills"],
+                firstTower=team["firstTower"],
+                firstInhibitor=team["firstInhibitor"],
+                firstRiftHerald=team["firstRiftHerald"],
+                firstDragon=team["firstDragon"],
+                firstBaron=team["firstBaron"],
+            )
         )
 
         team_dto["bans"] = [b["championId"] for b in team["bans"]]
@@ -94,7 +102,7 @@ def match_to_game(match_dto: dict, add_names: bool = False) -> game_dto.LolGame:
                 game_dto.LolGamePlayerSummonerSpell(id=participant[f"spell{i}Id"], slot=i - 1) for i in range(1, 3)
             ]
 
-            end_of_game_stats = game_dto.LolGamePlayerStats(
+            end_of_game_stats = game_dto.LolGamePlayerEndOfGameStats(
                 items=items,
                 firstBlood=participant["stats"]["firstBloodKill"],
                 firstBloodAssist=participant["stats"]["firstBloodAssist"],  # This field is wrong by default

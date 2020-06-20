@@ -9,7 +9,7 @@ pytest = "*"
 [packages]
 riotwatcher = "*"
 lol-id-tools = "*"
-lol-dto = "==0.0.1a6"
+lol-dto = "==0.1a1"
 
 [requires]
 python_version = "3.8"

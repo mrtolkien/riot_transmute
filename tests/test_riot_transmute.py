@@ -1,5 +1,4 @@
 import json
-
 import lol_dto.utilities
 import pytest
 import os
@@ -42,8 +41,8 @@ def test_game(match_dto):
     assert game["patch"] == "10.10"
     assert game["start"] == "2020-05-27T02:23:02+00:00"
     assert "riotLolApi" in game["sources"]
-    assert game["teams"]["BLUE"]["firstTower"]
-    assert not game["teams"]["BLUE"]["firstDragon"]
+    assert game["teams"]["BLUE"]["endOfGameStats"]["firstTower"]
+    assert not game["teams"]["BLUE"]["endOfGameStats"]["firstDragon"]
     assert game["teams"]["BLUE"]["bans"].__len__() == 5
     assert game["teams"]["BLUE"]["players"].__len__() == 5
 
@@ -141,6 +140,6 @@ def test_esports_timeline():
     with open(os.path.join("json_examples", "source_timeline_esports.json")) as file:
         match_dto = json.load(file)
 
-    game = match_timeline_to_game(match_dto, None, None)
+    game = match_timeline_to_game(match_dto, 0, '')
 
     assert game

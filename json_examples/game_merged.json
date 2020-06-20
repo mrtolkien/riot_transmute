@@ -12,16 +12,18 @@
     "winner": "BLUE",
     "teams": {
         "BLUE": {
-            "riftHeraldKills": 2,
-            "dragonKills": 2,
-            "baronKills": 1,
-            "towerKills": 10,
-            "inhibitorKills": 3,
-            "firstTower": true,
-            "firstInhibitor": true,
-            "firstRiftHerald": true,
-            "firstDragon": false,
-            "firstBaron": true,
+            "endOfGameStats": {
+                "riftHeraldKills": 2,
+                "dragonKills": 2,
+                "baronKills": 1,
+                "towerKills": 10,
+                "inhibitorKills": 3,
+                "firstTower": true,
+                "firstInhibitor": true,
+                "firstRiftHerald": true,
+                "firstDragon": false,
+                "firstBaron": true
+            },
             "bans": [
                 -1,
                 80,
@@ -142,10 +144,6 @@
                         ],
                         "firstBlood": false,
                         "firstBloodAssist": false,
-                        "firstTower": true,
-                        "firstTowerAssist": false,
-                        "firstInhibitor": false,
-                        "firstInhibitorAssist": true,
                         "kills": 5,
                         "deaths": 5,
                         "assists": 11,
@@ -183,7 +181,11 @@
                         "totalUnitsHealed": 1,
                         "damageSelfMitigated": 27003,
                         "totalTimeCCDealt": 502,
-                        "timeCCingOthers": 13
+                        "timeCCingOthers": 13,
+                        "firstTower": true,
+                        "firstTowerAssist": false,
+                        "firstInhibitor": false,
+                        "firstInhibitorAssist": true
                     },
                     "snapshots": [
                         {
@@ -1092,10 +1094,6 @@
                         ],
                         "firstBlood": false,
                         "firstBloodAssist": false,
-                        "firstTower": false,
-                        "firstTowerAssist": false,
-                        "firstInhibitor": false,
-                        "firstInhibitorAssist": false,
                         "kills": 7,
                         "deaths": 5,
                         "assists": 17,
@@ -1133,7 +1131,11 @@
                         "totalUnitsHealed": 4,
                         "damageSelfMitigated": 6780,
                         "totalTimeCCDealt": 170,
-                        "timeCCingOthers": 23
+                        "timeCCingOthers": 23,
+                        "firstTower": false,
+                        "firstTowerAssist": false,
+                        "firstInhibitor": false,
+                        "firstInhibitorAssist": false
                     },
                     "snapshots": [
                         {
@@ -2097,10 +2099,6 @@
                         ],
                         "firstBlood": true,
                         "firstBloodAssist": false,
-                        "firstTower": false,
-                        "firstTowerAssist": false,
-                        "firstInhibitor": false,
-                        "firstInhibitorAssist": false,
                         "kills": 13,
                         "deaths": 6,
                         "assists": 18,
@@ -2138,7 +2136,11 @@
                         "totalUnitsHealed": 5,
                         "damageSelfMitigated": 11155,
                         "totalTimeCCDealt": 223,
-                        "timeCCingOthers": 57
+                        "timeCCingOthers": 57,
+                        "firstTower": false,
+                        "firstTowerAssist": false,
+                        "firstInhibitor": false,
+                        "firstInhibitorAssist": false
                     },
                     "snapshots": [
                         {
@@ -3324,10 +3326,6 @@
                         ],
                         "firstBlood": false,
                         "firstBloodAssist": false,
-                        "firstTower": false,
-                        "firstTowerAssist": true,
-                        "firstInhibitor": false,
-                        "firstInhibitorAssist": true,
                         "kills": 9,
                         "deaths": 3,
                         "assists": 9,
@@ -3365,7 +3363,11 @@
                         "totalUnitsHealed": 1,
                         "damageSelfMitigated": 9341,
                         "totalTimeCCDealt": 155,
-                        "timeCCingOthers": 6
+                        "timeCCingOthers": 6,
+                        "firstTower": false,
+                        "firstTowerAssist": true,
+                        "firstInhibitor": false,
+                        "firstInhibitorAssist": true
                     },
                     "snapshots": [
                         {
@@ -4355,10 +4357,6 @@
                         ],
                         "firstBlood": false,
                         "firstBloodAssist": false,
-                        "firstTower": false,
-                        "firstTowerAssist": false,
-                        "firstInhibitor": false,
-                        "firstInhibitorAssist": false,
                         "kills": 7,
                         "deaths": 5,
                         "assists": 7,
@@ -4396,7 +4394,11 @@
                         "totalUnitsHealed": 1,
                         "damageSelfMitigated": 22442,
                         "totalTimeCCDealt": 56,
-                        "timeCCingOthers": 15
+                        "timeCCingOthers": 15,
+                        "firstTower": false,
+                        "firstTowerAssist": false,
+                        "firstInhibitor": false,
+                        "firstInhibitorAssist": false
                     },
                     "snapshots": [
                         {
@@ -5249,7 +5251,7 @@
                 },
                 {
                     "timestamp": 1835.368,
-                    "type": "NASHOR",
+                    "type": "BARON",
                     "killerId": 1
                 }
             ],
@@ -5345,16 +5347,18 @@
             ]
         },
         "RED": {
-            "riftHeraldKills": 0,
-            "dragonKills": 2,
-            "baronKills": 0,
-            "towerKills": 2,
-            "inhibitorKills": 0,
-            "firstTower": false,
-            "firstInhibitor": false,
-            "firstRiftHerald": false,
-            "firstDragon": true,
-            "firstBaron": false,
+            "endOfGameStats": {
+                "riftHeraldKills": 0,
+                "dragonKills": 2,
+                "baronKills": 0,
+                "towerKills": 2,
+                "inhibitorKills": 0,
+                "firstTower": false,
+                "firstInhibitor": false,
+                "firstRiftHerald": false,
+                "firstDragon": true,
+                "firstBaron": false
+            },
             "bans": [
                 110,
                 875,
@@ -5475,10 +5479,6 @@
                         ],
                         "firstBlood": false,
                         "firstBloodAssist": false,
-                        "firstTower": false,
-                        "firstTowerAssist": false,
-                        "firstInhibitor": false,
-                        "firstInhibitorAssist": false,
                         "kills": 11,
                         "deaths": 2,
                         "assists": 6,
@@ -5516,7 +5516,11 @@
                         "totalUnitsHealed": 1,
                         "damageSelfMitigated": 13110,
                         "totalTimeCCDealt": 606,
-                        "timeCCingOthers": 17
+                        "timeCCingOthers": 17,
+                        "firstTower": false,
+                        "firstTowerAssist": false,
+                        "firstInhibitor": false,
+                        "firstInhibitorAssist": false
                     },
                     "snapshots": [
                         {
@@ -6436,10 +6440,6 @@
                         ],
                         "firstBlood": false,
                         "firstBloodAssist": false,
-                        "firstTower": false,
-                        "firstTowerAssist": false,
-                        "firstInhibitor": false,
-                        "firstInhibitorAssist": false,
                         "kills": 5,
                         "deaths": 9,
                         "assists": 8,
@@ -6477,7 +6477,11 @@
                         "totalUnitsHealed": 3,
                         "damageSelfMitigated": 16864,
                         "totalTimeCCDealt": 240,
-                        "timeCCingOthers": 21
+                        "timeCCingOthers": 21,
+                        "firstTower": false,
+                        "firstTowerAssist": false,
+                        "firstInhibitor": false,
+                        "firstInhibitorAssist": false
                     },
                     "snapshots": [
                         {
@@ -7414,10 +7418,6 @@
                         ],
                         "firstBlood": false,
                         "firstBloodAssist": false,
-                        "firstTower": false,
-                        "firstTowerAssist": false,
-                        "firstInhibitor": false,
-                        "firstInhibitorAssist": false,
                         "kills": 1,
                         "deaths": 11,
                         "assists": 15,
@@ -7455,7 +7455,11 @@
                         "totalUnitsHealed": 1,
                         "damageSelfMitigated": 24767,
                         "totalTimeCCDealt": 94,
-                        "timeCCingOthers": 29
+                        "timeCCingOthers": 29,
+                        "firstTower": false,
+                        "firstTowerAssist": false,
+                        "firstInhibitor": false,
+                        "firstInhibitorAssist": false
                     },
                     "snapshots": [
                         {
@@ -8669,10 +8673,6 @@
                         ],
                         "firstBlood": false,
                         "firstBloodAssist": false,
-                        "firstTower": false,
-                        "firstTowerAssist": false,
-                        "firstInhibitor": false,
-                        "firstInhibitorAssist": false,
                         "kills": 4,
                         "deaths": 9,
                         "assists": 6,
@@ -8710,7 +8710,11 @@
                         "totalUnitsHealed": 1,
                         "damageSelfMitigated": 13077,
                         "totalTimeCCDealt": 134,
-                        "timeCCingOthers": 2
+                        "timeCCingOthers": 2,
+                        "firstTower": false,
+                        "firstTowerAssist": false,
+                        "firstInhibitor": false,
+                        "firstInhibitorAssist": false
                     },
                     "snapshots": [
                         {
@@ -9720,10 +9724,6 @@
                         ],
                         "firstBlood": false,
                         "firstBloodAssist": false,
-                        "firstTower": false,
-                        "firstTowerAssist": false,
-                        "firstInhibitor": false,
-                        "firstInhibitorAssist": false,
                         "kills": 2,
                         "deaths": 10,
                         "assists": 6,
@@ -9761,7 +9761,11 @@
                         "totalUnitsHealed": 1,
                         "damageSelfMitigated": 25784,
                         "totalTimeCCDealt": 178,
-                        "timeCCingOthers": 21
+                        "timeCCingOthers": 21,
+                        "firstTower": false,
+                        "firstTowerAssist": false,
+                        "firstInhibitor": false,
+                        "firstInhibitorAssist": false
                     },
                     "snapshots": [
                         {

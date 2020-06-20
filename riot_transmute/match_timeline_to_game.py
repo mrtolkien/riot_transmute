@@ -1,8 +1,9 @@
 import lol_dto.classes.game as game_dto
 import lol_id_tools as lit
 
+from riot_transmute.match_to_game import RiotGameIdentifier
 
-monster_type_dict = {"RIFTHERALD": "RIFT_HERALD", "DRAGON": "DRAGON", "BARON_NASHOR": "NASHOR"}
+monster_type_dict = {"RIFTHERALD": "RIFT_HERALD", "DRAGON": "DRAGON", "BARON_NASHOR": "BARON"}
 
 monster_subtype_dict = {
     "FIRE_DRAGON": "INFERNAL",
@@ -73,7 +74,7 @@ def match_timeline_to_game(
         The LolGame representation of the game.
     """
 
-    riot_source = {"riotLolApi": {"gameId": game_id, "platformId": platform_id}}
+    riot_source = {"riotLolApi": RiotGameIdentifier(gameId=game_id, platformId=platform_id)}
 
     # Creating the game_dto skeleton
     game = game_dto.LolGame(
