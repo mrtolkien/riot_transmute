@@ -4448,7 +4448,8 @@
                 {
                     "timestamp": 929.108,
                     "type": "DRAGON",
-                    "killerId": 1
+                    "killerId": 1,
+                    "subType": "INFERNAL"
                 },
                 {
                     "timestamp": 1089.283,
@@ -4458,7 +4459,8 @@
                 {
                     "timestamp": 1578.354,
                     "type": "DRAGON",
-                    "killerId": 5
+                    "killerId": 5,
+                    "subType": "OCEAN"
                 },
                 {
                     "timestamp": 1835.368,
@@ -8904,12 +8906,14 @@
                 {
                     "timestamp": 591.79,
                     "type": "DRAGON",
-                    "killerId": 6
+                    "killerId": 6,
+                    "subType": "CLOUD"
                 },
                 {
                     "timestamp": 1239.509,
                     "type": "DRAGON",
-                    "killerId": 9
+                    "killerId": 9,
+                    "subType": "OCEAN"
                 }
             ],
             "buildingsKills": [

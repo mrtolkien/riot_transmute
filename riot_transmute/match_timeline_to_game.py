@@ -140,7 +140,7 @@ def match_timeline_to_game(
                     timestamp=timestamp, type=monster_type, killerId=event["killerId"]
                 )
 
-                if event["type"] == "DRAGON":
+                if monster_type == "DRAGON":
                     try:
                         event_dto["subType"] = monster_subtype_dict[event["monsterSubType"]]
                     # If we don’t know how to translate the monster subtype, we simply leave it as-is
