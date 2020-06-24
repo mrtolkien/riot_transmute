@@ -87,6 +87,7 @@ def match_to_game(match_dto: dict, add_names: bool = False) -> game_dto.LolGame:
             else:
                 unique_identifier = None
 
+            # TODO Make that backwards-compatible with pre-runes reforged games
             runes = [
                 game_dto.LolGamePlayerRune(
                     id=participant["stats"][f"perk{i}"],
@@ -95,6 +96,11 @@ def match_to_game(match_dto: dict, add_names: bool = False) -> game_dto.LolGame:
                 )
                 for i in range(0, 6)
             ]
+
+            # Adding stats perks
+            runes.extend(
+                [game_dto.LolGamePlayerRune(id=participant["stats"][f"perk{i}"], slot=i + 6,) for i in range(0, 3)]
+            )
 
             items = [game_dto.LolGamePlayerItem(id=participant["stats"][f"item{i}"], slot=i) for i in range(0, 7)]
 

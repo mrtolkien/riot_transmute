@@ -105,6 +105,21 @@
                                 0
                             ],
                             "name": "Ravenous Hunter"
+                        },
+                        {
+                            "id": 8010,
+                            "slot": 6,
+                            "name": "Conqueror"
+                        },
+                        {
+                            "id": 8009,
+                            "slot": 7,
+                            "name": "Presence of Mind"
+                        },
+                        {
+                            "id": 9105,
+                            "slot": 8,
+                            "name": "Legend: Tenacity"
                         }
                     ],
                     "summonerSpells": [
@@ -1116,6 +1131,21 @@
                                 0
                             ],
                             "name": "Ravenous Hunter"
+                        },
+                        {
+                            "id": 8229,
+                            "slot": 6,
+                            "name": "Arcane Comet"
+                        },
+                        {
+                            "id": 8226,
+                            "slot": 7,
+                            "name": "Manaflow Band"
+                        },
+                        {
+                            "id": 8233,
+                            "slot": 8,
+                            "name": "Absolute Focus"
                         }
                     ],
                     "summonerSpells": [
@@ -2184,6 +2214,21 @@
                                 0
                             ],
                             "name": "Legend: Alacrity"
+                        },
+                        {
+                            "id": 8351,
+                            "slot": 6,
+                            "name": "Glacial Augment"
+                        },
+                        {
+                            "id": 8304,
+                            "slot": 7,
+                            "name": "Magical Footwear"
+                        },
+                        {
+                            "id": 8345,
+                            "slot": 8,
+                            "name": "Biscuit Delivery"
                         }
                     ],
                     "summonerSpells": [
@@ -3492,6 +3537,21 @@
                                 0
                             ],
                             "name": "Biscuit Delivery"
+                        },
+                        {
+                            "id": 8230,
+                            "slot": 6,
+                            "name": "Phase Rush"
+                        },
+                        {
+                            "id": 8226,
+                            "slot": 7,
+                            "name": "Manaflow Band"
+                        },
+                        {
+                            "id": 8210,
+                            "slot": 8,
+                            "name": "Transcendence"
                         }
                     ],
                     "summonerSpells": [
@@ -4585,6 +4645,21 @@
                                 0
                             ],
                             "name": "Biscuit Delivery"
+                        },
+                        {
+                            "id": 8010,
+                            "slot": 6,
+                            "name": "Conqueror"
+                        },
+                        {
+                            "id": 9111,
+                            "slot": 7,
+                            "name": "Triumph"
+                        },
+                        {
+                            "id": 9104,
+                            "slot": 8,
+                            "name": "Legend: Alacrity"
                         }
                     ],
                     "summonerSpells": [
@@ -5780,6 +5855,21 @@
                                 0
                             ],
                             "name": "Waterwalking"
+                        },
+                        {
+                            "id": 8112,
+                            "slot": 6,
+                            "name": "Electrocute"
+                        },
+                        {
+                            "id": 8126,
+                            "slot": 7,
+                            "name": "Cheap Shot"
+                        },
+                        {
+                            "id": 8138,
+                            "slot": 8,
+                            "name": "Eyeball Collection"
                         }
                     ],
                     "summonerSpells": [
@@ -6808,6 +6898,21 @@
                                 0
                             ],
                             "name": "Gathering Storm"
+                        },
+                        {
+                            "id": 8010,
+                            "slot": 6,
+                            "name": "Conqueror"
+                        },
+                        {
+                            "id": 9101,
+                            "slot": 7,
+                            "name": "Overheal"
+                        },
+                        {
+                            "id": 9103,
+                            "slot": 8,
+                            "name": "Legend: Bloodline"
                         }
                     ],
                     "summonerSpells": [
@@ -7843,6 +7948,21 @@
                                 0
                             ],
                             "name": "Minion Dematerializer"
+                        },
+                        {
+                            "id": 8439,
+                            "slot": 6,
+                            "name": "Aftershock"
+                        },
+                        {
+                            "id": 8446,
+                            "slot": 7,
+                            "name": "Demolish"
+                        },
+                        {
+                            "id": 8473,
+                            "slot": 8,
+                            "name": "Bone Plating"
                         }
                     ],
                     "summonerSpells": [
@@ -9184,6 +9304,21 @@
                                 0
                             ],
                             "name": "Scorch"
+                        },
+                        {
+                            "id": 8112,
+                            "slot": 6,
+                            "name": "Electrocute"
+                        },
+                        {
+                            "id": 8143,
+                            "slot": 7,
+                            "name": "Sudden Impact"
+                        },
+                        {
+                            "id": 8138,
+                            "slot": 8,
+                            "name": "Eyeball Collection"
                         }
                     ],
                     "summonerSpells": [
@@ -10311,6 +10446,21 @@
                                 0
                             ],
                             "name": "Biscuit Delivery"
+                        },
+                        {
+                            "id": 8437,
+                            "slot": 6,
+                            "name": "Grasp of the Undying"
+                        },
+                        {
+                            "id": 8401,
+                            "slot": 7,
+                            "name": "Shield Bash"
+                        },
+                        {
+                            "id": 8444,
+                            "slot": 8,
+                            "name": "Second Wind"
                         }
                     ],
                     "summonerSpells": [
