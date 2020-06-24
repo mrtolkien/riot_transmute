@@ -173,6 +173,15 @@ def match_to_game(match_dto: dict, add_names: bool = False) -> game_dto.LolGame:
                 endOfGameStats=end_of_game_stats,
             )
 
+            # roleml compatibility
+            if "role" in participant:
+                # TODO Remove that after roleml refactor
+                if participant["role"] not in {"TOP", "JGL", "MID", "BOT", "SUP"}:
+                    participant["role"] = {"top": "TOP", "jungle": "JGL", "mid": "MID", "bot": "BOT", "supp": "SUP"}[
+                        participant["role"]
+                    ]
+                player["role"] = participant["role"]
+
             # Then, we add convenience name fields for human readability if asked
             if add_names:
                 player["championName"] = lit.get_name(player["championId"], object_type="champion")

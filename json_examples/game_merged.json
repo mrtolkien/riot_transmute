@@ -187,6 +187,7 @@
                         "firstInhibitor": false,
                         "firstInhibitorAssist": true
                     },
+                    "role": "JGL",
                     "snapshots": [
                         {
                             "timestamp": 0.0,
@@ -1137,6 +1138,7 @@
                         "firstInhibitor": false,
                         "firstInhibitorAssist": false
                     },
+                    "role": "BOT",
                     "snapshots": [
                         {
                             "timestamp": 0.0,
@@ -2142,6 +2144,7 @@
                         "firstInhibitor": false,
                         "firstInhibitorAssist": false
                     },
+                    "role": "SUP",
                     "snapshots": [
                         {
                             "timestamp": 0.0,
@@ -3369,6 +3372,7 @@
                         "firstInhibitor": false,
                         "firstInhibitorAssist": true
                     },
+                    "role": "MID",
                     "snapshots": [
                         {
                             "timestamp": 0.0,
@@ -4400,6 +4404,7 @@
                         "firstInhibitor": false,
                         "firstInhibitorAssist": false
                     },
+                    "role": "TOP",
                     "snapshots": [
                         {
                             "timestamp": 0.0,
@@ -5522,6 +5527,7 @@
                         "firstInhibitor": false,
                         "firstInhibitorAssist": false
                     },
+                    "role": "JGL",
                     "snapshots": [
                         {
                             "timestamp": 0.0,
@@ -6483,6 +6489,7 @@
                         "firstInhibitor": false,
                         "firstInhibitorAssist": false
                     },
+                    "role": "BOT",
                     "snapshots": [
                         {
                             "timestamp": 0.0,
@@ -7461,6 +7468,7 @@
                         "firstInhibitor": false,
                         "firstInhibitorAssist": false
                     },
+                    "role": "SUP",
                     "snapshots": [
                         {
                             "timestamp": 0.0,
@@ -8716,6 +8724,7 @@
                         "firstInhibitor": false,
                         "firstInhibitorAssist": false
                     },
+                    "role": "MID",
                     "snapshots": [
                         {
                             "timestamp": 0.0,
@@ -9767,6 +9776,7 @@
                         "firstInhibitor": false,
                         "firstInhibitorAssist": false
                     },
+                    "role": "TOP",
                     "snapshots": [
                         {
                             "timestamp": 0.0,

@@ -4,6 +4,8 @@ import pytest
 import os
 
 from riotwatcher import LolWatcher
+import roleml
+
 from riot_transmute.match_to_game import match_to_game
 from riot_transmute.match_timeline_to_game import match_timeline_to_game
 
@@ -93,6 +95,8 @@ def test_timeline_with_names(timeline_game_id_platform_id):
 def test_full(match_dto, timeline_game_id_platform_id):
     timeline, game_id, platform_id = timeline_game_id_platform_id
 
+    match_dto, timeline = roleml.fix_and_augment_game_and_timeline(match_dto, timeline, True, True)
+
     game_match = match_to_game(match_dto)
     game_timeline = match_timeline_to_game(timeline, game_id, platform_id)
 
@@ -140,6 +144,6 @@ def test_esports_timeline():
     with open(os.path.join("json_examples", "source_timeline_esports.json")) as file:
         match_dto = json.load(file)
 
-    game = match_timeline_to_game(match_dto, 0, '')
+    game = match_timeline_to_game(match_dto, 0, "")
 
     assert game
