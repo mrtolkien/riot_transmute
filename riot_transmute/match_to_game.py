@@ -85,7 +85,7 @@ def match_to_game(match_dto: dict, add_names: bool = False) -> game_dto.LolGame:
                     }
                 }
             else:
-                unique_identifier = None
+                unique_identifier = {}
 
             # TODO Make that backwards-compatible with pre-runes reforged games
             runes = [
