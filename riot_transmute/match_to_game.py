@@ -20,7 +20,6 @@ def match_to_game(match_dto: dict, add_names: bool = False) -> game_dto.LolGame:
     Returns:
         The LolGame representation of the game.
     """
-
     riot_source = {"riotLolApi": RiotGameIdentifier(gameId=match_dto["gameId"], platformId=match_dto["platformId"])}
 
     log_prefix = f"gameId {match_dto['gameId']}|" f"platformId {match_dto['platformId']}:\t"
@@ -32,6 +31,8 @@ def match_to_game(match_dto: dict, add_names: bool = False) -> game_dto.LolGame:
 
     patch = ".".join(match_dto["gameVersion"].split(".")[:2])
     winner = "BLUE" if (match_dto["teams"][0]["teamId"] == 100) == (match_dto["teams"][0]["win"] == "Win") else "RED"
+
+    # TODO Change optional fields to .get() instead of [], do it in timeline too
 
     game = game_dto.LolGame(
         sources=riot_source,
@@ -49,16 +50,16 @@ def match_to_game(match_dto: dict, add_names: bool = False) -> game_dto.LolGame:
         # TODO Handle old games with elemental drakes before they were part of the API
         team_dto = game_dto.LolGameTeam(
             endOfGameStats=game_dto.LolGameTeamEndOfGameStats(
-                riftHeraldKills=team["riftHeraldKills"],
-                dragonKills=team["dragonKills"],
-                baronKills=team["baronKills"],
-                towerKills=team["towerKills"],
-                inhibitorKills=team["inhibitorKills"],
-                firstTower=team["firstTower"],
-                firstInhibitor=team["firstInhibitor"],
-                firstRiftHerald=team["firstRiftHerald"],
-                firstDragon=team["firstDragon"],
-                firstBaron=team["firstBaron"],
+                riftHeraldKills=team.get("riftHeraldKills"),
+                dragonKills=team.get("dragonKills"),
+                baronKills=team.get("baronKills"),
+                towerKills=team.get("towerKills"),
+                inhibitorKills=team.get("inhibitorKills"),
+                firstTower=team.get("firstTower"),
+                firstInhibitor=team.get("firstInhibitor"),
+                firstRiftHerald=team.get("firstRiftHerald"),
+                firstDragon=team.get("firstDragon"),
+                firstBaron=team.get("firstBaron"),
             )
         )
 
@@ -95,79 +96,79 @@ def match_to_game(match_dto: dict, add_names: bool = False) -> game_dto.LolGame:
             # TODO Make that backwards-compatible with pre-runes reforged games
             runes = [
                 game_dto.LolGamePlayerRune(
-                    id=participant["stats"][f"perk{i}"],
+                    id=participant["stats"].get(f"perk{i}"),
                     slot=i,
-                    stats=[participant["stats"][f"perk{i}Var{j}"] for j in range(1, 4)],
+                    stats=[participant["stats"].get(f"perk{i}Var{j}") for j in range(1, 4)],
                 )
                 for i in range(0, 6)
             ]
 
             # Adding stats perks
             runes.extend(
-                [game_dto.LolGamePlayerRune(id=participant["stats"][f"perk{i}"], slot=i + 6,) for i in range(0, 3)]
+                [game_dto.LolGamePlayerRune(id=participant["stats"].get(f"perk{i}"), slot=i + 6,) for i in range(0, 3)]
             )
 
-            items = [game_dto.LolGamePlayerItem(id=participant["stats"][f"item{i}"], slot=i) for i in range(0, 7)]
+            items = [game_dto.LolGamePlayerItem(id=participant["stats"].get(f"item{i}"), slot=i) for i in range(0, 7)]
 
             summoner_spells = [
-                game_dto.LolGamePlayerSummonerSpell(id=participant[f"spell{i}Id"], slot=i - 1) for i in range(1, 3)
+                game_dto.LolGamePlayerSummonerSpell(id=participant.get(f"spell{i}Id"), slot=i - 1) for i in range(1, 3)
             ]
 
             end_of_game_stats = game_dto.LolGamePlayerEndOfGameStats(
                 items=items,
-                firstBlood=participant["stats"]["firstBloodKill"],
-                firstBloodAssist=participant["stats"]["firstBloodAssist"],  # This field is wrong by default
-                kills=participant["stats"]["kills"],
-                deaths=participant["stats"]["deaths"],
-                assists=participant["stats"]["assists"],
-                gold=participant["stats"]["goldEarned"],
-                cs=participant["stats"]["totalMinionsKilled"] + participant["stats"]["neutralMinionsKilled"],
-                level=participant["stats"]["champLevel"],
-                wardsPlaced=participant["stats"]["wardsPlaced"],
-                wardsKilled=participant["stats"]["wardsKilled"],
-                visionWardsBought=participant["stats"]["visionWardsBoughtInGame"],
-                visionScore=participant["stats"]["visionScore"],
-                killingSprees=participant["stats"]["killingSprees"],
-                largestKillingSpree=participant["stats"]["largestKillingSpree"],
-                doubleKills=participant["stats"]["doubleKills"],
-                tripleKills=participant["stats"]["tripleKills"],
-                quadraKills=participant["stats"]["quadraKills"],
-                pentaKills=participant["stats"]["pentaKills"],
-                monsterKills=participant["stats"]["neutralMinionsKilled"],
-                monsterKillsInAlliedJungle=participant["stats"]["neutralMinionsKilledTeamJungle"],
-                monsterKillsInEnemyJungle=participant["stats"]["neutralMinionsKilledEnemyJungle"],
-                totalDamageDealt=participant["stats"]["totalDamageDealt"],
-                physicalDamageDealt=participant["stats"]["physicalDamageDealt"],
-                magicDamageDealt=participant["stats"]["magicDamageDealt"],
-                totalDamageDealtToChampions=participant["stats"]["totalDamageDealtToChampions"],
-                physicalDamageDealtToChampions=participant["stats"]["physicalDamageDealtToChampions"],
-                magicDamageDealtToChampions=participant["stats"]["magicDamageDealtToChampions"],
-                damageDealtToObjectives=participant["stats"]["damageDealtToObjectives"],
-                damageDealtToTurrets=participant["stats"]["damageDealtToTurrets"],
-                totalDamageTaken=participant["stats"]["totalDamageTaken"],
-                physicalDamageTaken=participant["stats"]["physicalDamageTaken"],
-                magicDamageTaken=participant["stats"]["magicalDamageTaken"],
-                longestTimeSpentLiving=participant["stats"]["longestTimeSpentLiving"],
-                largestCriticalStrike=participant["stats"]["largestCriticalStrike"],
-                goldSpent=participant["stats"]["goldSpent"],
-                totalHeal=participant["stats"]["totalHeal"],
-                totalUnitsHealed=participant["stats"]["totalUnitsHealed"],
-                damageSelfMitigated=participant["stats"]["damageSelfMitigated"],
-                totalTimeCCDealt=participant["stats"]["totalTimeCrowdControlDealt"],
-                timeCCingOthers=participant["stats"]["timeCCingOthers"],
+                firstBlood=participant["stats"].get("firstBloodKill"),
+                firstBloodAssist=participant["stats"].get("firstBloodAssist"),  # This field is wrong by default
+                kills=participant["stats"].get("kills"),
+                deaths=participant["stats"].get("deaths"),
+                assists=participant["stats"].get("assists"),
+                gold=participant["stats"].get("goldEarned"),
+                cs=participant["stats"].get("totalMinionsKilled") + participant["stats"].get("neutralMinionsKilled"),
+                level=participant["stats"].get("champLevel"),
+                wardsPlaced=participant["stats"].get("wardsPlaced"),
+                wardsKilled=participant["stats"].get("wardsKilled"),
+                visionWardsBought=participant["stats"].get("visionWardsBoughtInGame"),
+                visionScore=participant["stats"].get("visionScore"),
+                killingSprees=participant["stats"].get("killingSprees"),
+                largestKillingSpree=participant["stats"].get("largestKillingSpree"),
+                doubleKills=participant["stats"].get("doubleKills"),
+                tripleKills=participant["stats"].get("tripleKills"),
+                quadraKills=participant["stats"].get("quadraKills"),
+                pentaKills=participant["stats"].get("pentaKills"),
+                monsterKills=participant["stats"].get("neutralMinionsKilled"),
+                monsterKillsInAlliedJungle=participant["stats"].get("neutralMinionsKilledTeamJungle"),
+                monsterKillsInEnemyJungle=participant["stats"].get("neutralMinionsKilledEnemyJungle"),
+                totalDamageDealt=participant["stats"].get("totalDamageDealt"),
+                physicalDamageDealt=participant["stats"].get("physicalDamageDealt"),
+                magicDamageDealt=participant["stats"].get("magicDamageDealt"),
+                totalDamageDealtToChampions=participant["stats"].get("totalDamageDealtToChampions"),
+                physicalDamageDealtToChampions=participant["stats"].get("physicalDamageDealtToChampions"),
+                magicDamageDealtToChampions=participant["stats"].get("magicDamageDealtToChampions"),
+                damageDealtToObjectives=participant["stats"].get("damageDealtToObjectives"),
+                damageDealtToTurrets=participant["stats"].get("damageDealtToTurrets"),
+                totalDamageTaken=participant["stats"].get("totalDamageTaken"),
+                physicalDamageTaken=participant["stats"].get("physicalDamageTaken"),
+                magicDamageTaken=participant["stats"].get("magicalDamageTaken"),
+                longestTimeSpentLiving=participant["stats"].get("longestTimeSpentLiving"),
+                largestCriticalStrike=participant["stats"].get("largestCriticalStrike"),
+                goldSpent=participant["stats"].get("goldSpent"),
+                totalHeal=participant["stats"].get("totalHeal"),
+                totalUnitsHealed=participant["stats"].get("totalUnitsHealed"),
+                damageSelfMitigated=participant["stats"].get("damageSelfMitigated"),
+                totalTimeCCDealt=participant["stats"].get("totalTimeCrowdControlDealt"),
+                timeCCingOthers=participant["stats"].get("timeCCingOthers"),
             )
 
             # The following fields have proved to be missing or buggy in multiple games
 
             if "firstTowerKill" in participant["stats"]:
                 end_of_game_stats["firstTower"] = participant["stats"]["firstTowerKill"]
-                end_of_game_stats["firstTowerAssist"] = participant["stats"]["firstTowerAssist"]
+                end_of_game_stats["firstTowerAssist"] = participant["stats"].get("firstTowerAssist")
             else:
                 info_log.add(f"{log_prefix}Missing ['player']['firstTower']")
 
             if "firstInhibitorKill" in participant["stats"]:
                 end_of_game_stats["firstInhibitor"] = participant["stats"]["firstInhibitorKill"]
-                end_of_game_stats["firstInhibitorAssist"] = participant["stats"]["firstInhibitorAssist"]
+                end_of_game_stats["firstInhibitorAssist"] = participant["stats"].get("firstInhibitorAssist")
             else:
                 info_log.add(f"{log_prefix}Missing ['player']['firstInhibitor']")
 
@@ -175,8 +176,8 @@ def match_to_game(match_dto: dict, add_names: bool = False) -> game_dto.LolGame:
                 id=participant["participantId"],
                 championId=participant["championId"],
                 uniqueIdentifiers=unique_identifier,
-                primaryRuneTreeId=participant["stats"]["perkPrimaryStyle"],
-                secondaryRuneTreeId=participant["stats"]["perkSubStyle"],
+                primaryRuneTreeId=participant["stats"].get("perkPrimaryStyle"),
+                secondaryRuneTreeId=participant["stats"].get("perkSubStyle"),
                 runes=runes,
                 summonerSpells=summoner_spells,
                 endOfGameStats=end_of_game_stats,
