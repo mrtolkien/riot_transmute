@@ -70,21 +70,26 @@ def match_to_game(match_dto: dict, add_names: bool = False) -> game_dto.LolGame:
             if participant["teamId"] != team["teamId"]:
                 continue
 
-            participant_identity = next(
-                identity["player"]
-                for identity in match_dto["participantIdentities"]
-                if identity["participantId"] == participant["participantId"]
-            )
-
-            # Esports matches do not have an accountId field
-            if "accountId" in participant_identity:
-                unique_identifier = {
-                    "riotLolApi": {
-                        "accountId": participant_identity["accountId"],
-                        "platformId": participant_identity["platformId"],
+            try:
+                participant_identity = next(
+                    identity["player"]
+                    for identity in match_dto["participantIdentities"]
+                    if identity["participantId"] == participant["participantId"]
+                )
+                # Esports matches do not have an accountId field
+                if "accountId" in participant_identity:
+                    unique_identifier = {
+                        "riotLolApi": {
+                            "accountId": participant_identity["accountId"],
+                            "platformId": participant_identity["platformId"],
+                        }
                     }
-                }
-            else:
+                else:
+                    unique_identifier = {}
+
+            # Custom games don’t have identity info
+            except KeyError:
+                participant_identity = None
                 unique_identifier = {}
 
             # TODO Make that backwards-compatible with pre-runes reforged games
@@ -168,8 +173,6 @@ def match_to_game(match_dto: dict, add_names: bool = False) -> game_dto.LolGame:
 
             player = game_dto.LolGamePlayer(
                 id=participant["participantId"],
-                inGameName=participant_identity["summonerName"],
-                profileIconId=participant_identity["profileIcon"],
                 championId=participant["championId"],
                 uniqueIdentifiers=unique_identifier,
                 primaryRuneTreeId=participant["stats"]["perkPrimaryStyle"],
@@ -178,6 +181,10 @@ def match_to_game(match_dto: dict, add_names: bool = False) -> game_dto.LolGame:
                 summonerSpells=summoner_spells,
                 endOfGameStats=end_of_game_stats,
             )
+
+            if participant_identity:
+                player["inGameName"] = participant_identity["summonerName"]
+                player["profileIconId"] = participant_identity["profileIcon"]
 
             # roleml compatibility
             if "role" in participant:

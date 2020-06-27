@@ -34,8 +34,6 @@
             "players": [
                 {
                     "id": 1,
-                    "inGameName": "SANDBOX OnFleek",
-                    "profileIconId": 3951,
                     "championId": 517,
                     "uniqueIdentifiers": {
                         "riotLolApi": {
@@ -217,6 +215,8 @@
                         "firstInhibitor": false,
                         "firstInhibitorAssist": true
                     },
+                    "inGameName": "SANDBOX OnFleek",
+                    "profileIconId": 3951,
                     "championName": "Sylas",
                     "primaryRuneTreeName": "Precision",
                     "secondaryRuneTreeName": "Domination",
@@ -1060,8 +1060,6 @@
                 },
                 {
                     "id": 2,
-                    "inGameName": "KKuzan",
-                    "profileIconId": 4406,
                     "championId": 101,
                     "uniqueIdentifiers": {
                         "riotLolApi": {
@@ -1243,6 +1241,8 @@
                         "firstInhibitor": false,
                         "firstInhibitorAssist": false
                     },
+                    "inGameName": "KKuzan",
+                    "profileIconId": 4406,
                     "championName": "Xerath",
                     "primaryRuneTreeName": "Sorcery",
                     "secondaryRuneTreeName": "Domination",
@@ -2143,8 +2143,6 @@
                 },
                 {
                     "id": 3,
-                    "inGameName": "deokdam",
-                    "profileIconId": 6,
                     "championId": 235,
                     "uniqueIdentifiers": {
                         "riotLolApi": {
@@ -2326,6 +2324,8 @@
                         "firstInhibitor": false,
                         "firstInhibitorAssist": false
                     },
+                    "inGameName": "deokdam",
+                    "profileIconId": 6,
                     "championName": "Senna",
                     "primaryRuneTreeName": "Inspiration",
                     "secondaryRuneTreeName": "Precision",
@@ -3466,8 +3466,6 @@
                 },
                 {
                     "id": 4,
-                    "inGameName": "Hide on bush",
-                    "profileIconId": 6,
                     "championId": 126,
                     "uniqueIdentifiers": {
                         "riotLolApi": {
@@ -3649,6 +3647,8 @@
                         "firstInhibitor": false,
                         "firstInhibitorAssist": true
                     },
+                    "inGameName": "Hide on bush",
+                    "profileIconId": 6,
                     "championName": "Jayce",
                     "primaryRuneTreeName": "Sorcery",
                     "secondaryRuneTreeName": "Inspiration",
@@ -4574,8 +4574,6 @@
                 },
                 {
                     "id": 5,
-                    "inGameName": "Gen G gyuvee",
-                    "profileIconId": 4069,
                     "championId": 62,
                     "uniqueIdentifiers": {
                         "riotLolApi": {
@@ -4757,6 +4755,8 @@
                         "firstInhibitor": false,
                         "firstInhibitorAssist": false
                     },
+                    "inGameName": "Gen G gyuvee",
+                    "profileIconId": 4069,
                     "championName": "Wukong",
                     "primaryRuneTreeName": "Precision",
                     "secondaryRuneTreeName": "Inspiration",
@@ -5786,8 +5786,6 @@
             "players": [
                 {
                     "id": 6,
-                    "inGameName": "GIDE0N",
-                    "profileIconId": 25,
                     "championId": 163,
                     "uniqueIdentifiers": {
                         "riotLolApi": {
@@ -5969,6 +5967,8 @@
                         "firstInhibitor": false,
                         "firstInhibitorAssist": false
                     },
+                    "inGameName": "GIDE0N",
+                    "profileIconId": 25,
                     "championName": "Taliyah",
                     "primaryRuneTreeName": "Domination",
                     "secondaryRuneTreeName": "Sorcery",
@@ -6829,8 +6829,6 @@
                 },
                 {
                     "id": 7,
-                    "inGameName": "SPG Prince",
-                    "profileIconId": 3608,
                     "championId": 523,
                     "uniqueIdentifiers": {
                         "riotLolApi": {
@@ -7012,6 +7010,8 @@
                         "firstInhibitor": false,
                         "firstInhibitorAssist": false
                     },
+                    "inGameName": "SPG Prince",
+                    "profileIconId": 3608,
                     "championName": "Aphelios",
                     "primaryRuneTreeName": "Precision",
                     "secondaryRuneTreeName": "Sorcery",
@@ -7879,8 +7879,6 @@
                 },
                 {
                     "id": 8,
-                    "inGameName": "SPG Zzus",
-                    "profileIconId": 4568,
                     "championId": 412,
                     "uniqueIdentifiers": {
                         "riotLolApi": {
@@ -8062,6 +8060,8 @@
                         "firstInhibitor": false,
                         "firstInhibitorAssist": false
                     },
+                    "inGameName": "SPG Zzus",
+                    "profileIconId": 4568,
                     "championName": "Thresh",
                     "primaryRuneTreeName": "Resolve",
                     "secondaryRuneTreeName": "Inspiration",
@@ -9235,8 +9235,6 @@
                 },
                 {
                     "id": 9,
-                    "inGameName": "O\ucfe0\ub85c",
-                    "profileIconId": 4569,
                     "championId": 91,
                     "uniqueIdentifiers": {
                         "riotLolApi": {
@@ -9418,6 +9416,8 @@
                         "firstInhibitor": false,
                         "firstInhibitorAssist": false
                     },
+                    "inGameName": "O\ucfe0\ub85c",
+                    "profileIconId": 4569,
                     "championName": "Talon",
                     "primaryRuneTreeName": "Domination",
                     "secondaryRuneTreeName": "Sorcery",
@@ -10377,8 +10377,6 @@
                 },
                 {
                     "id": 10,
-                    "inGameName": "\ubbf8\uccd0\ub188",
-                    "profileIconId": 3787,
                     "championId": 164,
                     "uniqueIdentifiers": {
                         "riotLolApi": {
@@ -10560,6 +10558,8 @@
                         "firstInhibitor": false,
                         "firstInhibitorAssist": false
                     },
+                    "inGameName": "\ubbf8\uccd0\ub188",
+                    "profileIconId": 3787,
                     "championName": "Camille",
                     "primaryRuneTreeName": "Resolve",
                     "secondaryRuneTreeName": "Inspiration",

@@ -147,3 +147,13 @@ def test_esports_timeline():
     game = match_timeline_to_game(match_dto, 0, "")
 
     assert game
+
+
+def test_custom_game(watcher):
+    match = watcher.match.by_id("EUW1", 4676184349)
+    timeline = watcher.match.timeline_by_match("EUW1", 4676184349)
+
+    game = match_to_game(match, True)
+    game_timeline = match_timeline_to_game(timeline, 4676184349, "EUW1", True)
+
+    assert lol_dto.utilities.merge_games(game, game_timeline)
