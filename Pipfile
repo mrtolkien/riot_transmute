@@ -10,7 +10,10 @@ roleml = "*"
 [packages]
 riotwatcher = "*"
 lol-id-tools = "*"
-lol-dto = "==0.1a1"
+lol-dto = "*"
 
 [requires]
 python_version = "3.8"
+
+[pipenv]
+allow_prereleases = true

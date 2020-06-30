@@ -7,9 +7,9 @@ with open(path.join(this_directory, "README.md"), encoding="utf-8") as f:
 
 setuptools.setup(
     name="riot_transmute",
-    version="0.1a7",
+    version="0.1a8",
     packages=setuptools.find_packages(),
-    install_requires=["lol_dto >= 0.1a3"],
+    install_requires=["lol_dto >= 0.1a4"],
     extra_require={"names": ["lol_id_tools"]},
     url="https://github.com/mrtolkien/riot_transmute",
     license="MIT",

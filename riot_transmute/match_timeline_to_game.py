@@ -124,6 +124,11 @@ def match_timeline_to_game(
                 cs=participant_frame["minionsKilled"] + participant_frame["jungleMinionsKilled"],
                 monstersKilled=participant_frame["jungleMinionsKilled"],
                 position=position,
+                # Next fields gotten with .get() so they are None if they haven’t been created by roleml
+                totalGoldDiff=participant_frame.get("totalGoldDiff"),
+                xpDiff=participant_frame.get("xpDiff"),
+                csDiff=participant_frame.get("minionsKilledDiff"),
+                monstersKilledDiff=participant_frame.get("jungleMinionsKilledDiff"),
             )
 
             player["snapshots"].append(snapshot)

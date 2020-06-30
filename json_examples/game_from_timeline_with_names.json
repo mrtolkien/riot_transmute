@@ -22,7 +22,11 @@
                             "position": {
                                 "x": 560,
                                 "y": 361
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 60.014,
@@ -35,7 +39,11 @@
                             "position": {
                                 "x": 545,
                                 "y": 541
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 120.019,
@@ -48,7 +56,11 @@
                             "position": {
                                 "x": 8029,
                                 "y": 2363
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 180.028,
@@ -61,7 +73,11 @@
                             "position": {
                                 "x": 7584,
                                 "y": 7901
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 240.06,
@@ -74,7 +90,11 @@
                             "position": {
                                 "x": 3146,
                                 "y": 8264
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 300.093,
@@ -87,7 +107,11 @@
                             "position": {
                                 "x": 1784,
                                 "y": 11905
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 360.103,
@@ -100,7 +124,11 @@
                             "position": {
                                 "x": 6944,
                                 "y": 4649
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 420.105,
@@ -113,7 +141,11 @@
                             "position": {
                                 "x": 10448,
                                 "y": 2973
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 480.133,
@@ -126,7 +158,11 @@
                             "position": {
                                 "x": 13028,
                                 "y": 5129
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 540.141,
@@ -139,7 +175,11 @@
                             "position": {
                                 "x": 6886,
                                 "y": 5356
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 600.151,
@@ -152,7 +192,11 @@
                             "position": {
                                 "x": 4177,
                                 "y": 4729
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 660.16,
@@ -165,7 +209,11 @@
                             "position": {
                                 "x": 7108,
                                 "y": 9224
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 720.192,
@@ -178,7 +226,11 @@
                             "position": {
                                 "x": 2427,
                                 "y": 12588
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 780.199,
@@ -191,7 +243,11 @@
                             "position": {
                                 "x": 2157,
                                 "y": 1352
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 840.228,
@@ -204,7 +260,11 @@
                             "position": {
                                 "x": 11736,
                                 "y": 5864
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 900.232,
@@ -217,7 +277,11 @@
                             "position": {
                                 "x": 8724,
                                 "y": 9013
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 960.26,
@@ -230,7 +294,11 @@
                             "position": {
                                 "x": 8424,
                                 "y": 2590
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1020.262,
@@ -243,7 +311,11 @@
                             "position": {
                                 "x": 6310,
                                 "y": 11268
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1080.293,
@@ -256,7 +328,11 @@
                             "position": {
                                 "x": 4432,
                                 "y": 2755
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1140.304,
@@ -269,7 +345,11 @@
                             "position": {
                                 "x": 10402,
                                 "y": 5410
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1200.333,
@@ -282,7 +362,11 @@
                             "position": {
                                 "x": 3892,
                                 "y": 7421
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1260.359,
@@ -295,7 +379,11 @@
                             "position": {
                                 "x": 9973,
                                 "y": 10364
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1320.38,
@@ -308,7 +396,11 @@
                             "position": {
                                 "x": 10192,
                                 "y": 8431
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1380.382,
@@ -321,7 +413,11 @@
                             "position": {
                                 "x": 8212,
                                 "y": 10128
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1440.394,
@@ -334,7 +430,11 @@
                             "position": {
                                 "x": 5307,
                                 "y": 10528
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1500.41,
@@ -347,7 +447,11 @@
                             "position": {
                                 "x": 11789,
                                 "y": 12032
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1560.421,
@@ -360,7 +464,11 @@
                             "position": {
                                 "x": 10813,
                                 "y": 10451
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1620.436,
@@ -373,7 +481,11 @@
                             "position": {
                                 "x": 6750,
                                 "y": 4382
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1680.445,
@@ -386,7 +498,11 @@
                             "position": {
                                 "x": 9044,
                                 "y": 10944
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1740.466,
@@ -399,7 +515,11 @@
                             "position": {
                                 "x": 4838,
                                 "y": 8387
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1800.489,
@@ -412,7 +532,11 @@
                             "position": {
                                 "x": 6702,
                                 "y": 8541
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1860.518,
@@ -425,7 +549,11 @@
                             "position": {
                                 "x": 10994,
                                 "y": 11437
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1920.518,
@@ -435,7 +563,11 @@
                             "level": 16,
                             "cs": 166,
                             "monstersKilled": 139,
-                            "position": null
+                            "position": null,
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         }
                     ],
                     "itemsEvents": [
@@ -862,7 +994,11 @@
                             "position": {
                                 "x": 311,
                                 "y": 649
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 60.014,
@@ -875,7 +1011,11 @@
                             "position": {
                                 "x": 2672,
                                 "y": 13521
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 120.019,
@@ -888,7 +1028,11 @@
                             "position": {
                                 "x": 11386,
                                 "y": 1680
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 180.028,
@@ -901,7 +1045,11 @@
                             "position": {
                                 "x": 13484,
                                 "y": 3824
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 240.06,
@@ -914,7 +1062,11 @@
                             "position": {
                                 "x": 10952,
                                 "y": 1453
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 300.093,
@@ -927,7 +1079,11 @@
                             "position": {
                                 "x": 12878,
                                 "y": 2546
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 360.103,
@@ -940,7 +1096,11 @@
                             "position": {
                                 "x": 5464,
                                 "y": 1042
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 420.105,
@@ -953,7 +1113,11 @@
                             "position": {
                                 "x": 12537,
                                 "y": 2906
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 480.133,
@@ -966,7 +1130,11 @@
                             "position": {
                                 "x": 12932,
                                 "y": 3487
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 540.141,
@@ -979,7 +1147,11 @@
                             "position": {
                                 "x": 11870,
                                 "y": 1925
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 600.151,
@@ -992,7 +1164,11 @@
                             "position": {
                                 "x": 10893,
                                 "y": 5013
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 660.16,
@@ -1005,7 +1181,11 @@
                             "position": {
                                 "x": 12987,
                                 "y": 3523
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 720.192,
@@ -1018,7 +1198,11 @@
                             "position": {
                                 "x": 13144,
                                 "y": 3888
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 780.199,
@@ -1031,7 +1215,11 @@
                             "position": {
                                 "x": 12866,
                                 "y": 1924
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 840.228,
@@ -1044,7 +1232,11 @@
                             "position": {
                                 "x": 12771,
                                 "y": 3071
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 900.232,
@@ -1057,7 +1249,11 @@
                             "position": {
                                 "x": 11475,
                                 "y": 7730
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 960.26,
@@ -1070,7 +1266,11 @@
                             "position": {
                                 "x": 5372,
                                 "y": 4875
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1020.262,
@@ -1083,7 +1283,11 @@
                             "position": {
                                 "x": 6514,
                                 "y": 9820
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1080.293,
@@ -1096,7 +1300,11 @@
                             "position": {
                                 "x": 11053,
                                 "y": 5582
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1140.304,
@@ -1109,7 +1317,11 @@
                             "position": {
                                 "x": 8084,
                                 "y": 7456
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1200.333,
@@ -1122,7 +1334,11 @@
                             "position": {
                                 "x": 1170,
                                 "y": 7291
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1260.359,
@@ -1135,7 +1351,11 @@
                             "position": {
                                 "x": 10302,
                                 "y": 10445
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1320.38,
@@ -1148,7 +1368,11 @@
                             "position": {
                                 "x": 744,
                                 "y": 907
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1380.382,
@@ -1161,7 +1385,11 @@
                             "position": {
                                 "x": 8489,
                                 "y": 10113
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1440.394,
@@ -1174,7 +1402,11 @@
                             "position": {
                                 "x": 4425,
                                 "y": 10163
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1500.41,
@@ -1187,7 +1419,11 @@
                             "position": {
                                 "x": 7106,
                                 "y": 13254
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1560.421,
@@ -1200,7 +1436,11 @@
                             "position": {
                                 "x": 10148,
                                 "y": 9516
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1620.436,
@@ -1213,7 +1453,11 @@
                             "position": {
                                 "x": 895,
                                 "y": 8717
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1680.445,
@@ -1226,7 +1470,11 @@
                             "position": {
                                 "x": 10544,
                                 "y": 8664
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1740.466,
@@ -1239,7 +1487,11 @@
                             "position": {
                                 "x": 5097,
                                 "y": 8928
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1800.489,
@@ -1252,7 +1504,11 @@
                             "position": {
                                 "x": 7395,
                                 "y": 7762
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1860.518,
@@ -1265,7 +1521,11 @@
                             "position": {
                                 "x": 11028,
                                 "y": 10758
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1920.518,
@@ -1275,7 +1535,11 @@
                             "level": 16,
                             "cs": 207,
                             "monstersKilled": 16,
-                            "position": null
+                            "position": null,
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         }
                     ],
                     "itemsEvents": [
@@ -1759,7 +2023,11 @@
                             "position": {
                                 "x": 221,
                                 "y": 471
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 60.014,
@@ -1772,7 +2040,11 @@
                             "position": {
                                 "x": 3481,
                                 "y": 13469
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 120.019,
@@ -1785,7 +2057,11 @@
                             "position": {
                                 "x": 11624,
                                 "y": 1478
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 180.028,
@@ -1798,7 +2074,11 @@
                             "position": {
                                 "x": 13598,
                                 "y": 3703
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 240.06,
@@ -1811,7 +2091,11 @@
                             "position": {
                                 "x": 10574,
                                 "y": 1392
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 300.093,
@@ -1824,7 +2108,11 @@
                             "position": {
                                 "x": 13256,
                                 "y": 2801
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 360.103,
@@ -1837,7 +2125,11 @@
                             "position": {
                                 "x": 582,
                                 "y": 516
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 420.105,
@@ -1850,7 +2142,11 @@
                             "position": {
                                 "x": 13126,
                                 "y": 2579
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 480.133,
@@ -1863,7 +2159,11 @@
                             "position": {
                                 "x": 13431,
                                 "y": 3532
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 540.141,
@@ -1876,7 +2176,11 @@
                             "position": {
                                 "x": 809,
                                 "y": 554
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 600.151,
@@ -1889,7 +2193,11 @@
                             "position": {
                                 "x": 10891,
                                 "y": 4497
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 660.16,
@@ -1902,7 +2210,11 @@
                             "position": {
                                 "x": 13384,
                                 "y": 3645
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 720.192,
@@ -1915,7 +2227,11 @@
                             "position": {
                                 "x": 13284,
                                 "y": 3644
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 780.199,
@@ -1928,7 +2244,11 @@
                             "position": {
                                 "x": 4246,
                                 "y": 933
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 840.228,
@@ -1941,7 +2261,11 @@
                             "position": {
                                 "x": 13304,
                                 "y": 3355
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 900.232,
@@ -1954,7 +2278,11 @@
                             "position": {
                                 "x": 11663,
                                 "y": 8033
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 960.26,
@@ -1967,7 +2295,11 @@
                             "position": {
                                 "x": 5592,
                                 "y": 5614
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1020.262,
@@ -1980,7 +2312,11 @@
                             "position": {
                                 "x": 6932,
                                 "y": 9401
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1080.293,
@@ -1993,7 +2329,11 @@
                             "position": {
                                 "x": 11279,
                                 "y": 5606
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1140.304,
@@ -2006,7 +2346,11 @@
                             "position": {
                                 "x": 8562,
                                 "y": 7805
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1200.333,
@@ -2019,7 +2363,11 @@
                             "position": {
                                 "x": 1370,
                                 "y": 3477
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1260.359,
@@ -2032,7 +2380,11 @@
                             "position": {
                                 "x": 11094,
                                 "y": 10204
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1320.38,
@@ -2045,7 +2397,11 @@
                             "position": {
                                 "x": 10307,
                                 "y": 9069
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1380.382,
@@ -2058,7 +2414,11 @@
                             "position": {
                                 "x": 8553,
                                 "y": 10140
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1440.394,
@@ -2071,7 +2431,11 @@
                             "position": {
                                 "x": 4298,
                                 "y": 10214
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1500.41,
@@ -2084,7 +2448,11 @@
                             "position": {
                                 "x": 11964,
                                 "y": 12027
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1560.421,
@@ -2097,7 +2465,11 @@
                             "position": {
                                 "x": 9943,
                                 "y": 9836
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1620.436,
@@ -2110,7 +2482,11 @@
                             "position": {
                                 "x": 6993,
                                 "y": 3918
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1680.445,
@@ -2123,7 +2499,11 @@
                             "position": {
                                 "x": 8349,
                                 "y": 10083
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1740.466,
@@ -2136,7 +2516,11 @@
                             "position": {
                                 "x": 5803,
                                 "y": 8603
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1800.489,
@@ -2149,7 +2533,11 @@
                             "position": {
                                 "x": 5070,
                                 "y": 9437
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1860.518,
@@ -2162,7 +2550,11 @@
                             "position": {
                                 "x": 10743,
                                 "y": 10534
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1920.518,
@@ -2172,7 +2564,11 @@
                             "level": 15,
                             "cs": 44,
                             "monstersKilled": 10,
-                            "position": null
+                            "position": null,
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         }
                     ],
                     "itemsEvents": [
@@ -2896,7 +3292,11 @@
                             "position": {
                                 "x": 351,
                                 "y": 293
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 60.014,
@@ -2909,7 +3309,11 @@
                             "position": {
                                 "x": 4825,
                                 "y": 7912
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 120.019,
@@ -2922,7 +3326,11 @@
                             "position": {
                                 "x": 7393,
                                 "y": 6927
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 180.028,
@@ -2935,7 +3343,11 @@
                             "position": {
                                 "x": 7737,
                                 "y": 7668
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 240.06,
@@ -2948,7 +3360,11 @@
                             "position": {
                                 "x": 7763,
                                 "y": 5902
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 300.093,
@@ -2961,7 +3377,11 @@
                             "position": {
                                 "x": 7742,
                                 "y": 7891
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 360.103,
@@ -2974,7 +3394,11 @@
                             "position": {
                                 "x": 669,
                                 "y": 919
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 420.105,
@@ -2987,7 +3411,11 @@
                             "position": {
                                 "x": 9203,
                                 "y": 6194
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 480.133,
@@ -3000,7 +3428,11 @@
                             "position": {
                                 "x": 7903,
                                 "y": 7777
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 540.141,
@@ -3013,7 +3445,11 @@
                             "position": {
                                 "x": 6441,
                                 "y": 8286
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 600.151,
@@ -3026,7 +3462,11 @@
                             "position": {
                                 "x": 10277,
                                 "y": 5506
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 660.16,
@@ -3039,7 +3479,11 @@
                             "position": {
                                 "x": 8051,
                                 "y": 8087
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 720.192,
@@ -3052,7 +3496,11 @@
                             "position": {
                                 "x": 2333,
                                 "y": 1764
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 780.199,
@@ -3065,7 +3513,11 @@
                             "position": {
                                 "x": 1267,
                                 "y": 1001
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 840.228,
@@ -3078,7 +3530,11 @@
                             "position": {
                                 "x": 5235,
                                 "y": 8762
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 900.232,
@@ -3091,7 +3547,11 @@
                             "position": {
                                 "x": 9107,
                                 "y": 9318
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 960.26,
@@ -3104,7 +3564,11 @@
                             "position": {
                                 "x": 8433,
                                 "y": 10128
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1020.262,
@@ -3117,7 +3581,11 @@
                             "position": {
                                 "x": 2268,
                                 "y": 4060
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1080.293,
@@ -3130,7 +3598,11 @@
                             "position": {
                                 "x": 4164,
                                 "y": 9875
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1140.304,
@@ -3143,7 +3615,11 @@
                             "position": {
                                 "x": 4112,
                                 "y": 3614
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1200.333,
@@ -3156,7 +3632,11 @@
                             "position": {
                                 "x": 12770,
                                 "y": 7398
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1260.359,
@@ -3169,7 +3649,11 @@
                             "position": {
                                 "x": 9997,
                                 "y": 5405
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1320.38,
@@ -3182,7 +3666,11 @@
                             "position": {
                                 "x": 9908,
                                 "y": 9245
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1380.382,
@@ -3195,7 +3683,11 @@
                             "position": {
                                 "x": 8358,
                                 "y": 10083
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1440.394,
@@ -3208,7 +3700,11 @@
                             "position": {
                                 "x": 5020,
                                 "y": 10265
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1500.41,
@@ -3221,7 +3717,11 @@
                             "position": {
                                 "x": 12220,
                                 "y": 11461
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1560.421,
@@ -3234,7 +3734,11 @@
                             "position": {
                                 "x": 11585,
                                 "y": 10680
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1620.436,
@@ -3247,7 +3751,11 @@
                             "position": {
                                 "x": 8255,
                                 "y": 7530
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1680.445,
@@ -3260,7 +3768,11 @@
                             "position": {
                                 "x": 12372,
                                 "y": 8890
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1740.466,
@@ -3273,7 +3785,11 @@
                             "position": {
                                 "x": 4707,
                                 "y": 5153
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1800.489,
@@ -3286,7 +3802,11 @@
                             "position": {
                                 "x": 7157,
                                 "y": 6677
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1860.518,
@@ -3299,7 +3819,11 @@
                             "position": {
                                 "x": 11133,
                                 "y": 11400
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1920.518,
@@ -3309,7 +3833,11 @@
                             "level": 17,
                             "cs": 298,
                             "monstersKilled": 38,
-                            "position": null
+                            "position": null,
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         }
                     ],
                     "itemsEvents": [
@@ -3818,7 +4346,11 @@
                             "position": {
                                 "x": 560,
                                 "y": 581
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 60.014,
@@ -3831,7 +4363,11 @@
                             "position": {
                                 "x": 2593,
                                 "y": 13497
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 120.019,
@@ -3844,7 +4380,11 @@
                             "position": {
                                 "x": 2296,
                                 "y": 12789
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 180.028,
@@ -3857,7 +4397,11 @@
                             "position": {
                                 "x": 2446,
                                 "y": 12827
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 240.06,
@@ -3870,7 +4414,11 @@
                             "position": {
                                 "x": 1276,
                                 "y": 11112
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 300.093,
@@ -3883,7 +4431,11 @@
                             "position": {
                                 "x": 1682,
                                 "y": 12822
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 360.103,
@@ -3896,7 +4448,11 @@
                             "position": {
                                 "x": 2881,
                                 "y": 13260
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 420.105,
@@ -3909,7 +4465,11 @@
                             "position": {
                                 "x": 1812,
                                 "y": 11999
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 480.133,
@@ -3922,7 +4482,11 @@
                             "position": {
                                 "x": 2974,
                                 "y": 11363
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 540.141,
@@ -3935,7 +4499,11 @@
                             "position": {
                                 "x": 1205,
                                 "y": 8872
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 600.151,
@@ -3948,7 +4516,11 @@
                             "position": {
                                 "x": 4803,
                                 "y": 9623
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 660.16,
@@ -3961,7 +4533,11 @@
                             "position": {
                                 "x": 3500,
                                 "y": 12989
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 720.192,
@@ -3974,7 +4550,11 @@
                             "position": {
                                 "x": 2205,
                                 "y": 12409
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 780.199,
@@ -3987,7 +4567,11 @@
                             "position": {
                                 "x": 12223,
                                 "y": 2399
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 840.228,
@@ -4000,7 +4584,11 @@
                             "position": {
                                 "x": 3297,
                                 "y": 13234
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 900.232,
@@ -4013,7 +4601,11 @@
                             "position": {
                                 "x": 756,
                                 "y": 5296
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 960.26,
@@ -4026,7 +4618,11 @@
                             "position": {
                                 "x": 5555,
                                 "y": 13768
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1020.262,
@@ -4039,7 +4635,11 @@
                             "position": {
                                 "x": 7142,
                                 "y": 9706
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1080.293,
@@ -4052,7 +4652,11 @@
                             "position": {
                                 "x": 9985,
                                 "y": 2577
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1140.304,
@@ -4065,7 +4669,11 @@
                             "position": {
                                 "x": 11720,
                                 "y": 7912
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1200.333,
@@ -4078,7 +4686,11 @@
                             "position": {
                                 "x": 8509,
                                 "y": 10561
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1260.359,
@@ -4091,7 +4703,11 @@
                             "position": {
                                 "x": 10077,
                                 "y": 10473
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1320.38,
@@ -4104,7 +4720,11 @@
                             "position": {
                                 "x": 10710,
                                 "y": 10289
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1380.382,
@@ -4117,7 +4737,11 @@
                             "position": {
                                 "x": 8866,
                                 "y": 9782
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1440.394,
@@ -4130,7 +4754,11 @@
                             "position": {
                                 "x": 11553,
                                 "y": 1340
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1500.41,
@@ -4143,7 +4771,11 @@
                             "position": {
                                 "x": 9311,
                                 "y": 1440
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1560.421,
@@ -4156,7 +4788,11 @@
                             "position": {
                                 "x": 10154,
                                 "y": 7470
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1620.436,
@@ -4169,7 +4805,11 @@
                             "position": {
                                 "x": 10298,
                                 "y": 1178
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1680.445,
@@ -4182,7 +4822,11 @@
                             "position": {
                                 "x": 13691,
                                 "y": 7018
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1740.466,
@@ -4195,7 +4839,11 @@
                             "position": {
                                 "x": 4247,
                                 "y": 11780
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1800.489,
@@ -4208,7 +4856,11 @@
                             "position": {
                                 "x": 4579,
                                 "y": 9163
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1860.518,
@@ -4221,7 +4873,11 @@
                             "position": {
                                 "x": 13283,
                                 "y": 10028
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1920.518,
@@ -4231,7 +4887,11 @@
                             "level": 17,
                             "cs": 249,
                             "monstersKilled": 12,
-                            "position": null
+                            "position": null,
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         }
                     ],
                     "itemsEvents": [
@@ -4818,7 +5478,11 @@
                             "position": {
                                 "x": 14486,
                                 "y": 14291
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 60.014,
@@ -4831,7 +5495,11 @@
                             "position": {
                                 "x": 7091,
                                 "y": 11321
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 120.019,
@@ -4844,7 +5512,11 @@
                             "position": {
                                 "x": 7262,
                                 "y": 9789
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 180.028,
@@ -4857,7 +5529,11 @@
                             "position": {
                                 "x": 10885,
                                 "y": 7613
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 240.06,
@@ -4870,7 +5546,11 @@
                             "position": {
                                 "x": 12394,
                                 "y": 6166
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 300.093,
@@ -4883,7 +5563,11 @@
                             "position": {
                                 "x": 6029,
                                 "y": 12475
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 360.103,
@@ -4896,7 +5580,11 @@
                             "position": {
                                 "x": 10497,
                                 "y": 8972
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 420.105,
@@ -4909,7 +5597,11 @@
                             "position": {
                                 "x": 13094,
                                 "y": 4568
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 480.133,
@@ -4922,7 +5614,11 @@
                             "position": {
                                 "x": 7822,
                                 "y": 10917
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 540.141,
@@ -4935,7 +5631,11 @@
                             "position": {
                                 "x": 11275,
                                 "y": 6190
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 600.151,
@@ -4948,7 +5648,11 @@
                             "position": {
                                 "x": 12029,
                                 "y": 6729
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 660.16,
@@ -4961,7 +5665,11 @@
                             "position": {
                                 "x": 8936,
                                 "y": 9680
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 720.192,
@@ -4974,7 +5682,11 @@
                             "position": {
                                 "x": 3335,
                                 "y": 13465
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 780.199,
@@ -4987,7 +5699,11 @@
                             "position": {
                                 "x": 12207,
                                 "y": 9313
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 840.228,
@@ -5000,7 +5716,11 @@
                             "position": {
                                 "x": 5786,
                                 "y": 12601
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 900.232,
@@ -5013,7 +5733,11 @@
                             "position": {
                                 "x": 9214,
                                 "y": 9986
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 960.26,
@@ -5026,7 +5750,11 @@
                             "position": {
                                 "x": 11615,
                                 "y": 6648
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1020.262,
@@ -5039,7 +5767,11 @@
                             "position": {
                                 "x": 5576,
                                 "y": 12559
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1080.293,
@@ -5052,7 +5784,11 @@
                             "position": {
                                 "x": 9959,
                                 "y": 9337
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1140.304,
@@ -5065,7 +5801,11 @@
                             "position": {
                                 "x": 7088,
                                 "y": 10104
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1200.333,
@@ -5078,7 +5818,11 @@
                             "position": {
                                 "x": 10066,
                                 "y": 8666
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1260.359,
@@ -5091,7 +5835,11 @@
                             "position": {
                                 "x": 11638,
                                 "y": 10891
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1320.38,
@@ -5104,7 +5852,11 @@
                             "position": {
                                 "x": 9006,
                                 "y": 11393
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1380.382,
@@ -5117,7 +5869,11 @@
                             "position": {
                                 "x": 13128,
                                 "y": 8568
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1440.394,
@@ -5130,7 +5886,11 @@
                             "position": {
                                 "x": 9661,
                                 "y": 3467
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1500.41,
@@ -5143,7 +5903,11 @@
                             "position": {
                                 "x": 12464,
                                 "y": 12662
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1560.421,
@@ -5156,7 +5920,11 @@
                             "position": {
                                 "x": 10632,
                                 "y": 13159
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1620.436,
@@ -5169,7 +5937,11 @@
                             "position": {
                                 "x": 13246,
                                 "y": 14001
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1680.445,
@@ -5182,7 +5954,11 @@
                             "position": {
                                 "x": 12866,
                                 "y": 11598
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1740.466,
@@ -5195,7 +5971,11 @@
                             "position": {
                                 "x": 7734,
                                 "y": 9969
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1800.489,
@@ -5208,7 +5988,11 @@
                             "position": {
                                 "x": 8415,
                                 "y": 7979
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1860.518,
@@ -5221,7 +6005,11 @@
                             "position": {
                                 "x": 12301,
                                 "y": 13014
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1920.518,
@@ -5231,7 +6019,11 @@
                             "level": 16,
                             "cs": 208,
                             "monstersKilled": 135,
-                            "position": null
+                            "position": null,
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         }
                     ],
                     "itemsEvents": [
@@ -5675,7 +6467,11 @@
                             "position": {
                                 "x": 14147,
                                 "y": 14401
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 60.014,
@@ -5688,7 +6484,11 @@
                             "position": {
                                 "x": 7824,
                                 "y": 3522
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 120.019,
@@ -5701,7 +6501,11 @@
                             "position": {
                                 "x": 12530,
                                 "y": 1697
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 180.028,
@@ -5714,7 +6518,11 @@
                             "position": {
                                 "x": 13928,
                                 "y": 4907
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 240.06,
@@ -5727,7 +6535,11 @@
                             "position": {
                                 "x": 14114,
                                 "y": 13422
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 300.093,
@@ -5740,7 +6552,11 @@
                             "position": {
                                 "x": 13572,
                                 "y": 3780
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 360.103,
@@ -5753,7 +6569,11 @@
                             "position": {
                                 "x": 13883,
                                 "y": 10401
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 420.105,
@@ -5766,7 +6586,11 @@
                             "position": {
                                 "x": 13675,
                                 "y": 4009
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 480.133,
@@ -5779,7 +6603,11 @@
                             "position": {
                                 "x": 14029,
                                 "y": 4963
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 540.141,
@@ -5792,7 +6620,11 @@
                             "position": {
                                 "x": 13793,
                                 "y": 6603
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 600.151,
@@ -5805,7 +6637,11 @@
                             "position": {
                                 "x": 12193,
                                 "y": 4903
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 660.16,
@@ -5818,7 +6654,11 @@
                             "position": {
                                 "x": 13741,
                                 "y": 4611
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 720.192,
@@ -5831,7 +6671,11 @@
                             "position": {
                                 "x": 13362,
                                 "y": 4988
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 780.199,
@@ -5844,7 +6688,11 @@
                             "position": {
                                 "x": 12001,
                                 "y": 1623
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 840.228,
@@ -5857,7 +6705,11 @@
                             "position": {
                                 "x": 13328,
                                 "y": 4597
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 900.232,
@@ -5870,7 +6722,11 @@
                             "position": {
                                 "x": 11928,
                                 "y": 11628
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 960.26,
@@ -5883,7 +6739,11 @@
                             "position": {
                                 "x": 8970,
                                 "y": 9358
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1020.262,
@@ -5896,7 +6756,11 @@
                             "position": {
                                 "x": 8014,
                                 "y": 9622
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1080.293,
@@ -5909,7 +6773,11 @@
                             "position": {
                                 "x": 8613,
                                 "y": 9907
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1140.304,
@@ -5922,7 +6790,11 @@
                             "position": {
                                 "x": 8524,
                                 "y": 10165
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1200.333,
@@ -5935,7 +6807,11 @@
                             "position": {
                                 "x": 13289,
                                 "y": 12770
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1260.359,
@@ -5948,7 +6824,11 @@
                             "position": {
                                 "x": 13488,
                                 "y": 6840
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1320.38,
@@ -5961,7 +6841,11 @@
                             "position": {
                                 "x": 11300,
                                 "y": 10674
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1380.382,
@@ -5974,7 +6858,11 @@
                             "position": {
                                 "x": 13559,
                                 "y": 13035
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1440.394,
@@ -5987,7 +6875,11 @@
                             "position": {
                                 "x": 7855,
                                 "y": 8194
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1500.41,
@@ -6000,7 +6892,11 @@
                             "position": {
                                 "x": 9317,
                                 "y": 11440
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1560.421,
@@ -6013,7 +6909,11 @@
                             "position": {
                                 "x": 11868,
                                 "y": 11022
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1620.436,
@@ -6026,7 +6926,11 @@
                             "position": {
                                 "x": 9732,
                                 "y": 10289
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1680.445,
@@ -6039,7 +6943,11 @@
                             "position": {
                                 "x": 11391,
                                 "y": 11860
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1740.466,
@@ -6052,7 +6960,11 @@
                             "position": {
                                 "x": 8882,
                                 "y": 9448
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1800.489,
@@ -6065,7 +6977,11 @@
                             "position": {
                                 "x": 8730,
                                 "y": 7622
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1860.518,
@@ -6078,7 +6994,11 @@
                             "position": {
                                 "x": 6351,
                                 "y": 10022
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1920.518,
@@ -6088,7 +7008,11 @@
                             "level": 15,
                             "cs": 234,
                             "monstersKilled": 22,
-                            "position": null
+                            "position": null,
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         }
                     ],
                     "itemsEvents": [
@@ -6539,7 +7463,11 @@
                             "position": {
                                 "x": 14237,
                                 "y": 14579
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 60.014,
@@ -6552,7 +7480,11 @@
                             "position": {
                                 "x": 6972,
                                 "y": 4702
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 120.019,
@@ -6565,7 +7497,11 @@
                             "position": {
                                 "x": 12527,
                                 "y": 1342
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 180.028,
@@ -6578,7 +7514,11 @@
                             "position": {
                                 "x": 13545,
                                 "y": 4837
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 240.06,
@@ -6591,7 +7531,11 @@
                             "position": {
                                 "x": 13952,
                                 "y": 12689
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 300.093,
@@ -6604,7 +7548,11 @@
                             "position": {
                                 "x": 13257,
                                 "y": 3939
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 360.103,
@@ -6617,7 +7565,11 @@
                             "position": {
                                 "x": 11711,
                                 "y": 6721
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 420.105,
@@ -6630,7 +7582,11 @@
                             "position": {
                                 "x": 13385,
                                 "y": 3982
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 480.133,
@@ -6643,7 +7599,11 @@
                             "position": {
                                 "x": 13915,
                                 "y": 4195
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 540.141,
@@ -6656,7 +7616,11 @@
                             "position": {
                                 "x": 13485,
                                 "y": 12620
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 600.151,
@@ -6669,7 +7633,11 @@
                             "position": {
                                 "x": 11600,
                                 "y": 5921
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 660.16,
@@ -6682,7 +7650,11 @@
                             "position": {
                                 "x": 13814,
                                 "y": 9630
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 720.192,
@@ -6695,7 +7667,11 @@
                             "position": {
                                 "x": 13155,
                                 "y": 5316
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 780.199,
@@ -6708,7 +7684,11 @@
                             "position": {
                                 "x": 12681,
                                 "y": 1968
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 840.228,
@@ -6721,7 +7701,11 @@
                             "position": {
                                 "x": 13657,
                                 "y": 4085
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 900.232,
@@ -6734,7 +7718,11 @@
                             "position": {
                                 "x": 11341,
                                 "y": 10813
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 960.26,
@@ -6747,7 +7735,11 @@
                             "position": {
                                 "x": 8841,
                                 "y": 9993
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1020.262,
@@ -6760,7 +7752,11 @@
                             "position": {
                                 "x": 7737,
                                 "y": 11729
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1080.293,
@@ -6773,7 +7769,11 @@
                             "position": {
                                 "x": 13191,
                                 "y": 7629
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1140.304,
@@ -6786,7 +7786,11 @@
                             "position": {
                                 "x": 6726,
                                 "y": 9463
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1200.333,
@@ -6799,7 +7803,11 @@
                             "position": {
                                 "x": 10646,
                                 "y": 10676
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1260.359,
@@ -6812,7 +7820,11 @@
                             "position": {
                                 "x": 11290,
                                 "y": 11261
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1320.38,
@@ -6825,7 +7837,11 @@
                             "position": {
                                 "x": 10797,
                                 "y": 10363
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1380.382,
@@ -6838,7 +7854,11 @@
                             "position": {
                                 "x": 12216,
                                 "y": 12553
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1440.394,
@@ -6851,7 +7871,11 @@
                             "position": {
                                 "x": 6059,
                                 "y": 9089
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1500.41,
@@ -6864,7 +7888,11 @@
                             "position": {
                                 "x": 7160,
                                 "y": 10001
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1560.421,
@@ -6877,7 +7905,11 @@
                             "position": {
                                 "x": 11580,
                                 "y": 11067
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1620.436,
@@ -6890,7 +7922,11 @@
                             "position": {
                                 "x": 12689,
                                 "y": 12848
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1680.445,
@@ -6903,7 +7939,11 @@
                             "position": {
                                 "x": 9612,
                                 "y": 11143
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1740.466,
@@ -6916,7 +7956,11 @@
                             "position": {
                                 "x": 8964,
                                 "y": 9557
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1800.489,
@@ -6929,7 +7973,11 @@
                             "position": {
                                 "x": 7604,
                                 "y": 10060
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1860.518,
@@ -6942,7 +7990,11 @@
                             "position": {
                                 "x": 12471,
                                 "y": 11869
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1920.518,
@@ -6952,7 +8004,11 @@
                             "level": 13,
                             "cs": 31,
                             "monstersKilled": 0,
-                            "position": null
+                            "position": null,
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         }
                     ],
                     "itemsEvents": [
@@ -7709,7 +8765,11 @@
                             "position": {
                                 "x": 14277,
                                 "y": 14223
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 60.014,
@@ -7722,7 +8782,11 @@
                             "position": {
                                 "x": 6747,
                                 "y": 8162
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 120.019,
@@ -7735,7 +8799,11 @@
                             "position": {
                                 "x": 7578,
                                 "y": 7442
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 180.028,
@@ -7748,7 +8816,11 @@
                             "position": {
                                 "x": 13837,
                                 "y": 14094
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 240.06,
@@ -7761,7 +8833,11 @@
                             "position": {
                                 "x": 12144,
                                 "y": 12356
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 300.093,
@@ -7774,7 +8850,11 @@
                             "position": {
                                 "x": 8768,
                                 "y": 8277
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 360.103,
@@ -7787,7 +8867,11 @@
                             "position": {
                                 "x": 8000,
                                 "y": 7742
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 420.105,
@@ -7800,7 +8884,11 @@
                             "position": {
                                 "x": 7646,
                                 "y": 7717
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 480.133,
@@ -7813,7 +8901,11 @@
                             "position": {
                                 "x": 10742,
                                 "y": 7304
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 540.141,
@@ -7826,7 +8918,11 @@
                             "position": {
                                 "x": 10943,
                                 "y": 2710
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 600.151,
@@ -7839,7 +8935,11 @@
                             "position": {
                                 "x": 12225,
                                 "y": 12062
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 660.16,
@@ -7852,7 +8952,11 @@
                             "position": {
                                 "x": 13513,
                                 "y": 13540
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 720.192,
@@ -7865,7 +8969,11 @@
                             "position": {
                                 "x": 6891,
                                 "y": 6843
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 780.199,
@@ -7878,7 +8986,11 @@
                             "position": {
                                 "x": 3911,
                                 "y": 13474
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 840.228,
@@ -7891,7 +9003,11 @@
                             "position": {
                                 "x": 5818,
                                 "y": 10237
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 900.232,
@@ -7904,7 +9020,11 @@
                             "position": {
                                 "x": 1161,
                                 "y": 10482
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 960.26,
@@ -7917,7 +9037,11 @@
                             "position": {
                                 "x": 5715,
                                 "y": 12759
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1020.262,
@@ -7930,7 +9054,11 @@
                             "position": {
                                 "x": 7853,
                                 "y": 9994
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1080.293,
@@ -7943,7 +9071,11 @@
                             "position": {
                                 "x": 8920,
                                 "y": 2591
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1140.304,
@@ -7956,7 +9088,11 @@
                             "position": {
                                 "x": 13556,
                                 "y": 9790
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1200.333,
@@ -7969,7 +9105,11 @@
                             "position": {
                                 "x": 13461,
                                 "y": 9140
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1260.359,
@@ -7982,7 +9122,11 @@
                             "position": {
                                 "x": 10724,
                                 "y": 4130
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1320.38,
@@ -7995,7 +9139,11 @@
                             "position": {
                                 "x": 13597,
                                 "y": 9425
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1380.382,
@@ -8008,7 +9156,11 @@
                             "position": {
                                 "x": 13738,
                                 "y": 12737
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1440.394,
@@ -8021,7 +9173,11 @@
                             "position": {
                                 "x": 2041,
                                 "y": 11676
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1500.41,
@@ -8034,7 +9190,11 @@
                             "position": {
                                 "x": 13483,
                                 "y": 12951
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1560.421,
@@ -8047,7 +9207,11 @@
                             "position": {
                                 "x": 11552,
                                 "y": 10627
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1620.436,
@@ -8060,7 +9224,11 @@
                             "position": {
                                 "x": 2330,
                                 "y": 9133
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1680.445,
@@ -8073,7 +9241,11 @@
                             "position": {
                                 "x": 13783,
                                 "y": 14258
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1740.466,
@@ -8086,7 +9258,11 @@
                             "position": {
                                 "x": 7104,
                                 "y": 11475
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1800.489,
@@ -8099,7 +9275,11 @@
                             "position": {
                                 "x": 8135,
                                 "y": 13409
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1860.518,
@@ -8112,7 +9292,11 @@
                             "position": {
                                 "x": 5202,
                                 "y": 10467
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1920.518,
@@ -8122,7 +9306,11 @@
                             "level": 15,
                             "cs": 195,
                             "monstersKilled": 4,
-                            "position": null
+                            "position": null,
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         }
                     ],
                     "itemsEvents": [
@@ -8665,7 +9853,11 @@
                             "position": {
                                 "x": 14486,
                                 "y": 14511
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 60.014,
@@ -8678,7 +9870,11 @@
                             "position": {
                                 "x": 14099,
                                 "y": 14337
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 120.019,
@@ -8691,7 +9887,11 @@
                             "position": {
                                 "x": 2484,
                                 "y": 12692
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 180.028,
@@ -8704,7 +9904,11 @@
                             "position": {
                                 "x": 3249,
                                 "y": 13370
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 240.06,
@@ -8717,7 +9921,11 @@
                             "position": {
                                 "x": 1835,
                                 "y": 11930
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 300.093,
@@ -8730,7 +9938,11 @@
                             "position": {
                                 "x": 14340,
                                 "y": 14391
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 360.103,
@@ -8743,7 +9955,11 @@
                             "position": {
                                 "x": 3716,
                                 "y": 13509
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 420.105,
@@ -8756,7 +9972,11 @@
                             "position": {
                                 "x": 1607,
                                 "y": 12834
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 480.133,
@@ -8769,7 +9989,11 @@
                             "position": {
                                 "x": 3993,
                                 "y": 13605
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 540.141,
@@ -8782,7 +10006,11 @@
                             "position": {
                                 "x": 3260,
                                 "y": 13387
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 600.151,
@@ -8795,7 +10023,11 @@
                             "position": {
                                 "x": 4300,
                                 "y": 14047
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 660.16,
@@ -8808,7 +10040,11 @@
                             "position": {
                                 "x": 4005,
                                 "y": 13713
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 720.192,
@@ -8821,7 +10057,11 @@
                             "position": {
                                 "x": 950,
                                 "y": 11361
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 780.199,
@@ -8834,7 +10074,11 @@
                             "position": {
                                 "x": 5927,
                                 "y": 10749
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 840.228,
@@ -8847,7 +10091,11 @@
                             "position": {
                                 "x": 3797,
                                 "y": 13368
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 900.232,
@@ -8860,7 +10108,11 @@
                             "position": {
                                 "x": 13948,
                                 "y": 9571
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 960.26,
@@ -8873,7 +10125,11 @@
                             "position": {
                                 "x": 13649,
                                 "y": 4641
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1020.262,
@@ -8886,7 +10142,11 @@
                             "position": {
                                 "x": 4597,
                                 "y": 13659
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1080.293,
@@ -8899,7 +10159,11 @@
                             "position": {
                                 "x": 6684,
                                 "y": 13643
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1140.304,
@@ -8912,7 +10176,11 @@
                             "position": {
                                 "x": 5536,
                                 "y": 13850
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1200.333,
@@ -8925,7 +10193,11 @@
                             "position": {
                                 "x": 1022,
                                 "y": 7982
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1260.359,
@@ -8938,7 +10210,11 @@
                             "position": {
                                 "x": 12151,
                                 "y": 11791
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1320.38,
@@ -8951,7 +10227,11 @@
                             "position": {
                                 "x": 10720,
                                 "y": 10472
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1380.382,
@@ -8964,7 +10244,11 @@
                             "position": {
                                 "x": 13529,
                                 "y": 6585
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1440.394,
@@ -8977,7 +10261,11 @@
                             "position": {
                                 "x": 13541,
                                 "y": 3989
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1500.41,
@@ -8990,7 +10278,11 @@
                             "position": {
                                 "x": 13311,
                                 "y": 11950
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1560.421,
@@ -9003,7 +10295,11 @@
                             "position": {
                                 "x": 10742,
                                 "y": 10456
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1620.436,
@@ -9016,7 +10312,11 @@
                             "position": {
                                 "x": 10168,
                                 "y": 981
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1680.445,
@@ -9029,7 +10329,11 @@
                             "position": {
                                 "x": 13586,
                                 "y": 9614
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1740.466,
@@ -9042,7 +10346,11 @@
                             "position": {
                                 "x": 13995,
                                 "y": 5545
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1800.489,
@@ -9055,7 +10363,11 @@
                             "position": {
                                 "x": 8031,
                                 "y": 6630
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1860.518,
@@ -9068,7 +10380,11 @@
                             "position": {
                                 "x": 5371,
                                 "y": 10554
-                            }
+                            },
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         },
                         {
                             "timestamp": 1920.518,
@@ -9078,7 +10394,11 @@
                             "level": 16,
                             "cs": 223,
                             "monstersKilled": 0,
-                            "position": null
+                            "position": null,
+                            "totalGoldDiff": null,
+                            "xpDiff": null,
+                            "csDiff": null,
+                            "monstersKilledDiff": null
                         }
                     ],
                     "itemsEvents": [
