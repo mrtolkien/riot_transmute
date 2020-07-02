@@ -212,7 +212,11 @@ def match_timeline_to_game(
                     player = get_player(game, event["killerId"])
                     event_type = "KILLED"
                 else:
-                    player = get_player(game, event["creatorId"])
+                    try:
+                        player = get_player(game, event["creatorId"])
+                    except StopIteration:
+                        # TODO Understand events with ward_type=UNDEFINED + creatorId=0, they are dropped atm
+                        continue
                     event_type = "PLACED"
 
                 player["wardsEvents"].append(

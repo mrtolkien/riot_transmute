@@ -25,7 +25,7 @@ def match_to_game(match_dto: dict, add_names: bool = False) -> game_dto.LolGame:
     log_prefix = f"gameId {match_dto['gameId']}|" f"platformId {match_dto['platformId']}:\t"
     info_log = set()
 
-    date_time = datetime.fromtimestamp(match_dto["gameCreation"] / 1000)
+    date_time = datetime.utcfromtimestamp(match_dto["gameCreation"] / 1000)
     date_time = date_time.replace(tzinfo=timezone.utc)
     iso_date = date_time.isoformat(timespec="seconds")
 
