@@ -41,7 +41,7 @@ def test_game(match_dto):
 
     assert game["winner"] == "BLUE"
     assert game["patch"] == "10.10"
-    assert game["start"] == "2020-05-27T02:23:02+00:00"
+    assert game["start"] == "2020-05-26T17:23:02+00:00"
     assert "riotLolApi" in game["sources"]
     assert game["teams"]["BLUE"]["endOfGameStats"]["firstTower"]
     assert not game["teams"]["BLUE"]["endOfGameStats"]["firstDragon"]

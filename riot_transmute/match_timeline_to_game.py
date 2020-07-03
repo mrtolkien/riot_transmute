@@ -1,3 +1,5 @@
+import logging
+
 import lol_dto.classes.game as game_dto
 import lol_id_tools as lit
 
@@ -50,13 +52,6 @@ def get_player(game: game_dto.LolGame, participant_id: int) -> game_dto.LolGameP
     """
     team_side = "BLUE" if participant_id < 6 else "RED"
     return next(p for p in game["teams"][team_side]["players"] if p["id"] == participant_id)
-
-
-def get_team(game: game_dto.LolGame, participant_id: int) -> game_dto.LolGameTeam:
-    """Gets a team object from a player’s participantId
-    """
-    team_side = "BLUE" if participant_id < 6 else "RED"
-    return game["teams"][team_side]
 
 
 def match_timeline_to_game(
@@ -138,7 +133,13 @@ def match_timeline_to_game(
 
             # Epic monsters kills
             if event["type"] == "ELITE_MONSTER_KILL":
-                team = get_team(game, event["killerId"])
+                if event["killerId"] < 1:
+                    # This is Rift Herald killing itself, we just pass
+                    logging.info(f"Epic monster kill with killer id 0 found, likely Rift Herald killing itself.")
+                    continue
+
+                team = game["teams"]["BLUE" if event["killerId"] < 6 else "RED"]
+
                 monster_type = monster_type_dict[event["monsterType"]]
 
                 event_dto = game_dto.LolGameTeamMonsterKill(
@@ -156,7 +157,10 @@ def match_timeline_to_game(
 
             # Buildings kills
             elif event["type"] == "BUILDING_KILL":
-                team = get_team(game, event["killerId"])
+                from pprint import pprint
+                pprint(event)
+                # The teamId here refers to the SIDE of the tower that was killed, so the opponents killed it
+                team = game["teams"]["RED" if event["teamId"] == 100 else "BLUE"]
 
                 event_dto = building_dict[event["position"]["x"], event["position"]["y"]]
                 event_dto["timestamp"] = timestamp
