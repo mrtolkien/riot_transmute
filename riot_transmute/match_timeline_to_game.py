@@ -157,8 +157,6 @@ def match_timeline_to_game(
 
             # Buildings kills
             elif event["type"] == "BUILDING_KILL":
-                from pprint import pprint
-                pprint(event)
                 # The teamId here refers to the SIDE of the tower that was killed, so the opponents killed it
                 team = game["teams"]["RED" if event["teamId"] == 100 else "BLUE"]
 
