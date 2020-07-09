@@ -5134,7 +5134,8 @@
                     "lane": "MID",
                     "towerLocation": "OUTER",
                     "side": "RED",
-                    "timestamp": 673.244
+                    "timestamp": 673.244,
+                    "killerId": 1
                 },
                 {
                     "type": "TOWER",
@@ -5148,14 +5149,16 @@
                     "lane": "BOT",
                     "towerLocation": "INNER",
                     "side": "RED",
-                    "timestamp": 884.564
+                    "timestamp": 884.564,
+                    "killerId": 4
                 },
                 {
                     "type": "TOWER",
                     "lane": "MID",
                     "towerLocation": "INNER",
                     "side": "RED",
-                    "timestamp": 926.498
+                    "timestamp": 926.498,
+                    "killerId": 4
                 },
                 {
                     "type": "TOWER",
@@ -5169,13 +5172,15 @@
                     "lane": "MID",
                     "towerLocation": "INHIBITOR",
                     "side": "RED",
-                    "timestamp": 1351.733
+                    "timestamp": 1351.733,
+                    "killerId": 3
                 },
                 {
                     "type": "INHIBITOR",
                     "lane": "MID",
                     "side": "RED",
-                    "timestamp": 1862.765
+                    "timestamp": 1862.765,
+                    "killerId": 1
                 },
                 {
                     "type": "TOWER",
@@ -5196,19 +5201,22 @@
                     "lane": "BOT",
                     "towerLocation": "INHIBITOR",
                     "side": "RED",
-                    "timestamp": 1669.778
+                    "timestamp": 1669.778,
+                    "killerId": 5
                 },
                 {
                     "type": "INHIBITOR",
                     "lane": "MID",
                     "side": "RED",
-                    "timestamp": 1862.765
+                    "timestamp": 1862.765,
+                    "killerId": 1
                 },
                 {
                     "type": "INHIBITOR",
                     "lane": "BOT",
                     "side": "RED",
-                    "timestamp": 1867.058
+                    "timestamp": 1867.058,
+                    "killerId": 4
                 },
                 {
                     "type": "TOWER",
@@ -10242,14 +10250,16 @@
                     "lane": "TOP",
                     "towerLocation": "OUTER",
                     "side": "BLUE",
-                    "timestamp": 1187.681
+                    "timestamp": 1187.681,
+                    "killerId": 10
                 },
                 {
                     "type": "TOWER",
                     "lane": "BOT",
                     "towerLocation": "OUTER",
                     "side": "BLUE",
-                    "timestamp": 1484.979
+                    "timestamp": 1484.979,
+                    "killerId": 10
                 }
             ]
         }

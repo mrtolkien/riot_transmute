@@ -198,6 +198,7 @@ def match_timeline_to_game(
             # Item buying, selling, and undoing
             elif "ITEM" in event["type"]:
                 if not event.get("participantId"):
+                    logging.debug(f"Dropping item event because it does not have a participantId:\n{event}")
                     # Some weird ITEM_DESTROYED events without a participantId can appear in older games (tower items)
                     continue
 
@@ -221,6 +222,9 @@ def match_timeline_to_game(
             # Wards placing and killing
             elif "WARD" in event["type"]:
                 if event["type"] == "WARD_KILL":
+                    if not event.get("killerId"):
+                        logging.debug(f"Ward kill event without killerId dropped:\n{event}")
+                        continue
                     player = get_player(game, event["killerId"])
                     event_type = "KILLED"
                 else:
