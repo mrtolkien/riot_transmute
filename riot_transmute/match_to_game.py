@@ -122,7 +122,9 @@ def match_to_game(match_dto: dict, add_names: bool = False) -> game_dto.LolGame:
                 deaths=participant["stats"].get("deaths"),
                 assists=participant["stats"].get("assists"),
                 gold=participant["stats"].get("goldEarned"),
-                cs=participant["stats"].get("totalMinionsKilled") + participant["stats"].get("neutralMinionsKilled"),
+                # TODO Test with older games
+                cs=int(participant["stats"].get("totalMinionsKilled") or 0)
+                + int(participant["stats"].get("neutralMinionsKilled") or 0),
                 level=participant["stats"].get("champLevel"),
                 wardsPlaced=participant["stats"].get("wardsPlaced"),
                 wardsKilled=participant["stats"].get("wardsKilled"),
