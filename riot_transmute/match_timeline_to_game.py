@@ -160,8 +160,14 @@ def match_timeline_to_game(
                 # The teamId here refers to the SIDE of the tower that was killed, so the opponents killed it
                 team = game["teams"]["RED" if event["teamId"] == 100 else "BLUE"]
 
+                # Get the prebuilt "building" event DTO
                 event_dto = building_dict[event["position"]["x"], event["position"]["y"]]
+
+                # Fill its timestamp
                 event_dto["timestamp"] = timestamp
+
+                if event.get("killerId"):
+                    event_dto["killerId"] = event.get("killerId")
 
                 team["buildingsKills"].append(event_dto)
 
@@ -191,6 +197,10 @@ def match_timeline_to_game(
 
             # Item buying, selling, and undoing
             elif "ITEM" in event["type"]:
+                if not event.get("participantId"):
+                    # Some weird ITEM_DESTROYED events without a participantId can appear in older games (tower items)
+                    continue
+
                 player = get_player(game, event["participantId"])
                 event_type = event["type"].lstrip("ITEM_")
 
