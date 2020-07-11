@@ -1,8 +1,7 @@
-import logging
-
 import lol_dto.classes.game as game_dto
 import lol_id_tools as lit
 
+from riot_transmute.logger import riot_transmute_logger
 from riot_transmute.match_to_game import RiotGameIdentifier
 
 monster_type_dict = {"RIFTHERALD": "RIFT_HERALD", "DRAGON": "DRAGON", "BARON_NASHOR": "BARON"}
@@ -135,7 +134,9 @@ def match_timeline_to_game(
             if event["type"] == "ELITE_MONSTER_KILL":
                 if event["killerId"] < 1:
                     # This is Rift Herald killing itself, we just pass
-                    logging.info(f"Epic monster kill with killer id 0 found, likely Rift Herald killing itself.")
+                    riot_transmute_logger.debug(
+                        f"Epic monster kill with killer id 0 found, likely Rift Herald killing itself."
+                    )
                     continue
 
                 team = game["teams"]["BLUE" if event["killerId"] < 6 else "RED"]
@@ -198,7 +199,9 @@ def match_timeline_to_game(
             # Item buying, selling, and undoing
             elif "ITEM" in event["type"]:
                 if not event.get("participantId"):
-                    logging.debug(f"Dropping item event because it does not have a participantId:\n{event}")
+                    riot_transmute_logger.debug(
+                        f"Dropping item event because it does not have a participantId:\n{event}"
+                    )
                     # Some weird ITEM_DESTROYED events without a participantId can appear in older games (tower items)
                     continue
 
@@ -223,7 +226,7 @@ def match_timeline_to_game(
             elif "WARD" in event["type"]:
                 if event["type"] == "WARD_KILL":
                     if not event.get("killerId"):
-                        logging.debug(f"Ward kill event without killerId dropped:\n{event}")
+                        riot_transmute_logger.debug(f"Ward kill event without killerId dropped:\n{event}")
                         continue
                     player = get_player(game, event["killerId"])
                     event_type = "KILLED"
