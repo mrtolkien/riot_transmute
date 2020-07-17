@@ -105,19 +105,19 @@
                             "name": "Ravenous Hunter"
                         },
                         {
-                            "id": 8010,
+                            "id": 5005,
                             "slot": 6,
-                            "name": "Conqueror"
+                            "name": "AttackSpeed"
                         },
                         {
-                            "id": 8009,
+                            "id": 5008,
                             "slot": 7,
-                            "name": "Presence of Mind"
+                            "name": "Adaptive"
                         },
                         {
-                            "id": 9105,
+                            "id": 5002,
                             "slot": 8,
-                            "name": "Legend: Tenacity"
+                            "name": "Armor"
                         }
                     ],
                     "summonerSpells": [
@@ -294,19 +294,19 @@
                             "name": "Ravenous Hunter"
                         },
                         {
-                            "id": 8229,
+                            "id": 5008,
                             "slot": 6,
-                            "name": "Arcane Comet"
+                            "name": "Adaptive"
                         },
                         {
-                            "id": 8226,
+                            "id": 5008,
                             "slot": 7,
-                            "name": "Manaflow Band"
+                            "name": "Adaptive"
                         },
                         {
-                            "id": 8233,
+                            "id": 5002,
                             "slot": 8,
-                            "name": "Absolute Focus"
+                            "name": "Armor"
                         }
                     ],
                     "summonerSpells": [
@@ -483,19 +483,19 @@
                             "name": "Legend: Alacrity"
                         },
                         {
-                            "id": 8351,
+                            "id": 5005,
                             "slot": 6,
-                            "name": "Glacial Augment"
+                            "name": "AttackSpeed"
                         },
                         {
-                            "id": 8304,
+                            "id": 5008,
                             "slot": 7,
-                            "name": "Magical Footwear"
+                            "name": "Adaptive"
                         },
                         {
-                            "id": 8345,
+                            "id": 5002,
                             "slot": 8,
-                            "name": "Biscuit Delivery"
+                            "name": "Armor"
                         }
                     ],
                     "summonerSpells": [
@@ -672,19 +672,19 @@
                             "name": "Biscuit Delivery"
                         },
                         {
-                            "id": 8230,
+                            "id": 5005,
                             "slot": 6,
-                            "name": "Phase Rush"
+                            "name": "AttackSpeed"
                         },
                         {
-                            "id": 8226,
+                            "id": 5008,
                             "slot": 7,
-                            "name": "Manaflow Band"
+                            "name": "Adaptive"
                         },
                         {
-                            "id": 8210,
+                            "id": 5002,
                             "slot": 8,
-                            "name": "Transcendence"
+                            "name": "Armor"
                         }
                     ],
                     "summonerSpells": [
@@ -861,19 +861,19 @@
                             "name": "Biscuit Delivery"
                         },
                         {
-                            "id": 8010,
+                            "id": 5005,
                             "slot": 6,
-                            "name": "Conqueror"
+                            "name": "AttackSpeed"
                         },
                         {
-                            "id": 9111,
+                            "id": 5008,
                             "slot": 7,
-                            "name": "Triumph"
+                            "name": "Adaptive"
                         },
                         {
-                            "id": 9104,
+                            "id": 5002,
                             "slot": 8,
-                            "name": "Legend: Alacrity"
+                            "name": "Armor"
                         }
                     ],
                     "summonerSpells": [
@@ -1080,19 +1080,19 @@
                             "name": "Waterwalking"
                         },
                         {
-                            "id": 8112,
+                            "id": 5008,
                             "slot": 6,
-                            "name": "Electrocute"
+                            "name": "Adaptive"
                         },
                         {
-                            "id": 8126,
+                            "id": 5008,
                             "slot": 7,
-                            "name": "Cheap Shot"
+                            "name": "Adaptive"
                         },
                         {
-                            "id": 8138,
+                            "id": 5003,
                             "slot": 8,
-                            "name": "Eyeball Collection"
+                            "name": "MagicRes"
                         }
                     ],
                     "summonerSpells": [
@@ -1269,19 +1269,19 @@
                             "name": "Gathering Storm"
                         },
                         {
-                            "id": 8010,
+                            "id": 5005,
                             "slot": 6,
-                            "name": "Conqueror"
+                            "name": "AttackSpeed"
                         },
                         {
-                            "id": 9101,
+                            "id": 5008,
                             "slot": 7,
-                            "name": "Overheal"
+                            "name": "Adaptive"
                         },
                         {
-                            "id": 9103,
+                            "id": 5003,
                             "slot": 8,
-                            "name": "Legend: Bloodline"
+                            "name": "MagicRes"
                         }
                     ],
                     "summonerSpells": [
@@ -1458,19 +1458,19 @@
                             "name": "Minion Dematerializer"
                         },
                         {
-                            "id": 8439,
+                            "id": 5008,
                             "slot": 6,
-                            "name": "Aftershock"
+                            "name": "Adaptive"
                         },
                         {
-                            "id": 8446,
+                            "id": 5003,
                             "slot": 7,
-                            "name": "Demolish"
+                            "name": "MagicRes"
                         },
                         {
-                            "id": 8473,
+                            "id": 5002,
                             "slot": 8,
-                            "name": "Bone Plating"
+                            "name": "Armor"
                         }
                     ],
                     "summonerSpells": [
@@ -1647,19 +1647,19 @@
                             "name": "Scorch"
                         },
                         {
-                            "id": 8112,
+                            "id": 5008,
                             "slot": 6,
-                            "name": "Electrocute"
+                            "name": "Adaptive"
                         },
                         {
-                            "id": 8143,
+                            "id": 5008,
                             "slot": 7,
-                            "name": "Sudden Impact"
+                            "name": "Adaptive"
                         },
                         {
-                            "id": 8138,
+                            "id": 5002,
                             "slot": 8,
-                            "name": "Eyeball Collection"
+                            "name": "Armor"
                         }
                     ],
                     "summonerSpells": [
@@ -1836,19 +1836,19 @@
                             "name": "Biscuit Delivery"
                         },
                         {
-                            "id": 8437,
+                            "id": 5008,
                             "slot": 6,
-                            "name": "Grasp of the Undying"
+                            "name": "Adaptive"
                         },
                         {
-                            "id": 8401,
+                            "id": 5008,
                             "slot": 7,
-                            "name": "Shield Bash"
+                            "name": "Adaptive"
                         },
                         {
-                            "id": 8444,
+                            "id": 5002,
                             "slot": 8,
-                            "name": "Second Wind"
+                            "name": "Armor"
                         }
                     ],
                     "summonerSpells": [

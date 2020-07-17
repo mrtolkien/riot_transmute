@@ -20,9 +20,15 @@ def match_to_game(match_dto: dict, add_names: bool = False) -> game_dto.LolGame:
     Returns:
         The LolGame representation of the game.
     """
-    riot_source = {"riotLolApi": RiotGameIdentifier(gameId=match_dto["gameId"], platformId=match_dto["platformId"])}
+    riot_source = {
+        "riotLolApi": RiotGameIdentifier(
+            gameId=match_dto["gameId"], platformId=match_dto["platformId"]
+        )
+    }
 
-    log_prefix = f"gameId {match_dto['gameId']}|" f"platformId {match_dto['platformId']}:\t"
+    log_prefix = (
+        f"gameId {match_dto['gameId']}|" f"platformId {match_dto['platformId']}:\t"
+    )
     info_log = set()
 
     date_time = datetime.utcfromtimestamp(match_dto["gameCreation"] / 1000)
@@ -30,7 +36,12 @@ def match_to_game(match_dto: dict, add_names: bool = False) -> game_dto.LolGame:
     iso_date = date_time.isoformat(timespec="seconds")
 
     patch = ".".join(match_dto["gameVersion"].split(".")[:2])
-    winner = "BLUE" if (match_dto["teams"][0]["teamId"] == 100) == (match_dto["teams"][0]["win"] == "Win") else "RED"
+    winner = (
+        "BLUE"
+        if (match_dto["teams"][0]["teamId"] == 100)
+        == (match_dto["teams"][0]["win"] == "Win")
+        else "RED"
+    )
 
     # TODO Change optional fields to .get() instead of [], do it in timeline too
 
@@ -98,26 +109,43 @@ def match_to_game(match_dto: dict, add_names: bool = False) -> game_dto.LolGame:
                 game_dto.LolGamePlayerRune(
                     id=participant["stats"].get(f"perk{i}"),
                     slot=i,
-                    stats=[participant["stats"].get(f"perk{i}Var{j}") for j in range(1, 4)],
+                    stats=[
+                        participant["stats"].get(f"perk{i}Var{j}") for j in range(1, 4)
+                    ],
                 )
                 for i in range(0, 6)
             ]
 
             # Adding stats perks
             runes.extend(
-                [game_dto.LolGamePlayerRune(id=participant["stats"].get(f"perk{i}"), slot=i + 6,) for i in range(0, 3)]
+                [
+                    game_dto.LolGamePlayerRune(
+                        id=participant["stats"].get(f"statPerk{i}"), slot=i + 6,
+                    )
+                    for i in range(0, 3)
+                ]
             )
 
-            items = [game_dto.LolGamePlayerItem(id=participant["stats"].get(f"item{i}"), slot=i) for i in range(0, 7)]
+            items = [
+                game_dto.LolGamePlayerItem(
+                    id=participant["stats"].get(f"item{i}"), slot=i
+                )
+                for i in range(0, 7)
+            ]
 
             summoner_spells = [
-                game_dto.LolGamePlayerSummonerSpell(id=participant.get(f"spell{i}Id"), slot=i - 1) for i in range(1, 3)
+                game_dto.LolGamePlayerSummonerSpell(
+                    id=participant.get(f"spell{i}Id"), slot=i - 1
+                )
+                for i in range(1, 3)
             ]
 
             end_of_game_stats = game_dto.LolGamePlayerEndOfGameStats(
                 items=items,
                 firstBlood=participant["stats"].get("firstBloodKill"),
-                firstBloodAssist=participant["stats"].get("firstBloodAssist"),  # This field is wrong by default
+                firstBloodAssist=participant["stats"].get(
+                    "firstBloodAssist"
+                ),  # This field is wrong by default
                 kills=participant["stats"].get("kills"),
                 deaths=participant["stats"].get("deaths"),
                 assists=participant["stats"].get("assists"),
@@ -137,20 +165,34 @@ def match_to_game(match_dto: dict, add_names: bool = False) -> game_dto.LolGame:
                 quadraKills=participant["stats"].get("quadraKills"),
                 pentaKills=participant["stats"].get("pentaKills"),
                 monsterKills=participant["stats"].get("neutralMinionsKilled"),
-                monsterKillsInAlliedJungle=participant["stats"].get("neutralMinionsKilledTeamJungle"),
-                monsterKillsInEnemyJungle=participant["stats"].get("neutralMinionsKilledEnemyJungle"),
+                monsterKillsInAlliedJungle=participant["stats"].get(
+                    "neutralMinionsKilledTeamJungle"
+                ),
+                monsterKillsInEnemyJungle=participant["stats"].get(
+                    "neutralMinionsKilledEnemyJungle"
+                ),
                 totalDamageDealt=participant["stats"].get("totalDamageDealt"),
                 physicalDamageDealt=participant["stats"].get("physicalDamageDealt"),
                 magicDamageDealt=participant["stats"].get("magicDamageDealt"),
-                totalDamageDealtToChampions=participant["stats"].get("totalDamageDealtToChampions"),
-                physicalDamageDealtToChampions=participant["stats"].get("physicalDamageDealtToChampions"),
-                magicDamageDealtToChampions=participant["stats"].get("magicDamageDealtToChampions"),
-                damageDealtToObjectives=participant["stats"].get("damageDealtToObjectives"),
+                totalDamageDealtToChampions=participant["stats"].get(
+                    "totalDamageDealtToChampions"
+                ),
+                physicalDamageDealtToChampions=participant["stats"].get(
+                    "physicalDamageDealtToChampions"
+                ),
+                magicDamageDealtToChampions=participant["stats"].get(
+                    "magicDamageDealtToChampions"
+                ),
+                damageDealtToObjectives=participant["stats"].get(
+                    "damageDealtToObjectives"
+                ),
                 damageDealtToTurrets=participant["stats"].get("damageDealtToTurrets"),
                 totalDamageTaken=participant["stats"].get("totalDamageTaken"),
                 physicalDamageTaken=participant["stats"].get("physicalDamageTaken"),
                 magicDamageTaken=participant["stats"].get("magicalDamageTaken"),
-                longestTimeSpentLiving=participant["stats"].get("longestTimeSpentLiving"),
+                longestTimeSpentLiving=participant["stats"].get(
+                    "longestTimeSpentLiving"
+                ),
                 largestCriticalStrike=participant["stats"].get("largestCriticalStrike"),
                 goldSpent=participant["stats"].get("goldSpent"),
                 totalHeal=participant["stats"].get("totalHeal"),
@@ -164,13 +206,19 @@ def match_to_game(match_dto: dict, add_names: bool = False) -> game_dto.LolGame:
 
             if "firstTowerKill" in participant["stats"]:
                 end_of_game_stats["firstTower"] = participant["stats"]["firstTowerKill"]
-                end_of_game_stats["firstTowerAssist"] = participant["stats"].get("firstTowerAssist")
+                end_of_game_stats["firstTowerAssist"] = participant["stats"].get(
+                    "firstTowerAssist"
+                )
             else:
                 info_log.add(f"{log_prefix}Missing ['player']['firstTower']")
 
             if "firstInhibitorKill" in participant["stats"]:
-                end_of_game_stats["firstInhibitor"] = participant["stats"]["firstInhibitorKill"]
-                end_of_game_stats["firstInhibitorAssist"] = participant["stats"].get("firstInhibitorAssist")
+                end_of_game_stats["firstInhibitor"] = participant["stats"][
+                    "firstInhibitorKill"
+                ]
+                end_of_game_stats["firstInhibitorAssist"] = participant["stats"].get(
+                    "firstInhibitorAssist"
+                )
             else:
                 info_log.add(f"{log_prefix}Missing ['player']['firstInhibitor']")
 
@@ -193,23 +241,35 @@ def match_to_game(match_dto: dict, add_names: bool = False) -> game_dto.LolGame:
             if "role" in participant:
                 # TODO Remove that after roleml refactor
                 if participant["role"] not in {"TOP", "JGL", "MID", "BOT", "SUP"}:
-                    participant["role"] = {"top": "TOP", "jungle": "JGL", "mid": "MID", "bot": "BOT", "supp": "SUP"}[
-                        participant["role"]
-                    ]
+                    participant["role"] = {
+                        "top": "TOP",
+                        "jungle": "JGL",
+                        "mid": "MID",
+                        "bot": "BOT",
+                        "supp": "SUP",
+                    }[participant["role"]]
                 player["role"] = participant["role"]
 
             # Then, we add convenience name fields for human readability if asked
             if add_names:
-                player["championName"] = lit.get_name(player["championId"], object_type="champion")
-                player["primaryRuneTreeName"] = lit.get_name(player["primaryRuneTreeId"])
-                player["secondaryRuneTreeName"] = lit.get_name(player["secondaryRuneTreeId"])
+                player["championName"] = lit.get_name(
+                    player["championId"], object_type="champion"
+                )
+                player["primaryRuneTreeName"] = lit.get_name(
+                    player["primaryRuneTreeId"]
+                )
+                player["secondaryRuneTreeName"] = lit.get_name(
+                    player["secondaryRuneTreeId"]
+                )
 
                 for item in player["endOfGameStats"]["items"]:
                     item["name"] = lit.get_name(item["id"], object_type="item")
                 for rune in player["runes"]:
                     rune["name"] = lit.get_name(rune["id"], object_type="rune")
                 for summoner_spell in player["summonerSpells"]:
-                    summoner_spell["name"] = lit.get_name(summoner_spell["id"], object_type="summoner_spell")
+                    summoner_spell["name"] = lit.get_name(
+                        summoner_spell["id"], object_type="summoner_spell"
+                    )
 
             team_dto["players"].append(player)
 
