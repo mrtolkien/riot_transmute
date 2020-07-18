@@ -256,10 +256,10 @@ def match_to_game(match_dto: dict, add_names: bool = False) -> game_dto.LolGame:
                     player["championId"], object_type="champion"
                 )
                 player["primaryRuneTreeName"] = lit.get_name(
-                    player["primaryRuneTreeId"]
+                    player["primaryRuneTreeId"], object_type="rune"
                 )
                 player["secondaryRuneTreeName"] = lit.get_name(
-                    player["secondaryRuneTreeId"]
+                    player["secondaryRuneTreeId"], object_type="rune"
                 )
 
                 for item in player["endOfGameStats"]["items"]:

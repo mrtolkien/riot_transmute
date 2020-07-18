@@ -12,9 +12,7 @@ from riot_transmute.match_timeline_to_game import match_timeline_to_game
 
 @pytest.fixture
 def watcher():
-    with open(os.path.join(os.path.expanduser("~"), ".config", "riot", "api_key.txt")) as file:
-        api_key = file.read()
-    return LolWatcher(api_key)
+    return LolWatcher(os.environ["RIOT_API_KEY"])
 
 
 @pytest.fixture
