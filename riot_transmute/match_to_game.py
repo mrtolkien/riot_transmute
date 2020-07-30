@@ -234,7 +234,7 @@ def match_to_game(match_dto: dict, add_names: bool = False) -> game_dto.LolGame:
             )
 
             if participant_identity:
-                player["inGameName"] = participant_identity["summonerName"]
+                player["inGameName"] = participant_identity["summonerName"].strip()
                 player["profileIconId"] = participant_identity["profileIcon"]
 
             # roleml compatibility
