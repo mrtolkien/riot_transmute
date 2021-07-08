@@ -20,7 +20,7 @@ def watcher():
 @pytest.fixture
 def match_dto(watcher):
     match_dto = watcher.match.by_id("KR", 4409190456)
-    with open(os.path.join("json_examples", "source_match.json"), "w+") as file:
+    with open(os.path.join("examples", "source_match.json"), "w+") as file:
         json.dump(match_dto, file, indent=4)
     return match_dto
 
@@ -28,7 +28,7 @@ def match_dto(watcher):
 @pytest.fixture
 def timeline_game_id_platform_id(watcher):
     timeline_game_platform = watcher.match.timeline_by_match("KR", 4409190456), 4409190456, "KR"
-    with open(os.path.join("json_examples", "source_timeline.json"), "w+") as file:
+    with open(os.path.join("examples", "source_timeline.json"), "w+") as file:
         json.dump(timeline_game_platform[0], file, indent=4)
     return timeline_game_platform
 
@@ -36,7 +36,7 @@ def timeline_game_id_platform_id(watcher):
 def test_game(match_dto):
     game = match_to_game(match_dto)
 
-    with open(os.path.join("json_examples", "game_from_match.json"), "w+") as file:
+    with open(os.path.join("examples", "game_from_match.json"), "w+") as file:
         json.dump(game, file, indent=4)
 
     assert game["winner"] == "BLUE"
@@ -58,7 +58,7 @@ def test_game(match_dto):
 def test_game_with_names(match_dto):
     game = match_to_game(match_dto, add_names=True)
 
-    with open(os.path.join("json_examples", "game_from_match_with_names.json"), "w+") as file:
+    with open(os.path.join("examples", "game_from_match_with_names.json"), "w+") as file:
         json.dump(game, file, indent=4)
 
     for p in game["teams"]["BLUE"]["players"]:
@@ -70,7 +70,7 @@ def test_timeline(timeline_game_id_platform_id):
 
     game = match_timeline_to_game(timeline, game_id, platform_id)
 
-    with open(os.path.join("json_examples", "game_from_timeline.json"), "w+") as file:
+    with open(os.path.join("examples", "game_from_timeline.json"), "w+") as file:
         json.dump(game, file, indent=4)
 
     assert game["sources"]["riotLolApi"]["gameId"] == game_id
@@ -84,7 +84,7 @@ def test_timeline_with_names(timeline_game_id_platform_id):
 
     game = match_timeline_to_game(timeline, game_id, platform_id, add_names=True)
 
-    with open(os.path.join("json_examples", "game_from_timeline_with_names.json"), "w+") as file:
+    with open(os.path.join("examples", "game_from_timeline_with_names.json"), "w+") as file:
         json.dump(game, file, indent=4)
 
     for p in game["teams"]["BLUE"]["players"]:
@@ -102,7 +102,7 @@ def test_full(match_dto, timeline_game_id_platform_id):
 
     game_full = lol_dto.utilities.merge_games(game_match, game_timeline)
 
-    with open(os.path.join("json_examples", "game_merged.json"), "w+") as file:
+    with open(os.path.join("examples", "game_merged.json"), "w+") as file:
         json.dump(game_full, file, indent=4)
 
     assert game_full["sources"]["riotLolApi"]["gameId"] == game_id
@@ -121,7 +121,7 @@ def test_full_with_names(match_dto, timeline_game_id_platform_id):
 
     game = lol_dto.utilities.merge_games(game_match, game_timeline)
 
-    with open(os.path.join("json_examples", "game_merged_with_names.json"), "w+") as file:
+    with open(os.path.join("examples", "game_merged_with_names.json"), "w+") as file:
         json.dump(game, file, indent=4)
 
     for p in game["teams"]["BLUE"]["players"]:
@@ -132,7 +132,7 @@ def test_full_with_names(match_dto, timeline_game_id_platform_id):
 
 
 def test_esports_match():
-    with open(os.path.join("json_examples", "source_match_esports.json")) as file:
+    with open(os.path.join("examples", "source_match_esports.json")) as file:
         match_dto = json.load(file)
 
     game = match_to_game(match_dto)
@@ -141,7 +141,7 @@ def test_esports_match():
 
 
 def test_esports_timeline():
-    with open(os.path.join("json_examples", "source_timeline_esports.json")) as file:
+    with open(os.path.join("examples", "source_timeline_esports.json")) as file:
         match_dto = json.load(file)
 
     game = match_timeline_to_game(match_dto, 0, "")
