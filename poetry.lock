@@ -98,7 +98,7 @@ develop = false
 type = "git"
 url = "https://github.com/mrtolkien/lol_dto.git"
 reference = "dev/2.0.0"
-resolved_reference = "ab24b9e47db1a032914006c855f486e650e2ef13"
+resolved_reference = "dd0e2804073ae374e523a03dbdb8d501b7c2cf5b"
 
 [[package]]
 name = "lol-id-tools"
