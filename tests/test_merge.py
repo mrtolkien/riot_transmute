@@ -4,7 +4,9 @@ import lol_dto
 import roleml
 
 from riot_transmute import match_to_game, match_timeline_to_game
-from riot_transmute.merge_match_and_timeline import merge_games_from_riot_match_and_timeline
+from riot_transmute.merge_match_and_timeline import (
+    merge_games_from_riot_match_and_timeline,
+)
 
 
 def test_full(match_dto, timeline_game_id_platform_id):
@@ -31,12 +33,10 @@ def test_full(match_dto, timeline_game_id_platform_id):
     return game_full
 
 
-def test_custom_game(watcher):
-    match = watcher.match.by_id("EUW1", 4676184349)
-    timeline = watcher.match.timeline_by_match("EUW1", 4676184349)
+def test_custom_game(custom_match_and_timeline):
+    match, timeline = custom_match_and_timeline
 
     game = match_to_game(match)
     game_timeline = match_timeline_to_game(timeline, 4676184349, "EUW1")
 
-    # TODO Save test file sources
     assert merge_games_from_riot_match_and_timeline(game, game_timeline)
