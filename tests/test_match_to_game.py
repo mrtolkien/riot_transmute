@@ -26,18 +26,6 @@ def test_game(match_dto):
     assert onfleek.endOfGameStats.items[0].id == 3047
 
 
-def test_game_with_names(match_dto):
-    game = match_to_game(match_dto, add_names=True)
-
-    lol_dto.utilities.dump_json(
-        game,
-        os.path.join("examples", "game_from_match_with_names.json"),
-    )
-
-    for p in game.teams.BLUE.players:
-        assert p.championName is not None
-
-
 def test_esports_match(esports_match_dto):
     game = match_to_game(esports_match_dto)
 

@@ -1,6 +1,4 @@
 import lol_dto
-import lol_id_tools as lit
-
 from riot_transmute.constants import (
     monster_type_dict,
     monster_subtype_dict,
