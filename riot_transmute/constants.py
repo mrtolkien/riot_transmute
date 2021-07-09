@@ -1,5 +1,13 @@
 from lol_dto.classes import game as game_dto
 
+clean_roles = {
+    "top": "TOP",
+    "jungle": "JGL",
+    "mid": "MID",
+    "bot": "BOT",
+    "supp": "SUP",
+}
+
 monster_type_dict = {
     "RIFTHERALD": "RIFT_HERALD",
     "DRAGON": "DRAGON",

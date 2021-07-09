@@ -4,7 +4,9 @@ import lol_dto.classes.game as game_dto
 import lol_id_tools as lit
 from datetime import datetime, timezone
 
-from lol_dto.classes.sources.riot_lol_api import RiotGameSource
+from lol_dto.classes.sources.riot_lol_api import RiotGameSource, RiotPlayerSource
+
+from riot_transmute.constants import clean_roles
 
 
 @dataclass
@@ -83,6 +85,8 @@ def match_to_game(match_dto: dict, add_names: bool = False) -> game_dto.LolGame:
             if participant["teamId"] != team["teamId"]:
                 continue
 
+            sources = EmptySource()
+
             try:
                 participant_identity = next(
                     identity["player"]
@@ -90,22 +94,21 @@ def match_to_game(match_dto: dict, add_names: bool = False) -> game_dto.LolGame:
                     if identity["participantId"] == participant["participantId"]
                 )
 
-                # Esports matches do not have an accountId field
+                # Esports matches do not have an accountId field, so we need to test here
+
                 if "accountId" in participant_identity:
-                    unique_identifier = {
-                        "riotLolApi": {
-                            "accountId": participant_identity["accountId"],
-                            "platformId": participant_identity["platformId"],
-                        }
-                    }
+                    setattr(
+                        sources,
+                        "riotLolApi",
+                        RiotPlayerSource(
+                            accountId=participant_identity["accountId"],
+                            platformId=participant_identity["platformId"],
+                        ),
+                    )
 
-                else:
-                    unique_identifier = {}
-
-            # Custom games don’t have identity info
+            # Custom games also don’t have identity info
             except KeyError:
                 participant_identity = None
-                unique_identifier = {}
 
             # TODO Make that backwards-compatible with pre-runes reforged games
             runes = [
@@ -209,18 +212,18 @@ def match_to_game(match_dto: dict, add_names: bool = False) -> game_dto.LolGame:
             # The following fields have proved to be missing or buggy in multiple games
 
             if "firstTowerKill" in participant["stats"]:
-                end_of_game_stats["firstTower"] = participant["stats"]["firstTowerKill"]
-                end_of_game_stats["firstTowerAssist"] = participant["stats"].get(
+                end_of_game_stats.firstTurret = participant["stats"]["firstTowerKill"]
+                end_of_game_stats.firstTurretAssist = participant["stats"].get(
                     "firstTowerAssist"
                 )
             else:
                 info_log.add(f"{log_prefix}Missing ['player']['firstTower']")
 
             if "firstInhibitorKill" in participant["stats"]:
-                end_of_game_stats["firstInhibitor"] = participant["stats"][
+                end_of_game_stats.firstInhibitor = participant["stats"][
                     "firstInhibitorKill"
                 ]
-                end_of_game_stats["firstInhibitorAssist"] = participant["stats"].get(
+                end_of_game_stats.firstInhibitorAssist = participant["stats"].get(
                     "firstInhibitorAssist"
                 )
             else:
@@ -229,7 +232,7 @@ def match_to_game(match_dto: dict, add_names: bool = False) -> game_dto.LolGame:
             player = game_dto.LolGamePlayer(
                 id=participant["participantId"],
                 championId=participant["championId"],
-                uniqueIdentifiers=unique_identifier,
+                sources=sources,
                 primaryRuneTreeId=participant["stats"].get("perkPrimaryStyle"),
                 secondaryRuneTreeId=participant["stats"].get("perkSubStyle"),
                 runes=runes,
@@ -238,53 +241,47 @@ def match_to_game(match_dto: dict, add_names: bool = False) -> game_dto.LolGame:
             )
 
             if participant_identity:
-                player["inGameName"] = participant_identity["summonerName"]
-                player["profileIconId"] = participant_identity["profileIcon"]
+                player.inGameName = participant_identity["summonerName"]
+                player.profileIconId = participant_identity["profileIcon"]
 
             # roleml compatibility
             if "role" in participant:
                 # TODO Remove that after roleml refactor
                 if participant["role"] not in {"TOP", "JGL", "MID", "BOT", "SUP"}:
-                    participant["role"] = {
-                        "top": "TOP",
-                        "jungle": "JGL",
-                        "mid": "MID",
-                        "bot": "BOT",
-                        "supp": "SUP",
-                    }[participant["role"]]
-                player["role"] = participant["role"]
+                    participant["role"] = clean_roles[participant["role"]]
+
+                player.role = participant["role"]
 
             # Then, we add convenience name fields for human readability if asked
             if add_names:
-                player["championName"] = lit.get_name(
-                    player["championId"], object_type="champion"
+                player.championName = lit.get_name(
+                    player.championId, object_type="champion"
                 )
-                player["primaryRuneTreeName"] = lit.get_name(
-                    player["primaryRuneTreeId"], object_type="rune"
+                player.primaryRuneTreeName = lit.get_name(
+                    player.primaryRuneTreeId, object_type="rune"
                 )
-                player["secondaryRuneTreeName"] = lit.get_name(
-                    player["secondaryRuneTreeId"], object_type="rune"
+                player.secondaryRuneTreeName = lit.get_name(
+                    player.secondaryRuneTreeId, object_type="rune"
                 )
 
-                for item in player["endOfGameStats"]["items"]:
-                    item["name"] = lit.get_name(item["id"], object_type="item")
-                for rune in player["runes"]:
-                    rune["name"] = lit.get_name(rune["id"], object_type="rune")
-                for summoner_spell in player["summonerSpells"]:
-                    summoner_spell["name"] = lit.get_name(
-                        summoner_spell["id"], object_type="summoner_spell"
+                for item in player.endOfGameStats.items:
+                    item.name = lit.get_name(item.id, object_type="item")
+                for rune in player.runes:
+                    rune.name = lit.get_name(rune.id, object_type="rune")
+                for summoner_spell in player.summonerSpells:
+                    summoner_spell.name = lit.get_name(
+                        summoner_spell.id, object_type="summoner_spell"
                     )
 
-            team_dto["players"].append(player)
+            team_dto.players.append(player)
 
         # We want to make extra sure players are always ordered by Riot’s given id
-        team_dto["players"] = sorted(team_dto["players"], key=lambda x: x["id"])
+        team_dto.players = sorted(team_dto.players, key=lambda x: x.id)
 
         if add_names:
-            team_dto["bansNames"] = []
-            for ban in team_dto["bans"]:
-                team_dto["bansNames"].append(lit.get_name(ban, object_type="champion"))
+            for ban in team_dto.bans:
+                team_dto.bansNames.append(lit.get_name(ban, object_type="champion"))
 
-        game["teams"][side] = team_dto
+        setattr(game.teams, side, team_dto)
 
     return game
