@@ -1,5 +1,6 @@
-import json
 import os
+
+import lol_dto
 import roleml
 
 from riot_transmute import match_to_game, match_timeline_to_game
@@ -20,8 +21,7 @@ def test_full(match_dto, timeline_game_id_platform_id):
 
     game_full = merge_games_from_riot_match_and_timeline(game_match, game_timeline)
 
-    with open(os.path.join("examples", "game_merged.json"), "w+") as file:
-        json.dump(game_full, file, indent=4)
+    lol_dto.utilities.dump_json(game_full, os.path.join("examples", "game_merged.json"))
 
     assert game_full.sources.riotLolApi.gameId == game_id
     assert game_full.teams.BLUE.players[0].snapshots.__len__() > 0
