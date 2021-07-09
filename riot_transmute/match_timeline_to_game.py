@@ -3,7 +3,6 @@ import lol_id_tools as lit
 
 from riot_transmute.constants import monster_type_dict, monster_subtype_dict, building_dict
 from riot_transmute.logger import riot_transmute_logger
-from riot_transmute.match_to_game import RiotGameIdentifier
 
 
 def get_player(game: game_dto.LolGame, participant_id: int) -> game_dto.LolGamePlayer:

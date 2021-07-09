@@ -2,17 +2,10 @@ import json
 import lol_dto.utilities
 import pytest
 import os
-
-from riotwatcher import LolWatcher
 import roleml
 
 from riot_transmute.match_to_game import match_to_game
 from riot_transmute.match_timeline_to_game import match_timeline_to_game
-
-
-@pytest.fixture
-def watcher():
-    return LolWatcher(os.environ["RIOT_API_KEY"])
 
 
 @pytest.fixture
