@@ -1,13 +1,15 @@
-from typing import TypedDict
+from dataclasses import dataclass
 
 import lol_dto.classes.game as game_dto
 import lol_id_tools as lit
 from datetime import datetime, timezone
 
+from lol_dto.classes.sources.riot_lol_api import RiotGameSource
 
-class RiotGameIdentifier(TypedDict):
-    gameId: int
-    platformId: str
+
+@dataclass
+class EmptySource:
+    ...
 
 
 def match_to_game(match_dto: dict, add_names: bool = False) -> game_dto.LolGame:
@@ -20,11 +22,13 @@ def match_to_game(match_dto: dict, add_names: bool = False) -> game_dto.LolGame:
     Returns:
         The LolGame representation of the game.
     """
-    riot_source = {
-        "riotLolApi": RiotGameIdentifier(
-            gameId=match_dto["gameId"], platformId=match_dto["platformId"]
-        )
-    }
+
+    sources = EmptySource()
+    setattr(
+        sources,
+        "riotLolApi",
+        RiotGameSource(gameId=match_dto["gameId"], platformId=match_dto["platformId"]),
+    )
 
     log_prefix = (
         f"gameId {match_dto['gameId']}|" f"platformId {match_dto['platformId']}:\t"
@@ -46,13 +50,12 @@ def match_to_game(match_dto: dict, add_names: bool = False) -> game_dto.LolGame:
     # TODO Change optional fields to .get() instead of [], do it in timeline too
 
     game = game_dto.LolGame(
-        sources=riot_source,
+        sources=sources,
         duration=match_dto["gameDuration"],
         start=iso_date,
         patch=patch,
         gameVersion=match_dto["gameVersion"],
         winner=winner,
-        teams={},
     )
 
     for team in match_dto["teams"]:
@@ -64,9 +67,9 @@ def match_to_game(match_dto: dict, add_names: bool = False) -> game_dto.LolGame:
                 riftHeraldKills=team.get("riftHeraldKills"),
                 dragonKills=team.get("dragonKills"),
                 baronKills=team.get("baronKills"),
-                towerKills=team.get("towerKills"),
+                turretKills=team.get("towerKills"),
                 inhibitorKills=team.get("inhibitorKills"),
-                firstTower=team.get("firstTower"),
+                firstTurret=team.get("firstTower"),
                 firstInhibitor=team.get("firstInhibitor"),
                 firstRiftHerald=team.get("firstRiftHerald"),
                 firstDragon=team.get("firstDragon"),
@@ -74,9 +77,7 @@ def match_to_game(match_dto: dict, add_names: bool = False) -> game_dto.LolGame:
             )
         )
 
-        team_dto["bans"] = [b["championId"] for b in team["bans"]]
-
-        team_dto["players"] = []
+        team_dto.bans = [b["championId"] for b in team["bans"]]
 
         for participant in match_dto["participants"]:
             if participant["teamId"] != team["teamId"]:
@@ -88,6 +89,7 @@ def match_to_game(match_dto: dict, add_names: bool = False) -> game_dto.LolGame:
                     for identity in match_dto["participantIdentities"]
                     if identity["participantId"] == participant["participantId"]
                 )
+
                 # Esports matches do not have an accountId field
                 if "accountId" in participant_identity:
                     unique_identifier = {
@@ -96,6 +98,7 @@ def match_to_game(match_dto: dict, add_names: bool = False) -> game_dto.LolGame:
                             "platformId": participant_identity["platformId"],
                         }
                     }
+
                 else:
                     unique_identifier = {}
 
@@ -120,7 +123,8 @@ def match_to_game(match_dto: dict, add_names: bool = False) -> game_dto.LolGame:
             runes.extend(
                 [
                     game_dto.LolGamePlayerRune(
-                        id=participant["stats"].get(f"statPerk{i}"), slot=i + 6,
+                        id=participant["stats"].get(f"statPerk{i}"),
+                        slot=i + 6,
                     )
                     for i in range(0, 3)
                 ]

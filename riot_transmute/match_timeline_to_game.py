@@ -1,60 +1,24 @@
 import lol_dto.classes.game as game_dto
 import lol_id_tools as lit
 
+from riot_transmute.constants import monster_type_dict, monster_subtype_dict, building_dict
 from riot_transmute.logger import riot_transmute_logger
 from riot_transmute.match_to_game import RiotGameIdentifier
 
-monster_type_dict = {"RIFTHERALD": "RIFT_HERALD", "DRAGON": "DRAGON", "BARON_NASHOR": "BARON"}
-
-monster_subtype_dict = {
-    "FIRE_DRAGON": "INFERNAL",
-    "AIR_DRAGON": "CLOUD",
-    "EARTH_DRAGON": "MOUNTAIN",
-    "WATER_DRAGON": "OCEAN",
-    "ELDER_DRAGON": "ELDER",
-}
-
-building_dict = {
-    (981, 10441): game_dto.LolGameTeamBuildingKill(type="TOWER", lane="TOP", towerLocation="OUTER", side="BLUE"),
-    (1512, 6699): game_dto.LolGameTeamBuildingKill(type="TOWER", lane="TOP", towerLocation="INNER", side="BLUE"),
-    (1169, 4287): game_dto.LolGameTeamBuildingKill(type="TOWER", lane="TOP", towerLocation="INHIBITOR", side="BLUE"),
-    (5846, 6396): game_dto.LolGameTeamBuildingKill(type="TOWER", lane="MID", towerLocation="OUTER", side="BLUE"),
-    (5048, 4812): game_dto.LolGameTeamBuildingKill(type="TOWER", lane="MID", towerLocation="INNER", side="BLUE"),
-    (3651, 3696): game_dto.LolGameTeamBuildingKill(type="TOWER", lane="MID", towerLocation="INHIBITOR", side="BLUE"),
-    (10504, 1029): game_dto.LolGameTeamBuildingKill(type="TOWER", lane="BOT", towerLocation="OUTER", side="BLUE"),
-    (6919, 1483): game_dto.LolGameTeamBuildingKill(type="TOWER", lane="BOT", towerLocation="INNER", side="BLUE"),
-    (4281, 1253): game_dto.LolGameTeamBuildingKill(type="TOWER", lane="BOT", towerLocation="INHIBITOR", side="BLUE"),
-    (1748, 2270): game_dto.LolGameTeamBuildingKill(type="TOWER", lane="TOP", towerLocation="NEXUS", side="BLUE"),
-    (2177, 1807): game_dto.LolGameTeamBuildingKill(type="TOWER", lane="BOT", towerLocation="NEXUS", side="BLUE"),
-    (1171, 3571): game_dto.LolGameTeamBuildingKill(type="INHIBITOR", lane="TOP", side="BLUE"),
-    (3203, 3208): game_dto.LolGameTeamBuildingKill(type="INHIBITOR", lane="MID", side="BLUE"),
-    (3452, 1236): game_dto.LolGameTeamBuildingKill(type="INHIBITOR", lane="BOT", side="BLUE"),
-    (4318, 13875): game_dto.LolGameTeamBuildingKill(type="TOWER", lane="TOP", towerLocation="OUTER", side="RED"),
-    (7943, 13411): game_dto.LolGameTeamBuildingKill(type="TOWER", lane="TOP", towerLocation="INNER", side="RED"),
-    (10481, 13650): game_dto.LolGameTeamBuildingKill(type="TOWER", lane="TOP", towerLocation="INHIBITOR", side="RED"),
-    (8955, 8510): game_dto.LolGameTeamBuildingKill(type="TOWER", lane="MID", towerLocation="OUTER", side="RED"),
-    (9767, 10113): game_dto.LolGameTeamBuildingKill(type="TOWER", lane="MID", towerLocation="INNER", side="RED"),
-    (11134, 11207): game_dto.LolGameTeamBuildingKill(type="TOWER", lane="MID", towerLocation="INHIBITOR", side="RED"),
-    (13866, 4505): game_dto.LolGameTeamBuildingKill(type="TOWER", lane="BOT", towerLocation="OUTER", side="RED"),
-    (13327, 8226): game_dto.LolGameTeamBuildingKill(type="TOWER", lane="BOT", towerLocation="INNER", side="RED"),
-    (13624, 10572): game_dto.LolGameTeamBuildingKill(type="TOWER", lane="BOT", towerLocation="INHIBITOR", side="RED"),
-    (12611, 13084): game_dto.LolGameTeamBuildingKill(type="TOWER", lane="TOP", towerLocation="NEXUS", side="RED"),
-    (13052, 12612): game_dto.LolGameTeamBuildingKill(type="TOWER", lane="BOT", towerLocation="NEXUS", side="RED"),
-    (11261, 13676): game_dto.LolGameTeamBuildingKill(type="INHIBITOR", lane="TOP", side="RED"),
-    (11598, 11667): game_dto.LolGameTeamBuildingKill(type="INHIBITOR", lane="MID", side="RED"),
-    (13604, 11316): game_dto.LolGameTeamBuildingKill(type="INHIBITOR", lane="BOT", side="RED"),
-}
-
 
 def get_player(game: game_dto.LolGame, participant_id: int) -> game_dto.LolGamePlayer:
-    """Gets a player object from its participantId.
-    """
+    """Gets a player object from its participantId."""
     team_side = "BLUE" if participant_id < 6 else "RED"
-    return next(p for p in game["teams"][team_side]["players"] if p["id"] == participant_id)
+    return next(
+        p for p in game["teams"][team_side]["players"] if p["id"] == participant_id
+    )
 
 
 def match_timeline_to_game(
-    match_timeline_dto: dict, game_id: int, platform_id: str, add_names: bool = False,
+    match_timeline_dto: dict,
+    game_id: int,
+    platform_id: str,
+    add_names: bool = False,
 ) -> game_dto.LolGame:
     """Returns a LolGame from a MatchTimelineDto.
 
@@ -68,7 +32,9 @@ def match_timeline_to_game(
         The LolGame representation of the game.
     """
 
-    riot_source = {"riotLolApi": RiotGameIdentifier(gameId=game_id, platformId=platform_id)}
+    riot_source = {
+        "riotLolApi": RiotGameIdentifier(gameId=game_id, platformId=platform_id)
+    }
 
     # Creating the game_dto skeleton
     game = game_dto.LolGame(
@@ -76,7 +42,13 @@ def match_timeline_to_game(
         teams={
             "BLUE": game_dto.LolGameTeam(
                 players=[
-                    game_dto.LolGamePlayer(id=i, snapshots=[], itemsEvents=[], wardsEvents=[], skillsLevelUpEvents=[])
+                    game_dto.LolGamePlayer(
+                        id=i,
+                        snapshots=[],
+                        itemsEvents=[],
+                        wardsEvents=[],
+                        skillsLevelUpEvents=[],
+                    )
                     for i in range(1, 6)
                 ],
                 monstersKills=[],
@@ -84,7 +56,13 @@ def match_timeline_to_game(
             ),
             "RED": game_dto.LolGameTeam(
                 players=[
-                    game_dto.LolGamePlayer(id=i, snapshots=[], itemsEvents=[], wardsEvents=[], skillsLevelUpEvents=[])
+                    game_dto.LolGamePlayer(
+                        id=i,
+                        snapshots=[],
+                        itemsEvents=[],
+                        wardsEvents=[],
+                        skillsLevelUpEvents=[],
+                    )
                     for i in range(6, 11)
                 ],
                 monstersKills=[],
@@ -101,11 +79,16 @@ def match_timeline_to_game(
 
             # Finding the player with the same id in our game object
             player = next(
-                p for p in game["teams"][team_side]["players"] if p["id"] == participant_frame["participantId"]
+                p
+                for p in game["teams"][team_side]["players"]
+                if p["id"] == participant_frame["participantId"]
             )
 
             try:
-                position = game_dto.Position(x=participant_frame["position"]["x"], y=participant_frame["position"]["y"])
+                position = game_dto.Position(
+                    x=participant_frame["position"]["x"],
+                    y=participant_frame["position"]["y"],
+                )
             except KeyError:
                 position = None
 
@@ -115,7 +98,8 @@ def match_timeline_to_game(
                 totalGold=participant_frame["totalGold"],
                 xp=participant_frame["xp"],
                 level=participant_frame["level"],
-                cs=participant_frame["minionsKilled"] + participant_frame["jungleMinionsKilled"],
+                cs=participant_frame["minionsKilled"]
+                + participant_frame["jungleMinionsKilled"],
                 monstersKilled=participant_frame["jungleMinionsKilled"],
                 position=position,
                 # Next fields gotten with .get() so they are None if they haven’t been created by roleml
@@ -149,7 +133,9 @@ def match_timeline_to_game(
 
                 if monster_type == "DRAGON":
                     try:
-                        event_dto["subType"] = monster_subtype_dict[event["monsterSubType"]]
+                        event_dto["subType"] = monster_subtype_dict[
+                            event["monsterSubType"]
+                        ]
                     # If we don’t know how to translate the monster subtype, we simply leave it as-is
                     except KeyError:
                         event_dto["subType"] = event["monsterSubType"]
@@ -162,7 +148,9 @@ def match_timeline_to_game(
                 team = game["teams"]["RED" if event["teamId"] == 100 else "BLUE"]
 
                 # Get the prebuilt "building" event DTO
-                event_dto = building_dict[event["position"]["x"], event["position"]["y"]]
+                event_dto = building_dict[
+                    event["position"]["x"], event["position"]["y"]
+                ]
 
                 # Fill its timestamp
                 event_dto["timestamp"] = timestamp
@@ -174,7 +162,9 @@ def match_timeline_to_game(
 
             # Champions kills
             elif event["type"] == "CHAMPION_KILL":
-                position = game_dto.Position(x=event["position"]["x"], y=event["position"]["y"])
+                position = game_dto.Position(
+                    x=event["position"]["x"], y=event["position"]["y"]
+                )
 
                 game["kills"].append(
                     game_dto.LolGameKill(
@@ -192,7 +182,9 @@ def match_timeline_to_game(
 
                 player["skillsLevelUpEvents"].append(
                     game_dto.LolGamePlayerSkillLevelUpEvent(
-                        timestamp=timestamp, slot=event["skillSlot"], type=event["levelUpType"]
+                        timestamp=timestamp,
+                        slot=event["skillSlot"],
+                        type=event["levelUpType"],
                     )
                 )
 
@@ -210,7 +202,10 @@ def match_timeline_to_game(
 
                 if event_type == "UNDO":
                     item_event = game_dto.LolGamePlayerItemEvent(
-                        timestamp=timestamp, type=event_type, id=event["afterId"], undoId=event["beforeId"]
+                        timestamp=timestamp,
+                        type=event_type,
+                        id=event["afterId"],
+                        undoId=event["beforeId"],
                     )
                 else:
                     item_event = game_dto.LolGamePlayerItemEvent(
@@ -218,7 +213,9 @@ def match_timeline_to_game(
                     )
 
                 if add_names:
-                    item_event["name"] = lit.get_name(item_event["id"], object_type="item")
+                    item_event["name"] = lit.get_name(
+                        item_event["id"], object_type="item"
+                    )
 
                 player["itemsEvents"].append(item_event)
 
@@ -226,7 +223,9 @@ def match_timeline_to_game(
             elif "WARD" in event["type"]:
                 if event["type"] == "WARD_KILL":
                     if not event.get("killerId"):
-                        riot_transmute_logger.debug(f"Ward kill event without killerId dropped:\n{event}")
+                        riot_transmute_logger.debug(
+                            f"Ward kill event without killerId dropped:\n{event}"
+                        )
                         continue
                     player = get_player(game, event["killerId"])
                     event_type = "KILLED"
@@ -239,7 +238,9 @@ def match_timeline_to_game(
                     event_type = "PLACED"
 
                 player["wardsEvents"].append(
-                    game_dto.LolGamePlayerWardEvent(timestamp=timestamp, type=event_type, wardType=event["wardType"])
+                    game_dto.LolGamePlayerWardEvent(
+                        timestamp=timestamp, type=event_type, wardType=event["wardType"]
+                    )
                 )
 
     return game
