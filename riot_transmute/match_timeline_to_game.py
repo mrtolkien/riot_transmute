@@ -22,7 +22,6 @@ def match_timeline_to_game(
     match_timeline_dto: dict,
     game_id: int,
     platform_id: str,
-    add_names: bool = False,
 ) -> lol_dto.classes.game.LolGame:
     """
     Returns a LolGame from a MatchTimelineDto
@@ -31,7 +30,6 @@ def match_timeline_to_game(
         match_timeline_dto: A MatchTimelineDto from Riot’s API.
         game_id: The gameId of the game, required as it is not present in the MatchTimelineDto.
         platform_id: The platformId of the game, required as it is not present in the MatchTimelineDto.
-        add_names: whether or not to add names for human readability in the DTO. False by default.
 
     Returns:
         The LolGame representation of the game.
@@ -199,9 +197,6 @@ def match_timeline_to_game(
                     item_event = lol_dto.classes.game.LolGamePlayerItemEvent(
                         timestamp=timestamp, type=event_type, id=event["itemId"]
                     )
-
-                if add_names:
-                    item_event.name = lit.get_name(item_event.id, object_type="item")
 
                 player.itemsEvents.append(item_event)
 

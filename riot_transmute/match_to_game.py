@@ -1,5 +1,4 @@
 import lol_dto.classes.game as game_dto
-import lol_id_tools as lit
 from datetime import datetime, timezone
 
 from lol_dto.classes.sources.riot_lol_api import RiotGameSource, RiotPlayerSource
@@ -7,7 +6,7 @@ from lol_dto.classes.sources.riot_lol_api import RiotGameSource, RiotPlayerSourc
 from riot_transmute.constants import clean_roles, EmptySource
 
 
-def match_to_game(match_dto: dict, add_names: bool = False) -> game_dto.LolGame:
+def match_to_game(match_dto: dict) -> game_dto.LolGame:
     """
     Returns a LolGame from a MatchDto
 
@@ -16,7 +15,6 @@ def match_to_game(match_dto: dict, add_names: bool = False) -> game_dto.LolGame:
 
     Args:
         match_dto: A MatchDto from Riot’s API
-        add_names: whether or not to add names for human readability in the DTO. False by default.
 
     Returns:
         The LolGame representation of the game
@@ -249,35 +247,10 @@ def match_to_game(match_dto: dict, add_names: bool = False) -> game_dto.LolGame:
 
                 player.role = participant["role"]
 
-            # Then, we add convenience name fields for human readability if asked
-            if add_names:
-                player.championName = lit.get_name(
-                    player.championId, object_type="champion"
-                )
-                player.primaryRuneTreeName = lit.get_name(
-                    player.primaryRuneTreeId, object_type="rune"
-                )
-                player.secondaryRuneTreeName = lit.get_name(
-                    player.secondaryRuneTreeId, object_type="rune"
-                )
-
-                for item in player.endOfGameStats.items:
-                    item.name = lit.get_name(item.id, object_type="item")
-                for rune in player.runes:
-                    rune.name = lit.get_name(rune.id, object_type="rune")
-                for summoner_spell in player.summonerSpells:
-                    summoner_spell.name = lit.get_name(
-                        summoner_spell.id, object_type="summoner_spell"
-                    )
-
             team_dto.players.append(player)
 
         # We want to make extra sure players are always ordered by Riot’s given id
         team_dto.players = sorted(team_dto.players, key=lambda x: x.id)
-
-        if add_names:
-            for ban in team_dto.bans:
-                team_dto.bansNames.append(lit.get_name(ban, object_type="champion"))
 
         setattr(game.teams, side, team_dto)
 
