@@ -3,7 +3,6 @@ from riot_transmute.constants import (
     monster_type_dict,
     monster_subtype_dict,
     building_dict,
-    EmptySource,
 )
 from riot_transmute.logger import riot_transmute_logger
 
@@ -35,17 +34,16 @@ def match_timeline_to_game(
         The LolGame representation of the game.
     """
 
-    sources = EmptySource()
+    # Creating the game_dto
+    game = lol_dto.classes.game.LolGame()
+
     setattr(
-        sources,
+        game.sources,
         "riotLolApi",
         lol_dto.classes.sources.riot_lol_api.RiotGameSource(
             gameId=game_id, platformId=platform_id
         ),
     )
-
-    # Creating the game_dto
-    game = lol_dto.classes.game.LolGame(sources=sources)
 
     # We create empty Player objects with IDs from 1 to 10 to match the frames
     game.teams.BLUE.players = [

@@ -3,7 +3,7 @@ from datetime import datetime, timezone
 
 from lol_dto.classes.sources.riot_lol_api import RiotGameSource, RiotPlayerSource
 
-from riot_transmute.constants import clean_roles, EmptySource
+from riot_transmute.constants import clean_roles
 
 
 def match_to_game(match_dto: dict) -> game_dto.LolGame:
@@ -19,13 +19,6 @@ def match_to_game(match_dto: dict) -> game_dto.LolGame:
     Returns:
         The LolGame representation of the game
     """
-
-    sources = EmptySource()
-    setattr(
-        sources,
-        "riotLolApi",
-        RiotGameSource(gameId=match_dto["gameId"], platformId=match_dto["platformId"]),
-    )
 
     log_prefix = (
         f"gameId {match_dto['gameId']}|" f"platformId {match_dto['platformId']}:\t"
@@ -47,12 +40,17 @@ def match_to_game(match_dto: dict) -> game_dto.LolGame:
     # TODO Change optional fields to .get() instead of [], do it in timeline too
 
     game = game_dto.LolGame(
-        sources=sources,
         duration=match_dto["gameDuration"],
         start=iso_date,
         patch=patch,
         gameVersion=match_dto["gameVersion"],
         winner=winner,
+    )
+
+    setattr(
+        game.sources,
+        "riotLolApi",
+        RiotGameSource(gameId=match_dto["gameId"], platformId=match_dto["platformId"]),
     )
 
     for team in match_dto["teams"]:
@@ -80,26 +78,12 @@ def match_to_game(match_dto: dict) -> game_dto.LolGame:
             if participant["teamId"] != team["teamId"]:
                 continue
 
-            sources = EmptySource()
-
             try:
                 participant_identity = next(
                     identity["player"]
                     for identity in match_dto["participantIdentities"]
                     if identity["participantId"] == participant["participantId"]
                 )
-
-                # Esports matches do not have an accountId field, so we need to test here
-
-                if "accountId" in participant_identity:
-                    setattr(
-                        sources,
-                        "riotLolApi",
-                        RiotPlayerSource(
-                            accountId=participant_identity["accountId"],
-                            platformId=participant_identity["platformId"],
-                        ),
-                    )
 
             # Custom games also don’t have identity info
             except KeyError:
@@ -227,13 +211,23 @@ def match_to_game(match_dto: dict) -> game_dto.LolGame:
             player = game_dto.LolGamePlayer(
                 id=participant["participantId"],
                 championId=participant["championId"],
-                sources=sources,
                 primaryRuneTreeId=participant["stats"].get("perkPrimaryStyle"),
                 secondaryRuneTreeId=participant["stats"].get("perkSubStyle"),
                 runes=runes,
                 summonerSpells=summoner_spells,
                 endOfGameStats=end_of_game_stats,
             )
+
+            # Esports matches do not have an accountId field, so we need to test here
+            if participant_identity and "accountId" in participant_identity:
+                setattr(
+                    player.sources,
+                    "riotLolApi",
+                    RiotPlayerSource(
+                        accountId=participant_identity["accountId"],
+                        platformId=participant_identity["platformId"],
+                    ),
+                )
 
             if participant_identity:
                 player.inGameName = participant_identity["summonerName"]
