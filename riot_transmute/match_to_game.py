@@ -1,17 +1,10 @@
-from dataclasses import dataclass
-
 import lol_dto.classes.game as game_dto
 import lol_id_tools as lit
 from datetime import datetime, timezone
 
 from lol_dto.classes.sources.riot_lol_api import RiotGameSource, RiotPlayerSource
 
-from riot_transmute.constants import clean_roles
-
-
-@dataclass
-class EmptySource:
-    ...
+from riot_transmute.constants import clean_roles, EmptySource
 
 
 def match_to_game(match_dto: dict, add_names: bool = False) -> game_dto.LolGame:

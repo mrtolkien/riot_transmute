@@ -1,3 +1,5 @@
+from dataclasses import dataclass
+
 from lol_dto.classes import game as game_dto
 
 clean_roles = {
@@ -186,3 +188,8 @@ building_dict = {
         side="RED",
     ),
 }
+
+
+@dataclass
+class EmptySource:
+    ...

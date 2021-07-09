@@ -39,7 +39,7 @@ def timeline_game_id_platform_id(watcher):
     with open(file_location) as file:
         timeline_game_platform = json.load(file)
 
-    return timeline_game_platform
+    return timeline_game_platform, 4409190456, "KR"
 
 
 @pytest.fixture
