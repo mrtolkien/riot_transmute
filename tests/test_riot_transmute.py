@@ -15,9 +15,6 @@ def watcher():
     return LolWatcher(os.environ["RIOT_API_KEY"])
 
 
-# TODO Parametrize tests and make them run on at least 10 random games + esports games
-
-
 @pytest.fixture
 def match_dto(watcher):
     match_dto = watcher.match.by_id("KR", 4409190456)
