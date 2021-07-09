@@ -18,7 +18,7 @@ def test_timeline(timeline_game_id_platform_id):
     assert game.sources.riotLolApi.gameId == game_id
     assert game.teams.BLUE.players[0].snapshots.__len__() > 0
 
-    # TODO Test events
+    # TODO Test events individually
 
 
 def test_timeline_with_names(timeline_game_id_platform_id):
