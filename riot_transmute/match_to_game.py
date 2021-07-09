@@ -15,14 +15,18 @@ class EmptySource:
 
 
 def match_to_game(match_dto: dict, add_names: bool = False) -> game_dto.LolGame:
-    """Returns a LolGame from a MatchDto.
+    """
+    Returns a LolGame from a MatchDto
+
+    Currently works for both MatchV3 and MatchV4 from season 9 and later
+    TODO Full 2.0 release will support MatchV5
 
     Args:
         match_dto: A MatchDto from Riot’s API
         add_names: whether or not to add names for human readability in the DTO. False by default.
 
     Returns:
-        The LolGame representation of the game.
+        The LolGame representation of the game
     """
 
     sources = EmptySource()
