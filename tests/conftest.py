@@ -2,7 +2,6 @@ import json
 import os
 
 import pytest
-from riotwatcher import LolWatcher
 import dotenv
 
 dotenv.load_dotenv()

@@ -1,3 +1,5 @@
+import warnings
+
 import lol_dto
 from riot_transmute.constants import (
     monster_type_dict,
@@ -122,7 +124,8 @@ def match_timeline_to_game(
                         ]
                     # If we don’t know how to translate the monster subtype, we simply leave it as-is
                     except KeyError:
-                        event_dto.subType = event["monsterSubType"]
+                        # get to be compatible with pre 6.9 games
+                        event_dto.subType = event.get("monsterSubType")
 
                 team.epicMonstersKills.append(event_dto)
 
@@ -132,9 +135,13 @@ def match_timeline_to_game(
                 team = game.teams.RED if event["teamId"] == 100 else game.teams.BLUE
 
                 # Get the prebuilt "building" event DTO
-                event_dto = building_dict[
-                    event["position"]["x"], event["position"]["y"]
-                ]
+                event_dto = building_dict.get(
+                    (event["position"]["x"], event["position"]["y"])
+                )
+
+                if not event_dto:
+                    warnings.warn("Pre 4.20 games building kills do not get saved at the moment")
+                    continue
 
                 # Fill its timestamp
                 event_dto.timestamp = timestamp
