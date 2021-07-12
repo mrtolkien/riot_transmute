@@ -87,21 +87,14 @@ python-versions = ">=3.6"
 
 [[package]]
 name = "lol-dto"
-version = "2.0.0a0"
+version = "2.0.0a2"
 description = "A unified representation of League of Legends-related information"
 category = "main"
 optional = false
-python-versions = "^3.7"
-develop = false
+python-versions = ">=3.7,<4.0"
 
 [package.extras]
 names = ["lol-id-tools (>=1.7.1,<2.0.0)"]
-
-[package.source]
-type = "git"
-url = "https://github.com/mrtolkien/lol_dto.git"
-reference = "dev/2.0.0"
-resolved_reference = "5fae02fd20709ff80fe275df1bc58ea00ebc74a2"
 
 [[package]]
 name = "lol-id-tools"
@@ -391,7 +384,7 @@ testing = ["pytest (>=4.6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytes
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.7"
-content-hash = "05bed80c48fbaee74d77f8c2fe37284911d0fb0d66b0f23aa6fe7ca6cd07b4b0"
+content-hash = "e05cb5cb5d9417454a2a71d658eb7739b393a5d0de2306826f5f82d98daed28e"
 
 [metadata.files]
 atomicwrites = [
@@ -430,7 +423,10 @@ joblib = [
     {file = "joblib-1.0.1-py3-none-any.whl", hash = "sha256:feeb1ec69c4d45129954f1b7034954241eedfd6ba39b5e9e4b6883be3332d5e5"},
     {file = "joblib-1.0.1.tar.gz", hash = "sha256:9c17567692206d2f3fb9ecf5e991084254fe631665c450b443761c4186a613f7"},
 ]
-lol-dto = []
+lol-dto = [
+    {file = "lol_dto-2.0.0a2-py3-none-any.whl", hash = "sha256:6e9ab21bda1bbea2bb6eab419795f7693e21a74ebc55dca9c27ee0431367e378"},
+    {file = "lol_dto-2.0.0a2.tar.gz", hash = "sha256:429c00ad6b18d68aed3b592cccf35af50b82fc395d7c3eaf530565028545eac0"},
+]
 lol-id-tools = [
     {file = "lol_id_tools-1.7.1.tar.gz", hash = "sha256:4ab9367151022004ef712aeca74f80ab3dada626077f46f6626e6b4c8b82e409"},
 ]
