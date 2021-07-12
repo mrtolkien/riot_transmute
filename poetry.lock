@@ -24,7 +24,7 @@ tests_no_zope = ["coverage[toml] (>=5.0.2)", "hypothesis", "pympler", "pytest (>
 name = "certifi"
 version = "2021.5.30"
 description = "Python package for providing Mozilla's CA Bundle."
-category = "main"
+category = "dev"
 optional = false
 python-versions = "*"
 
@@ -32,7 +32,7 @@ python-versions = "*"
 name = "chardet"
 version = "4.0.0"
 description = "Universal encoding detector for Python 2 and 3"
-category = "main"
+category = "dev"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
 
@@ -48,7 +48,7 @@ python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
 name = "idna"
 version = "2.10"
 description = "Internationalized Domain Names in Applications (IDNA)"
-category = "main"
+category = "dev"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 
@@ -87,24 +87,27 @@ python-versions = ">=3.6"
 
 [[package]]
 name = "lol-dto"
-version = "2.0.0a1"
+version = "2.0.0a0"
 description = "A unified representation of League of Legends-related information"
 category = "main"
 optional = false
 python-versions = "^3.7"
 develop = false
 
+[package.extras]
+names = ["lol-id-tools (>=1.7.1,<2.0.0)"]
+
 [package.source]
 type = "git"
 url = "https://github.com/mrtolkien/lol_dto.git"
 reference = "dev/2.0.0"
-resolved_reference = "79b1b4bc0ad22730c2f975cf9762a2ebbd6c74c7"
+resolved_reference = "5fae02fd20709ff80fe275df1bc58ea00ebc74a2"
 
 [[package]]
 name = "lol-id-tools"
 version = "1.7.1"
 description = "An id tool for League of Legends with fuzzy string matching, nicknames, multiple locales, automatic updates, and translation."
-category = "main"
+category = "dev"
 optional = false
 python-versions = "*"
 
@@ -233,7 +236,7 @@ python-versions = "*"
 name = "rapidfuzz"
 version = "1.4.1"
 description = "rapid fuzzy string matching"
-category = "main"
+category = "dev"
 optional = false
 python-versions = ">=3.5"
 
@@ -241,7 +244,7 @@ python-versions = ">=3.5"
 name = "requests"
 version = "2.25.1"
 description = "Python HTTP for Humans."
-category = "main"
+category = "dev"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
 
@@ -338,11 +341,11 @@ python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*"
 
 [[package]]
 name = "threadpoolctl"
-version = "2.1.0"
+version = "2.2.0"
 description = "threadpoolctl"
 category = "dev"
 optional = false
-python-versions = ">=3.5"
+python-versions = ">=3.6"
 
 [[package]]
 name = "toml"
@@ -364,7 +367,7 @@ python-versions = "*"
 name = "urllib3"
 version = "1.26.6"
 description = "HTTP library with thread-safe connection pooling, file post, and more."
-category = "main"
+category = "dev"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*, <4"
 
@@ -388,7 +391,7 @@ testing = ["pytest (>=4.6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytes
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.7"
-content-hash = "29c400fb2c4667b464d6eebe99a522b853ad990af320d07de9c9ea7328b2a4bf"
+content-hash = "05bed80c48fbaee74d77f8c2fe37284911d0fb0d66b0f23aa6fe7ca6cd07b4b0"
 
 [metadata.files]
 atomicwrites = [
@@ -680,8 +683,8 @@ six = [
     {file = "six-1.16.0.tar.gz", hash = "sha256:1e61c37477a1626458e36f7b1d82aa5c9b094fa4802892072e49de9c60c4c926"},
 ]
 threadpoolctl = [
-    {file = "threadpoolctl-2.1.0-py3-none-any.whl", hash = "sha256:38b74ca20ff3bb42caca8b00055111d74159ee95c4370882bbff2b93d24da725"},
-    {file = "threadpoolctl-2.1.0.tar.gz", hash = "sha256:ddc57c96a38beb63db45d6c159b5ab07b6bced12c45a1f07b2b92f272aebfa6b"},
+    {file = "threadpoolctl-2.2.0-py3-none-any.whl", hash = "sha256:e5a995e3ffae202758fa8a90082e35783b9370699627ae2733cd1c3a73553616"},
+    {file = "threadpoolctl-2.2.0.tar.gz", hash = "sha256:86d4b6801456d780e94681d155779058759eaef3c3564758b17b6c99db5f81cb"},
 ]
 toml = [
     {file = "toml-0.10.2-py2.py3-none-any.whl", hash = "sha256:806143ae5bfb6a3c6e736a764057db0e6a0e05e338b5630894a5f779cabb4f9b"},

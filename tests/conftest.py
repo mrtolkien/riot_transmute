@@ -16,7 +16,7 @@ dotenv.load_dotenv()
 
 @pytest.fixture
 def match_dto():
-    file_location = os.path.join(os.getcwd(), "examples", "source_match.json")
+    file_location = os.path.join("tests", "data", "source_match.json")
 
     # match_dto = watcher.match.by_id("KR", 4409190456)
 
@@ -28,7 +28,7 @@ def match_dto():
 
 @pytest.fixture
 def timeline_game_id_platform_id():
-    file_location = os.path.join("examples", "source_timeline.json")
+    file_location = os.path.join("tests", "data", "source_timeline.json")
 
     # timeline_game_platform = (
     #     watcher.match.timeline_by_match("KR", 4409190456),
@@ -44,7 +44,15 @@ def timeline_game_id_platform_id():
 
 @pytest.fixture
 def esports_match_dto():
-    with open(os.path.join("examples", "source_match_esports.json")) as file:
+    with open(os.path.join("tests", "data", "source_match_esports.json")) as file:
+        match_dto = json.load(file)
+
+    return match_dto
+
+
+@pytest.fixture()
+def esports_timeline():
+    with open(os.path.join("tests", "data", "source_timeline_esports.json")) as file:
         match_dto = json.load(file)
 
     return match_dto
@@ -55,10 +63,10 @@ def custom_match_and_timeline():
     # match = watcher.match.by_id("EUW1", 4676184349)
     # timeline = watcher.match.timeline_by_match("EUW1", 4676184349)
 
-    with open(os.path.join("examples", "source_custom.json")) as file:
+    with open(os.path.join("tests", "data", "source_custom.json")) as file:
         match = json.load(file)
 
-    with open(os.path.join("examples", "source_custom_timeline.json")) as file:
+    with open(os.path.join("tests", "data", "source_custom_timeline.json")) as file:
         timeline = json.load(file)
 
     return match, timeline

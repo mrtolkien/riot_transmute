@@ -8,13 +8,15 @@ license = "MIT"
 [tool.poetry.dependencies]
 python = "^3.7"
 lol-dto = {git = "https://github.com/mrtolkien/lol_dto.git", rev = "dev/2.0.0"}
-lol-id-tools = "^1.7.1"
+
 
 [tool.poetry.dev-dependencies]
 pytest = "^6.2.4"
 roleml = "^0.2.3"
 riotwatcher = "^3.1.2"
 python-dotenv = "^0.18.0"
+lol-id-tools = "^1.7.1"
+
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]

@@ -213,7 +213,7 @@ def match_timeline_to_game(
                     try:
                         player = get_player(game, event["creatorId"])
                     except StopIteration:
-                        # TODO Understand events with ward_type=UNDEFINED + creatorId=0, they are dropped atm
+                        # Events with ward_type=UNDEFINED and creatorId=0 are dropped at the moment
                         continue
                     event_type = "PLACED"
 

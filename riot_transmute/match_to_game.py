@@ -11,7 +11,6 @@ def match_to_game(match_dto: dict) -> game_dto.LolGame:
     Returns a LolGame from a MatchDto
 
     Currently works for both MatchV3 and MatchV4 from season 9 and later
-    TODO Full 2.0 release will support MatchV5
 
     Args:
         match_dto: A MatchDto from Riot’s API
@@ -37,8 +36,6 @@ def match_to_game(match_dto: dict) -> game_dto.LolGame:
         else "RED"
     )
 
-    # TODO Change optional fields to .get() instead of [], do it in timeline too
-
     game = game_dto.LolGame(
         duration=match_dto["gameDuration"],
         start=iso_date,
@@ -56,7 +53,6 @@ def match_to_game(match_dto: dict) -> game_dto.LolGame:
     for team in match_dto["teams"]:
         side = "BLUE" if team["teamId"] == 100 else "RED"
 
-        # TODO Handle old games with elemental drakes before they were part of the API
         team_dto = game_dto.LolGameTeam(
             endOfGameStats=game_dto.LolGameTeamEndOfGameStats(
                 riftHeraldKills=team.get("riftHeraldKills"),
@@ -89,7 +85,6 @@ def match_to_game(match_dto: dict) -> game_dto.LolGame:
             except KeyError:
                 participant_identity = None
 
-            # TODO Make that backwards-compatible with pre-runes reforged games
             runes = [
                 game_dto.LolGamePlayerRune(
                     id=participant["stats"].get(f"perk{i}"),
@@ -136,7 +131,6 @@ def match_to_game(match_dto: dict) -> game_dto.LolGame:
                 deaths=participant["stats"].get("deaths"),
                 assists=participant["stats"].get("assists"),
                 gold=participant["stats"].get("goldEarned"),
-                # TODO Test with older games
                 cs=int(participant["stats"].get("totalMinionsKilled") or 0)
                 + int(participant["stats"].get("neutralMinionsKilled") or 0),
                 level=participant["stats"].get("champLevel"),
@@ -235,7 +229,6 @@ def match_to_game(match_dto: dict) -> game_dto.LolGame:
 
             # roleml compatibility
             if "role" in participant:
-                # TODO Remove that after roleml refactor
                 if participant["role"] not in {"TOP", "JGL", "MID", "BOT", "SUP"}:
                     participant["role"] = clean_roles[participant["role"]]
 

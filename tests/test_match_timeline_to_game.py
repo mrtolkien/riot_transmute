@@ -15,15 +15,18 @@ def test_timeline(timeline_game_id_platform_id):
     )
 
     assert game.sources.riotLolApi.gameId == game_id
-    assert game.teams.BLUE.players[0].snapshots.__len__() > 0
+    assert len(game.teams.BLUE.players[0].snapshots) > 0
 
-    # TODO Test events individually
+    for kill in game.kills:
+        assert kill.victimId is not None
+
+    for team in game.teams:
+        for player in team.players:
+            for snapshot in player.snapshots:
+                assert snapshot.timestamp is not None
 
 
-def test_esports_timeline():
-    with open(os.path.join("examples", "source_timeline_esports.json")) as file:
-        match_dto = json.load(file)
-
-    game = match_timeline_to_game(match_dto, 0, "")
+def test_esports_timeline(esports_timeline):
+    game = match_timeline_to_game(esports_timeline, 0, "")
 
     assert game
