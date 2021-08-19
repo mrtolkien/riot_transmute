@@ -11,7 +11,7 @@ from riot_transmute import (
     merge_games_from_riot_match_and_timeline,
 )
 
-data_folder = os.path.join("tests", "data")
+data_folder = os.path.join("tests", "data", "v4")
 
 # The export folder is ignored in git and used to test packages relying on Riot Transmute
 export_folder = os.path.join("tests", "data", "exports")

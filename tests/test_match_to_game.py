@@ -3,8 +3,8 @@ import lol_dto.utilities
 from riot_transmute import match_to_game
 
 
-def test_game(match_dto):
-    game = match_to_game(match_dto)
+def test_game_v4(match_v4_dto):
+    game = match_to_game(match_v4_dto)
 
     lol_dto.utilities.dump_json(game, os.path.join("examples", "game_from_match.json"))
 
@@ -30,3 +30,7 @@ def test_esports_match(esports_match_dto):
     game = match_to_game(esports_match_dto)
 
     assert game
+
+
+def test_game_v5(match_v5_dto):
+    ...

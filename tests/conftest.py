@@ -7,17 +7,9 @@ import dotenv
 dotenv.load_dotenv()
 
 
-# Relic of the past, could be removed
-# @pytest.fixture
-# def watcher():
-#     return LolWatcher(os.environ["RIOT_API_KEY"])
-
-
 @pytest.fixture
-def match_dto():
-    file_location = os.path.join("tests", "data", "source_match.json")
-
-    # match_dto = watcher.match.by_id("KR", 4409190456)
+def match_v4_dto():
+    file_location = os.path.join("tests", "data", "v4", "source_match.json")
 
     with open(file_location) as file:
         match_dto = json.load(file)
@@ -27,13 +19,7 @@ def match_dto():
 
 @pytest.fixture
 def timeline_game_id_platform_id():
-    file_location = os.path.join("tests", "data", "source_timeline.json")
-
-    # timeline_game_platform = (
-    #     watcher.match.timeline_by_match("KR", 4409190456),
-    #     4409190456,
-    #     "KR",
-    # )
+    file_location = os.path.join("tests", "data", "v4", "source_timeline.json")
 
     with open(file_location) as file:
         timeline_game_platform = json.load(file)
@@ -43,7 +29,7 @@ def timeline_game_id_platform_id():
 
 @pytest.fixture
 def esports_match_dto():
-    with open(os.path.join("tests", "data", "source_match_esports.json")) as file:
+    with open(os.path.join("tests", "data", "v4", "source_match_esports.json")) as file:
         match_dto = json.load(file)
 
     return match_dto
@@ -51,7 +37,9 @@ def esports_match_dto():
 
 @pytest.fixture()
 def esports_timeline():
-    with open(os.path.join("tests", "data", "source_timeline_esports.json")) as file:
+    with open(
+        os.path.join("tests", "data", "v4", "source_timeline_esports.json")
+    ) as file:
         match_dto = json.load(file)
 
     return match_dto
@@ -59,13 +47,12 @@ def esports_timeline():
 
 @pytest.fixture
 def custom_match_and_timeline():
-    # match = watcher.match.by_id("EUW1", 4676184349)
-    # timeline = watcher.match.timeline_by_match("EUW1", 4676184349)
-
-    with open(os.path.join("tests", "data", "source_custom.json")) as file:
+    with open(os.path.join("tests", "data", "v4", "source_custom.json")) as file:
         match = json.load(file)
 
-    with open(os.path.join("tests", "data", "source_custom_timeline.json")) as file:
+    with open(
+        os.path.join("tests", "data", "v4", "source_custom_timeline.json")
+    ) as file:
         timeline = json.load(file)
 
     return match, timeline
