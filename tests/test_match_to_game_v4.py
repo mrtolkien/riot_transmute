@@ -30,7 +30,3 @@ def test_esports_match(esports_match_dto):
     game = match_to_game(esports_match_dto)
 
     assert game
-
-
-def test_game_v5(match_v5_dto):
-    ...
