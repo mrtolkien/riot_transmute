@@ -148,7 +148,8 @@ def match_to_game(match_dto: dict) -> dto.LolGame:
 
         game_player.summonerSpells.extend(
             dto.LolGamePlayerSummonerSpell(
-                id=dto_player[f"summoner{spell_id}Id"],
+                # Bayes' GAMH data uses spell1Id instead of summoner1Id
+                id=dto_player[f"summoner{spell_id}Id"] or dto_player[f'spell{spell_id}Id'],
                 slot=spell_id - 1,
                 casts=dto_player[f"summoner{spell_id}Casts"],
             )
