@@ -111,7 +111,9 @@ def match_to_game(match_dto: dict) -> dto.LolGame:
             game_player.sources,
             "riot",
             RiotPlayerSource(
-                puuid=dto_player["puuid"], summonerId=dto_player["summonerId"]
+                # We have to use get to also be compatible with esports games
+                puuid=dto_player.get("puuid"),
+                summonerId=dto_player.get("summonerId"),
             ),
         )
 
