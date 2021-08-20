@@ -8,12 +8,16 @@ from riot_transmute.v5.match_to_game import role_trigrams
 data_folder = os.path.join("tests", "data", "v5")
 
 
-# TODO A big test with a lot of inputs
+@pytest.mark.parametrize(
+    "file_name", [f for f in os.listdir(data_folder) if "timeline" not in f]
+)
+def test_match_to_game_v5(file_name):
+    with open(os.path.join(data_folder, file_name)) as file:
+        match_dto = json.load(file)
 
-# Testing a single game against specific values
-def test_match_to_game_v5():
-    with open(os.path.join(data_folder, f"match_v5_ranked.json")) as file:
-        match_dto = json.load(file)["info"]
+        # For ranked games, the dto is in the info key
+        if "info" in match_dto:
+            match_dto = match_dto["info"]
 
     game = riot_transmute.match_to_game(match_dto, match_v5=True)
 
@@ -40,12 +44,15 @@ def test_match_to_game_v5():
         assert len(team.players) == 5
 
         for player in team.players:
-            assert player.sources.riot.puuid
-            assert player.sources.riot.summonerId
+            try:
+                assert player.sources.riot.puuid
+            except AssertionError:
+                assert type(player.sources.riot.summonerId) == int
 
             assert player.id
             assert player.inGameName
-            assert player.role in role_trigrams.values()
+
+            assert player.role in list(role_trigrams.values()) + [None]
 
             assert player.primaryRuneTreeId
             assert player.secondaryRuneTreeId
@@ -54,7 +61,7 @@ def test_match_to_game_v5():
 
             assert player.summonerSpells
             for ss in player.summonerSpells:
-                assert ss.casts
+                assert ss.casts is not None
 
             assert player.endOfGameStats.items
 
