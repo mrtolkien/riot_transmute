@@ -1,7 +1,7 @@
 from datetime import datetime, timezone
 
 import lol_dto.classes.game as dto
-
+from lol_dto.classes.sources.riot_lol_api import RiotPlayerSource, RiotGameSource
 
 role_trigrams = {
     "TOP": "TOP",
@@ -22,11 +22,6 @@ def match_to_game(match_dto: dict) -> dto.LolGame:
     Returns:
         The LolGame representation of the game
     """
-    log_prefix = (
-        f"gameId {match_dto['gameId']}|" f"platformId {match_dto['platformId']}:\t"
-    )
-    info_log = set()
-
     # Creating some data fields in a friendlier format
 
     # ms timestamp -> ISO format
@@ -66,6 +61,12 @@ def match_to_game(match_dto: dict) -> dto.LolGame:
         queue_id=match_dto["queueId"],
     )
 
+    setattr(
+        game.sources,
+        "riot",
+        RiotGameSource(gameId=match_dto["gameId"], platformId=match_dto["platformId"]),
+    )
+
     for dto_team in match_dto["teams"]:
         if dto_team["teamId"] == 100:
             game_team = game.teams.BLUE
@@ -74,8 +75,6 @@ def match_to_game(match_dto: dict) -> dto.LolGame:
         else:
             raise ValueError(f"{dto_team['teamId']=} value not supported")
 
-        # TODO Check if this loses use any information
-        #   There is also a pickTurn value, but it goes from 1 to 10...
         game_team.bans = [b["championId"] for b in dto_team["bans"]]
 
         game_team.endOfGameStats = dto.LolGameTeamEndOfGameStats(
@@ -104,9 +103,16 @@ def match_to_game(match_dto: dict) -> dto.LolGame:
             inGameName=dto_player["summonerName"],
             role=role_trigrams.get(dto_player["individualPosition"]),
             championId=dto_player["championId"],
-            # TODO sources, for the game too!!! puuid + summonerId
             primaryRuneTreeId=dto_player["perks"]["styles"][0]["style"],
             secondaryRuneTreeId=dto_player["perks"]["styles"][1]["style"],
+        )
+
+        setattr(
+            game_player.sources,
+            "riot",
+            RiotPlayerSource(
+                puuid=dto_player["puuid"], summonerId=dto_player["summonerId"]
+            ),
         )
 
         # We extend the runes with the primary and secondary trees
@@ -147,11 +153,17 @@ def match_to_game(match_dto: dict) -> dto.LolGame:
             for spell_id in (1, 2)
         )
 
-        game_team.earlySurrendered = dto_player['teamEarlySurrendered']
+        game_team.earlySurrendered = dto_player["teamEarlySurrendered"]
+
+        items = [
+            dto.LolGamePlayerItem(id=dto_player.get(f"item{i}"), slot=i)
+            for i in range(0, 7)
+        ]
 
         end_of_game_stats = dto.LolGamePlayerEndOfGameStats(
+            items=items,
             firstBlood=dto_player["firstBloodKill"],
-            firstBloodAssist=dto_player["firstBloodAssist"],  # TODO check its right now
+            firstBloodAssist=dto_player["firstBloodAssist"],
             kills=dto_player["kills"],
             deaths=dto_player["deaths"],
             assists=dto_player["assists"],

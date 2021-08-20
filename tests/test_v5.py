@@ -1,6 +1,5 @@
 import json
 import os
-
 import pytest
 
 import riot_transmute
@@ -9,6 +8,8 @@ from riot_transmute.v5.match_to_game import role_trigrams
 data_folder = os.path.join("tests", "data", "v5")
 
 
+# TODO A big test with a lot of inputs
+
 # Testing a single game against specific values
 def test_match_to_game_v5():
     with open(os.path.join(data_folder, f"match_v5_ranked.json")) as file:
@@ -16,9 +17,10 @@ def test_match_to_game_v5():
 
     game = riot_transmute.match_to_game(match_dto, match_v5=True)
 
-    assert game.winner == "RED"
-    assert game.patch == "11.16"
-    assert game.type == "MATCHED_GAME"
+    assert game.winner in ["RED", "BLUE"]
+    assert type(game.type) == str
+    assert game.sources.riot.gameId
+    assert game.sources.riot.platformId
 
     for team in game.teams:
         assert team.bans
@@ -35,9 +37,12 @@ def test_match_to_game_v5():
         assert type(team.endOfGameStats.riftHeraldKills) == int
         assert type(team.endOfGameStats.inhibitorKills) == int
 
-        assert team.players
+        assert len(team.players) == 5
 
         for player in team.players:
+            assert player.sources.riot.puuid
+            assert player.sources.riot.summonerId
+
             assert player.id
             assert player.inGameName
             assert player.role in role_trigrams.values()
