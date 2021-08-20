@@ -45,8 +45,11 @@ def test_match_to_game_v5(file_name):
 
         for player in team.players:
             try:
+                # This is ranked games
                 assert player.sources.riot.puuid
+                assert type(player.sources.riot.summonerId) == str
             except AssertionError:
+                # If we get here this is an esport game, where the summonerId is clear
                 assert type(player.sources.riot.summonerId) == int
 
             assert player.id
