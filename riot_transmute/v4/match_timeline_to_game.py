@@ -2,7 +2,7 @@ import warnings
 
 import lol_dto
 
-from riot_transmute.constants import (
+from riot_transmute.common.constants import (
     monster_type_dict,
     monster_subtype_dict,
     building_dict,

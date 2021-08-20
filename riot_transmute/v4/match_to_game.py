@@ -4,7 +4,7 @@ from lol_dto.classes import game as game_dto
 from lol_dto.classes.game import LolGame
 from lol_dto.classes.sources.riot_lol_api import RiotGameSource, RiotPlayerSource
 
-from riot_transmute.constants import clean_roles
+from riot_transmute.common.constants import clean_roles
 
 
 def match_to_game(match_dto: dict) -> LolGame:

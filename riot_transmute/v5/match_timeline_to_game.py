@@ -1,9 +1,10 @@
 import warnings
 
-import lol_dto
+import lol_dto.classes.game as dto
+from lol_dto.classes.sources.riot_lol_api import RiotGameSource, RiotPlayerSource
 
 from riot_transmute.common.get_player import get_player
-from riot_transmute.constants import (
+from riot_transmute.common.constants import (
     monster_type_dict,
     monster_subtype_dict,
     building_dict,
@@ -12,53 +13,72 @@ from riot_transmute.logger import riot_transmute_logger
 
 
 def match_timeline_to_game(
-    match_timeline_dto: dict,
-    game_id: int,
-    platform_id: str,
-) -> lol_dto.classes.game.LolGame:
+    match_timeline_dto: dict, metadata: dict = None
+) -> dto.LolGame:
+    """
+    Match-V5 timeline to LolGame
 
-    # Creating the game_dto
-    game = lol_dto.classes.game.LolGame()
+    Args:
+        match_timeline_dto: the MatchTimelineDto from the API, 'info' field in the ranked API
+        metadata: the metadata from the API, 'metadata' field in the ranked API
 
-    setattr(
-        game.sources,
-        "riotLolApi",
-        lol_dto.classes.sources.riot_lol_api.RiotGameSource(
-            gameId=game_id, platformId=platform_id
-        ),
-    )
+    """
+    # Creating an empty game_dto
+    game = dto.LolGame()
 
-    # We create empty Player objects with IDs from 1 to 10 to match the frames
-    game.teams.BLUE.players = [
-        lol_dto.classes.game.LolGamePlayer(id=i) for i in range(1, 6)
-    ]
-    game.teams.RED.players = [
-        lol_dto.classes.game.LolGamePlayer(id=i) for i in range(6, 11)
-    ]
+    if metadata:
+        platform_id, game_id = metadata["matchId"].split("_")
+
+        # Saving our unique identifier from the metadata if provided
+        setattr(
+            game.sources,
+            "riotLolApi",
+            RiotGameSource(gameId=int(game_id), platformId=platform_id),
+        )
+
+    else:
+        # There is still a gameId for esports games
+        setattr(
+            game.sources,
+            "riotLolApi",
+            RiotGameSource(gameId=match_timeline_dto["gameId"]),
+        )
+
+    for participant in match_timeline_dto["participants"]:
+        player = dto.LolGamePlayer(
+            id=participant["participantId"],
+        )
+
+        setattr(
+            player.sources,
+            "riot",
+            RiotPlayerSource(puuid=participant.get("puuid")),
+        )
+
+        if 1 <= player.id <= 5:
+            game.teams.BLUE.players.append(player)
+        elif 6 <= player.id <= 10:
+            game.teams.RED.players.append(player)
+        else:
+            raise ValueError
 
     for frame in match_timeline_dto["frames"]:
+
         # We start by adding player information at the given snapshot timestamps
         for participant_frame in frame["participantFrames"].values():
-            team = (
-                game.teams.BLUE
-                if participant_frame["participantId"] < 6
-                else game.teams.RED
-            )
 
-            # Finding the player with the same id in our game object
-            player = next(
-                p for p in team.players if p.id == participant_frame["participantId"]
-            )
+            # Getting our player object
+            player = get_player(game, participant_frame["participantId"])
 
             try:
-                position = lol_dto.classes.game.Position(
+                position = dto.Position(
                     x=participant_frame["position"]["x"],
                     y=participant_frame["position"]["y"],
                 )
             except KeyError:
                 position = None
 
-            snapshot = lol_dto.classes.game.LolGamePlayerSnapshot(
+            snapshot = dto.LolGamePlayerSnapshot(
                 timestamp=frame["timestamp"] / 1000,
                 currentGold=participant_frame["currentGold"],
                 totalGold=participant_frame["totalGold"],
@@ -68,6 +88,13 @@ def match_timeline_to_game(
                 + participant_frame["jungleMinionsKilled"],
                 monstersKilled=participant_frame["jungleMinionsKilled"],
                 position=position,
+                timeEnemySpentControlled=participant_frame["timeEnemySpentControlled"],
+                damageStats=dto.LolGamePlayerSnapshotDamageStats(
+                    **participant_frame["damageStats"]
+                ),
+                championStats=dto.LolGamePlayerSnapshotChampionStats(
+                    **participant_frame["championStats"]
+                ),
             )
 
             player.snapshots.append(snapshot)
@@ -87,7 +114,7 @@ def match_timeline_to_game(
                 team = game.teams.BLUE if event["killerId"] < 6 else game.teams.RED
                 monster_type = monster_type_dict[event["monsterType"]]
 
-                event_dto = lol_dto.classes.game.LolGameTeamEpicMonsterKill(
+                event_dto = dto.LolGameTeamEpicMonsterKill(
                     timestamp=timestamp,
                     type=monster_type,
                     killerId=event["killerId"],
@@ -131,17 +158,28 @@ def match_timeline_to_game(
 
             # Champions kills
             elif event["type"] == "CHAMPION_KILL":
-                position = lol_dto.classes.game.Position(
+                position = dto.Position(
                     x=event["position"]["x"], y=event["position"]["y"]
                 )
 
                 game.kills.append(
-                    lol_dto.classes.game.LolGameKill(
+                    dto.LolGameKill(
                         timestamp=timestamp,
                         position=position,
                         killerId=event["killerId"],
                         victimId=event["victimId"],
-                        assistsIds=event["assistingParticipantIds"],
+                        # This is now *not there* if there are no assists
+                        assistsIds=event.get("assistingParticipantIds") or [],
+                        bounty=event["bounty"],
+                        killStreakLength=event["killStreakLength"],
+                        victimDamageDealt=[
+                            dto.LolGameKillDamageInstance(**e)
+                            for e in event.get("victimDamageDealt") or []
+                        ],
+                        victimDamageReceived=[
+                            dto.LolGameKillDamageInstance(**e)
+                            for e in event["victimDamageReceived"]
+                        ],
                     )
                 )
 
@@ -150,12 +188,17 @@ def match_timeline_to_game(
                 player = get_player(game, event["participantId"])
 
                 player.skillsLevelUpEvents.append(
-                    lol_dto.classes.game.LolGamePlayerSkillLevelUpEvent(
+                    dto.LolGamePlayerSkillLevelUpEvent(
                         timestamp=timestamp,
                         slot=event["skillSlot"],
                         type=event["levelUpType"],
                     )
                 )
+
+            # Actual level ups
+            elif event["type"] == "LEVEL_UP":
+                # TODO
+                continue
 
             # Item buying, selling, and undoing
             elif "ITEM" in event["type"]:
@@ -170,14 +213,14 @@ def match_timeline_to_game(
                 event_type = event["type"].lstrip("ITEM_")
 
                 if event_type == "UNDO":
-                    item_event = lol_dto.classes.game.LolGamePlayerItemEvent(
+                    item_event = dto.LolGamePlayerItemEvent(
                         timestamp=timestamp,
                         type=event_type,
                         id=event["afterId"],
                         beforeUndoId=event["beforeId"],
                     )
                 else:
-                    item_event = lol_dto.classes.game.LolGamePlayerItemEvent(
+                    item_event = dto.LolGamePlayerItemEvent(
                         timestamp=timestamp, type=event_type, id=event["itemId"]
                     )
 
@@ -203,9 +246,32 @@ def match_timeline_to_game(
                     event_type = "PLACED"
 
                 player.wardsEvents.append(
-                    lol_dto.classes.game.LolGamePlayerWardEvent(
+                    dto.LolGamePlayerWardEvent(
                         timestamp=timestamp, type=event_type, wardType=event["wardType"]
                     )
                 )
+
+            # Happens once at the beginning of the game at least
+            elif event["type"] == "PAUSE_END":
+                continue
+            # Really doesn't need to be saved does it?
+            elif event["type"] == "GAME_END":
+                continue
+
+            elif event["type"] == "CHAMPION_SPECIAL_KILL":
+                # TODO Handle this
+                continue
+
+            elif event["type"] == "TURRET_PLATE_DESTROYED":
+                # TODO
+                continue
+
+            elif event["type"] == "DRAGON_SOUL_GIVEN":
+                # TODO
+                continue
+
+            # Events not handled, we raise
+            else:
+                raise ValueError(event)
 
     return game
