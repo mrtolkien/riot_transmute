@@ -10,6 +10,7 @@ from riot_transmute.common.constants import (
     monster_subtype_dict,
     building_dict,
 )
+from riot_transmute.common.iso_date_from_ms import get_iso_date_from_ms_timestamp
 from riot_transmute.logger import riot_transmute_logger
 
 
@@ -262,8 +263,16 @@ def match_timeline_to_game(
                 )
 
             # Happens once at the beginning of the game at least
-            elif event["type"] == "PAUSE_END":
+            elif "PAUSE" in event["type"]:
+                pause_event = dto.LolGamePause(
+                    realTimestamp=get_iso_date_from_ms_timestamp(
+                        event["realTimestamp"]
+                    ),
+                    type=event["type"],
+                )
+                game.pauses.append(pause_event)
                 continue
+
             # Really doesn't need to be saved does it?
             elif event["type"] == "GAME_END":
                 continue

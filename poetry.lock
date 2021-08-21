@@ -96,7 +96,7 @@ names = ["lol-id-tools (>=1.7.1,<2.0.0)"]
 type = "git"
 url = "https://github.com/mrtolkien/lol_dto.git"
 reference = "dev/2.0.0"
-resolved_reference = "e1a3cd0239b814e937b72bf663af2efbb9feeda9"
+resolved_reference = "ca47911c04aed3e652d4fe168c939d6955072aed"
 
 [[package]]
 name = "lol-id-tools"
@@ -268,7 +268,7 @@ testing = ["pytest (>=4.6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytes
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.7"
-content-hash = "d57b6205d4c8c5b7f0a3f2d755861ce141cdb0dc94122556349bbbe3d05d7968"
+content-hash = "d66fc6d6b9748d405ad355774d5f9d6218c0d9dcc61161c3b035e1d61f09df86"
 
 [metadata.files]
 atomicwrites = [

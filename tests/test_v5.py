@@ -75,10 +75,6 @@ def test_match_to_game_v5(file_name):
     "file_name", [f for f in os.listdir(data_folder) if "timeline" in f]
 )
 def test_match_timeline_to_game_v5(file_name):
-    if "ESPORTS" in file_name:
-        # TODO remove
-        return
-
     with open(os.path.join(data_folder, file_name)) as file:
         timeline_dto = json.load(file)
         metadata = None
@@ -97,7 +93,15 @@ def test_match_timeline_to_game_v5(file_name):
         for damage_instance in kill.victimDamageReceived:
             assert damage_instance.type
 
+    assert timeline.pauses
+    for pause in timeline.pauses:
+        assert pause.type in ["PAUSE_START", "PAUSE_END"]
+
     for team in timeline.teams:
+        # Testing that each team got at least one plate
+        # TODO Find a way to test smartly?
+        assert len([e for e in team.buildingsKills if e.type == "TURRET_PLATE"])
+
         for player in team.players:
             assert player.snapshots
 
