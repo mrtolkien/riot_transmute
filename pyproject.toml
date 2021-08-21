@@ -12,7 +12,7 @@ lol-dto = {git = "https://github.com/mrtolkien/lol_dto.git", rev = "dev/2.0.0"}
 
 [tool.poetry.dev-dependencies]
 pytest = "^6.2.4"
-# Removed roleml as Riot now offers proper roles + it is very heavy and only used for tests atm
+# TODO Re-enable roleml
 # roleml = "^0.2.3"
 riotwatcher = "^3.1.2"
 python-dotenv = "^0.19.0"

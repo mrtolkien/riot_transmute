@@ -1,4 +1,5 @@
 import warnings
+from copy import deepcopy
 
 import lol_dto.classes.game as dto
 from lol_dto.classes.sources.riot_lol_api import RiotGameSource, RiotPlayerSource
@@ -104,6 +105,7 @@ def match_timeline_to_game(
 
             # Epic monsters kills
             if event["type"] == "ELITE_MONSTER_KILL":
+                # TODO Make a common events handler function
                 if event["killerId"] < 1:
                     # This is Rift Herald killing itself, we just pass
                     riot_transmute_logger.debug(
@@ -118,6 +120,7 @@ def match_timeline_to_game(
                     timestamp=timestamp,
                     type=monster_type,
                     killerId=event["killerId"],
+                    assistsIds=event.get("assistingParticipantIds"),
                 )
 
                 if monster_type == "DRAGON":
@@ -132,15 +135,23 @@ def match_timeline_to_game(
 
                 team.epicMonstersKills.append(event_dto)
 
-            # Buildings kills
-            elif event["type"] == "BUILDING_KILL":
+            # Buildings kills and turret plates
+            elif (
+                event["type"] == "BUILDING_KILL"
+                or event["type"] == "TURRET_PLATE_DESTROYED"
+            ):
                 # The teamId here refers to the SIDE of the tower that was killed, so the opponents killed it
                 team = game.teams.RED if event["teamId"] == 100 else game.teams.BLUE
 
-                # Get the prebuilt "building" event DTO
-                event_dto = building_dict.get(
-                    (event["position"]["x"], event["position"]["y"])
+                # Get a copy of the prebuilt "building" event DTO
+                event_dto = deepcopy(
+                    building_dict.get((event["position"]["x"], event["position"]["y"]))
                 )
+
+                # If it was a turret plate kill, we change the type from TURRET to TURRET_PLATE
+                if event["type"] == "TURRET_PLATE_DESTROYED":
+                    assert event_dto.type == "TURRET"
+                    event_dto.type = "TURRET_PLATE"
 
                 if not event_dto:
                     warnings.warn(
@@ -148,11 +159,10 @@ def match_timeline_to_game(
                     )
                     continue
 
-                # Fill its timestamp
+                # Fill its information
                 event_dto.timestamp = timestamp
-
-                if event.get("killerId"):
-                    event_dto.killerId = event.get("killerId")
+                event_dto.killerId = event.get("killerId")
+                event_dto.assistsIds = event.get("assistingParticipantIds")
 
                 team.buildingsKills.append(event_dto)
 
@@ -260,10 +270,6 @@ def match_timeline_to_game(
 
             elif event["type"] == "CHAMPION_SPECIAL_KILL":
                 # TODO Handle this
-                continue
-
-            elif event["type"] == "TURRET_PLATE_DESTROYED":
-                # TODO
                 continue
 
             elif event["type"] == "DRAGON_SOUL_GIVEN":
