@@ -102,7 +102,7 @@ def match_timeline_to_game(
             player.snapshots.append(snapshot)
 
         for event in frame["events"]:
-            # TODO Make a common events handler function to reduce code duplication
+            # TODO Make a common events handler function to reduce code duplication with v4
 
             timestamp = event["timestamp"] / 1000
 
@@ -299,7 +299,15 @@ def match_timeline_to_game(
                 continue
 
             elif event["type"] == "DRAGON_SOUL_GIVEN":
-                # TODO
+                team = game.teams.RED if event["teamId"] == 100 else game.teams.BLUE
+
+                team.epicMonstersKills.append(
+                    dto.LolGameTeamEpicMonsterKill(
+                        timestamp=timestamp,
+                        type="DRAGON_SOUL",
+                        subType=event["name"].upper(),
+                    )
+                )
                 continue
 
             # Events not handled, we raise

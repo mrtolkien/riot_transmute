@@ -111,6 +111,16 @@ def test_match_timeline_to_game_v5(file_name):
                 ]
             )
 
+        for monster_kill in team.epicMonstersKills:
+            if "DRAGON" in monster_kill.type:
+                assert monster_kill.subType in [
+                    "CLOUD",
+                    "INFERNAL",
+                    "MOUNTAIN",
+                    "OCEAN",
+                    "ELDER",
+                ]
+
         for player in team.players:
             assert player.snapshots
             assert player.levelUpEvents
