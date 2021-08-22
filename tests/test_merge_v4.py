@@ -9,11 +9,11 @@ from riot_transmute.merge_match_and_timeline import (
 )
 
 
-def test_full(match_dto, timeline_game_id_platform_id):
+def test_full(match_v4_dto, timeline_game_id_platform_id):
     timeline, game_id, platform_id = timeline_game_id_platform_id
 
     match_dto, timeline = roleml.fix_game(
-        match_dto,
+        match_v4_dto,
         timeline,
         True,
     )

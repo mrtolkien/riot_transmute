@@ -113,6 +113,7 @@ def test_match_timeline_to_game_v5(file_name):
 
         for player in team.players:
             assert player.snapshots
+            assert player.levelUpEvents
 
             for snapshot in player.snapshots:
                 assert snapshot.championStats.armor is not None

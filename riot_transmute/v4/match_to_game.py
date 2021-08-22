@@ -172,9 +172,9 @@ def match_to_game(match_dto: dict) -> LolGame:
                 longestTimeSpentLiving=participant["stats"].get(
                     "longestTimeSpentLiving"
                 ),
-                totalDamageShieldedOnTeammates=participant["stats"][
+                totalDamageShieldedOnTeammates=participant["stats"].get(
                     "totalDamageShieldedOnTeammates"
-                ],
+                ),
                 largestCriticalStrike=participant["stats"].get("largestCriticalStrike"),
                 goldSpent=participant["stats"].get("goldSpent"),
                 totalHeal=participant["stats"].get("totalHeal"),

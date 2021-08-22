@@ -102,11 +102,12 @@ def match_timeline_to_game(
             player.snapshots.append(snapshot)
 
         for event in frame["events"]:
+            # TODO Make a common events handler function to reduce code duplication
+
             timestamp = event["timestamp"] / 1000
 
             # Epic monsters kills
             if event["type"] == "ELITE_MONSTER_KILL":
-                # TODO Make a common events handler function
                 if event["killerId"] < 1:
                     # This is Rift Herald killing itself, we just pass
                     riot_transmute_logger.debug(
@@ -208,7 +209,8 @@ def match_timeline_to_game(
 
             # Actual level ups
             elif event["type"] == "LEVEL_UP":
-                # TODO
+                player = get_player(game, event["participantId"])
+                player.levelUpEvents.append(event["timestamp"] / 1000)
                 continue
 
             # Item buying, selling, and undoing
@@ -278,7 +280,22 @@ def match_timeline_to_game(
                 continue
 
             elif event["type"] == "CHAMPION_SPECIAL_KILL":
-                # TODO Handle this
+                player = get_player(game, event["killerId"])
+                position = dto.Position(
+                    x=event["position"]["x"], y=event["position"]["y"]
+                )
+
+                assert player
+
+                player.specialKills.append(
+                    dto.LolGamePlayerSpecialKill(
+                        timestamp=timestamp,
+                        position=position,
+                        type=event["type"],
+                        multiKillLength=event.get("multiKillLength"),
+                    )
+                )
+
                 continue
 
             elif event["type"] == "DRAGON_SOUL_GIVEN":
