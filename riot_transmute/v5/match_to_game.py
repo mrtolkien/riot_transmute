@@ -3,6 +3,8 @@ from datetime import datetime, timezone
 import lol_dto.classes.game as dto
 from lol_dto.classes.sources.riot_lol_api import RiotPlayerSource, RiotGameSource
 
+from riot_transmute.common.iso_date_from_ms import get_iso_date_from_ms_timestamp
+
 role_trigrams = {
     "TOP": "TOP",
     "JUNGLE": "JGL",
@@ -25,16 +27,10 @@ def match_to_game(match_dto: dict) -> dto.LolGame:
     # Creating some data fields in a friendlier format
 
     # ms timestamp -> ISO format
-    date_time = datetime.utcfromtimestamp(match_dto["gameCreation"] / 1000).replace(
-        tzinfo=timezone.utc
-    )
-    iso_creation_date = date_time.isoformat(timespec="seconds")
+    iso_creation_date = get_iso_date_from_ms_timestamp(match_dto["gameCreation"])
 
     # v5 has game start as well
-    date_time = datetime.utcfromtimestamp(
-        match_dto["gameStartTimestamp"] / 1000
-    ).replace(tzinfo=timezone.utc)
-    iso_start_date = date_time.isoformat(timespec="seconds")
+    iso_start_date = get_iso_date_from_ms_timestamp(match_dto["gameStartTimestamp"])
 
     # only 2 values for the patch key (gameVersion is also saved)
     patch = ".".join(match_dto["gameVersion"].split(".")[:2])

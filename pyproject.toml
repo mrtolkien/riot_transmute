@@ -12,8 +12,7 @@ lol-dto = {git = "https://github.com/mrtolkien/lol_dto.git", rev = "dev/2.0.0"}
 
 [tool.poetry.dev-dependencies]
 pytest = "^6.2.4"
-# TODO Re-enable roleml
-# roleml = "^0.2.3"
+roleml = "^0.2.3"
 riotwatcher = "^3.1.2"
 python-dotenv = "^0.19.0"
 lol-id-tools = "^1.7.1"

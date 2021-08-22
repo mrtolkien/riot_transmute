@@ -97,10 +97,19 @@ def test_match_timeline_to_game_v5(file_name):
     for pause in timeline.pauses:
         assert pause.type in ["PAUSE_START", "PAUSE_END"]
 
-    for team in timeline.teams:
+    for side, team in (("BLUE", timeline.teams.BLUE), ("RED", timeline.teams.RED)):
         # Testing that each team got at least one plate
-        # TODO Find a way to test smartly?
-        assert len([e for e in team.buildingsKills if e.type == "TURRET_PLATE"])
+        try:
+            assert len([e for e in team.buildingsKills if e.type == "TURRET_PLATE"])
+        except AssertionError:
+            # We check no towers were killed before 14 minutes to double-check
+            assert not len(
+                [
+                    e
+                    for e in team.buildingsKills
+                    if e.type == "TURRET" and e.timestamp < 60 * 14
+                ]
+            )
 
         for player in team.players:
             assert player.snapshots

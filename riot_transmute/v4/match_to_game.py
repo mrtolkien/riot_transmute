@@ -5,6 +5,7 @@ from lol_dto.classes.game import LolGame
 from lol_dto.classes.sources.riot_lol_api import RiotGameSource, RiotPlayerSource
 
 from riot_transmute.common.constants import clean_roles
+from riot_transmute.common.iso_date_from_ms import get_iso_date_from_ms_timestamp
 
 
 def match_to_game(match_dto: dict) -> LolGame:
@@ -24,9 +25,7 @@ def match_to_game(match_dto: dict) -> LolGame:
     )
     info_log = set()
 
-    date_time = datetime.utcfromtimestamp(match_dto["gameCreation"] / 1000)
-    date_time = date_time.replace(tzinfo=timezone.utc)
-    iso_date = date_time.isoformat(timespec="seconds")
+    iso_date = get_iso_date_from_ms_timestamp(match_dto["gameCreation"])
 
     patch = ".".join(match_dto["gameVersion"].split(".")[:2])
     winner = (
