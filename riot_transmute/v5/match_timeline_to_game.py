@@ -39,7 +39,7 @@ def match_timeline_to_game(
         )
 
     else:
-        # There is still a gameId for esports games
+        # There is still a gameId for esports games, but no platform id for some reason
         setattr(
             game.sources,
             "riotLolApi",
