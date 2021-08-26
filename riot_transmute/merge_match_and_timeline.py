@@ -9,6 +9,7 @@ def merge_games_from_riot_match_and_timeline(
     Merges a LolGame from match_to_game with a LolGame from match_timeline_to_game
     """
     game_from_match.kills = game_from_timeline.kills
+    game_from_match.pauses = game_from_timeline.pauses
 
     for side in "BLUE", "RED":
         match_team = getattr(game_from_match.teams, side)
@@ -25,9 +26,18 @@ def merge_games_from_riot_match_and_timeline(
                 p for p in timeline_team.players if p.id == match_player.id
             )
 
+            # Match v5 gives us the puuid in the timeline
+            if hasattr(match_player.sources.riot, "puuid"):
+                assert (
+                    match_player.sources.riot.puuid
+                    == timeline_player.sources.riot.puuid
+                )
+
             match_player.itemsEvents = timeline_player.itemsEvents
             match_player.skillsLevelUpEvents = timeline_player.skillsLevelUpEvents
+            match_player.levelUpEvents = timeline_player.levelUpEvents
             match_player.snapshots = timeline_player.snapshots
             match_player.wardsEvents = timeline_player.wardsEvents
+            match_player.specialKills = timeline_player.specialKills
 
     return game_from_match

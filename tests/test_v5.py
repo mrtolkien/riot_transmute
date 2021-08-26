@@ -130,3 +130,52 @@ def test_match_timeline_to_game_v5(file_name):
                 assert snapshot.damageStats.trueDamageDone is not None
 
                 assert snapshot.timeEnemySpentControlled is not None
+
+
+@pytest.mark.parametrize(
+    "file_name", [f for f in os.listdir(data_folder) if "timeline" not in f]
+)
+def test_merge_v5(file_name):
+    with open(os.path.join(data_folder, file_name)) as file:
+        match_dto = json.load(file)
+
+        # For ranked games, the dto is in the info key and we drop the metadata
+        if "info" in match_dto:
+            match_dto = match_dto["info"]
+
+    with open(os.path.join(data_folder, file_name)[:-5] + "_timeline.json") as file:
+        timeline_dto = json.load(file)
+        metadata = None
+
+        # For ranked games, the dto is in the info key and we drop the metadata
+        if "info" in timeline_dto:
+            metadata = timeline_dto["metadata"]
+            timeline_dto = timeline_dto["info"]
+
+    game = riot_transmute.v5.match_to_game(match_dto)
+    timeline = riot_transmute.v5.match_timeline_to_game(timeline_dto, metadata)
+
+    merged_game = riot_transmute.merge_games_from_riot_match_and_timeline(
+        game, timeline
+    )
+
+    assert merged_game
+
+    assert merged_game.kills
+    assert merged_game.pauses
+
+    special_kills = False
+
+    for team in merged_game.teams:
+        for player in team.players:
+            # This is from timeline
+            assert player.snapshots
+            assert player.levelUpEvents
+
+            if player.specialKills:
+                special_kills = True
+
+            # This is from details
+            assert player.runes
+
+    assert special_kills
