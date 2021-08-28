@@ -36,10 +36,19 @@ def match_to_game(match_dto: dict) -> dto.LolGame:
     patch = ".".join(match_dto["gameVersion"].split(".")[:2])
 
     # Saving winner as BLUE or RED
+    if not any(match_dto["teams"][i]["win"] in ["Win", True] for i in range(0, 2)):
+        raise ValueError
+
     winner = (
         "BLUE"
         if (match_dto["teams"][0]["teamId"] == 100)
-        == (match_dto["teams"][0]["win"] == "Win")
+        == (
+            (
+                # I saw both between esports games and live games
+                match_dto["teams"][0]["win"] == "Win"
+                or match_dto["teams"][0]["win"] == True
+            )
+        )
         else "RED"
     )
 
