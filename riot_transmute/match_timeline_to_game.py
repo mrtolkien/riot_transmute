@@ -34,6 +34,5 @@ def match_timeline_to_game(
             match_timeline_dto, game_id, platform_id
         )
     else:
-        return riot_transmute.v5.match_timeline_to_game(
-            match_timeline_dto, game_id, platform_id
-        )
+        # TODO This needs metadata, so using the function creates issues... Maybe just drop it
+        return riot_transmute.v5.match_timeline_to_game(match_timeline_dto)

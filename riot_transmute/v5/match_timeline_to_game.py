@@ -275,8 +275,9 @@ def match_timeline_to_game(
                 game.pauses.append(pause_event)
                 continue
 
-            # Really doesn't need to be saved does it?
+            # Gives us the *proper* game end timestamp, *without counting pauses*
             elif event["type"] == "GAME_END":
+                game.duration = event['timestamp'] / 1000
                 continue
 
             elif event["type"] == "CHAMPION_SPECIAL_KILL":
