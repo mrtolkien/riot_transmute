@@ -277,7 +277,7 @@ def match_timeline_to_game(
 
             # Gives us the *proper* game end timestamp, *without counting pauses*
             elif event["type"] == "GAME_END":
-                game.duration = event['timestamp'] / 1000
+                game.duration = event["timestamp"] / 1000
                 continue
 
             elif event["type"] == "CHAMPION_SPECIAL_KILL":
@@ -300,7 +300,12 @@ def match_timeline_to_game(
                 continue
 
             elif event["type"] == "DRAGON_SOUL_GIVEN":
-                team = game.teams.RED if event["teamId"] == 100 else game.teams.BLUE
+                if event["teamId"] == 100:
+                    team = game.teams.BLUE
+                elif event["teamId"] == 200:
+                    team = game.teams.RED
+                else:
+                    raise ValueError
 
                 team.epicMonstersKills.append(
                     dto.LolGameTeamEpicMonsterKill(
