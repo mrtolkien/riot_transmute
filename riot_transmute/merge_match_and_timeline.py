@@ -12,7 +12,8 @@ def merge_games_from_riot_match_and_timeline(
     game_from_match.pauses = game_from_timeline.pauses
 
     # Timeline has GAME_END with the proper timestamp, the game_from_match only gets full time (with pauses)
-    game_from_match.duration = game_from_timeline.duration
+    if game_from_timeline.duration:
+        game_from_match.duration = game_from_timeline.duration
 
     for side in "BLUE", "RED":
         match_team = getattr(game_from_match.teams, side)
