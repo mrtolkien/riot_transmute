@@ -1,17 +1,17 @@
 [tool.poetry]
 name = "riot_transmute"
-version = "2.0.0a4"
+version = "2.0.0a5"
 description = "Transmute Riot API objects to the community-defined DTO"
 authors = ["mrtolkien <gary.mialaret@gmail.com>"]
 license = "MIT"
 
 [tool.poetry.dependencies]
 python = "^3.7"
-lol-dto = {git = "https://github.com/mrtolkien/lol_dto.git", rev = "dev/2.0.0"}
+lol-dto = "^2.0.0a4"
 
 
 [tool.poetry.dev-dependencies]
-pytest = "^6.2.4"
+pytest = "^6.2.5"
 roleml = "^0.2.3"
 riotwatcher = "^3.1.2"
 python-dotenv = "^0.19.0"
