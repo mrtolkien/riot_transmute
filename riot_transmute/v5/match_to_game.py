@@ -141,11 +141,11 @@ def match_to_game(match_dto: dict) -> dto.LolGame:
                     id=dto_player["perks"]["statPerks"]["offense"],
                 ),
                 dto.LolGamePlayerRune(
-                    slot=len(game_player.runes),
+                    slot=len(game_player.runes) + 1,
                     id=dto_player["perks"]["statPerks"]["flex"],
                 ),
                 dto.LolGamePlayerRune(
-                    slot=len(game_player.runes),
+                    slot=len(game_player.runes) + 2,
                     id=dto_player["perks"]["statPerks"]["defense"],
                 ),
             ]
