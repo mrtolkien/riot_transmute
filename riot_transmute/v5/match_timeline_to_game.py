@@ -53,7 +53,7 @@ def match_timeline_to_game(
 
         setattr(
             player.sources,
-            "riot",
+            "riotLolApi",
             RiotPlayerSource(puuid=participant.get("puuid")),
         )
 

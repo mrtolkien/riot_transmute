@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "riot_transmute"
-version = "2.0.0a6"
+version = "2.0.0a7"
 description = "Transmute Riot API objects to the community-defined DTO"
 authors = ["mrtolkien <gary.mialaret@gmail.com>"]
 license = "MIT"

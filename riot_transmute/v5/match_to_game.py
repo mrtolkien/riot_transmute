@@ -68,7 +68,7 @@ def match_to_game(match_dto: dict) -> dto.LolGame:
 
     setattr(
         game.sources,
-        "riot",
+        "riotLolApi",
         RiotGameSource(gameId=match_dto["gameId"], platformId=match_dto["platformId"]),
     )
 
@@ -114,7 +114,7 @@ def match_to_game(match_dto: dict) -> dto.LolGame:
 
         setattr(
             game_player.sources,
-            "riot",
+            "riotLolApi",
             RiotPlayerSource(
                 # We have to use get to also be compatible with esports games
                 puuid=dto_player.get("puuid"),
