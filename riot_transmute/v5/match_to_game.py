@@ -54,7 +54,6 @@ def match_to_game(match_dto: dict) -> dto.LolGame:
 
     # Creating our object's structure
     game = dto.LolGame(
-        # Duration is in ms and not seconds in match v5
         duration=int(match_dto["gameDuration"]),
         creation=iso_creation_date,
         start=iso_start_date,
