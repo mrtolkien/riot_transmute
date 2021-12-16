@@ -13,12 +13,14 @@ I recommend using [riotwatcher](https://pypi.org/project/riotwatcher/) or [panth
 ```python
 import riot_transmute
 
-game_from_match = riot_transmute.match_to_game(match)
-game_from_timeline = riot_transmute.match_timeline_to_game(match_timeline, game_id, platform_id)
+game_from_match = riot_transmute.match_to_game(match_dto)
+game_from_timeline = riot_transmute.match_timeline_to_game(match_timeline_dto, game_id, platform_id)
 ```
 
 # Adding names to objects
-## Install extras
-`pip install riot_transmute[names]`
+
+## Install lol_dto extras
+`pip install riot_transmute lol_dto[names]`
+
 ## Usage
-`game_witch_names = riot_transmute.match_to_game(match, add_names=True)`
+`game_with_names = riot_transmute.match_to_game(match)`
