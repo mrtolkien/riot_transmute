@@ -7,6 +7,8 @@ from riot_transmute.v5.match_to_game import role_trigrams
 
 data_folder = os.path.join("tests", "data", "v5")
 
+# TODO Add tests with pre 11.20 games and post 11.20 to test for the duration format change
+
 
 @pytest.mark.parametrize(
     "file_name", [f for f in os.listdir(data_folder) if "timeline" not in f]
@@ -23,8 +25,8 @@ def test_match_to_game_v5(file_name):
 
     assert game.winner in ["RED", "BLUE"]
     assert type(game.type) == str
-    assert game.sources.riot.gameId
-    assert game.sources.riot.platformId
+    assert game.sources.riotLolApi.gameId
+    assert game.sources.riotLolApi.platformId
 
     for team in game.teams:
         assert team.bans
@@ -46,11 +48,11 @@ def test_match_to_game_v5(file_name):
         for player in team.players:
             try:
                 # This is ranked games
-                assert player.sources.riot.puuid
-                assert type(player.sources.riot.summonerId) == str
+                assert player.sources.riotLolApi.puuid
+                assert type(player.sources.riotLolApi.summonerId) == str
             except AssertionError:
                 # If we get here this is an esport game, where the summonerId is clear
-                assert type(player.sources.riot.summonerId) == int
+                assert type(player.sources.riotLolApi.summonerId) == int
 
             assert player.id
             assert player.inGameName

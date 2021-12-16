@@ -1,7 +1,5 @@
-from datetime import datetime, timezone
-
 import lol_dto.classes.game as dto
-from lol_dto.classes.sources.riot_lol_api import RiotPlayerSource, RiotGameSource
+from lol_dto.classes.sources.riot_lol_api import RiotGameSource, RiotPlayerSource
 
 from riot_transmute.common.iso_date_from_ms import get_iso_date_from_ms_timestamp
 
@@ -12,6 +10,13 @@ role_trigrams = {
     "BOTTOM": "BOT",
     "UTILITY": "SUP",
 }
+
+from dataclasses import dataclass
+
+
+@dataclass
+class RiotGameRankedSource(RiotGameSource):
+    tournamentCode: str = None
 
 
 def match_to_game(match_dto: dict) -> dto.LolGame:
@@ -76,11 +81,14 @@ def match_to_game(match_dto: dict) -> dto.LolGame:
         queue_id=match_dto["queueId"],
     )
 
-    # TODO Add tournamentCode as it's part of a Riot-determined game's identity?
     setattr(
         game.sources,
         "riotLolApi",
-        RiotGameSource(gameId=match_dto["gameId"], platformId=match_dto["platformId"]),
+        RiotGameRankedSource(
+            gameId=match_dto["gameId"],
+            platformId=match_dto["platformId"],
+            tournamentCode=match_dto.get("tournamentCode"),
+        ),
     )
 
     for dto_team in match_dto["teams"]:

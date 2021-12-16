@@ -31,12 +31,13 @@ def merge_games_from_riot_match_and_timeline(
             )
 
             # Match v5 gives us the puuid in the timeline
-            if hasattr(match_player.sources, "riot") and hasattr(
-                match_player.sources.riot, "puuid"
+            if (
+                hasattr(match_player.sources, "riot")
+                and match_player.sources.riotLolApi.puuid
             ):
                 assert (
-                    match_player.sources.riot.puuid
-                    == timeline_player.sources.riot.puuid
+                    match_player.sources.riotLolApi.puuid
+                    == timeline_player.sources.riotLolApi.puuid
                 )
 
             match_player.itemsEvents = timeline_player.itemsEvents
