@@ -16,6 +16,8 @@ data_folder = os.path.join("tests", "data", "v4")
 # The export folder is ignored in git and used to test packages relying on Riot Transmute
 export_folder = os.path.join("tests", "data", "exports")
 
+os.makedirs(export_folder, exist_ok=True)
+
 version_files = [
     f for f in os.listdir(data_folder) if "source" not in f and f != "exports"
 ]
