@@ -1,13 +1,13 @@
 [tool.poetry]
 name = "riot_transmute"
-version = "2.0.0a7"
+version = "2.0.0"
 description = "Transmute Riot API objects to the community-defined DTO"
 authors = ["mrtolkien <gary.mialaret@gmail.com>"]
 license = "MIT"
 
 [tool.poetry.dependencies]
 python = "^3.7"
-lol-dto = "^2.0.0a4"
+lol-dto = "^2.0.0"
 
 
 [tool.poetry.dev-dependencies]
