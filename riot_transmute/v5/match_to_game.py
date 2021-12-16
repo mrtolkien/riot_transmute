@@ -52,9 +52,21 @@ def match_to_game(match_dto: dict) -> dto.LolGame:
         else "RED"
     )
 
+    # Riot made changes to duration on 11.20
+    # Prior to patch 11.20, this field returns the game length in milliseconds calculated from gameEndTimestamp - gameStartTimestamp. 
+    # Post patch 11.20, this field returns the max timePlayed of any participant in the game in seconds, which makes the behavior of this field consistent with that of match-v4. 
+    # The best way to handling the change in this field is to treat the value as milliseconds if the gameEndTimestamp field isn't in the response and 
+    # to treat the value as seconds if gameEndTimestamp is in the response.
+    
+    if not match_dto.get("gameEndTimestamp"):
+        duration = int(match_dto["gameDuration"] / 1000)
+    else:
+        duration = int(match_dto["gameDuration"])
+
+
     # Creating our object's structure
     game = dto.LolGame(
-        duration=int(match_dto["gameDuration"]),
+        duration=duration,
         creation=iso_creation_date,
         start=iso_start_date,
         patch=patch,
