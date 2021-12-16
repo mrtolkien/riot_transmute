@@ -40,7 +40,7 @@ for game_version in test_games:
     ) as file:
         timeline_dto = json.load(file)
 
-    with open(os.path.join(examples_folder, game_version + '.json'), "w+") as file:
-        json.dump({'match': match_dto, 'timeline': timeline_dto}, file)
+    with open(os.path.join(examples_folder, game_version + ".json"), "w+") as file:
+        json.dump({"match": match_dto, "timeline": timeline_dto}, file)
 
 ##
