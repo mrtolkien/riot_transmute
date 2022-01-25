@@ -316,6 +316,9 @@ def match_timeline_to_game(
                 )
                 continue
 
+            elif event["type"] == "CHAMPION_TRANSFORM":
+                pass
+
             # Events not handled, we raise
             else:
                 raise ValueError(event)
