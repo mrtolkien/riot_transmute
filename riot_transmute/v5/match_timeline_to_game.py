@@ -317,6 +317,7 @@ def match_timeline_to_game(
                 continue
 
             elif event["type"] == "CHAMPION_TRANSFORM":
+                # TODO Add this case, which happens with Kayne transforms
                 pass
 
             # Events not handled, we raise
