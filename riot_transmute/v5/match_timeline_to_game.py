@@ -317,8 +317,8 @@ def match_timeline_to_game(
                 continue
 
             elif event["type"] == "CHAMPION_TRANSFORM":
-                # TODO Add this case, which happens with Kayne transforms
-                pass
+                # TODO This happens when Kayn level ups, it is not handled at the moment
+                continue
 
             # Events not handled, we raise
             else:

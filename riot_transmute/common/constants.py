@@ -19,6 +19,8 @@ monster_subtype_dict = {
     "AIR_DRAGON": "CLOUD",
     "EARTH_DRAGON": "MOUNTAIN",
     "WATER_DRAGON": "OCEAN",
+    "HEXTECH_DRAGON": "HEXTECH",
+    "CHEMTECH_DRAGON": "CHEMTECH",
     "ELDER_DRAGON": "ELDER",
 }
 

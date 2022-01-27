@@ -4,6 +4,7 @@ import pytest
 
 import riot_transmute
 from riot_transmute.v5.match_to_game import role_trigrams
+from riot_transmute.common import constants
 
 data_folder = os.path.join("tests", "data", "v5")
 
@@ -115,13 +116,7 @@ def test_match_timeline_to_game_v5(file_name):
 
         for monster_kill in team.epicMonstersKills:
             if "DRAGON" in monster_kill.type:
-                assert monster_kill.subType in [
-                    "CLOUD",
-                    "INFERNAL",
-                    "MOUNTAIN",
-                    "OCEAN",
-                    "ELDER",
-                ]
+                assert monster_kill.subType in constants.monster_subtype_dict.values()
 
         for player in team.players:
             assert player.snapshots
