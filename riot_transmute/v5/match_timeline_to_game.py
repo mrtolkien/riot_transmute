@@ -1,3 +1,4 @@
+from asyncio.log import logger
 import warnings
 from copy import deepcopy
 
@@ -15,7 +16,9 @@ from riot_transmute.logger import riot_transmute_logger
 
 
 def match_timeline_to_game(
-    match_timeline_dto: dict, metadata: dict = None
+    match_timeline_dto: dict,
+    metadata: dict = None,
+    raise_on_unkown_event=False,
 ) -> dto.LolGame:
     """
     Match-V5 timeline to LolGame
@@ -322,6 +325,11 @@ def match_timeline_to_game(
 
             # Events not handled, we raise
             else:
-                raise ValueError(event)
+                if raise_on_unkown_event:
+                    raise ValueError(event)
+
+                else:
+                    logger.warning(f"{event['type']=} not handled")
+                    continue
 
     return game
