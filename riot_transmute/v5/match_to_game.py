@@ -129,6 +129,7 @@ def match_to_game(match_dto: dict) -> dto.LolGame:
             championId=dto_player["championId"],
             primaryRuneTreeId=dto_player["perks"]["styles"][0]["style"],
             secondaryRuneTreeId=dto_player["perks"]["styles"][1]["style"],
+            game=game,
         )
 
         setattr(
