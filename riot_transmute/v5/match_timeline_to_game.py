@@ -10,6 +10,7 @@ from riot_transmute.common.constants import (
     monster_type_dict,
     monster_subtype_dict,
     building_dict,
+    clean_lanes,
 )
 from riot_transmute.common.iso_date_from_ms import get_iso_date_from_ms_timestamp
 from riot_transmute.logger import riot_transmute_logger
@@ -155,7 +156,15 @@ def match_timeline_to_game(
 
                 # If it was a turret plate kill, we change the type from TURRET to TURRET_PLATE
                 if event["type"] == "TURRET_PLATE_DESTROYED":
-                    assert event_dto.type == "TURRET"
+                    # If we can't get the event DTO from constants asume we are on 12.15+
+                    if not event_dto:
+                        event_dto = dto.LolGameTeamBuildingKill(
+                            type="TURRET_PLATE",
+                            lane=clean_lanes.get(event.get("laneType"), None),
+                            side="BLUE" if event["teamId"] == 200 else ("RED" if event["teamId"] == 100 else None),
+                            turretLocation="OUTER",
+                        )
+                        team = game.teams.RED if event["teamId"] == 200 else game.teams.BLUE
                     event_dto.type = "TURRET_PLATE"
 
                 if not event_dto:

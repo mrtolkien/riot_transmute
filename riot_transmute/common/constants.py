@@ -8,6 +8,12 @@ clean_roles = {
     "supp": "SUP",
 }
 
+clean_lanes = {
+    "TOP_LANE": "TOP",
+    "MID_LANE": "MID",
+    "BOT_LANE": "BOT",
+}
+
 monster_type_dict = {
     "RIFTHERALD": "RIFT_HERALD",
     "DRAGON": "DRAGON",
