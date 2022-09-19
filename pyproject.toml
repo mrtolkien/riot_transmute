@@ -6,17 +6,20 @@ authors = ["mrtolkien <gary.mialaret@gmail.com>"]
 license = "MIT"
 
 [tool.poetry.dependencies]
-python = "^3.7"
+python = "^3.7.2"
 lol-dto = "^2.0.0"
 
 
 [tool.poetry.dev-dependencies]
 pytest = "^6.2.5"
-roleml = "^0.2.3"
 riotwatcher = "^3.1.2"
 python-dotenv = "^0.19.0"
 lol-id-tools = "^1.7.1"
-black = {version = "^21.12b0", allow-prereleases = true}
+black = "^22.8.0"
+coverage = "^6.4.4"
+pylint = "^2.15.2"
+pre-commit = "^2.20.0"
+isort = "^5.10.1"
 
 
 [build-system]
