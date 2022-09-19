@@ -1,6 +1,12 @@
 # Riot Transmute
 
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+[![pre-commit enabled][pre-commit badge]][pre-commit project]
+[![codecov](https://codecov.io/gh/mrtolkien/riot_transmute/branch/master/graph/badge.svg?token=R9DU7KJSPT)](https://codecov.io/gh/mrtolkien/riot_transmute)
+[![Python Tests](https://github.com/mrtolkien/riot_transmute/actions/workflows/pr_tests_python.yml/badge.svg)](https://github.com/mrtolkien/riot_transmute/actions/workflows/pr_tests_python.yml)
+
+[pre-commit badge]: https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white
+[pre-commit project]: https://pre-commit.com/
 
 A simple wrapper to cast Riot API data to the [community-defined LoL DTO format](https://github.com/mrtolkien/lol_dto).
 
