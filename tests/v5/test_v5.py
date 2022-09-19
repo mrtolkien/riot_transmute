@@ -29,24 +29,24 @@ def test_match_to_game_v5(file_name):
     game = riot_transmute.v5.match_to_game(match_dto)
 
     assert game.winner in ["RED", "BLUE"]
-    assert isinstance(game.type) == str
+    assert isinstance(game.type, str)
     assert game.sources.riotLolApi.gameId
     assert game.sources.riotLolApi.platformId
 
     for team in game.teams:
         assert team.bans
 
-        assert isinstance(team.endOfGameStats.firstTurret) == bool
-        assert isinstance(team.endOfGameStats.firstBaron) == bool
-        assert isinstance(team.endOfGameStats.firstDragon) == bool
-        assert isinstance(team.endOfGameStats.firstRiftHerald) == bool
-        assert isinstance(team.endOfGameStats.firstInhibitor) == bool
+        assert isinstance(team.endOfGameStats.firstTurret, bool)
+        assert isinstance(team.endOfGameStats.firstBaron, bool)
+        assert isinstance(team.endOfGameStats.firstDragon, bool)
+        assert isinstance(team.endOfGameStats.firstRiftHerald, bool)
+        assert isinstance(team.endOfGameStats.firstInhibitor, bool)
 
-        assert isinstance(team.endOfGameStats.turretKills) == int
-        assert isinstance(team.endOfGameStats.baronKills) == int
-        assert isinstance(team.endOfGameStats.dragonKills) == int
-        assert isinstance(team.endOfGameStats.riftHeraldKills) == int
-        assert isinstance(team.endOfGameStats.inhibitorKills) == int
+        assert isinstance(team.endOfGameStats.turretKills, int)
+        assert isinstance(team.endOfGameStats.baronKills, int)
+        assert isinstance(team.endOfGameStats.dragonKills, int)
+        assert isinstance(team.endOfGameStats.riftHeraldKills, int)
+        assert isinstance(team.endOfGameStats.inhibitorKills, int)
 
         assert len(team.players) == 5
 
@@ -54,10 +54,10 @@ def test_match_to_game_v5(file_name):
             try:
                 # This is ranked games
                 assert player.sources.riotLolApi.puuid
-                assert isinstance(player.sources.riotLolApi.summonerId) == str
+                assert isinstance(player.sources.riotLolApi.summonerId, str)
             except AssertionError:
                 # If we get here this is an esport game, where the summonerId is clear
-                assert isinstance(player.sources.riotLolApi.summonerId) == int
+                assert isinstance(player.sources.riotLolApi.summonerId, int)
 
             assert player.id
             assert player.inGameName
