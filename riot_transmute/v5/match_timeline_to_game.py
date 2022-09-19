@@ -1,17 +1,20 @@
-from asyncio.log import logger
+"""Transform MatchTimelineDto to LolGame.
+"""
+
 import warnings
+from asyncio.log import logger
 from copy import deepcopy
 
 import lol_dto.classes.game as dto
 from lol_dto.classes.sources.riot_lol_api import RiotGameSource, RiotPlayerSource
 
-from riot_transmute.common.get_player import get_player
 from riot_transmute.common.constants import (
-    monster_type_dict,
-    monster_subtype_dict,
     building_dict,
     clean_lanes,
+    monster_subtype_dict,
+    monster_type_dict,
 )
+from riot_transmute.common.get_player import get_player
 from riot_transmute.common.iso_date_from_ms import get_iso_date_from_ms_timestamp
 from riot_transmute.logger import riot_transmute_logger
 
@@ -115,7 +118,8 @@ def match_timeline_to_game(
                 if event["killerId"] < 1:
                     # This is Rift Herald killing itself, we just pass
                     riot_transmute_logger.debug(
-                        f"Epic monster kill with killer id 0 found, likely Rift Herald killing itself."
+                        "Epic monster kill with killer id 0 found, \
+                            likely Rift Herald killing itself."
                     )
                     continue
 
@@ -134,7 +138,8 @@ def match_timeline_to_game(
                         event_dto.subType = monster_subtype_dict[
                             event["monsterSubType"]
                         ]
-                    # If we don’t know how to translate the monster subtype, we simply leave it as-is
+                    # If we don’t know how to translate the monster subtype,
+                    #   we simply leave it as-is
                     except KeyError:
                         # get to be compatible with pre 6.9 games
                         event_dto.subType = event.get("monsterSubType")
@@ -146,7 +151,8 @@ def match_timeline_to_game(
                 event["type"] == "BUILDING_KILL"
                 or event["type"] == "TURRET_PLATE_DESTROYED"
             ):
-                # The teamId here refers to the SIDE of the tower that was killed, so the opponents killed it
+                # The teamId here refers to the SIDE of the tower that was killed,
+                #   so the opponents killed it
                 team = game.teams.RED if event["teamId"] == 100 else game.teams.BLUE
 
                 # Get a copy of the prebuilt "building" event DTO
@@ -161,10 +167,16 @@ def match_timeline_to_game(
                         event_dto = dto.LolGameTeamBuildingKill(
                             type="TURRET_PLATE",
                             lane=clean_lanes.get(event.get("laneType"), None),
-                            side="BLUE" if event["teamId"] == 200 else ("RED" if event["teamId"] == 100 else None),
+                            side="BLUE"
+                            if event["teamId"] == 200
+                            else ("RED" if event["teamId"] == 100 else None),
                             turretLocation="OUTER",
                         )
-                        team = game.teams.RED if event["teamId"] == 200 else game.teams.BLUE
+                        team = (
+                            game.teams.RED
+                            if event["teamId"] == 200
+                            else game.teams.BLUE
+                        )
                     event_dto.type = "TURRET_PLATE"
 
                 if not event_dto:
@@ -231,7 +243,8 @@ def match_timeline_to_game(
                     riot_transmute_logger.debug(
                         f"Dropping item event because it does not have a participantId:\n{event}"
                     )
-                    # Some weird ITEM_DESTROYED events without a participantId can appear in older games (tower items)
+                    # Some weird ITEM_DESTROYED events without a participantId
+                    #   can appear in older games (tower items)
                     continue
 
                 player = get_player(game, event["participantId"])
