@@ -1,3 +1,5 @@
+"""Merging of two LolGame to a single unified representation.
+"""
 import lol_dto
 
 
@@ -11,7 +13,8 @@ def merge_games_from_riot_match_and_timeline(
     game_from_match.kills = game_from_timeline.kills
     game_from_match.pauses = game_from_timeline.pauses
 
-    # Timeline has GAME_END with the proper timestamp, the game_from_match only gets full time (with pauses)
+    # Timeline has GAME_END with the proper timestamp,
+    #   the game_from_match only gets full time (with pauses)
     if game_from_timeline.duration:
         game_from_match.duration = game_from_timeline.duration
 
@@ -22,8 +25,16 @@ def merge_games_from_riot_match_and_timeline(
         match_team: lol_dto.classes.game.LolGameTeam
         timeline_team: lol_dto.classes.game.LolGameTeam
 
-        assert len([event for event in timeline_team.buildingsKills
-                    if event.type == "TURRET"]) == match_team.endOfGameStats.turretKills
+        assert (
+            len(
+                [
+                    event
+                    for event in timeline_team.buildingsKills
+                    if event.type == "TURRET"
+                ]
+            )
+            == match_team.endOfGameStats.turretKills
+        )
 
         match_team.buildingsKills = timeline_team.buildingsKills
         match_team.epicMonstersKills = timeline_team.epicMonstersKills
