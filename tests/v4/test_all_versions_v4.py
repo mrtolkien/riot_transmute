@@ -1,3 +1,6 @@
+"""Testing v4 games from all the API lifetime.
+"""
+
 import json
 import os
 import pickle
@@ -6,8 +9,8 @@ import pickle
 import pytest
 
 from riot_transmute import (
-    match_to_game,
     match_timeline_to_game,
+    match_to_game,
     merge_games_from_riot_match_and_timeline,
 )
 
@@ -25,7 +28,7 @@ version_files = [
 
 @pytest.mark.parametrize("input_file", version_files)
 def test_parsing(input_file):
-    with open(os.path.join(data_folder, input_file)) as file:
+    with open(os.path.join(data_folder, input_file), encoding="utf-8") as file:
         raw = json.load(file)
 
     match_dto = raw["match"]

@@ -1,10 +1,14 @@
+"""v5 data format tests.
+"""
+
 import json
 import os
+
 import pytest
 
 import riot_transmute
-from riot_transmute.v5.match_to_game import role_trigrams
 from riot_transmute.common import constants
+from riot_transmute.v5.match_to_game import role_trigrams
 
 data_folder = os.path.join("tests", "data", "v5")
 
@@ -15,7 +19,7 @@ data_folder = os.path.join("tests", "data", "v5")
     "file_name", [f for f in os.listdir(data_folder) if "timeline" not in f]
 )
 def test_match_to_game_v5(file_name):
-    with open(os.path.join(data_folder, file_name)) as file:
+    with open(os.path.join(data_folder, file_name), encoding="utf-8") as file:
         match_dto = json.load(file)
 
         # For ranked games, the dto is in the info key and we drop the metadata
@@ -25,24 +29,24 @@ def test_match_to_game_v5(file_name):
     game = riot_transmute.v5.match_to_game(match_dto)
 
     assert game.winner in ["RED", "BLUE"]
-    assert type(game.type) == str
+    assert isinstance(game.type, str)
     assert game.sources.riotLolApi.gameId
     assert game.sources.riotLolApi.platformId
 
     for team in game.teams:
         assert team.bans
 
-        assert type(team.endOfGameStats.firstTurret) == bool
-        assert type(team.endOfGameStats.firstBaron) == bool
-        assert type(team.endOfGameStats.firstDragon) == bool
-        assert type(team.endOfGameStats.firstRiftHerald) == bool
-        assert type(team.endOfGameStats.firstInhibitor) == bool
+        assert isinstance(team.endOfGameStats.firstTurret, bool)
+        assert isinstance(team.endOfGameStats.firstBaron, bool)
+        assert isinstance(team.endOfGameStats.firstDragon, bool)
+        assert isinstance(team.endOfGameStats.firstRiftHerald, bool)
+        assert isinstance(team.endOfGameStats.firstInhibitor, bool)
 
-        assert type(team.endOfGameStats.turretKills) == int
-        assert type(team.endOfGameStats.baronKills) == int
-        assert type(team.endOfGameStats.dragonKills) == int
-        assert type(team.endOfGameStats.riftHeraldKills) == int
-        assert type(team.endOfGameStats.inhibitorKills) == int
+        assert isinstance(team.endOfGameStats.turretKills, int)
+        assert isinstance(team.endOfGameStats.baronKills, int)
+        assert isinstance(team.endOfGameStats.dragonKills, int)
+        assert isinstance(team.endOfGameStats.riftHeraldKills, int)
+        assert isinstance(team.endOfGameStats.inhibitorKills, int)
 
         assert len(team.players) == 5
 
@@ -50,10 +54,10 @@ def test_match_to_game_v5(file_name):
             try:
                 # This is ranked games
                 assert player.sources.riotLolApi.puuid
-                assert type(player.sources.riotLolApi.summonerId) == str
+                assert isinstance(player.sources.riotLolApi.summonerId, str)
             except AssertionError:
                 # If we get here this is an esport game, where the summonerId is clear
-                assert type(player.sources.riotLolApi.summonerId) == int
+                assert isinstance(player.sources.riotLolApi.summonerId, int)
 
             assert player.id
             assert player.inGameName
@@ -78,7 +82,7 @@ def test_match_to_game_v5(file_name):
     "file_name", [f for f in os.listdir(data_folder) if "timeline" in f]
 )
 def test_match_timeline_to_game_v5(file_name):
-    with open(os.path.join(data_folder, file_name)) as file:
+    with open(os.path.join(data_folder, file_name), encoding="utf-8") as file:
         timeline_dto = json.load(file)
         metadata = None
 
@@ -100,18 +104,23 @@ def test_match_timeline_to_game_v5(file_name):
     for pause in timeline.pauses:
         assert pause.type in ["PAUSE_START", "PAUSE_END"]
 
-    for side, team in (("BLUE", timeline.teams.BLUE), ("RED", timeline.teams.RED)):
+    for team in timeline.teams.BLUE, timeline.teams.RED:
         # Testing that each team got at least one plate
         try:
-            assert len([e for e in team.buildingsKills if e.type == "TURRET_PLATE"])
+            assert (
+                len([e for e in team.buildingsKills if e.type == "TURRET_PLATE"]) != 0
+            )
         except AssertionError:
             # We check no towers were killed before 14 minutes to double-check
-            assert not len(
-                [
-                    e
-                    for e in team.buildingsKills
-                    if e.type == "TURRET" and e.timestamp < 60 * 14
-                ]
+            assert (
+                len(
+                    [
+                        e
+                        for e in team.buildingsKills
+                        if e.type == "TURRET" and e.timestamp < 60 * 14
+                    ]
+                )
+                == 0
             )
 
         for monster_kill in team.epicMonstersKills:
@@ -133,14 +142,16 @@ def test_match_timeline_to_game_v5(file_name):
     "file_name", [f for f in os.listdir(data_folder) if "timeline" not in f]
 )
 def test_merge_v5(file_name):
-    with open(os.path.join(data_folder, file_name)) as file:
+    with open(os.path.join(data_folder, file_name), encoding="utf-8") as file:
         match_dto = json.load(file)
 
         # For ranked games, the dto is in the info key and we drop the metadata
         if "info" in match_dto:
             match_dto = match_dto["info"]
 
-    with open(os.path.join(data_folder, file_name)[:-5] + "_timeline.json") as file:
+    with open(
+        os.path.join(data_folder, file_name)[:-5] + "_timeline.json", encoding="utf-8"
+    ) as file:
         timeline_dto = json.load(file)
         metadata = None
 
