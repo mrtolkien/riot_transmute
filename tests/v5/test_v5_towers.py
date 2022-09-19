@@ -9,8 +9,8 @@ from tests import conftest
 
 
 def get_merged_game(filename: str) -> game.LolGame:
-    match = conftest.load_json("v4", f"{filename}.json")
-    timeline = conftest.load_json("v4", f"{filename}_timeline.json")
+    match = conftest.load_json("v5", f"{filename}.json")
+    timeline = conftest.load_json("v5", f"{filename}_timeline.json")
 
     lol_game = riot_transmute.v5.match_to_game(match)
     lol_game_timeline = riot_transmute.v5.match_timeline_to_game(timeline)
