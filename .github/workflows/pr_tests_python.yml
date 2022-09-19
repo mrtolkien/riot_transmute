@@ -35,10 +35,10 @@ jobs:
         run: |
           poetry run coverage run -m pytest -s tests
 
-      # Uploading coverage report
-      - name: Generate and upload coverage reports to Codecov
-        run: |
-          poetry run coverage xml
-          curl -Os https://uploader.codecov.io/latest/linux/codecov
-          chmod +x codecov
-          ./codecov -t ${{ secrets.CODECOV_TOKEN }}
+      # Generating and uploading coverage report
+      - name: Generate covera report
+        run: poetry run coverage xml
+
+      # No need for a token for public repos
+      - name: Upload coverage
+        uses: codecov/codecov-action@v3
