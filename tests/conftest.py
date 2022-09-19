@@ -36,7 +36,7 @@ def esports_match_dto():
 
 @pytest.fixture()
 def esports_timeline():
-    load_game("tests", "data", "v4", "source_timeline_esports.json")
+    return load_game("tests", "data", "v4", "source_timeline_esports.json")
 
 
 @pytest.fixture
