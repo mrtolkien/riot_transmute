@@ -164,6 +164,11 @@ def test_merge_v5(file_name):
     special_kills = False
 
     for team in merged_game.teams:
+        assert (
+            len([event for event in team.buildingsKills if event.type == "TURRET"])
+            == team.endOfGameStats.turretKills
+        )
+
         for player in team.players:
             # This is from timeline
             assert player.snapshots

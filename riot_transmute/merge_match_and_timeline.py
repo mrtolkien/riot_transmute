@@ -22,8 +22,16 @@ def merge_games_from_riot_match_and_timeline(
         match_team: lol_dto.classes.game.LolGameTeam
         timeline_team: lol_dto.classes.game.LolGameTeam
 
-        assert len([event for event in timeline_team.buildingsKills
-                    if event.type == "TURRET"]) == match_team.endOfGameStats.turretKills
+        assert (
+            len(
+                [
+                    event
+                    for event in timeline_team.buildingsKills
+                    if event.type == "TURRET"
+                ]
+            )
+            == match_team.endOfGameStats.turretKills
+        )
 
         match_team.buildingsKills = timeline_team.buildingsKills
         match_team.epicMonstersKills = timeline_team.epicMonstersKills

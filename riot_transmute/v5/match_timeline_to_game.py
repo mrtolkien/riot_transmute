@@ -161,10 +161,16 @@ def match_timeline_to_game(
                         event_dto = dto.LolGameTeamBuildingKill(
                             type="TURRET_PLATE",
                             lane=clean_lanes.get(event.get("laneType"), None),
-                            side="BLUE" if event["teamId"] == 200 else ("RED" if event["teamId"] == 100 else None),
+                            side="BLUE"
+                            if event["teamId"] == 200
+                            else ("RED" if event["teamId"] == 100 else None),
                             turretLocation="OUTER",
                         )
-                        team = game.teams.RED if event["teamId"] == 200 else game.teams.BLUE
+                        team = (
+                            game.teams.RED
+                            if event["teamId"] == 200
+                            else game.teams.BLUE
+                        )
                     event_dto.type = "TURRET_PLATE"
 
                 if not event_dto:
