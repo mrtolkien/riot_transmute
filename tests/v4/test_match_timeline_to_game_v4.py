@@ -1,5 +1,9 @@
-import lol_dto.utilities
+"""Timeline-only tests.
+"""
+
 import os
+
+import lol_dto.utilities
 
 from riot_transmute.match_timeline_to_game import match_timeline_to_game
 
