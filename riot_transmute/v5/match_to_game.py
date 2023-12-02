@@ -124,7 +124,8 @@ def match_to_game(match_dto: dict) -> dto.LolGame:
 
         game_player = dto.LolGamePlayer(
             id=dto_player["participantId"],
-            inGameName=dto_player["summonerName"],
+            # Since 13.23 Riot is using riot ids instead of summoner names
+            inGameName=dto_player.get("riotIdGameName") or dto_player["summonerName"],
             role=role_trigrams.get(dto_player["individualPosition"]),
             championId=dto_player["championId"],
             primaryRuneTreeId=dto_player["perks"]["styles"][0]["style"],
