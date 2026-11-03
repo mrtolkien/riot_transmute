@@ -13,18 +13,18 @@ jobs:
 
     steps:
       # Get the files
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       # Python setup
-      - name: Set up Python 3.9
-        uses: actions/setup-python@v4
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
         with:
-          python-version: "3.9"
+          python-version: "3.12"
 
       - name: Install poetry
-        uses: abatilo/actions-poetry@v2.1.6
+        uses: abatilo/actions-poetry@v4
         with:
-          poetry-version: 1.2
+          poetry-version: 2.5.1
 
       - name: Install python dependencies
         run: |

@@ -11,10 +11,10 @@ repos:
 
   # https://pre-commit.com/#2-add-a-pre-commit-configuration
   - repo: https://github.com/psf/black
-    rev: 22.8.0
+    rev: 26.10.1
     hooks:
       - id: black
-        language_version: python3.9
+        language_version: python3
 
   # https://pycqa.github.io/isort/docs/configuration/pre-commit.html
   - repo: https://github.com/pycqa/isort
