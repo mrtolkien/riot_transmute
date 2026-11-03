@@ -1,5 +1,4 @@
-"""Testing merging of match + timeline.
-"""
+"""Testing merging of match + timeline."""
 
 import os
 

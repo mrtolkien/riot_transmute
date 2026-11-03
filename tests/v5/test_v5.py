@@ -1,5 +1,4 @@
-"""v5 data format tests.
-"""
+"""v5 data format tests."""
 
 import json
 import os

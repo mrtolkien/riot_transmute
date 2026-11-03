@@ -1,5 +1,4 @@
-"""Pytest defaults.
-"""
+"""Pytest defaults."""
 
 import json
 import os

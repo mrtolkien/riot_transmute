@@ -1,5 +1,4 @@
-"""Timeline-only tests.
-"""
+"""Timeline-only tests."""
 
 import os
 

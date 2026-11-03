@@ -1,5 +1,4 @@
-"""Small test files prep script.
-"""
+"""Small test files prep script."""
 
 import json
 import os

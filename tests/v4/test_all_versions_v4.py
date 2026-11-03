@@ -1,5 +1,4 @@
-"""Testing v4 games from all the API lifetime.
-"""
+"""Testing v4 games from all the API lifetime."""
 
 import json
 import os
